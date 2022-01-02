@@ -10,6 +10,7 @@ pretvorba iz Markdowna v HTML in nato objava na GitHub Pages.
 ## Lokalno urejanje
 
 Najlažje je datoteke urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj
+
 Treba je imeti nameščen paket `bookdown`.
 
-Lokalno lahko tako vidimo "compiled" strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
+Lokalno lahko vidimo "compiled" strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
