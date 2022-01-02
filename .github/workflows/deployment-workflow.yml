@@ -30,6 +30,10 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
 
+      - name: Install TinyTeX
+        run: |
+          Rscript -e "install.packages('tinytex')"
+          Rscript -e 'tinytex::install_tinytex()'
       - name: Build
         run: |
           chmod +x ./_build.sh
