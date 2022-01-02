@@ -27,6 +27,9 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v2
 
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
+
       - name: Build
         run: |
           chmod +x ./_build.sh
