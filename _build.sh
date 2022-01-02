@@ -2,6 +2,7 @@
 
 rm -r docs
 
+mkdir docs
 cd docs
 touch .nojekyll
 cd ..
