@@ -20,9 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build
-        run: |
-          npm ci
-          npm run build
+        run: ./_build.sh
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.7
