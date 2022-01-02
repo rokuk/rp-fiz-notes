@@ -1,0 +1,29 @@
+--- 
+title: "Računalniški praktikum (fizika) - vaje"
+author: "Rok Kuk"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+# bibliography: [book.bib, packages.bib]
+url: your book url like https://rp-fiz-notes.github.io
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike 
+  na Fakulteti za matematiko in fiziko Univerze v Ljubljani.
+link-citations: yes
+github-repo: rokuk/rp-fiz-notes
+---
+
+# O strani {-}
+
+Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 
+1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani.
+
+Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin.
+
+
+
+```{r eval=FALSE}
+bookdown::serve_book()
+```
+

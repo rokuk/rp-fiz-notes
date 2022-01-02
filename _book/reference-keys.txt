@@ -1,0 +1,11 @@
+namestitev-okolja-za-vaje
+ptyhon
+uvod-v-ptyhon
+funkcije
+zanke
+seznami
+numpy
+datoteke
+publishing
+pages
+metadata-for-sharing
