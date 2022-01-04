@@ -4,7 +4,6 @@ author: "Rok Kuk"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-# bibliography: [book.bib, packages.bib]
 url: your book url like https://rokuk.github.io/rp-fiz-notes
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
@@ -20,7 +19,10 @@ Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. l
 
 Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.
 
+Ta spletna stran je dostopna na https://python.rokuk.org in 
+https://rokuk.github.io/rp-fiz-notes
 
+Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes
 
 ```{r eval=FALSE}
 bookdown::serve_book()
