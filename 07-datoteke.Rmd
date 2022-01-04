@@ -1,0 +1,150 @@
+# Datoteke
+
+Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter9/
+
+## Datotečni sistem
+
+Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, ...).
+Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu 
+imamo korensko mapo (root folder). Na Linux in macOS je to `/` na Windowsu pa 
+`C:\`, kjer je `C` ime particije. 
+
+Prostor, ki je na voljo na nosilcu lahko razdelimo 
+na več ločenih delov, ki jim rečemo particije. npr. trdi disk z 
+1000 GB bi lahko razdelili na dve particiji `C` z 100 GB in `D` z 900 GB). Vsaka
+particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko 
+(to velja za Windows, drugje je drugače). npr. 
+USB ključi so pogosto pod `E` ali `F`.
+
+### Absolutna in relativna pot
+
+Vsaki datoteki ustreza ena absolutna pot. To je "naslov", pod katero jo lahko najdemo.
+Primer: `C:\eggs\bacon\spam.txt`. Pot vsebuje vse mape, v katerih se datoteka 
+nahaja, ločene z `\` (na Windowsu; na Linux in macOS je ločilo `/`), ime datoteke, 
+piko in končnico datoteke, ki določa njen tip.
+
+Relativna pot do datoteke je pot glede na neko drugo mapo. Za zgornji primer:
+glede na mapo `eggs` je relativna pot do datoteke `.\bacon\spam.txt`, kjer pika 
+pomeni trenutno mapo. Če bi imeli mapo `tomatoes` v mapi `C:` in v njej datoteko `dat.txt`,
+bi bila relativna pot glede na `eggs` enaka `..\tomatoes\dat.txt`. Dve piki pomenita
+eno mapo višje v hierarhiji (parent folder) glede na trenutno mapo. 
+Če bi želeli iti dve mapi višje bi uporabili `..\..\nekadrugamapa`, itd.
+
+Za podrobnejši razlago in več primerov glej gradivo: https://automatetheboringstuff.com/2e/chapter9/
+
+### Delo z ukaznim pozivom
+Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v 
+nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD). 
+Ta mapa je vedno napisana na začetku vrstice.
+V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene 
+s presledki. Ukaz izvedemo s tipko Enter.
+
+V neko mapo se lahko premaknemo z ukazom `cd`, ki mu kot argument podamo pot do 
+mape, v katero se želimo premakniti.
+
+Ukaz `dir` izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.
+
+### Mape in datoteke v Pythonu
+
+Za delo z datotečnim sistemom je na voljo knjižnica `os`.
+Posamezne funkcije in njihovo uporabo najdete v uradni dokumentaciji. Nekaj 
+najbolj uporabnih je `os.getcwd()`, `.chdir()`, `.listdir()`, `.mkdir()`,
+`.rename()`, `.remove()`, `.rmdir()`.
+
+Za delo s potmi je uporabna knjižnica `os.path`, kjer so uporabne funkcije
+`os.path.join()`, `.exists()`, `.abspath()`, `.relpath()`.
+
+## Pisanje
+
+Datoteko odpremo v načinu za pisanje `mode="w"` in uporabimo funkcijo `write()`, 
+ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če želimo zapisati znak `\`
+moramo v Pythonu napisati `\\`. Več o uporabi `\` v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp
+
+```python
+potdodatoteke = "datoteka.txt"
+with open(potdodatoteke, mode="w", encoding="utf-8") as dat:
+    dat.write("To je ")
+    dat.write("en stavek.\nTo je drugi.")
+```
+
+```{python, echo=FALSE}
+with open("datoteka.txt", mode="r", encoding="utf-8") as dat:
+    print("datoteka.txt")
+    print(dat.read())
+```
+
+Namesto `dat.write("niz")` se lahko uporablja tudi `print("niz", file=dat)`, kjer
+odprto datoteko podamo kot parameter.
+
+## Branje
+
+### read()
+
+Datoteko odpremo v načinu za branje `mode="r"` in uporabimo metodo `read()`, 
+ki vrne celotno vsebino datoteke naenkrat v obliki niza.
+
+```{python}
+with open("datoteka.txt", mode="r", encoding="utf-8") as datoteka:
+    vsebina = datoteka.read()
+print(vsebina)
+```
+
+Uporaba argumenta `mode` je opisana na dnu strani.
+Klicu `open` lahko podamo tudi neobvezni argument `encoding`, ki poda kodno
+tabelo, v kateri je napisana datoteka. Privzeta vrednost tega argumenta je na
+Windowsu `cp1250`, kar je nekoliko zastarel standard, zato je dobra praksa
+uporaba parametra `encoding="utf-8"`, s čimer uporabimo Unicode, ki se danes
+uporablja skoraj povsod. Na macOS in Linux je vrednost `utf-8` že privzeta.
+
+### readlines()
+
+Z metodo `readlines()` dobimo seznam, v katerem so posamezne
+vrstice iz datoteke. 
+
+```{python}
+with open("datoteka.txt", mode="r", encoding="utf-8") as datoteka:
+    vrstice = datoteka.readlines()
+print(vrstice)
+```
+
+### zanka
+
+Po vrsticah datoteke lahko gremo z zanko for.
+
+```{python}
+vrstice = []
+with open("datoteka.txt", mode="r", encoding="utf-8") as datoteka:
+    for line in datoteka:
+        vrstice.append(line)
+print(vrstice)
+```
+
+## Mode
+
+je neobvezni argument funkcije `open()`. Privzeta vrednost je `mode="rt"`. Zato
+nam v zgornjih primerih ni bilo treba pisati `t` (je že privzet poleg druge
+črke, ki jo podamo (`r` ali `w`)). S posameznimi črkami povemo, kaj želimo z
+datoteko početi.
+
+oznaka | opis | opomba
+--- | ------------ | ------------
+r | branje | če ne obstaja, javi napako
+w | pisanje | če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke
+a | append | če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine
+x | ustvari datoteko, pisanje | če že obstaja, javi napako
+\+ | pisanje in branje
+t | text mode
+b | binary mode (npr. slike)
+
+Nekaj lastnosti je zbranih v spodnji tabeli:
+
+| lastnost &emsp; &emsp; \\ &emsp; &emsp; kombinacija črk   | r | r+ | x | x+ | w | w+ | a | a+ |
+|:--------------------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| branje                    | x | x  |   | x  |   | x  |   | x  |
+| pisanje                   |   | x  | x | x  | x | x  | x | x  |
+| datoteka mora obstajati   | x | x  |   |    |   |    |   |    |
+| datoteka ne sme obstajati |   |    | x | x  |   |    |   |    |
+| zbriše prejšnjo vsebino datoteke |   |    |   |    | x | x  |   |    |
+| pisanje na konec datoteke |   |    |   |    |   |    | x | x  |
+
+K zgornjim kombinacijam lahko dodamo še `t` ali `b`.

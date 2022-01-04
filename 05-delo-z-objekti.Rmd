@@ -1,0 +1,35 @@
+# Delo z objekti
+
+Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter6/
+
+```{css, echo=FALSE}
+.sourceCode .python {
+  margin-left: 2em;
+}
+
+pre {
+  margin-left: 2em !important;
+}
+```
+
+## Nekaj uporabnih metod za nize
+- `niz.count(znak)` vrne kolikokrat se znak pojavi v nizu
+- `niz.index(znak)` vrne indeks, na katerem se znak prvič pojavi
+- `niz.replace("prviniz", "druginiz")` vrne niz, kjer so vsi deli `niz` enaki "prviniz" zamenjani z "druginiz"
+- `niz.lower()` in `niz.upper()` vrne niz, kjer iz malih črk naredi velike ali obratno
+- `niz.islower()` in `niz.isupper()`
+- `niz.strip()` vrne niz, kjer z leve in desne strani odstrani "whitespace characters" (presledki, tab, `"\n"`). Lahko podamo neobvezni argument, s katerim določimo, katere znake 
+naj odstrani z leve in desne. Obstajata tudi metodi `rstrip()` in `lstrip()`, ki odstranjujeta le z leve in desne.
+```{python}
+print('    Hello, World    \n'.strip())
+```
+- `"locilo".join(seznam)` združi elemente seznama v niz in postavilo `locilo` 
+med posamezne elemente
+```{python}
+print('ABC'.join(['Moje', 'ime', 'je', 'Rok']))
+```
+- `niz.split(locilo)` vrne seznam, kjer so elementi posamezni deli niza, ki jih 
+ločuje `locilo`. Privzeta vrednost za `locilo` je presledek.
+```{python}
+print("Moje ime je Rok.".split())
+```
