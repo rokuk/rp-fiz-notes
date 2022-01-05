@@ -44,10 +44,12 @@ mape, v katero se želimo premakniti.
 
 Ukaz `dir` izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.
 
+Glej tudi: https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505
+
 ### Mape in datoteke v Pythonu
 
 Za delo z datotečnim sistemom je na voljo knjižnica `os`.
-Posamezne funkcije in njihovo uporabo najdete v uradni dokumentaciji. Nekaj 
+Posamezne funkcije in njihovo uporabo lahko poiščete v uradni dokumentaciji. Nekaj 
 najbolj uporabnih je `os.getcwd()`, `.chdir()`, `.listdir()`, `.mkdir()`,
 `.rename()`, `.remove()`, `.rmdir()`.
 
@@ -133,8 +135,8 @@ w | pisanje | če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke
 a | append | če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine
 x | ustvari datoteko, pisanje | če že obstaja, javi napako
 \+ | pisanje in branje
-t | text mode
-b | binary mode (npr. slike)
+t | za delo s tekstovnimi datotekami | npr. .txt, .csv, .tex, .html, .py
+b | za delo s binarnimi datotekami | npr. slike
 
 Nekaj lastnosti je zbranih v spodnji tabeli:
 

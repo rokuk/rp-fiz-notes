@@ -12,7 +12,14 @@ pre {
 }
 ```
 
-## Nekaj uporabnih metod za nize
+Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten 
+seznam je v uradni dokumentaciji: https://docs.python.org/3/library/stdtypes.html#string-methods
+
+Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo 
+narediti (npr. s `python count characters in string` hitro najdemo `count()` in primere uporabe).
+
+## Metode za nize
+
 - `niz.count(znak)` vrne kolikokrat se znak pojavi v nizu
 - `niz.index(znak)` vrne indeks, na katerem se znak prvič pojavi
 - `niz.replace(prviniz, druginiz)` vrne niz, kjer so vsi nizi enaki `prviniz` 

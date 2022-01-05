@@ -4,7 +4,8 @@ Stran je v delu.
 
 Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
-programov. Če imate težave, pišite asistentu ali postavite vprašanje na forumu.
+programov. Če imate težave, je opis problema dobro pogooglati, sicer pa pišite 
+asistentu ali postavite vprašanje na forumu.
 
 ## Namestitev Pythona
 
