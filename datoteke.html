@@ -34,7 +34,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="numpy.html"/>
+<link rel="prev" href="numpy-1.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -143,8 +143,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>O strani</a></li>
 <li class="chapter" data-level="1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html"><i class="fa fa-check"></i><b>1</b> Namestitev okolja za vaje</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-okolja-za-programiranje"><i class="fa fa-check"></i><b>1.1</b> Namestitev okolja za programiranje</a></li>
-<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.2</b> Pogoste težave</a></li>
+<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-pythona"><i class="fa fa-check"></i><b>1.1</b> Namestitev Pythona</a></li>
+<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-visual-studio-code"><i class="fa fa-check"></i><b>1.2</b> Namestitev Visual Studio Code</a></li>
+<li class="chapter" data-level="1.3" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#numpy"><i class="fa fa-check"></i><b>1.3</b> Numpy</a></li>
+<li class="chapter" data-level="1.4" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.4</b> Pogoste težave</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html"><i class="fa fa-check"></i><b>2</b> Uvod v Ptyhon</a></li>
 <li class="chapter" data-level="3" data-path="zanke.html"><a href="zanke.html"><i class="fa fa-check"></i><b>3</b> Zanke</a></li>
@@ -153,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nekaj-uporabnih-metod-za-nize"><i class="fa fa-check"></i><b>5.1</b> Nekaj uporabnih metod za nize</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
+<li class="chapter" data-level="6" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
 <li class="chapter" data-level="7" data-path="datoteke.html"><a href="datoteke.html"><i class="fa fa-check"></i><b>7</b> Datoteke</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="datoteke.html"><a href="datoteke.html#datotečni-sistem"><i class="fa fa-check"></i><b>7.1</b> Datotečni sistem</a>
@@ -243,10 +245,10 @@ najbolj uporabnih je <code>os.getcwd()</code>, <code>.chdir()</code>, <code>.lis
 <p>Datoteko odpremo v načinu za pisanje <code>mode="w"</code> in uporabimo funkcijo <code>write()</code>,
 ki zapiše niz v datoteko. Znak <code>\n</code> pomeni novo vrstico. Če želimo zapisati znak <code>\</code>
 moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pythonu: <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" class="uri">https://www.w3schools.com/python/gloss_python_escape_characters.asp</a></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="datoteke.html#cb8-1" aria-hidden="true" tabindex="-1"></a>potdodatoteke <span class="op">=</span> <span class="st">&quot;datoteka.txt&quot;</span></span>
-<span id="cb8-2"><a href="datoteke.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(potdodatoteke, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> dat:</span>
-<span id="cb8-3"><a href="datoteke.html#cb8-3" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;To je &quot;</span>)</span>
-<span id="cb8-4"><a href="datoteke.html#cb8-4" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;en stavek.</span><span class="ch">\n</span><span class="st">To je drugi.&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="datoteke.html#cb7-1" aria-hidden="true" tabindex="-1"></a>potdodatoteke <span class="op">=</span> <span class="st">&quot;datoteka.txt&quot;</span></span>
+<span id="cb7-2"><a href="datoteke.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(potdodatoteke, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> dat:</span>
+<span id="cb7-3"><a href="datoteke.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;To je &quot;</span>)</span>
+<span id="cb7-4"><a href="datoteke.html#cb7-4" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;en stavek.</span><span class="ch">\n</span><span class="st">To je drugi.&quot;</span>)</span></code></pre></div>
 <pre><code>## datoteka.txt
 ## To je en stavek.
 ## To je drugi.</code></pre>
@@ -259,9 +261,9 @@ odprto datoteko podamo kot parameter.</p>
 <h3><span class="header-section-number">7.3.1</span> read()</h3>
 <p>Datoteko odpremo v načinu za branje <code>mode="r"</code> in uporabimo metodo <code>read()</code>,
 ki vrne celotno vsebino datoteke naenkrat v obliki niza.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="datoteke.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb10-2"><a href="datoteke.html#cb10-2" aria-hidden="true" tabindex="-1"></a>    vsebina <span class="op">=</span> datoteka.read()</span>
-<span id="cb10-3"><a href="datoteke.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vsebina)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="datoteke.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb9-2"><a href="datoteke.html#cb9-2" aria-hidden="true" tabindex="-1"></a>    vsebina <span class="op">=</span> datoteka.read()</span>
+<span id="cb9-3"><a href="datoteke.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vsebina)</span></code></pre></div>
 <pre><code>## To je en stavek.
 ## To je drugi.</code></pre>
 <p>Uporaba argumenta <code>mode</code> je opisana na dnu strani.
@@ -275,19 +277,19 @@ uporablja skoraj povsod. Na macOS in Linux je vrednost <code>utf-8</code> že pr
 <h3><span class="header-section-number">7.3.2</span> readlines()</h3>
 <p>Z metodo <code>readlines()</code> dobimo seznam, v katerem so posamezne
 vrstice iz datoteke.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="datoteke.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb12-2"><a href="datoteke.html#cb12-2" aria-hidden="true" tabindex="-1"></a>    vrstice <span class="op">=</span> datoteka.readlines()</span>
-<span id="cb12-3"><a href="datoteke.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="datoteke.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb11-2"><a href="datoteke.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    vrstice <span class="op">=</span> datoteka.readlines()</span>
+<span id="cb11-3"><a href="datoteke.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
 <div id="zanka" class="section level3" number="7.3.3">
 <h3><span class="header-section-number">7.3.3</span> zanka</h3>
 <p>Po vrsticah datoteke lahko gremo z zanko for.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="datoteke.html#cb14-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
-<span id="cb14-2"><a href="datoteke.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb14-3"><a href="datoteke.html#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> datoteka:</span>
-<span id="cb14-4"><a href="datoteke.html#cb14-4" aria-hidden="true" tabindex="-1"></a>        vrstice.append(line)</span>
-<span id="cb14-5"><a href="datoteke.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="datoteke.html#cb13-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
+<span id="cb13-2"><a href="datoteke.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb13-3"><a href="datoteke.html#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> datoteka:</span>
+<span id="cb13-4"><a href="datoteke.html#cb13-4" aria-hidden="true" tabindex="-1"></a>        vrstice.append(line)</span>
+<span id="cb13-5"><a href="datoteke.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
 </div>
@@ -436,7 +438,7 @@ datoteko početi.</p>
           </div>
         </div>
       </div>
-<a href="numpy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numpy-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -457,7 +459,7 @@ gitbook.start({
 "twitter": true,
 "linkedin": false,
 "weibo": false,
-"instapaper": true,
+"instapaper": false,
 "vk": false,
 "whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]

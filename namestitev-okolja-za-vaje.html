@@ -143,8 +143,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>O strani</a></li>
 <li class="chapter" data-level="1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html"><i class="fa fa-check"></i><b>1</b> Namestitev okolja za vaje</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-okolja-za-programiranje"><i class="fa fa-check"></i><b>1.1</b> Namestitev okolja za programiranje</a></li>
-<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.2</b> Pogoste težave</a></li>
+<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-pythona"><i class="fa fa-check"></i><b>1.1</b> Namestitev Pythona</a></li>
+<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-visual-studio-code"><i class="fa fa-check"></i><b>1.2</b> Namestitev Visual Studio Code</a></li>
+<li class="chapter" data-level="1.3" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#numpy"><i class="fa fa-check"></i><b>1.3</b> Numpy</a></li>
+<li class="chapter" data-level="1.4" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.4</b> Pogoste težave</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html"><i class="fa fa-check"></i><b>2</b> Uvod v Ptyhon</a></li>
 <li class="chapter" data-level="3" data-path="zanke.html"><a href="zanke.html"><i class="fa fa-check"></i><b>3</b> Zanke</a></li>
@@ -153,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nekaj-uporabnih-metod-za-nize"><i class="fa fa-check"></i><b>5.1</b> Nekaj uporabnih metod za nize</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
+<li class="chapter" data-level="6" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
 <li class="chapter" data-level="7" data-path="datoteke.html"><a href="datoteke.html"><i class="fa fa-check"></i><b>7</b> Datoteke</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="datoteke.html"><a href="datoteke.html#datotečni-sistem"><i class="fa fa-check"></i><b>7.1</b> Datotečni sistem</a>
@@ -194,19 +196,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
 programov. Če imate težave, pišite asistentu ali postavite vprašanje na forumu.</p>
-<div id="namestitev-okolja-za-programiranje" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Namestitev okolja za programiranje</h2>
+<div id="namestitev-pythona" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Namestitev Pythona</h2>
 <ol style="list-style-type: decimal">
-<li>Namestimo Python (najbolje kar verzijo 3.10) s te strani (zavihek <code>Downloads</code>): <a href="https://www.python.org" class="uri">https://www.python.org</a>
+<li>Namestite Python (najbolje kar verzijo 3.10) s te strani (zavihek <code>Downloads</code>): <a href="https://www.python.org" class="uri">https://www.python.org</a>
 Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
-starejšo verzijo Pythona (npr. 3.8 ali manj). Najdete jo tule: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></li>
-<li>Namestimo Visual Studio Code: <a href="https://code.visualstudio.com" class="uri">https://code.visualstudio.com</a></li>
-<li>Namestimo Python extension - odpremo Visual Studio Code, na levi kliknemo na zavihek Extensions (ikona s štirimi kvadratki), vpišemo “Python”, kliknemo <code>Install</code>.
-Ko se namestitev konča</li>
+starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tule: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></li>
 </ol>
+<blockquote>
+<p>Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte
+“Add Python 3.x to PATH”.
+Nato nadaljujte z namestitvijo (opcija Install now).</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Preverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows)
+ali Terminal (macOS in Linux), ki je že na vašem računalniku. V okno, ki se odpre
+vpišite ukaz <code>python --version</code> in pritisnite tipko Enter. Če je Python
+uspešno nameščen, bi se vam v novi vrstici moralo izpisati <code>Python 3.x.y</code>
+(kjer je <code>x.y</code> verzija nameščenega Pythona).</li>
+</ol>
+<blockquote>
+<p>Če ste na Windowsu in ukaz <code>pyhon --version</code> ne izpiše verzije, temveč javi napako, poskusite ukaz <code>py --version</code>.</p>
+</blockquote>
 </div>
-<div id="pogoste-težave" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Pogoste težave</h2>
+<div id="namestitev-visual-studio-code" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Namestitev Visual Studio Code</h2>
+<ol start="3" style="list-style-type: decimal">
+<li>Namestite Visual Studio Code: <a href="https://code.visualstudio.com" class="uri">https://code.visualstudio.com</a></li>
+<li>Namestite Python extension - Odprite Visual Studio Code. Morda se vam bo V
+VSCode okonu pojavil zavihek z naslovom <code>Get Started</code>, ki ga lahko kar zaprete.
+Na levi kliknite na Extensions (ikona s štirimi kvadratki), vpišite <code>Python</code>,
+izberite <code>Python</code> in na desni kliknite <code>Install</code>. Morda se bo odprlo okno
+<code>Get Started</code>, ki ga lahko zaprete.</li>
+<li>Dobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali
+vso vašo kodo. V VSCode v meniju kliknite <code>Open Folder...</code> in izberite to mapo.
+Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek
+v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko
+(meni File &gt; New File), jo shranite (meni File &gt; Save) in jo poimenujte
+<code>test.py</code> (na Windowsu izberete <code>Save as type: Python</code>). Vsebina datoteke se vam
+odpre kot zavihek v VSCode. Vanj vpišite <code>print("Pozdravljen svet!")</code>. V desnem
+zgornjem kotu bi morali imeti gumb (<code>|&gt;</code>), s katerim lahko poženete napisani program.
+Če ga nimate, si lahko namestite extension z imenom <code>Code Runner</code>. Sicer lahko
+program poženete tudi tako, da desno kliknete v območju urejevalnika in nato v
+meniju, ki se pojavi izberete <code>Run Python File in Terminal</code>.</li>
+<li>Priporočam, da vklopite tudi “linter”. To je program, ki je del VSCode in
+v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak,
+mnoge pa zazna in vas nanje opozori, še preden poženete program.
+VSCode pritisnite Ctrl+Shift+P in vpišite “linter”, kliknite na
+<code>Python: Select Linter</code>. Pojavi se meni z različnimi možnostmi za različne linterje.
+Priporočam <code>flake8</code>, ki nas poleg napak opozori tudi na kršitve priporočil za stil
+PEP8. VSCode vas bo levo spodaj obvestil, da ta linter ni nameščen;
+namestite ga tako, da kliknete <code>Install</code> v tem obvestilu. Po nekaj sekundah bo nameščen.</li>
+</ol>
+<p>VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju.
+Več o tem v uradni dokumentaciji: <a href="https://code.visualstudio.com/docs/editor/codebasics" class="uri">https://code.visualstudio.com/docs/editor/codebasics</a></p>
+</div>
+<div id="numpy" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Numpy</h2>
+</div>
+<div id="pogoste-težave" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Pogoste težave</h2>
 
 </div>
 </div>
@@ -236,7 +285,7 @@ gitbook.start({
 "twitter": true,
 "linkedin": false,
 "weibo": false,
-"instapaper": true,
+"instapaper": false,
 "vk": false,
 "whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]

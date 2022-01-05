@@ -139,12 +139,6 @@ Ta spletna stran je dostopna na \url{https://python.rokuk.org} in
 
 Markdown koda za strani je dostopna na \url{https://github.com/rokuk/rp-fiz-notes}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
 \hypertarget{namestitev-okolja-za-vaje}{%
 \chapter{Namestitev okolja za vaje}\label{namestitev-okolja-za-vaje}}
 
@@ -154,22 +148,83 @@ Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
 programov. Če imate težave, pišite asistentu ali postavite vprašanje na forumu.
 
-\hypertarget{namestitev-okolja-za-programiranje}{%
-\section{Namestitev okolja za programiranje}\label{namestitev-okolja-za-programiranje}}
+\hypertarget{namestitev-pythona}{%
+\section{Namestitev Pythona}\label{namestitev-pythona}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Namestimo Python (najbolje kar verzijo 3.10) s te strani (zavihek \texttt{Downloads}): \url{https://www.python.org}
+  Namestite Python (najbolje kar verzijo 3.10) s te strani (zavihek \texttt{Downloads}): \url{https://www.python.org}
   Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
-  starejšo verzijo Pythona (npr. 3.8 ali manj). Najdete jo tule: \url{https://www.python.org/downloads/}
-\item
-  Namestimo Visual Studio Code: \url{https://code.visualstudio.com}
-\item
-  Namestimo Python extension - odpremo Visual Studio Code, na levi kliknemo na zavihek Extensions (ikona s štirimi kvadratki), vpišemo ``Python'', kliknemo \texttt{Install}.
-  Ko se namestitev konča
+  starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tule: \url{https://www.python.org/downloads/}
 \end{enumerate}
+
+\begin{quote}
+Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte
+``Add Python 3.x to PATH''.
+Nato nadaljujte z namestitvijo (opcija Install now).
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Preverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows)
+  ali Terminal (macOS in Linux), ki je že na vašem računalniku. V okno, ki se odpre
+  vpišite ukaz \texttt{python\ -\/-version} in pritisnite tipko Enter. Če je Python
+  uspešno nameščen, bi se vam v novi vrstici moralo izpisati \texttt{Python\ 3.x.y}
+  (kjer je \texttt{x.y} verzija nameščenega Pythona).
+\end{enumerate}
+
+\begin{quote}
+Če ste na Windowsu in ukaz \texttt{pyhon\ -\/-version} ne izpiše verzije, temveč javi napako, poskusite ukaz \texttt{py\ -\/-version}.
+\end{quote}
+
+\hypertarget{namestitev-visual-studio-code}{%
+\section{Namestitev Visual Studio Code}\label{namestitev-visual-studio-code}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Namestite Visual Studio Code: \url{https://code.visualstudio.com}
+\item
+  Namestite Python extension - Odprite Visual Studio Code. Morda se vam bo V
+  VSCode okonu pojavil zavihek z naslovom \texttt{Get\ Started}, ki ga lahko kar zaprete.
+  Na levi kliknite na Extensions (ikona s štirimi kvadratki), vpišite \texttt{Python},
+  izberite \texttt{Python} in na desni kliknite \texttt{Install}. Morda se bo odprlo okno
+  \texttt{Get\ Started}, ki ga lahko zaprete.
+\item
+  Dobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali
+  vso vašo kodo. V VSCode v meniju kliknite \texttt{Open\ Folder...} in izberite to mapo.
+  Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek
+  v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko
+  (meni File \textgreater{} New File), jo shranite (meni File \textgreater{} Save) in jo poimenujte
+  \texttt{test.py} (na Windowsu izberete \texttt{Save\ as\ type:\ Python}). Vsebina datoteke se vam
+  odpre kot zavihek v VSCode. Vanj vpišite \texttt{print("Pozdravljen\ svet!")}. V desnem
+  zgornjem kotu bi morali imeti gumb (\texttt{\textbar{}\textgreater{}}), s katerim lahko poženete napisani program.
+  Če ga nimate, si lahko namestite extension z imenom \texttt{Code\ Runner}. Sicer lahko
+  program poženete tudi tako, da desno kliknete v območju urejevalnika in nato v
+  meniju, ki se pojavi izberete \texttt{Run\ Python\ File\ in\ Terminal}.
+\item
+  Priporočam, da vklopite tudi ``linter''. To je program, ki je del VSCode in
+  v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak,
+  mnoge pa zazna in vas nanje opozori, še preden poženete program.
+  VSCode pritisnite Ctrl+Shift+P in vpišite ``linter'', kliknite na
+  \texttt{Python:\ Select\ Linter}. Pojavi se meni z različnimi možnostmi za različne linterje.
+  Priporočam \texttt{flake8}, ki nas poleg napak opozori tudi na kršitve priporočil za stil
+  PEP8. VSCode vas bo levo spodaj obvestil, da ta linter ni nameščen;
+  namestite ga tako, da kliknete \texttt{Install} v tem obvestilu. Po nekaj sekundah bo nameščen.
+\end{enumerate}
+
+VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju.
+Več o tem v uradni dokumentaciji: \url{https://code.visualstudio.com/docs/editor/codebasics}
+
+\hypertarget{numpy}{%
+\section{Numpy}\label{numpy}}
 
 \hypertarget{pogoste-teux17eave}{%
 \section{Pogoste težave}\label{pogoste-teux17eave}}
@@ -204,7 +259,8 @@ Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter6/}
 \item
   \texttt{niz.index(znak)} vrne indeks, na katerem se znak prvič pojavi
 \item
-  \texttt{niz.replace("prviniz",\ "druginiz")} vrne niz, kjer so vsi deli \texttt{niz} enaki ``prviniz'' zamenjani z ``druginiz''
+  \texttt{niz.replace(prviniz,\ druginiz)} vrne niz, kjer so vsi nizi enaki \texttt{prviniz}
+  zamenjani z \texttt{druginiz}
 \item
   \texttt{niz.lower()} in \texttt{niz.upper()} vrne niz, kjer iz malih črk naredi velike ali obratno
 \item
@@ -258,8 +314,8 @@ Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter6/}
 ## ['Moje', 'ime', 'je', 'Rok.']
 \end{verbatim}
 
-\hypertarget{numpy}{%
-\chapter{Numpy}\label{numpy}}
+\hypertarget{numpy-1}{%
+\chapter{Numpy}\label{numpy-1}}
 
 Stran je v delu.
 

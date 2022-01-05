@@ -1,12 +1,14 @@
 namestitev-okolja-za-vaje
-namestitev-okolja-za-programiranje
+namestitev-pythona
+namestitev-visual-studio-code
+numpy
 pogoste-težave
 uvod-v-ptyhon
 zanke
 seznami
 delo-z-objekti
 nekaj-uporabnih-metod-za-nize
-numpy
+numpy-1
 datoteke
 datotečni-sistem
 absolutna-in-relativna-pot

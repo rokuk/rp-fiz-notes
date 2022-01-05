@@ -35,7 +35,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   
   
 <link rel="prev" href="seznami.html"/>
-<link rel="next" href="numpy.html"/>
+<link rel="next" href="numpy-1.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -143,8 +143,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>O strani</a></li>
 <li class="chapter" data-level="1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html"><i class="fa fa-check"></i><b>1</b> Namestitev okolja za vaje</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-okolja-za-programiranje"><i class="fa fa-check"></i><b>1.1</b> Namestitev okolja za programiranje</a></li>
-<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.2</b> Pogoste težave</a></li>
+<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-pythona"><i class="fa fa-check"></i><b>1.1</b> Namestitev Pythona</a></li>
+<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-visual-studio-code"><i class="fa fa-check"></i><b>1.2</b> Namestitev Visual Studio Code</a></li>
+<li class="chapter" data-level="1.3" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#numpy"><i class="fa fa-check"></i><b>1.3</b> Numpy</a></li>
+<li class="chapter" data-level="1.4" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.4</b> Pogoste težave</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html"><i class="fa fa-check"></i><b>2</b> Uvod v Ptyhon</a></li>
 <li class="chapter" data-level="3" data-path="zanke.html"><a href="zanke.html"><i class="fa fa-check"></i><b>3</b> Zanke</a></li>
@@ -153,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nekaj-uporabnih-metod-za-nize"><i class="fa fa-check"></i><b>5.1</b> Nekaj uporabnih metod za nize</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
+<li class="chapter" data-level="6" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>6</b> Numpy</a></li>
 <li class="chapter" data-level="7" data-path="datoteke.html"><a href="datoteke.html"><i class="fa fa-check"></i><b>7</b> Datoteke</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="datoteke.html"><a href="datoteke.html#datotečni-sistem"><i class="fa fa-check"></i><b>7.1</b> Datotečni sistem</a>
@@ -205,25 +207,26 @@ pre {
 <ul>
 <li><code>niz.count(znak)</code> vrne kolikokrat se znak pojavi v nizu</li>
 <li><code>niz.index(znak)</code> vrne indeks, na katerem se znak prvič pojavi</li>
-<li><code>niz.replace("prviniz", "druginiz")</code> vrne niz, kjer so vsi deli <code>niz</code> enaki “prviniz” zamenjani z “druginiz”</li>
+<li><code>niz.replace(prviniz, druginiz)</code> vrne niz, kjer so vsi nizi enaki <code>prviniz</code>
+zamenjani z <code>druginiz</code></li>
 <li><code>niz.lower()</code> in <code>niz.upper()</code> vrne niz, kjer iz malih črk naredi velike ali obratno</li>
 <li><code>niz.islower()</code> in <code>niz.isupper()</code></li>
 <li><code>niz.strip()</code> vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, <code>"\n"</code>). Lahko podamo neobvezni argument, s katerim določimo, katere znake
 naj odstrani z leve in desne. Obstajata tudi metodi <code>rstrip()</code> in <code>lstrip()</code>, ki odstranjujeta le z leve in desne.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="delo-z-objekti.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="delo-z-objekti.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
 <pre><code>## Hello, World</code></pre>
 <ul>
 <li><code>"locilo".join(seznam)</code> združi elemente seznama v niz in postavilo <code>locilo</code>
 med posamezne elemente</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="delo-z-objekti.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="delo-z-objekti.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
 <pre><code>## MojeABCimeABCjeABCRok</code></pre>
 <ul>
 <li><code>niz.split(locilo)</code> vrne seznam, kjer so elementi posamezni deli niza, ki jih
 ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presledek.</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="delo-z-objekti.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="delo-z-objekti.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
 <pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
 
 </div>
@@ -234,7 +237,7 @@ ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presled
         </div>
       </div>
 <a href="seznami.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="numpy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="numpy-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -254,7 +257,7 @@ gitbook.start({
 "twitter": true,
 "linkedin": false,
 "weibo": false,
-"instapaper": true,
+"instapaper": false,
 "vk": false,
 "whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
