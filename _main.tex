@@ -146,7 +146,8 @@ Stran je v delu.
 
 Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
-programov. Če imate težave, pišite asistentu ali postavite vprašanje na forumu.
+programov. Če imate težave, je opis problema dobro pogooglati, sicer pa pišite
+asistentu ali postavite vprašanje na forumu.
 
 \hypertarget{namestitev-pythona}{%
 \section{Namestitev Pythona}\label{namestitev-pythona}}
@@ -249,8 +250,14 @@ Stran je v delu.
 
 Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter6/}
 
-\hypertarget{nekaj-uporabnih-metod-za-nize}{%
-\section{Nekaj uporabnih metod za nize}\label{nekaj-uporabnih-metod-za-nize}}
+Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten
+seznam je v uradni dokumentaciji: \url{https://docs.python.org/3/library/stdtypes.html\#string-methods}
+
+Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo
+narediti (npr. s \texttt{python\ count\ characters\ in\ string} hitro najdemo \texttt{count()} in primere uporabe).
+
+\hypertarget{metode-za-nize}{%
+\section{Metode za nize}\label{metode-za-nize}}
 
 \begin{itemize}
 \tightlist
@@ -370,11 +377,13 @@ mape, v katero se želimo premakniti.
 
 Ukaz \texttt{dir} izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.
 
+Glej tudi: \url{https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505}
+
 \hypertarget{mape-in-datoteke-v-pythonu}{%
 \subsection{Mape in datoteke v Pythonu}\label{mape-in-datoteke-v-pythonu}}
 
 Za delo z datotečnim sistemom je na voljo knjižnica \texttt{os}.
-Posamezne funkcije in njihovo uporabo najdete v uradni dokumentaciji. Nekaj
+Posamezne funkcije in njihovo uporabo lahko poiščete v uradni dokumentaciji. Nekaj
 najbolj uporabnih je \texttt{os.getcwd()}, \texttt{.chdir()}, \texttt{.listdir()}, \texttt{.mkdir()},
 \texttt{.rename()}, \texttt{.remove()}, \texttt{.rmdir()}.
 
@@ -490,8 +499,8 @@ w & pisanje & če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke 
 a & append & če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine \\
 x & ustvari datoteko, pisanje & če že obstaja, javi napako \\
 + & pisanje in branje & \\
-t & text mode & \\
-b & binary mode (npr. slike) & \\
+t & za delo s tekstovnimi datotekami & npr. .txt, .csv, .tex, .html, .py \\
+b & za delo s binarnimi datotekami & npr. slike \\
 \bottomrule
 \end{longtable}
 

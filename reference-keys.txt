@@ -7,7 +7,7 @@ uvod-v-ptyhon
 zanke
 seznami
 delo-z-objekti
-nekaj-uporabnih-metod-za-nize
+metode-za-nize
 numpy-1
 datoteke
 datotečni-sistem
