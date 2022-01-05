@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="<p>Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike
 na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="your book url like https://rokuk.github.io/rp-fiz-notes" />
   
@@ -18,7 +18,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="<p>Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike
 na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
@@ -34,8 +34,8 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="namestitev-okolja-za-vaje.html"/>
-<link rel="next" href="zanke.html"/>
+<link rel="prev" href="seznami.html"/>
+<link rel="next" href="numpy.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -188,18 +188,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="uvod-v-ptyhon" class="section level1" number="2">
-<h1><span class="header-section-number">Poglavje 2</span> Uvod v Ptyhon</h1>
-<p>Stran je v delu.</p>
+<div id="delo-z-objekti" class="section level1" number="5">
+<h1><span class="header-section-number">Poglavje 5</span> Delo z objekti</h1>
+<p>Gradivo za to poglavje je <a href="https://automatetheboringstuff.com/2e/chapter6/" class="uri">https://automatetheboringstuff.com/2e/chapter6/</a></p>
+<style type="text/css">
+.sourceCode .python {
+  margin-left: 2em;
+}
 
+pre {
+  margin-left: 2em !important;
+}
+</style>
+<div id="nekaj-uporabnih-metod-za-nize" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Nekaj uporabnih metod za nize</h2>
+<ul>
+<li><code>niz.count(znak)</code> vrne kolikokrat se znak pojavi v nizu</li>
+<li><code>niz.index(znak)</code> vrne indeks, na katerem se znak prvič pojavi</li>
+<li><code>niz.replace("prviniz", "druginiz")</code> vrne niz, kjer so vsi deli <code>niz</code> enaki “prviniz” zamenjani z “druginiz”</li>
+<li><code>niz.lower()</code> in <code>niz.upper()</code> vrne niz, kjer iz malih črk naredi velike ali obratno</li>
+<li><code>niz.islower()</code> in <code>niz.isupper()</code></li>
+<li><code>niz.strip()</code> vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, <code>"\n"</code>). Lahko podamo neobvezni argument, s katerim določimo, katere znake
+naj odstrani z leve in desne. Obstajata tudi metodi <code>rstrip()</code> in <code>lstrip()</code>, ki odstranjujeta le z leve in desne.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="delo-z-objekti.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
+<pre><code>## Hello, World</code></pre>
+<ul>
+<li><code>"locilo".join(seznam)</code> združi elemente seznama v niz in postavilo <code>locilo</code>
+med posamezne elemente</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="delo-z-objekti.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
+<pre><code>## MojeABCimeABCjeABCRok</code></pre>
+<ul>
+<li><code>niz.split(locilo)</code> vrne seznam, kjer so elementi posamezni deli niza, ki jih
+ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presledek.</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="delo-z-objekti.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
+<pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="namestitev-okolja-za-vaje.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="zanke.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seznami.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numpy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -230,7 +265,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/02-uvod-v-python.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/05-delo-z-objekti.Rmd",
 "text": "Edit"
 },
 "history": {

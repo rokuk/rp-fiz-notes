@@ -117,7 +117,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk}
-\date{2022-01-02}
+\date{2022-01-05}
 
 \begin{document}
 \maketitle
@@ -134,6 +134,11 @@ Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. l
 
 Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.
 
+Ta spletna stran je dostopna na \url{https://python.rokuk.org} in
+\url{https://rokuk.github.io/rp-fiz-notes}
+
+Markdown koda za strani je dostopna na \url{https://github.com/rokuk/rp-fiz-notes}
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
@@ -143,69 +148,313 @@ Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh o
 \hypertarget{namestitev-okolja-za-vaje}{%
 \chapter{Namestitev okolja za vaje}\label{namestitev-okolja-za-vaje}}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+Stran je v delu.
 
-\hypertarget{ptyhon}{%
-\section{Ptyhon}\label{ptyhon}}
+Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
+nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
+programov. Če imate težave, pišite asistentu ali postavite vprašanje na forumu.
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\hypertarget{namestitev-okolja-za-programiranje}{%
+\section{Namestitev okolja za programiranje}\label{namestitev-okolja-za-programiranje}}
 
-\hypertarget{an-unnumbered-section}{%
-\subsection*{An unnumbered section}\label{an-unnumbered-section}}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Namestimo Python (najbolje kar verzijo 3.10) s te strani (zavihek \texttt{Downloads}): \url{https://www.python.org}
+  Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
+  starejšo verzijo Pythona (npr. 3.8 ali manj). Najdete jo tule: \url{https://www.python.org/downloads/}
+\item
+  Namestimo Visual Studio Code: \url{https://code.visualstudio.com}
+\item
+  Namestimo Python extension - odpremo Visual Studio Code, na levi kliknemo na zavihek Extensions (ikona s štirimi kvadratki), vpišemo ``Python'', kliknemo \texttt{Install}.
+  Ko se namestitev konča
+\end{enumerate}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\hypertarget{pogoste-teux17eave}{%
+\section{Pogoste težave}\label{pogoste-teux17eave}}
 
 \hypertarget{uvod-v-ptyhon}{%
 \chapter{Uvod v Ptyhon}\label{uvod-v-ptyhon}}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
-
-\hypertarget{funkcije}{%
-\section{Funkcije}\label{funkcije}}
+Stran je v delu.
 
 \hypertarget{zanke}{%
 \chapter{Zanke}\label{zanke}}
 
+Stran je v delu.
+
 \hypertarget{seznami}{%
 \chapter{Seznami}\label{seznami}}
+
+Stran je v delu.
+
+\hypertarget{delo-z-objekti}{%
+\chapter{Delo z objekti}\label{delo-z-objekti}}
+
+Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter6/}
+
+\hypertarget{nekaj-uporabnih-metod-za-nize}{%
+\section{Nekaj uporabnih metod za nize}\label{nekaj-uporabnih-metod-za-nize}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{niz.count(znak)} vrne kolikokrat se znak pojavi v nizu
+\item
+  \texttt{niz.index(znak)} vrne indeks, na katerem se znak prvič pojavi
+\item
+  \texttt{niz.replace("prviniz",\ "druginiz")} vrne niz, kjer so vsi deli \texttt{niz} enaki ``prviniz'' zamenjani z ``druginiz''
+\item
+  \texttt{niz.lower()} in \texttt{niz.upper()} vrne niz, kjer iz malih črk naredi velike ali obratno
+\item
+  \texttt{niz.islower()} in \texttt{niz.isupper()}
+\item
+  \texttt{niz.strip()} vrne niz, kjer z leve in desne strani odstrani ``whitespace characters'' (presledki, tab, \texttt{"\textbackslash{}n"}). Lahko podamo neobvezni argument, s katerim določimo, katere znake
+  naj odstrani z leve in desne. Obstajata tudi metodi \texttt{rstrip()} in \texttt{lstrip()}, ki odstranjujeta le z leve in desne.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}    Hello, World    }\CharTok{\textbackslash{}n}\StringTok{\textquotesingle{}}\NormalTok{.strip())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Hello, World
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{"locilo".join(seznam)} združi elemente seznama v niz in postavilo \texttt{locilo}
+  med posamezne elemente
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}ABC\textquotesingle{}}\NormalTok{.join([}\StringTok{\textquotesingle{}Moje\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}ime\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}je\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Rok\textquotesingle{}}\NormalTok{]))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## MojeABCimeABCjeABCRok
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{niz.split(locilo)} vrne seznam, kjer so elementi posamezni deli niza, ki jih
+  ločuje \texttt{locilo}. Privzeta vrednost za \texttt{locilo} je presledek.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Moje ime je Rok."}\NormalTok{.split())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['Moje', 'ime', 'je', 'Rok.']
+\end{verbatim}
 
 \hypertarget{numpy}{%
 \chapter{Numpy}\label{numpy}}
 
+Stran je v delu.
+
 \hypertarget{datoteke}{%
 \chapter{Datoteke}\label{datoteke}}
 
-\hypertarget{publishing}{%
-\section{Publishing}\label{publishing}}
+Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter9/}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+\hypertarget{datoteux10dni-sistem}{%
+\section{Datotečni sistem}\label{datoteux10dni-sistem}}
 
-\hypertarget{pages}{%
-\section{404 pages}\label{pages}}
+Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, \ldots).
+Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu
+imamo korensko mapo (root folder). Na Linux in macOS je to \texttt{/} na Windowsu pa
+\texttt{C:\textbackslash{}}, kjer je \texttt{C} ime particije.
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+Prostor, ki je na voljo na nosilcu lahko razdelimo
+na več ločenih delov, ki jim rečemo particije. npr. trdi disk z
+1000 GB bi lahko razdelili na dve particiji \texttt{C} z 100 GB in \texttt{D} z 900 GB). Vsaka
+particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko
+(to velja za Windows, drugje je drugače). npr.
+USB ključi so pogosto pod \texttt{E} ali \texttt{F}.
 
-\hypertarget{metadata-for-sharing}{%
-\section{Metadata for sharing}\label{metadata-for-sharing}}
+\hypertarget{absolutna-in-relativna-pot}{%
+\subsection{Absolutna in relativna pot}\label{absolutna-in-relativna-pot}}
 
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+Vsaki datoteki ustreza ena absolutna pot. To je ``naslov'', pod katero jo lahko najdemo.
+Primer: \texttt{C:\textbackslash{}eggs\textbackslash{}bacon\textbackslash{}spam.txt}. Pot vsebuje vse mape, v katerih se datoteka
+nahaja, ločene z \texttt{\textbackslash{}} (na Windowsu; na Linux in macOS je ločilo \texttt{/}), ime datoteke,
+piko in končnico datoteke, ki določa njen tip.
 
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
+Relativna pot do datoteke je pot glede na neko drugo mapo. Za zgornji primer:
+glede na mapo \texttt{eggs} je relativna pot do datoteke \texttt{.\textbackslash{}bacon\textbackslash{}spam.txt}, kjer pika
+pomeni trenutno mapo. Če bi imeli mapo \texttt{tomatoes} v mapi \texttt{C:} in v njej datoteko \texttt{dat.txt},
+bi bila relativna pot glede na \texttt{eggs} enaka \texttt{..\textbackslash{}tomatoes\textbackslash{}dat.txt}. Dve piki pomenita
+eno mapo višje v hierarhiji (parent folder) glede na trenutno mapo.
+Če bi želeli iti dve mapi višje bi uporabili \texttt{..\textbackslash{}..\textbackslash{}nekadrugamapa}, itd.
 
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
+Za podrobnejši razlago in več primerov glej gradivo: \url{https://automatetheboringstuff.com/2e/chapter9/}
 
-Read more about the features of this output format here:
+\hypertarget{delo-z-ukaznim-pozivom}{%
+\subsection{Delo z ukaznim pozivom}\label{delo-z-ukaznim-pozivom}}
 
-\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
+Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v
+nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD).
+Ta mapa je vedno napisana na začetku vrstice.
+V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene
+s presledki. Ukaz izvedemo s tipko Enter.
 
-Or use:
+V neko mapo se lahko premaknemo z ukazom \texttt{cd}, ki mu kot argument podamo pot do
+mape, v katero se želimo premakniti.
+
+Ukaz \texttt{dir} izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.
+
+\hypertarget{mape-in-datoteke-v-pythonu}{%
+\subsection{Mape in datoteke v Pythonu}\label{mape-in-datoteke-v-pythonu}}
+
+Za delo z datotečnim sistemom je na voljo knjižnica \texttt{os}.
+Posamezne funkcije in njihovo uporabo najdete v uradni dokumentaciji. Nekaj
+najbolj uporabnih je \texttt{os.getcwd()}, \texttt{.chdir()}, \texttt{.listdir()}, \texttt{.mkdir()},
+\texttt{.rename()}, \texttt{.remove()}, \texttt{.rmdir()}.
+
+Za delo s potmi je uporabna knjižnica \texttt{os.path}, kjer so uporabne funkcije
+\texttt{os.path.join()}, \texttt{.exists()}, \texttt{.abspath()}, \texttt{.relpath()}.
+
+\hypertarget{pisanje}{%
+\section{Pisanje}\label{pisanje}}
+
+Datoteko odpremo v načinu za pisanje \texttt{mode="w"} in uporabimo funkcijo \texttt{write()},
+ki zapiše niz v datoteko. Znak \texttt{\textbackslash{}n} pomeni novo vrstico. Če želimo zapisati znak \texttt{\textbackslash{}}
+moramo v Pythonu napisati \texttt{\textbackslash{}\textbackslash{}}. Več o uporabi \texttt{\textbackslash{}} v Pythonu: \url{https://www.w3schools.com/python/gloss_python_escape_characters.asp}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
+\NormalTok{potdodatoteke }\OperatorTok{=} \StringTok{"datoteka.txt"}
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{(potdodatoteke, mode}\OperatorTok{=}\StringTok{"w"}\NormalTok{, encoding}\OperatorTok{=}\StringTok{"utf{-}8"}\NormalTok{) }\ImportTok{as}\NormalTok{ dat:}
+\NormalTok{    dat.write(}\StringTok{"To je "}\NormalTok{)}
+\NormalTok{    dat.write(}\StringTok{"en stavek.}\CharTok{\textbackslash{}n}\StringTok{To je drugi."}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## datoteka.txt
+## To je en stavek.
+## To je drugi.
+\end{verbatim}
+
+Namesto \texttt{dat.write("niz")} se lahko uporablja tudi \texttt{print("niz",\ file=dat)}, kjer
+odprto datoteko podamo kot parameter.
+
+\hypertarget{branje}{%
+\section{Branje}\label{branje}}
+
+\hypertarget{read}{%
+\subsection{read()}\label{read}}
+
+Datoteko odpremo v načinu za branje \texttt{mode="r"} in uporabimo metodo \texttt{read()},
+ki vrne celotno vsebino datoteke naenkrat v obliki niza.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{(}\StringTok{"datoteka.txt"}\NormalTok{, mode}\OperatorTok{=}\StringTok{"r"}\NormalTok{, encoding}\OperatorTok{=}\StringTok{"utf{-}8"}\NormalTok{) }\ImportTok{as}\NormalTok{ datoteka:}
+\NormalTok{    vsebina }\OperatorTok{=}\NormalTok{ datoteka.read()}
+\BuiltInTok{print}\NormalTok{(vsebina)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## To je en stavek.
+## To je drugi.
+\end{verbatim}
+
+Uporaba argumenta \texttt{mode} je opisana na dnu strani.
+Klicu \texttt{open} lahko podamo tudi neobvezni argument \texttt{encoding}, ki poda kodno
+tabelo, v kateri je napisana datoteka. Privzeta vrednost tega argumenta je na
+Windowsu \texttt{cp1250}, kar je nekoliko zastarel standard, zato je dobra praksa
+uporaba parametra \texttt{encoding="utf-8"}, s čimer uporabimo Unicode, ki se danes
+uporablja skoraj povsod. Na macOS in Linux je vrednost \texttt{utf-8} že privzeta.
+
+\hypertarget{readlines}{%
+\subsection{readlines()}\label{readlines}}
+
+Z metodo \texttt{readlines()} dobimo seznam, v katerem so posamezne
+vrstice iz datoteke.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{(}\StringTok{"datoteka.txt"}\NormalTok{, mode}\OperatorTok{=}\StringTok{"r"}\NormalTok{, encoding}\OperatorTok{=}\StringTok{"utf{-}8"}\NormalTok{) }\ImportTok{as}\NormalTok{ datoteka:}
+\NormalTok{    vrstice }\OperatorTok{=}\NormalTok{ datoteka.readlines()}
+\BuiltInTok{print}\NormalTok{(vrstice)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['To je en stavek.\n', 'To je drugi.']
+\end{verbatim}
+
+\hypertarget{zanka}{%
+\subsection{zanka}\label{zanka}}
+
+Po vrsticah datoteke lahko gremo z zanko for.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{vrstice }\OperatorTok{=}\NormalTok{ []}
+\ControlFlowTok{with} \BuiltInTok{open}\NormalTok{(}\StringTok{"datoteka.txt"}\NormalTok{, mode}\OperatorTok{=}\StringTok{"r"}\NormalTok{, encoding}\OperatorTok{=}\StringTok{"utf{-}8"}\NormalTok{) }\ImportTok{as}\NormalTok{ datoteka:}
+    \ControlFlowTok{for}\NormalTok{ line }\KeywordTok{in}\NormalTok{ datoteka:}
+\NormalTok{        vrstice.append(line)}
+\BuiltInTok{print}\NormalTok{(vrstice)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['To je en stavek.\n', 'To je drugi.']
+\end{verbatim}
+
+\hypertarget{mode}{%
+\section{Mode}\label{mode}}
+
+je neobvezni argument funkcije \texttt{open()}. Privzeta vrednost je \texttt{mode="rt"}. Zato
+nam v zgornjih primerih ni bilo treba pisati \texttt{t} (je že privzet poleg druge
+črke, ki jo podamo (\texttt{r} ali \texttt{w})). S posameznimi črkami povemo, kaj želimo z
+datoteko početi.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+oznaka & opis & opomba \\
+\midrule
+\endhead
+r & branje & če ne obstaja, javi napako \\
+w & pisanje & če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke \\
+a & append & če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine \\
+x & ustvari datoteko, pisanje & če že obstaja, javi napako \\
++ & pisanje in branje & \\
+t & text mode & \\
+b & binary mode (npr. slike) & \\
+\bottomrule
+\end{longtable}
+
+Nekaj lastnosti je zbranih v spodnji tabeli:
+
+\begin{longtable}[]{@{}lcccccccc@{}}
+\toprule
+lastnost     \textbackslash{}     kombinacija črk & r & r+ & x & x+ & w & w+ & a & a+ \\
+\midrule
+\endhead
+branje & x & x & & x & & x & & x \\
+pisanje & & x & x & x & x & x & x & x \\
+datoteka mora obstajati & x & x & & & & & & \\
+datoteka ne sme obstajati & & & x & x & & & & \\
+zbriše prejšnjo vsebino datoteke & & & & & x & x & & \\
+pisanje na konec datoteke & & & & & & & x & x \\
+\bottomrule
+\end{longtable}
+
+K zgornjim kombinacijam lahko dodamo še \texttt{t} ali \texttt{b}.
 
 \end{document}

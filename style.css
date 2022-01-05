@@ -64,3 +64,7 @@ h1.title {
 .book .book-body .page-wrapper .page-inner section.normal strong {
   font-weight: 600;
 }
+
+.sourceCode .python {
+  margin-bottom: 0.4em !important;
+}
