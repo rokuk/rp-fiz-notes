@@ -15,7 +15,8 @@ pre {
 ## Nekaj uporabnih metod za nize
 - `niz.count(znak)` vrne kolikokrat se znak pojavi v nizu
 - `niz.index(znak)` vrne indeks, na katerem se znak prvič pojavi
-- `niz.replace("prviniz", "druginiz")` vrne niz, kjer so vsi deli `niz` enaki "prviniz" zamenjani z "druginiz"
+- `niz.replace(prviniz, druginiz)` vrne niz, kjer so vsi nizi enaki `prviniz` 
+zamenjani z `druginiz`
 - `niz.lower()` in `niz.upper()` vrne niz, kjer iz malih črk naredi velike ali obratno
 - `niz.islower()` in `niz.isupper()`
 - `niz.strip()` vrne niz, kjer z leve in desne strani odstrani "whitespace characters" (presledki, tab, `"\n"`). Lahko podamo neobvezni argument, s katerim določimo, katere znake 

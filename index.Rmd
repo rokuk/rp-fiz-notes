@@ -24,7 +24,3 @@ https://rokuk.github.io/rp-fiz-notes
 
 Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
-
