@@ -8,6 +8,8 @@ bookdown::gitbook:
       scroll_hightlight: true
     edit: https://github.com/rokuk/rp-fiz-notes/blob/main/%s
     download: ["pdf", "epub"]
+  includes:
+    after_body: cfbeacon.html
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
