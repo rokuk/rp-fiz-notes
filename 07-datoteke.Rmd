@@ -54,7 +54,7 @@ najbolj uporabnih je `os.getcwd()`, `.chdir()`, `.listdir()`, `.mkdir()`,
 `.rename()`, `.remove()`, `.rmdir()`.
 
 Za delo s potmi je uporabna knjižnica `os.path`, kjer so uporabne funkcije
-`os.path.join()`, `.exists()`, `.abspath()`, `.relpath()`.
+`os.path.join()`, `.exists()`, `.abspath()`, `.relpath()`, `.isfile()`.
 
 ## Pisanje
 
