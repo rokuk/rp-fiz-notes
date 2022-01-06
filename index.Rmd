@@ -22,5 +22,6 @@ Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh o
 Ta spletna stran je dostopna na https://python.rokuk.org in 
 https://rokuk.github.io/rp-fiz-notes
 
-Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes
+Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes 
+po licenci [GNU GPLv2](https://github.com/rokuk/rp-fiz-notes/blob/main/LICENSE).
 
