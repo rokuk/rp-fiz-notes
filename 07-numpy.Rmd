@@ -1,0 +1,70 @@
+# Numpy
+
+Gradivo za to poglavje je https://numpy.org/doc/stable/user/absolute_beginners.html 
+ter https://numpy.org/doc/stable/user/quickstart.html
+
+Navadnen seznam pretvorimo v Numpy seznam s funkcijo `array(seznam)`.
+
+```{python, eval=FALSE}
+import numpy as np
+a = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+print(a)
+print(a.shape)
+print(a.ndim)
+print(a.size)
+```
+
+```
+## [[1 2 3 4]
+##  [5 6 7 8]]
+## (2, 4)
+## 2
+## 8
+```
+
+Sezname lahko združimo s `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam.
+
+## Ustvarjanje tabel
+
+- `np.zeros(oblika)` vrne tabelo ničel; `oblika` je nabor celih števil, ki predstavlja obliko tabele
+- `np.ones(oblika)` vrne tabelo enic
+- `np.linspace(zacetek, konec, num)` vrne seznam `num` števil z intervala od `zacetek` do `konec`, kjer so elementi ekvidistančni
+- `np.arange(zacetek, konec, korak)` vrne seznam od vrednosti parametra `zacetek` (neobvezen, privzeto je 0) do `konec` s koraki `korak` (neobvezen, privzeto je 1)
+- `np.fromfunction(ime_funkcije, oblika)` ustvari tabelo z obliko `oblika`, kjer 
+vsak element v tabeli izračuna s klicom funkcije `funkcija`; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
+- `seznam.reshape(oblika)` spremeni obliko seznama
+
+## Filtriranje
+
+Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih 
+(`zacetek:konec:korak`), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.
+```{python}
+import numpy as np
+tabela = np.arange(0, 49).reshape(7, 7)
+print(tabela)
+print(tabela[0:4,2:7:2])
+```
+
+Če želimo vse elemente v neki dimenziji napišemo `:`. Tako lahko dobimo posamezne stolpce.
+```{python}
+print(tabela[:,3])
+```
+
+## Uporabne funkcije
+
+Glej predvsem uradno dokumentacijo: https://numpy.org/doc/stable/reference/routines.sort.html
+
+Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe. 
+Pozor: True se obnaša kot 1 in False se obnaša kot 0.
+
+- `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej
+- `np.flatten(tabela)` vrne "flat" obliko tabele (enodimenzionalni seznam zaporednih elementov)
+- `np.flatnonzero(tabela)` vrne indekse neničelnih elementov v "flat" obliki tabele (zaporedni indeks)
+- `np.where(pogoj, x, y)` vrne elemente iz `x`, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz `y`; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji
+
+## Matematika
+
+- `np.sum(tabela)`
+- `np.prod(tabela)`
+- `np.log(tabela)`
+- `np.exp(tabela)`

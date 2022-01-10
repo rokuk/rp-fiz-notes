@@ -1,3 +1,0 @@
-# Numpy
-
-Stran je v delu.

@@ -1,7 +1,5 @@
 # Namestitev okolja za vaje
 
-Stran je v delu.
-
 Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
 programov. Če imate težave, je opis problema dobro pogooglati, sicer pa pišite 
@@ -58,4 +56,23 @@ Več o tem v uradni dokumentaciji: https://code.visualstudio.com/docs/editor/cod
 
 ## Numpy
 
+7. Najprej v Ukazni poziv / Terminal vpišite in izvršite ukaz `python -m pip --version` 
+(če ste na Windowsu boste morda dobili napako v stilu "python ne obstaja", 
+v tem primeru poskusite izvršiti ukaz `py -m pip --version`).
+Izpisati bi se vam moralo nekaj podobnega `pip X.Y.Z from ... (python 3.N.N)`. 
+
+> Več o tem na https://pip.pypa.io/en/stable/getting-started/
+
+Če se vam izpiše to, lahko nadaljujete na 8. korak, sicer berite naprej. 
+Če se vam izpiše nekaj v stilu "pip ne obstaja" ali "command not found", 
+morate namestiti Pythonov modul `pip`. To naredite z ukazom 
+`python -m ensurepip --upgrade` (oz. na Windowsu morda `py -m ensurepip --upgrade`).
+
+> Več informacij o nameščanju modula `pip` je na https://pip.pypa.io/en/stable/installation/#python
+
+8. Namestite Pythonov modul numpy. To naredite z ukazom `python -m pip install numpy` 
+(oz. na Windowsu bo morda treba uporabiti `py -m pip install numpy`).
+
 ## Pogoste težave
+
+Če imate na računalniku nameščenih več verzij Pythona (to so npr. vsi računalniki z macOS) se lahko "python" v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli .py datoteko in kliknete na "Python 3.x.y" v spodnjem levem vogalu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz `python3.10 -m pip install numpy`, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz `py -3.10 -m pip install numpy`.

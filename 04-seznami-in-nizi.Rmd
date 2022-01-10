@@ -1,3 +1,157 @@
-# Seznami
+# Seznami in nizi
 
-Stran je v delu.
+```{css, echo=FALSE}
+#nekaj-uporabnih-funkcij div.sourceCode {
+  margin-left: 2em !important;
+}
+
+#nekaj-uporabnih-funkcij pre:not(.sourceCode) {
+  margin-left: 2em !important;
+}
+```
+
+Gradiva za to poglavje so: 
+
+- https://automatetheboringstuff.com/2e/chapter4/ 
+- poglavje `Tabele` v https://lusy.fri.uni-lj.si/ucbenik/book/1204/index.html 
+- poglavje `Nizi` v https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html
+
+## Skupne lastnosti
+
+### Indeksiranje
+
+Indeksi morajo biti cela števila, sicer pride do napake. Negativni indeksi so 
+indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa).
+
+```{python, eval=FALSE}
+spam = ['cat', 'bat', 42, True, 'dog']
+print(spam[2])
+print(spam[-2])
+```
+
+```
+## 42
+## True
+```
+
+Podsezname dobimo z sintakso `seznam[zacetni_indeks:koncni_indeks:korak]`. Nobeno
+od teh treh števil ni obvezno.
+
+```{python eval=FALSE}
+spam = ['cat', 'bat', 42, True, 'dog']
+print(spam[1:4:2])
+print(spam[:2])
+```
+
+```
+## ['bat', True]
+## ['cat', 'bat']
+```
+
+### Združevanje
+
+Nize in sezname staknemo s plusom.
+
+```{python, eval=FALSE}
+niz1 = "a"
+niz2 = "b"
+print(niz1 + niz2)
+sez1 = [1, 2, 3]
+sez2 = [4, 5, 6]
+print(sez1 + sez2)
+```
+
+```
+## ab
+## [1, 2, 3, 4, 5, 6]
+```
+
+Sezname lahko združimo tudi z metodo `extend`. Za zgornji primer: `niz1.extend(niz2)`.
+
+### Preverjanje vsebovanja
+
+S ključno besedo `in` preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z `in` preverimo ali niz vsebuje nek znak.
+
+```{python, eval=FALSE}
+print('cat' in ['cat', 'bat', 42, True, 'dog'])
+print('c' in 'beseda')
+```
+
+```
+## True
+## False
+```
+
+### Sprehod po elementih
+
+Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
+
+```{python}
+spam = ['cat', 'bat', 42, True, 'dog']
+for el in spam:
+    print(el)
+```
+
+```{python}
+spam = "abc"
+for el in spam:
+    print(el)
+```
+
+## Spreminjanje
+
+Vrednost elementa v seznamu lahko spremenimo.
+
+```{python}
+spam = ['cat', 'bat', 42, True, 'dog']
+spam[1] = 'aardvark'
+print(spam)
+```
+
+Elemente seznama lahko zbrišemo s ključno besedo `del`.
+
+```{python}
+spam = ['cat', 'bat', 42, True, 'dog']
+del spam[2]
+print(spam)
+```
+
+V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:
+
+```{python}
+s = "abcdef"
+index = 3
+s = s[:index] + "ž" + s[index + 1:]
+print(s)
+```
+
+## Nekaj uporabnih funkcij
+
+- `len(seznam_ali_niz)` vrne število elementov seznama oz. število znakov v nizu
+
+- `zip(seznam1, seznam2, ...)` vrne zaporedje naborov istoležnih elementov v podanih seznamih (poljubno število). Funkcija 
+vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo `list()`.
+V for zanki lahko uporabimo `zip` brez `list`.
+
+```{python}
+print(list(zip('xyz', [10, 20, 30], [4, 5, 6])))
+```
+
+```{python}
+for x in zip('xyz', [10, 20, 30], [4, 5, 6]):
+    print(x)
+```
+
+- `enumerate(seznam)` vrne zaporedje parov, v katerih so druge komponente vrednosti 
+iz podanega seznama, prve pa njihovi indeksi.
+Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip 
+pretvoriti s funkcijo `list()`. V for zanki lahko uporabimo `enumerate` brez `list`.
+
+```{python}
+print(list(enumerate(["a", "b", "c"])))
+```
+
+```{python}
+for indeks, element in enumerate(["a", "b", "c"]):
+    print(indeks, element)
+```

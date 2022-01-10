@@ -1,7 +1,5 @@
 # Delo z objekti
 
-Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter6/
-
 ```{css, echo=FALSE}
 .sourceCode .python {
   margin-left: 2em;
@@ -12,22 +10,35 @@ pre {
 }
 ```
 
+Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter6/ 
+in poglavje `Nizi` v https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html
+
 Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten 
 seznam je v uradni dokumentaciji: https://docs.python.org/3/library/stdtypes.html#string-methods
 
 Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo 
 narediti (npr. s `python count characters in string` hitro najdemo `count()` in primere uporabe).
 
+## Metode za sezname
+
+- `sez.append(element)` doda element na konec seznama
+- `sez.extend(sez2)` na konec seznama `sez` pristavi seznam `sez2`, na kratko `sez += sez2`
+- `sez.insert(i, x)` na mesto z indeksom `i` vstavi element `x`
+- `sez.remove(x)` iz seznama odstrani prvo pojavitev elementa `x`
+- `sez.pop(i)` odstrani element na indeksu `i` in ga vrne; če `i` ne podamo je to zadnji element
+- `sez.index(x)` vrne prvi indeks, na katerem se nahaja vrednost `x`
+- `sez.count(x)` vrne število pojavitev `x` v seznamu
+- `sez.sort(reverse=False)` uredi seznam po velikosti naraščajoče / abecedi, če podamo `reverse=True`, bo seznam urejen v nasprotnem vrstnem redu
+
 ## Metode za nize
 
-- `niz.count(znak)` vrne kolikokrat se znak pojavi v nizu
-- `niz.index(znak)` vrne indeks, na katerem se znak prvič pojavi
-- `niz.replace(prviniz, druginiz)` vrne niz, kjer so vsi nizi enaki `prviniz` 
-zamenjani z `druginiz`
+- `niz.count(znak)` vrne število pojavitev znaka v nizu
+- `niz.index(znak)` vrne indeks, na katerem se znak prvič pojavi; če ne obstaja sproži napako
+- `niz.replace(niz1, niz2)` vrne niz, kjer so podnizi enaki `niz1` zamenjani z `niz2`
 - `niz.lower()` in `niz.upper()` vrne niz, kjer iz malih črk naredi velike ali obratno
-- `niz.islower()` in `niz.isupper()`
-- `niz.strip()` vrne niz, kjer z leve in desne strani odstrani "whitespace characters" (presledki, tab, `"\n"`). Lahko podamo neobvezni argument, s katerim določimo, katere znake 
-naj odstrani z leve in desne. Obstajata tudi metodi `rstrip()` in `lstrip()`, ki odstranjujeta le z leve in desne.
+- `niz.islower()` in `niz.isupper()` vrne True, če je niz iz samih malih črk oz. velikih črk
+- `niz.strip()` vrne niz, kjer z leve in desne strani odstrani "whitespace characters" (presledki, tab, `\n`). Lahko podamo neobvezni argument, s katerim določimo, katere znake 
+naj odstrani z leve in desne. Obstajata tudi metodi `.rstrip()` in `.lstrip()`, ki odstranjujeta le z leve in desne.
 ```{python}
 print('    Hello, World    \n'.strip())
 ```
