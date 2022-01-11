@@ -41,10 +41,12 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v2
 
-      - name: Install rmarkdown and TeX
+      - name: Install Tinytex
+        uses: r-lib/actions/setup-tinytex@v1
+
+      - name: Install rmarkdown, bookdown, reticulate
         run: |
-          Rscript -e 'install.packages(c("rmarkdown","bookdown","tinytex","reticulate"))'
-          Rscript -e 'tinytex::install_tinytex()'
+          Rscript -e 'install.packages(c("rmarkdown","bookdown","reticulate"))'
         
       - name: Build
         run: |
