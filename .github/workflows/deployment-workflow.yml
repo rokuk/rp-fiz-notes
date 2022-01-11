@@ -30,16 +30,23 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-pandoc@v2
+      - uses: r-lib/actions/setup-renv@v2
+
+      - name: Get R and OS version
+        id: get-version
+        run: |
+          cat("##[set-output name=os-version;]", sessionInfo()$running, "\n", sep = "")
+          cat("##[set-output name=r-version;]", R.Version()$version.string, sep = "")
+        shell: Rscript {0}
 
       - name: Cache R packages 
-        if: runner.os != 'Windows' 
-        uses: actions/cache@v1 
-        with: 
-          path: ${{ env.R_LIBS_USER }} 
-          key: r-${{ hashFiles('DESCRIPTION') }}
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{ inputs.cache-version }}-${{ hashFiles('renv.lock') }}
+          restore-keys: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{inputs.cache-version }}-
 
-      - uses: r-lib/actions/setup-renv@v2
+      - uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install Tinytex
         uses: r-lib/actions/setup-tinytex@v1
