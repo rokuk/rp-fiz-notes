@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 6 Slovarji | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="<p>Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike
 na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 6 Slovarji | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="your book url like https://rokuk.github.io/rp-fiz-notes" />
   
@@ -18,7 +18,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 6 Slovarji | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="<p>Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike
 na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
@@ -34,8 +34,8 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="seznami-in-nizi.html"/>
-<link rel="next" href="slovarji.html"/>
+<link rel="prev" href="delo-z-objekti.html"/>
+<link rel="next" href="numpy-1.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -230,61 +230,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="delo-z-objekti" class="section level1" number="5">
-<h1><span class="header-section-number">Poglavje 5</span> Delo z objekti</h1>
-<style type="text/css">
-.sourceCode .python {
-  margin-left: 2em;
-}
-
-pre {
-  margin-left: 2em !important;
-}
-</style>
-<p>Gradivo za to poglavje je <a href="https://automatetheboringstuff.com/2e/chapter6/" class="uri">https://automatetheboringstuff.com/2e/chapter6/</a>
-in poglavje <code>Nizi</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html</a></p>
-<p>Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten
-seznam je v uradni dokumentaciji: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="uri">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p>
-<p>Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo
-narediti (npr. s <code>python count characters in string</code> hitro najdemo <code>count()</code> in primere uporabe).</p>
-<div id="metode-za-sezname" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Metode za sezname</h2>
+<div id="slovarji" class="section level1" number="6">
+<h1><span class="header-section-number">Poglavje 6</span> Slovarji</h1>
+<p>Gradivi za to poglavje sta
+- <a href="https://automatetheboringstuff.com/2e/chapter5/" class="uri">https://automatetheboringstuff.com/2e/chapter5/</a>
+- poglavje <code>Slovar</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1212/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1212/index.html</a></p>
+<div id="osnovne-operacije" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Osnovne operacije</h2>
+<div id="dostopanje-do-vrednosti" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Dostopanje do vrednosti</h3>
+<p>Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabimo ključe.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="slovarji.html#cb45-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb45-2"><a href="slovarji.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s[<span class="st">&#39;b&#39;</span>])</span></code></pre></div>
+<pre><code>## test</code></pre>
+<p>Če ključ ne obstaja pride do napake. Temu se lahko izognemo z metodo <code>get</code></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="slovarji.html#cb47-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb47-2"><a href="slovarji.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
+<pre><code>## 6</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="slovarji.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;ž&#39;</span>, <span class="dv">0</span>))</span></code></pre></div>
+<pre><code>## 0</code></pre>
+</div>
+<div id="spreminjanje-1" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Spreminjanje</h3>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="slovarji.html#cb51-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb51-2"><a href="slovarji.html#cb51-2" aria-hidden="true" tabindex="-1"></a>s[<span class="st">&#39;a&#39;</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb51-3"><a href="slovarji.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<pre><code>## {&#39;a&#39;: 10, &#39;b&#39;: &#39;test&#39;, 123: True}</code></pre>
+</div>
+<div id="brisanje" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Brisanje</h3>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="slovarji.html#cb53-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb53-2"><a href="slovarji.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> s[<span class="st">&#39;a&#39;</span>]</span>
+<span id="cb53-3"><a href="slovarji.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<pre><code>## {&#39;b&#39;: &#39;test&#39;, 123: True}</code></pre>
+</div>
+</div>
+<div id="metode-na-slovarjih" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Metode na slovarjih</h2>
 <ul>
-<li><code>sez.append(element)</code> doda element na konec seznama</li>
-<li><code>sez.extend(sez2)</code> na konec seznama <code>sez</code> pristavi seznam <code>sez2</code>, na kratko <code>sez += sez2</code></li>
-<li><code>sez.insert(i, x)</code> na mesto z indeksom <code>i</code> vstavi element <code>x</code></li>
-<li><code>sez.remove(x)</code> iz seznama odstrani prvo pojavitev elementa <code>x</code></li>
-<li><code>sez.pop(i)</code> odstrani element na indeksu <code>i</code> in ga vrne; če <code>i</code> ne podamo je to zadnji element</li>
-<li><code>sez.index(x)</code> vrne prvi indeks, na katerem se nahaja vrednost <code>x</code></li>
-<li><code>sez.count(x)</code> vrne število pojavitev <code>x</code> v seznamu</li>
-<li><code>sez.sort(reverse=False)</code> uredi seznam po velikosti naraščajoče / abecedi, če podamo <code>reverse=True</code>, bo seznam urejen v nasprotnem vrstnem redu</li>
+<li><code>s.get(kljuc, privzeta_vrednost)</code> vrne vrednost, ki ustreza ključu <code>kljuc</code>, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezen parameter <code>privzeta_vrednost</code>, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani</li>
+<li><code>s.pop(kljuc)</code> iz slovarja odstrani par s ključem <code>kljuc</code> in vrne vrednost</li>
+<li><code>s.update(s2)</code> k slovarju <code>s</code> doda pare slovarja <code>s2</code></li>
+<li><code>s.values()</code> za uporabo v zankah; vrne vrednosti v slovarju; s funkcijo <code>list</code> pretvorimo v seznam</li>
+<li><code>s.keys()</code> za uporabo v zankah; vrne ključe v slovarju; s funkcijo <code>list</code> pretvorimo v seznam</li>
+<li><code>s.items()</code> za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo <code>list</code> pretvorimo v seznam</li>
 </ul>
 </div>
-<div id="metode-za-nize" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Metode za nize</h2>
-<ul>
-<li><code>niz.count(znak)</code> vrne število pojavitev znaka v nizu</li>
-<li><code>niz.index(znak)</code> vrne indeks, na katerem se znak prvič pojavi; če ne obstaja sproži napako</li>
-<li><code>niz.replace(niz1, niz2)</code> vrne niz, kjer so podnizi enaki <code>niz1</code> zamenjani z <code>niz2</code></li>
-<li><code>niz.lower()</code> in <code>niz.upper()</code> vrne niz, kjer iz malih črk naredi velike ali obratno</li>
-<li><code>niz.islower()</code> in <code>niz.isupper()</code> vrne True, če je niz iz samih malih črk oz. velikih črk</li>
-<li><code>niz.strip()</code> vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, <code>\n</code>). Lahko podamo neobvezni argument, s katerim določimo, katere znake
-naj odstrani z leve in desne. Obstajata tudi metodi <code>.rstrip()</code> in <code>.lstrip()</code>, ki odstranjujeta le z leve in desne.</li>
-</ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="delo-z-objekti.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
-<pre><code>## Hello, World</code></pre>
-<ul>
-<li><code>"locilo".join(seznam)</code> združi elemente seznama v niz in postavilo <code>locilo</code>
-med posamezne elemente</li>
-</ul>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="delo-z-objekti.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
-<pre><code>## MojeABCimeABCjeABCRok</code></pre>
-<ul>
-<li><code>niz.split(locilo)</code> vrne seznam, kjer so elementi posamezni deli niza, ki jih
-ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presledek.</li>
-</ul>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="delo-z-objekti.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
-<pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
+<div id="preverjanje-vsebovanja-1" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Preverjanje vsebovanja</h2>
+<p>Kot pri seznamih in nizih porabimo ključno besedo <code>in</code></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="slovarji.html#cb55-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb55-2"><a href="slovarji.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;test&#39;</span> <span class="kw">in</span> s.values())</span>
+<span id="cb55-3"><a href="slovarji.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;b&#39;</span> <span class="kw">in</span> s.keys())</span>
+<span id="cb55-4"><a href="slovarji.html#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="st">&#39;a&#39;</span>, <span class="dv">6</span>) <span class="kw">in</span> s.items())</span></code></pre></div>
+<pre><code>## True
+## True
+## True</code></pre>
+</div>
+<div id="zanke-1" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Zanke</h2>
+<p>Zanka po vrednostih v slovarju.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="slovarji.html#cb57-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb57-2"><a href="slovarji.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> s.values():</span>
+<span id="cb57-3"><a href="slovarji.html#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(v)</span></code></pre></div>
+<pre><code>## 6
+## test
+## True</code></pre>
+<p>Zanka po ključih v slovarju.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="slovarji.html#cb59-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb59-2"><a href="slovarji.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> s.keys():</span>
+<span id="cb59-3"><a href="slovarji.html#cb59-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div>
+<pre><code>## a
+## b
+## 123</code></pre>
+<p>Zanka po parih v slovarju.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="slovarji.html#cb61-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb61-2"><a href="slovarji.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> kljuc, vrednost <span class="kw">in</span> s.items():</span>
+<span id="cb61-3"><a href="slovarji.html#cb61-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kljuc, <span class="st">&#39;-&gt;&#39;</span>, vrednost)</span></code></pre></div>
+<pre><code>## a -&gt; 6
+## b -&gt; test
+## 123 -&gt; True</code></pre>
 
 </div>
 </div>
@@ -294,8 +319,8 @@ ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presled
           </div>
         </div>
       </div>
-<a href="seznami-in-nizi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="slovarji.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="delo-z-objekti.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numpy-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +341,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/05-delo-z-objekti.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/06-slovarji.Rmd",
 "text": "Edit"
 },
 "history": {
