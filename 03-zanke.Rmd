@@ -21,7 +21,7 @@ vrednosti tega parametra.
 
 ## Zanka while
 
-Zanko while uporabimo, ko želimo zanko izvajati vse dokler je nek pogoj izpolnjen.
+Zanko while uporabimo, ko želimo zanko izvajati, vse dokler je nek pogoj izpolnjen.
 
 ```{python}
 i = 3

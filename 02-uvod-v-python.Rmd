@@ -56,7 +56,7 @@ kar je na levi, in tem, kar je na desni.
 
 ## Nekoliko kompleksnejši primer
 
-Če želimo preveriti ali je spremenljivka `mesec` enaka 6 ali 7, ni prav če napišemo
+Če želimo preveriti ali je spremenljivka `mesec` enaka 6 ali 7, ni prav, če napišemo
 
 ```{python}
 mesec = 4

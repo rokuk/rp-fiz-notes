@@ -34,7 +34,7 @@ print(spam[-2])
 ## True
 ```
 
-Podsezname dobimo z sintakso `seznam[zacetni_indeks:koncni_indeks:korak]`. Nobeno
+Podsezname dobimo s sintakso `seznam[zacetni_indeks:koncni_indeks:korak]`. Nobeno
 od teh treh števil ni obvezno.
 
 ```{python eval=FALSE}

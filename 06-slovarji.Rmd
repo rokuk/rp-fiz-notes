@@ -46,7 +46,7 @@ print(s)
 - `s.update(s2)` k slovarju `s` doda pare slovarja `s2`
 - `s.values()` za uporabo v zankah; vrne vrednosti v slovarju; s funkcijo `list` pretvorimo v seznam
 - `s.keys()` za uporabo v zankah; vrne ključe v slovarju; s funkcijo `list` pretvorimo v seznam
-- `s.items()` za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo `list`  pretvorimo v seznam
+- `s.items()` za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo `list` pretvorimo v seznam
 
 ## Preverjanje vsebovanja
 
