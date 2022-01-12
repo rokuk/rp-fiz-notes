@@ -42,7 +42,7 @@ naj odstrani z leve in desne. Obstajata tudi metodi `.rstrip()` in `.lstrip()`, 
 ```{python}
 print('    Hello, World    \n'.strip())
 ```
-- `"locilo".join(seznam)` združi elemente seznama v niz in postavilo `locilo` 
+- `"locilo".join(seznam)` združi elemente seznama v niz in postavi `locilo` 
 med posamezne elemente
 ```{python}
 print('ABC'.join(['Moje', 'ime', 'je', 'Rok']))
