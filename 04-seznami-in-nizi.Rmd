@@ -68,7 +68,7 @@ print(sez1 + sez2)
 
 Sezname lahko združimo tudi z metodo `extend`. Za zgornji primer: `niz1.extend(niz2)`.
 
-### Preverjanje vsebovanja
+### Preverjanje vsebovanosti
 
 S ključno besedo `in` preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z `in` preverimo ali niz vsebuje nek znak.
 
