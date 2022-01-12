@@ -61,3 +61,7 @@ pre {
 pre:not(.python) {
   border-radius: .7em;
 }
+
+hr {
+  height: 1px !important;
+}
