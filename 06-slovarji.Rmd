@@ -41,7 +41,7 @@ print(s)
 
 ## Metode na slovarjih
 
-- `s.get(kljuc, privzeta_vrednost)` vrne vrednost, ki ustreza ključu `kljuc`, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezen parameter `privzeta_vrednost`, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani
+- `s.get(kljuc, privzeta_vrednost)` vrne vrednost, ki ustreza ključu `kljuc`, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezni parameter `privzeta_vrednost`, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani
 - `s.pop(kljuc)` iz slovarja odstrani par s ključem `kljuc` in vrne vrednost
 - `s.update(s2)` k slovarju `s` doda pare slovarja `s2`
 - `s.values()` za uporabo v zankah; vrne vrednosti v slovarju; s funkcijo `list` pretvorimo v seznam

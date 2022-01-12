@@ -54,10 +54,13 @@ print(tabela[:,3])
 
 ## Uporabne funkcije
 
-Glej predvsem uradno dokumentacijo: https://numpy.org/doc/stable/reference/routines.sort.html
-
+Glej predvsem uradno dokumentacijo: https://numpy.org/doc/stable/reference/routines.sort.html  
 Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe. 
-Pozor: True se obnaša kot 1 in False se obnaša kot 0.
+
+Pri mnogih funkcijah lahko podamo neobvezni parameter `axis=x`, kjer je `x` 
+številka osi, po kateri želimo operacijo izvesti (0, 1, 2, ...).
+
+Pozor: True se obnaša kot 1 in False se obnaša kot 0. 
 
 - `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej
 - `np.flatten(tabela)` vrne "flat" obliko tabele (enodimenzionalni seznam zaporednih elementov)
@@ -67,6 +70,7 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0.
 ## Matematika
 
 - `np.sum(tabela)`
+- `np.cumsum(tabela)`
 - `np.prod(tabela)`
 - `np.log(tabela)`
 - `np.exp(tabela)`
