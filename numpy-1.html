@@ -284,9 +284,11 @@ vsak element v tabeli izračuna s klicem funkcije <code>funkcija</code>; funkcij
 </div>
 <div id="uporabne-funkcije" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Uporabne funkcije</h2>
-<p>Glej predvsem uradno dokumentacijo: <a href="https://numpy.org/doc/stable/reference/routines.sort.html" class="uri">https://numpy.org/doc/stable/reference/routines.sort.html</a></p>
-<p>Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.
-Pozor: True se obnaša kot 1 in False se obnaša kot 0.</p>
+<p>Glej predvsem uradno dokumentacijo: <a href="https://numpy.org/doc/stable/reference/routines.sort.html" class="uri">https://numpy.org/doc/stable/reference/routines.sort.html</a><br />
+Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
+<p>Pri mnogih funkcijah lahko podamo neobvezni parameter <code>axis=x</code>, kjer je <code>x</code>
+številka osi, po kateri želimo operacijo izvesti (0, 1, 2, …).</p>
+<p>Pozor: True se obnaša kot 1 in False se obnaša kot 0.</p>
 <ul>
 <li><code>np.nonzero(tabela)</code> vrne indekse neničelnih elementov v vsaki dimenziji posebej</li>
 <li><code>np.flatten(tabela)</code> vrne “flat” obliko tabele (enodimenzionalni seznam zaporednih elementov)</li>
@@ -298,6 +300,7 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0.</p>
 <h2><span class="header-section-number">7.4</span> Matematika</h2>
 <ul>
 <li><code>np.sum(tabela)</code></li>
+<li><code>np.cumsum(tabela)</code></li>
 <li><code>np.prod(tabela)</code></li>
 <li><code>np.log(tabela)</code></li>
 <li><code>np.exp(tabela)</code></li>

@@ -887,7 +887,7 @@ Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabim
 \begin{itemize}
 \tightlist
 \item
-  \texttt{s.get(kljuc,\ privzeta\_vrednost)} vrne vrednost, ki ustreza ključu \texttt{kljuc}, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezen parameter \texttt{privzeta\_vrednost}, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani
+  \texttt{s.get(kljuc,\ privzeta\_vrednost)} vrne vrednost, ki ustreza ključu \texttt{kljuc}, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezni parameter \texttt{privzeta\_vrednost}, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani
 \item
   \texttt{s.pop(kljuc)} iz slovarja odstrani par s ključem \texttt{kljuc} in vrne vrednost
 \item
@@ -1072,9 +1072,12 @@ Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 \hypertarget{uporabne-funkcije}{%
 \section{Uporabne funkcije}\label{uporabne-funkcije}}
 
-Glej predvsem uradno dokumentacijo: \url{https://numpy.org/doc/stable/reference/routines.sort.html}
-
+Glej predvsem uradno dokumentacijo: \url{https://numpy.org/doc/stable/reference/routines.sort.html}\\
 Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.
+
+Pri mnogih funkcijah lahko podamo neobvezni parameter \texttt{axis=x}, kjer je \texttt{x}
+številka osi, po kateri želimo operacijo izvesti (0, 1, 2, \ldots).
+
 Pozor: True se obnaša kot 1 in False se obnaša kot 0.
 
 \begin{itemize}
@@ -1096,6 +1099,8 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0.
 \tightlist
 \item
   \texttt{np.sum(tabela)}
+\item
+  \texttt{np.cumsum(tabela)}
 \item
   \texttt{np.prod(tabela)}
 \item
