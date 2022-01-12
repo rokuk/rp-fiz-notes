@@ -15,7 +15,7 @@ seznami-in-nizi
 skupne-lastnosti
 indeksiranje
 združevanje
-preverjanje-vsebovanja
+preverjanje-vsebovanosti
 sprehod-po-elementih
 spreminjanje
 nekaj-uporabnih-funkcij
@@ -28,7 +28,7 @@ dostopanje-do-vrednosti
 spreminjanje-1
 brisanje
 metode-na-slovarjih
-preverjanje-vsebovanja-1
+preverjanje-vsebovanja
 zanke-1
 numpy-1
 ustvarjanje-tabel
