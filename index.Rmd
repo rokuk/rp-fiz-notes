@@ -19,6 +19,8 @@ Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. l
 
 Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.
 
+___
+
 Ta spletna stran je dostopna na https://python.rokuk.org in 
 https://rokuk.github.io/rp-fiz-notes
 
