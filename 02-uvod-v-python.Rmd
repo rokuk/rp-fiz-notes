@@ -12,7 +12,7 @@ Gradiva za to poglavje so:
 
 ## Števila
 
-Za seštevanje uporabimo `+`, za odštevanje `-`, za množenje `*`, za potence `*`, 
+Za seštevanje uporabimo `+`, za odštevanje `-`, za množenje `*`, za potence `**`, 
 za deljenje `/`, za celoštevilsko deljenje `//`, za ostanek pri deljenju `%`. 
 Za vrstni red računanja operacij (če jih kombiniramo) veljajo enaka pravila kot 
 v matematiki.
