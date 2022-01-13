@@ -34,7 +34,7 @@ Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam.
 vsak element v tabeli izračuna s klicem funkcije `funkcija`; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
 - `seznam.reshape(oblika)` spremeni obliko seznama
 
-## Filtriranje
+## Rezine
 
 Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih 
 (`zacetek:konec:korak`), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.
@@ -43,13 +43,21 @@ Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 import numpy as np
 tabela = np.arange(0, 49).reshape(7, 7)
 print(tabela)
-print(tabela[0:4,2:7:2])
+razrezano = tabela[0:4,2:7:2]
+print(razrezano)
 ```
 
 Če želimo vse elemente v neki dimenziji napišemo `:`. Tako lahko dobimo posamezne stolpce.
 
 ```{python}
 print(tabela[:,3])
+```
+
+Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri `razrezano`) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:
+
+```{python}
+tabela[0:4,2:7:2] = np.arange(100, 112).reshape(4,3)
+print(tabela)
 ```
 
 ## Uporabne funkcije
@@ -60,12 +68,19 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.
 Pri mnogih funkcijah lahko podamo neobvezni parameter `axis=x`, kjer je `x` 
 številka osi, po kateri želimo operacijo izvesti (0, 1, 2, ...).
 
-Pozor: True se obnaša kot 1 in False se obnaša kot 0. 
+Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 
-- `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej
+- `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)
 - `np.flatten(tabela)` vrne "flat" obliko tabele (enodimenzionalni seznam zaporednih elementov)
 - `np.flatnonzero(tabela)` vrne indekse neničelnih elementov v "flat" obliki tabele (zaporedni indeks)
-- `np.where(pogoj, x, y)` vrne elemente iz `x`, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz `y`; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji
+- `np.where(pogoj, x, y)` vrne elemente iz `x`, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz `y`; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!
+- `tabela.T` vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele
+
+```{python}
+a = np.array([[1, 2, 3], [4, 5, 6]])
+print(a)
+print(a.T)
+```
 
 ## Matematika
 

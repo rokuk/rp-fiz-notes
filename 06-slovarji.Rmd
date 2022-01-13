@@ -79,7 +79,7 @@ Zanka po ključih v slovarju.
 
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
-for k in s.keys():
+for k in s.keys(): # lahko tudi "for k in s:"
 	print(k)
 ```
 

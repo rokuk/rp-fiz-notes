@@ -23,6 +23,8 @@ ostanek = 20 % 8
 print(celidel, ostanek)
 ```
 
+Za zaokroževanje števila `stevilo` uporabimo funkcijo `round(stevilo, d)`, ki število zaokroži na `d` decimalnih mest.
+
 ## Logične operacije
 
 Logične operacije s ključnimi besedami `and`, `or` in `not` ustrezajo operacijam v matematiki.
