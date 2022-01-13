@@ -70,6 +70,8 @@ Pri mnogih funkcijah lahko podamo neobvezni parameter `axis=x`, kjer je `x`
 
 Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 
+- `np.any(tabela)` vrne True, če je vsaj en element True
+- `np.all(tabela)` vrne True, če so vsi elementi True
 - `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)
 - `np.flatten(tabela)` vrne "flat" obliko tabele (enodimenzionalni seznam zaporednih elementov)
 - `np.flatnonzero(tabela)` vrne indekse neničelnih elementov v "flat" obliki tabele (zaporedni indeks)
