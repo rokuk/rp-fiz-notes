@@ -20,8 +20,13 @@ sprehod-po-elementih
 spreminjanje
 nekaj-uporabnih-funkcij
 delo-z-objekti
-metode-za-sezname
 metode-za-nize
+metode-za-sezname
+sortiranje-seznamov
+drugi-tipi
+nabori
+množice
+pretvarjanje-med-tipi
 slovarji
 osnovne-operacije
 dostopanje-do-vrednosti
@@ -32,7 +37,7 @@ preverjanje-vsebovanja
 zanke-1
 numpy-1
 ustvarjanje-tabel
-filtriranje
+rezine
 uporabne-funkcije
 matematika
 datoteke

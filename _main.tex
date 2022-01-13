@@ -117,7 +117,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk}
-\date{2022-01-12}
+\date{2022-01-13}
 
 \begin{document}
 \maketitle
@@ -311,6 +311,8 @@ v matematiki.
 \begin{verbatim}
 ## 2 4
 \end{verbatim}
+
+Za zaokroževanje števila \texttt{stevilo} uporabimo funkcijo \texttt{round(stevilo,\ d)}, ki število zaokroži na \texttt{d} decimalnih mest.
 
 \hypertarget{logiux10dne-operacije}{%
 \section{Logične operacije}\label{logiux10dne-operacije}}
@@ -709,34 +711,12 @@ V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:
 Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter6/}
 in poglavje \texttt{Nizi} v \url{https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html}
 
-Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten
-seznam je v uradni dokumentaciji: \url{https://docs.python.org/3/library/stdtypes.html\#string-methods}
+Uporabna je tudi dokumentacija za različne tipe \url{https://docs.python.org/3/tutorial/datastructures.html}
+
+Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: \url{https://docs.python.org/3/library/stdtypes.html\#string-methods}
 
 Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo
 narediti (npr. s \texttt{python\ count\ characters\ in\ string} hitro najdemo \texttt{count()} in primere uporabe).
-
-\hypertarget{metode-za-sezname}{%
-\section{Metode za sezname}\label{metode-za-sezname}}
-
-\begin{itemize}
-\tightlist
-\item
-  \texttt{sez.append(element)} doda element na konec seznama
-\item
-  \texttt{sez.extend(sez2)} na konec seznama \texttt{sez} pristavi seznam \texttt{sez2}, na kratko \texttt{sez\ +=\ sez2}
-\item
-  \texttt{sez.insert(i,\ x)} na mesto z indeksom \texttt{i} vstavi element \texttt{x}
-\item
-  \texttt{sez.remove(x)} iz seznama odstrani prvo pojavitev elementa \texttt{x}
-\item
-  \texttt{sez.pop(i)} odstrani element na indeksu \texttt{i} in ga vrne; če \texttt{i} ne podamo je to zadnji element
-\item
-  \texttt{sez.index(x)} vrne prvi indeks, na katerem se nahaja vrednost \texttt{x}
-\item
-  \texttt{sez.count(x)} vrne število pojavitev \texttt{x} v seznamu
-\item
-  \texttt{sez.sort(reverse=False)} uredi seznam po velikosti naraščajoče / abecedi, če podamo \texttt{reverse=True}, bo seznam urejen v nasprotnem vrstnem redu
-\end{itemize}
 
 \hypertarget{metode-za-nize}{%
 \section{Metode za nize}\label{metode-za-nize}}
@@ -801,6 +781,106 @@ narediti (npr. s \texttt{python\ count\ characters\ in\ string} hitro najdemo \t
 \begin{verbatim}
 ## ['Moje', 'ime', 'je', 'Rok.']
 \end{verbatim}
+
+\hypertarget{metode-za-sezname}{%
+\section{Metode za sezname}\label{metode-za-sezname}}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{sez.append(element)} doda element na konec seznama
+\item
+  \texttt{sez.extend(sez2)} na konec seznama \texttt{sez} pristavi seznam \texttt{sez2}, na kratko \texttt{sez\ +=\ sez2}
+\item
+  \texttt{sez.insert(i,\ x)} na mesto z indeksom \texttt{i} vstavi element \texttt{x}
+\item
+  \texttt{sez.remove(x)} iz seznama odstrani prvo pojavitev elementa \texttt{x}
+\item
+  \texttt{sez.pop(i)} odstrani element na indeksu \texttt{i} in ga vrne; če \texttt{i} ne podamo je to zadnji element
+\item
+  \texttt{sez.index(x)} vrne prvi indeks, na katerem se nahaja vrednost \texttt{x}
+\item
+  \texttt{sez.count(x)} vrne število pojavitev \texttt{x} v seznamu
+\item
+  \texttt{sez.sort(reverse=False)} uredi seznam po velikosti naraščajoče / abecedi; če podamo neobvezni argument \texttt{reverse=True}, bo seznam urejen v nasprotnem vrstnem redu
+\end{itemize}
+
+\hypertarget{sortiranje-seznamov}{%
+\section{Sortiranje seznamov}\label{sortiranje-seznamov}}
+
+Za sortiranje lahko uporabimo funkcijo \texttt{sorted(seznam)}, ki vrne sortiran seznam ali pa metodo \texttt{seznam.sort()}, ki spremeni originalni seznam, tako, da je sortiran.
+
+Obema funkcijama lahko podamo neobvezni argument \texttt{reversed=True}, ki seznam sortira v nasprotnem vrstnem redu. Podamo lahko tudi neobvezni argument \texttt{key=ime\_funkcije}, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ sortirna\_funkcija(element\_seznama):}
+    \ControlFlowTok{return}\NormalTok{ element\_seznama[}\DecValTok{2}\NormalTok{]}
+
+\NormalTok{student\_tuples }\OperatorTok{=}\NormalTok{ [}
+\NormalTok{    (}\StringTok{\textquotesingle{}john\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}A\textquotesingle{}}\NormalTok{, }\DecValTok{15}\NormalTok{),}
+\NormalTok{    (}\StringTok{\textquotesingle{}jane\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}B\textquotesingle{}}\NormalTok{, }\DecValTok{12}\NormalTok{),}
+\NormalTok{    (}\StringTok{\textquotesingle{}dave\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}B\textquotesingle{}}\NormalTok{, }\DecValTok{10}\NormalTok{),}
+\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{sorted}\NormalTok{(student\_tuples, key}\OperatorTok{=}\NormalTok{sortirna\_funkcija))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+\end{verbatim}
+
+Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z \texttt{return\ (element\_seznama{[}1{]},\ element\_seznama{[}2{]})} bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).
+
+Več o sortiranju v uradni dokumentaciji: \url{https://docs.python.org/3/howto/sorting.html}
+
+\hypertarget{drugi-tipi}{%
+\section{Drugi tipi}\label{drugi-tipi}}
+
+\hypertarget{nabori}{%
+\subsection{Nabori}\label{nabori}}
+
+Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji \texttt{()}. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#tuples-and-sequences}
+
+Vrednosti v naborih lahko ``odpakiramo'' nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo \texttt{*}. V to spremenljivko se bo shranil seznam presežnih elementov.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sadje }\OperatorTok{=}\NormalTok{ (}\StringTok{"jabolko"}\NormalTok{, }\StringTok{"banana"}\NormalTok{, }\StringTok{"črešnje"}\NormalTok{)}
+\NormalTok{zeleno, rumeno, rdece }\OperatorTok{=}\NormalTok{ sadje}
+\BuiltInTok{print}\NormalTok{(rdece, rumeno, zeleno)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## črešnje banana jabolko
+\end{verbatim}
+
+\hypertarget{mnoux17eice}{%
+\subsection{Množice}\label{mnoux17eice}}
+
+Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji \texttt{\{\}}. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z \texttt{mnozica.add(element)}. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#sets}
+
+\hypertarget{pretvarjanje-med-tipi}{%
+\section{Pretvarjanje med tipi}\label{pretvarjanje-med-tipi}}
+
+Spremenljivko \texttt{a} lahko pretvorimo v najpogosteje uporabljane tipe z:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{int(a)} vrne celo število
+\item
+  \texttt{float(a)} vrne decimalno število
+\item
+  \texttt{str(a)} vrne niz
+\item
+  \texttt{list(a)} vrne seznam
+\item
+  \texttt{tuple(a)} vrne nabor
+\item
+  \texttt{set(a)} vrne množico
+\end{itemize}
 
 \hypertarget{slovarji}{%
 \chapter{Slovarji}\label{slovarji}}
@@ -944,7 +1024,7 @@ Zanka po ključih v slovarju.
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{s }\OperatorTok{=}\NormalTok{ \{}\StringTok{\textquotesingle{}a\textquotesingle{}}\NormalTok{: }\DecValTok{6}\NormalTok{, }\StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{: }\StringTok{\textquotesingle{}test\textquotesingle{}}\NormalTok{, }\DecValTok{123}\NormalTok{: }\VariableTok{True}\NormalTok{\}}
-\ControlFlowTok{for}\NormalTok{ k }\KeywordTok{in}\NormalTok{ s.keys():}
+\ControlFlowTok{for}\NormalTok{ k }\KeywordTok{in}\NormalTok{ s.keys(): }\CommentTok{\# lahko tudi "for k in s:"}
     \BuiltInTok{print}\NormalTok{(k)}
 \end{Highlighting}
 \end{Shaded}
@@ -1020,8 +1100,8 @@ Sezname lahko združimo z \texttt{np.concatenate(sez1,\ sez2)}, ki vrne staknjen
   \texttt{seznam.reshape(oblika)} spremeni obliko seznama
 \end{itemize}
 
-\hypertarget{filtriranje}{%
-\section{Filtriranje}\label{filtriranje}}
+\hypertarget{rezine}{%
+\section{Rezine}\label{rezine}}
 
 Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 (\texttt{zacetek:konec:korak}), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.
@@ -1046,7 +1126,8 @@ Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(tabela[}\DecValTok{0}\NormalTok{:}\DecValTok{4}\NormalTok{,}\DecValTok{2}\NormalTok{:}\DecValTok{7}\NormalTok{:}\DecValTok{2}\NormalTok{])}
+\NormalTok{razrezano }\OperatorTok{=}\NormalTok{ tabela[}\DecValTok{0}\NormalTok{:}\DecValTok{4}\NormalTok{,}\DecValTok{2}\NormalTok{:}\DecValTok{7}\NormalTok{:}\DecValTok{2}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(razrezano)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1069,6 +1150,25 @@ Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 ## [ 3 10 17 24 31 38 45]
 \end{verbatim}
 
+Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri \texttt{razrezano}) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tabela[}\DecValTok{0}\NormalTok{:}\DecValTok{4}\NormalTok{,}\DecValTok{2}\NormalTok{:}\DecValTok{7}\NormalTok{:}\DecValTok{2}\NormalTok{] }\OperatorTok{=}\NormalTok{ np.arange(}\DecValTok{100}\NormalTok{, }\DecValTok{112}\NormalTok{).reshape(}\DecValTok{4}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(tabela)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[  0   1 100   3 101   5 102]
+##  [  7   8 103  10 104  12 105]
+##  [ 14  15 106  17 107  19 108]
+##  [ 21  22 109  24 110  26 111]
+##  [ 28  29  30  31  32  33  34]
+##  [ 35  36  37  38  39  40  41]
+##  [ 42  43  44  45  46  47  48]]
+\end{verbatim}
+
 \hypertarget{uporabne-funkcije}{%
 \section{Uporabne funkcije}\label{uporabne-funkcije}}
 
@@ -1078,19 +1178,45 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.
 Pri mnogih funkcijah lahko podamo neobvezni parameter \texttt{axis=x}, kjer je \texttt{x}
 številka osi, po kateri želimo operacijo izvesti (0, 1, 2, \ldots).
 
-Pozor: True se obnaša kot 1 in False se obnaša kot 0.
+Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 
 \begin{itemize}
 \tightlist
 \item
-  \texttt{np.nonzero(tabela)} vrne indekse neničelnih elementov v vsaki dimenziji posebej
+  \texttt{np.nonzero(tabela)} vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)
 \item
   \texttt{np.flatten(tabela)} vrne ``flat'' obliko tabele (enodimenzionalni seznam zaporednih elementov)
 \item
   \texttt{np.flatnonzero(tabela)} vrne indekse neničelnih elementov v ``flat'' obliki tabele (zaporedni indeks)
 \item
-  \texttt{np.where(pogoj,\ x,\ y)} vrne elemente iz \texttt{x}, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz \texttt{y}; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji
+  \texttt{np.where(pogoj,\ x,\ y)} vrne elemente iz \texttt{x}, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz \texttt{y}; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!
+\item
+  \texttt{tabela.T} vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele
 \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=}\NormalTok{ np.array([[}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{], [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{]])}
+\BuiltInTok{print}\NormalTok{(a)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1 2 3]
+##  [4 5 6]]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(a.T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1 4]
+##  [2 5]
+##  [3 6]]
+\end{verbatim}
 
 \hypertarget{matematika}{%
 \section{Matematika}\label{matematika}}

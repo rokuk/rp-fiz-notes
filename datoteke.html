@@ -27,7 +27,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
 <meta name="author" content="Rok Kuk" />
 
 
-<meta name="date" content="2022-01-12" />
+<meta name="date" content="2022-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,8 +174,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html"><i class="fa fa-check"></i><b>5</b> Delo z objekti</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-sezname"><i class="fa fa-check"></i><b>5.1</b> Metode za sezname</a></li>
-<li class="chapter" data-level="5.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-nize"><i class="fa fa-check"></i><b>5.2</b> Metode za nize</a></li>
+<li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-nize"><i class="fa fa-check"></i><b>5.1</b> Metode za nize</a></li>
+<li class="chapter" data-level="5.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-sezname"><i class="fa fa-check"></i><b>5.2</b> Metode za sezname</a></li>
+<li class="chapter" data-level="5.3" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#sortiranje-seznamov"><i class="fa fa-check"></i><b>5.3</b> Sortiranje seznamov</a></li>
+<li class="chapter" data-level="5.4" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#drugi-tipi"><i class="fa fa-check"></i><b>5.4</b> Drugi tipi</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nabori"><i class="fa fa-check"></i><b>5.4.1</b> Nabori</a></li>
+<li class="chapter" data-level="5.4.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#množice"><i class="fa fa-check"></i><b>5.4.2</b> Množice</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#pretvarjanje-med-tipi"><i class="fa fa-check"></i><b>5.5</b> Pretvarjanje med tipi</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="slovarji.html"><a href="slovarji.html"><i class="fa fa-check"></i><b>6</b> Slovarji</a>
 <ul>
@@ -192,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="numpy-1.html"><a href="numpy-1.html#ustvarjanje-tabel"><i class="fa fa-check"></i><b>7.1</b> Ustvarjanje tabel</a></li>
-<li class="chapter" data-level="7.2" data-path="numpy-1.html"><a href="numpy-1.html#filtriranje"><i class="fa fa-check"></i><b>7.2</b> Filtriranje</a></li>
+<li class="chapter" data-level="7.2" data-path="numpy-1.html"><a href="numpy-1.html#rezine"><i class="fa fa-check"></i><b>7.2</b> Rezine</a></li>
 <li class="chapter" data-level="7.3" data-path="numpy-1.html"><a href="numpy-1.html#uporabne-funkcije"><i class="fa fa-check"></i><b>7.3</b> Uporabne funkcije</a></li>
 <li class="chapter" data-level="7.4" data-path="numpy-1.html"><a href="numpy-1.html#matematika"><i class="fa fa-check"></i><b>7.4</b> Matematika</a></li>
 </ul></li>
@@ -313,10 +320,10 @@ dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!</p>
 <p>Datoteko odpremo v načinu za pisanje <code>mode="w"</code> in uporabimo funkcijo <code>write()</code>,
 ki zapiše niz v datoteko. Znak <code>\n</code> pomeni novo vrstico. Če želimo zapisati znak <code>\</code>
 moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pythonu: <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" class="uri">https://www.w3schools.com/python/gloss_python_escape_characters.asp</a></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="datoteke.html#cb71-1" aria-hidden="true" tabindex="-1"></a>potdodatoteke <span class="op">=</span> <span class="st">&quot;datoteka.txt&quot;</span></span>
-<span id="cb71-2"><a href="datoteke.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(potdodatoteke, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> dat:</span>
-<span id="cb71-3"><a href="datoteke.html#cb71-3" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;To je &quot;</span>)</span>
-<span id="cb71-4"><a href="datoteke.html#cb71-4" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;en stavek.</span><span class="ch">\n</span><span class="st">To je drugi.&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="datoteke.html#cb81-1" aria-hidden="true" tabindex="-1"></a>potdodatoteke <span class="op">=</span> <span class="st">&quot;datoteka.txt&quot;</span></span>
+<span id="cb81-2"><a href="datoteke.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(potdodatoteke, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> dat:</span>
+<span id="cb81-3"><a href="datoteke.html#cb81-3" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;To je &quot;</span>)</span>
+<span id="cb81-4"><a href="datoteke.html#cb81-4" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;en stavek.</span><span class="ch">\n</span><span class="st">To je drugi.&quot;</span>)</span></code></pre></div>
 <pre><code>## datoteka.txt
 ## To je en stavek.
 ## To je drugi.</code></pre>
@@ -329,9 +336,9 @@ odprto datoteko podamo kot parameter.</p>
 <h3><span class="header-section-number">8.3.1</span> read()</h3>
 <p>Datoteko odpremo v načinu za branje <code>mode="r"</code> in uporabimo metodo <code>read()</code>,
 ki vrne celotno vsebino datoteke naenkrat v obliki niza.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="datoteke.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb73-2"><a href="datoteke.html#cb73-2" aria-hidden="true" tabindex="-1"></a>    vsebina <span class="op">=</span> datoteka.read()</span>
-<span id="cb73-3"><a href="datoteke.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vsebina)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="datoteke.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb83-2"><a href="datoteke.html#cb83-2" aria-hidden="true" tabindex="-1"></a>    vsebina <span class="op">=</span> datoteka.read()</span>
+<span id="cb83-3"><a href="datoteke.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vsebina)</span></code></pre></div>
 <pre><code>## To je en stavek.
 ## To je drugi.</code></pre>
 <p>Uporaba argumenta <code>mode</code> je opisana na dnu strani.
@@ -346,19 +353,19 @@ uporablja skoraj povsod. Na macOS in Linux je vrednost <code>utf-8</code> že pr
 <h3><span class="header-section-number">8.3.2</span> readlines()</h3>
 <p>Z metodo <code>readlines()</code> dobimo seznam, v katerem so posamezne
 vrstice iz datoteke.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="datoteke.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb75-2"><a href="datoteke.html#cb75-2" aria-hidden="true" tabindex="-1"></a>    vrstice <span class="op">=</span> datoteka.readlines()</span>
-<span id="cb75-3"><a href="datoteke.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="datoteke.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb85-2"><a href="datoteke.html#cb85-2" aria-hidden="true" tabindex="-1"></a>    vrstice <span class="op">=</span> datoteka.readlines()</span>
+<span id="cb85-3"><a href="datoteke.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
 <div id="zanka" class="section level3" number="8.3.3">
 <h3><span class="header-section-number">8.3.3</span> zanka</h3>
 <p>Po vrsticah datoteke lahko gremo z zanko for.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="datoteke.html#cb77-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
-<span id="cb77-2"><a href="datoteke.html#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
-<span id="cb77-3"><a href="datoteke.html#cb77-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> datoteka:</span>
-<span id="cb77-4"><a href="datoteke.html#cb77-4" aria-hidden="true" tabindex="-1"></a>        vrstice.append(line)</span>
-<span id="cb77-5"><a href="datoteke.html#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="datoteke.html#cb87-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
+<span id="cb87-2"><a href="datoteke.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
+<span id="cb87-3"><a href="datoteke.html#cb87-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> datoteka:</span>
+<span id="cb87-4"><a href="datoteke.html#cb87-4" aria-hidden="true" tabindex="-1"></a>        vrstice.append(line)</span>
+<span id="cb87-5"><a href="datoteke.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
 </div>

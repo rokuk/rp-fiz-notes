@@ -27,7 +27,7 @@ na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>" />
 <meta name="author" content="Rok Kuk" />
 
 
-<meta name="date" content="2022-01-12" />
+<meta name="date" content="2022-01-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -174,8 +174,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html"><i class="fa fa-check"></i><b>5</b> Delo z objekti</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-sezname"><i class="fa fa-check"></i><b>5.1</b> Metode za sezname</a></li>
-<li class="chapter" data-level="5.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-nize"><i class="fa fa-check"></i><b>5.2</b> Metode za nize</a></li>
+<li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-nize"><i class="fa fa-check"></i><b>5.1</b> Metode za nize</a></li>
+<li class="chapter" data-level="5.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-sezname"><i class="fa fa-check"></i><b>5.2</b> Metode za sezname</a></li>
+<li class="chapter" data-level="5.3" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#sortiranje-seznamov"><i class="fa fa-check"></i><b>5.3</b> Sortiranje seznamov</a></li>
+<li class="chapter" data-level="5.4" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#drugi-tipi"><i class="fa fa-check"></i><b>5.4</b> Drugi tipi</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nabori"><i class="fa fa-check"></i><b>5.4.1</b> Nabori</a></li>
+<li class="chapter" data-level="5.4.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#množice"><i class="fa fa-check"></i><b>5.4.2</b> Množice</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#pretvarjanje-med-tipi"><i class="fa fa-check"></i><b>5.5</b> Pretvarjanje med tipi</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="slovarji.html"><a href="slovarji.html"><i class="fa fa-check"></i><b>6</b> Slovarji</a>
 <ul>
@@ -192,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="numpy-1.html"><a href="numpy-1.html#ustvarjanje-tabel"><i class="fa fa-check"></i><b>7.1</b> Ustvarjanje tabel</a></li>
-<li class="chapter" data-level="7.2" data-path="numpy-1.html"><a href="numpy-1.html#filtriranje"><i class="fa fa-check"></i><b>7.2</b> Filtriranje</a></li>
+<li class="chapter" data-level="7.2" data-path="numpy-1.html"><a href="numpy-1.html#rezine"><i class="fa fa-check"></i><b>7.2</b> Rezine</a></li>
 <li class="chapter" data-level="7.3" data-path="numpy-1.html"><a href="numpy-1.html#uporabne-funkcije"><i class="fa fa-check"></i><b>7.3</b> Uporabne funkcije</a></li>
 <li class="chapter" data-level="7.4" data-path="numpy-1.html"><a href="numpy-1.html#matematika"><i class="fa fa-check"></i><b>7.4</b> Matematika</a></li>
 </ul></li>
@@ -233,35 +240,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="delo-z-objekti" class="section level1" number="5">
 <h1><span class="header-section-number">Poglavje 5</span> Delo z objekti</h1>
 <style type="text/css">
-.sourceCode .python {
+#metode-za-nize pre {
   margin-left: 2em;
-}
-
-pre {
-  margin-left: 2em !important;
 }
 </style>
 <p>Gradivo za to poglavje je <a href="https://automatetheboringstuff.com/2e/chapter6/" class="uri">https://automatetheboringstuff.com/2e/chapter6/</a>
 in poglavje <code>Nizi</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html</a></p>
-<p>Metod je veliko, spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten
-seznam je v uradni dokumentaciji: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="uri">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p>
+<p>Uporabna je tudi dokumentacija za različne tipe <a href="https://docs.python.org/3/tutorial/datastructures.html" class="uri">https://docs.python.org/3/tutorial/datastructures.html</a></p>
+<p>Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="uri">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p>
 <p>Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo
 narediti (npr. s <code>python count characters in string</code> hitro najdemo <code>count()</code> in primere uporabe).</p>
-<div id="metode-za-sezname" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Metode za sezname</h2>
-<ul>
-<li><code>sez.append(element)</code> doda element na konec seznama</li>
-<li><code>sez.extend(sez2)</code> na konec seznama <code>sez</code> pristavi seznam <code>sez2</code>, na kratko <code>sez += sez2</code></li>
-<li><code>sez.insert(i, x)</code> na mesto z indeksom <code>i</code> vstavi element <code>x</code></li>
-<li><code>sez.remove(x)</code> iz seznama odstrani prvo pojavitev elementa <code>x</code></li>
-<li><code>sez.pop(i)</code> odstrani element na indeksu <code>i</code> in ga vrne; če <code>i</code> ne podamo je to zadnji element</li>
-<li><code>sez.index(x)</code> vrne prvi indeks, na katerem se nahaja vrednost <code>x</code></li>
-<li><code>sez.count(x)</code> vrne število pojavitev <code>x</code> v seznamu</li>
-<li><code>sez.sort(reverse=False)</code> uredi seznam po velikosti naraščajoče / abecedi, če podamo <code>reverse=True</code>, bo seznam urejen v nasprotnem vrstnem redu</li>
-</ul>
-</div>
-<div id="metode-za-nize" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Metode za nize</h2>
+<div id="metode-za-nize" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Metode za nize</h2>
 <ul>
 <li><code>niz.count(znak)</code> vrne število pojavitev znaka v nizu</li>
 <li><code>niz.index(znak)</code> vrne indeks, na katerem se znak prvič pojavi; če ne obstaja sproži napako</li>
@@ -285,6 +275,64 @@ ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presled
 </ul>
 <div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="delo-z-objekti.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
 <pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
+</div>
+<div id="metode-za-sezname" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Metode za sezname</h2>
+<ul>
+<li><code>sez.append(element)</code> doda element na konec seznama</li>
+<li><code>sez.extend(sez2)</code> na konec seznama <code>sez</code> pristavi seznam <code>sez2</code>, na kratko <code>sez += sez2</code></li>
+<li><code>sez.insert(i, x)</code> na mesto z indeksom <code>i</code> vstavi element <code>x</code></li>
+<li><code>sez.remove(x)</code> iz seznama odstrani prvo pojavitev elementa <code>x</code></li>
+<li><code>sez.pop(i)</code> odstrani element na indeksu <code>i</code> in ga vrne; če <code>i</code> ne podamo je to zadnji element</li>
+<li><code>sez.index(x)</code> vrne prvi indeks, na katerem se nahaja vrednost <code>x</code></li>
+<li><code>sez.count(x)</code> vrne število pojavitev <code>x</code> v seznamu</li>
+<li><code>sez.sort(reverse=False)</code> uredi seznam po velikosti naraščajoče / abecedi; če podamo neobvezni argument <code>reverse=True</code>, bo seznam urejen v nasprotnem vrstnem redu</li>
+</ul>
+</div>
+<div id="sortiranje-seznamov" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Sortiranje seznamov</h2>
+<p>Za sortiranje lahko uporabimo funkcijo <code>sorted(seznam)</code>, ki vrne sortiran seznam ali pa metodo <code>seznam.sort()</code>, ki spremeni originalni seznam, tako, da je sortiran.</p>
+<p>Obema funkcijama lahko podamo neobvezni argument <code>reversed=True</code>, ki seznam sortira v nasprotnem vrstnem redu. Podamo lahko tudi neobvezni argument <code>key=ime_funkcije</code>, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="delo-z-objekti.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sortirna_funkcija(element_seznama):</span>
+<span id="cb45-2"><a href="delo-z-objekti.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> element_seznama[<span class="dv">2</span>]</span>
+<span id="cb45-3"><a href="delo-z-objekti.html#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="delo-z-objekti.html#cb45-4" aria-hidden="true" tabindex="-1"></a>student_tuples <span class="op">=</span> [</span>
+<span id="cb45-5"><a href="delo-z-objekti.html#cb45-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;john&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="dv">15</span>),</span>
+<span id="cb45-6"><a href="delo-z-objekti.html#cb45-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;jane&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">12</span>),</span>
+<span id="cb45-7"><a href="delo-z-objekti.html#cb45-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;dave&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">10</span>),</span>
+<span id="cb45-8"><a href="delo-z-objekti.html#cb45-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb45-9"><a href="delo-z-objekti.html#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(student_tuples, key<span class="op">=</span>sortirna_funkcija))</span></code></pre></div>
+<pre><code>## [(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</code></pre>
+<p>Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z <code>return (element_seznama[1], element_seznama[2])</code> bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).</p>
+<p>Več o sortiranju v uradni dokumentaciji: <a href="https://docs.python.org/3/howto/sorting.html" class="uri">https://docs.python.org/3/howto/sorting.html</a></p>
+</div>
+<div id="drugi-tipi" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Drugi tipi</h2>
+<div id="nabori" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Nabori</h3>
+<p>Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji <code>()</code>. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" class="uri">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></p>
+<p>Vrednosti v naborih lahko “odpakiramo” nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo <code>*</code>. V to spremenljivko se bo shranil seznam presežnih elementov.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="delo-z-objekti.html#cb47-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;črešnje&quot;</span>)</span>
+<span id="cb47-2"><a href="delo-z-objekti.html#cb47-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
+<span id="cb47-3"><a href="delo-z-objekti.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece, rumeno, zeleno)</span></code></pre></div>
+<pre><code>## črešnje banana jabolko</code></pre>
+</div>
+<div id="množice" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Množice</h3>
+<p>Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji <code>{}</code>. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z <code>mnozica.add(element)</code>. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#sets" class="uri">https://docs.python.org/3/tutorial/datastructures.html#sets</a></p>
+</div>
+</div>
+<div id="pretvarjanje-med-tipi" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Pretvarjanje med tipi</h2>
+<p>Spremenljivko <code>a</code> lahko pretvorimo v najpogosteje uporabljane tipe z:</p>
+<ul>
+<li><code>int(a)</code> vrne celo število</li>
+<li><code>float(a)</code> vrne decimalno število</li>
+<li><code>str(a)</code> vrne niz</li>
+<li><code>list(a)</code> vrne seznam</li>
+<li><code>tuple(a)</code> vrne nabor</li>
+<li><code>set(a)</code> vrne množico</li>
+</ul>
 
 </div>
 </div>
