@@ -41,7 +41,8 @@ odpre kot zavihek v VSCode. Vanj vpišite `print("Pozdravljen svet!")`. V desnem
 zgornjem kotu bi morali imeti gumb (`|>`), s katerim lahko poženete napisani program.
 Če ga nimate, si lahko namestite extension z imenom `Code Runner`. Sicer lahko 
 program poženete tudi tako, da desno kliknete v območju urejevalnika in nato v 
-meniju, ki se pojavi izberete `Run Python File in Terminal`.
+meniju, ki se pojavi, izberete `Run Python File in Terminal`. Ko poženete program, 
+bi se vam v oknu terminala moralo izpisati "Pozdravljen svet!".
 6. Priporočam, da vklopite tudi "linter". To je program, ki je del VSCode in 
 v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak, 
 mnoge pa zazna in vas nanje opozori, še preden poženete program.
