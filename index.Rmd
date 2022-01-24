@@ -24,6 +24,5 @@ ___
 Ta spletna stran je dostopna na https://python.rokuk.org in 
 https://rokuk.github.io/rp-fiz-notes
 
-Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes 
-po licenci [GNU GPLv2](https://github.com/rokuk/rp-fiz-notes/blob/main/LICENSE).
+Vsebina teh strani in markdown koda je na voljo po licenci [GNU GPLv2](https://github.com/rokuk/rp-fiz-notes/blob/main/LICENSE). Koda je dostopna na https://github.com/rokuk/rp-fiz-notes.
 
