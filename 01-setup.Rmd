@@ -27,7 +27,7 @@ uspešno nameščen, bi se vam v novi vrstici moralo izpisati `Python 3.x.y`
 
 3. Namestite Visual Studio Code: https://code.visualstudio.com
 4. Namestite Python extension - Odprite Visual Studio Code. Morda se vam bo V 
-VSCode okonu pojavil zavihek z naslovom `Get Started`, ki ga lahko kar zaprete. 
+VSCode oknu pojavil zavihek z naslovom `Get Started`, ki ga lahko kar zaprete. 
 Na levi kliknite na Extensions (ikona s štirimi kvadratki), vpišite `Python`, 
 izberite `Python` in na desni kliknite `Install`. Morda se bo odprlo okno 
 `Get Started`, ki ga lahko zaprete.

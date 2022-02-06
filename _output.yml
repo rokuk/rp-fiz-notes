@@ -7,7 +7,7 @@ bookdown::gitbook:
         <li><a href="./">Računalniški praktikum (fizika) - Vaje</a></li>
       scroll_hightlight: true
     edit: https://github.com/rokuk/rp-fiz-notes/blob/main/%s
-    download: ["pdf", "epub"]
+    download: ["pdf", "epub", "docx"]
     sharing: no
     info: false
   includes:
@@ -19,3 +19,5 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
+bookdown::word_document2:
+    toc: true
