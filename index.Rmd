@@ -1,6 +1,6 @@
 --- 
 title: "Računalniški praktikum (fizika) - vaje"
-author: "Rok Kuk  -  rokuk.kontakt@gmail.com"
+author: "Rok Kuk  -  kontakt@rokuk.org"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
