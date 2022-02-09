@@ -1,6 +1,7 @@
 # Slovarji
 
 Gradivi za to poglavje sta
+
 - https://automatetheboringstuff.com/2e/chapter5/ 
 - poglavje `Slovar` v https://lusy.fri.uni-lj.si/ucbenik/book/1212/index.html
 

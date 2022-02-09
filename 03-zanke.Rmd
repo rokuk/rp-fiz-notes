@@ -1,6 +1,7 @@
 # Zanke
 
 Gradivi za to poglavje sta
+
 - https://automatetheboringstuff.com/2e/chapter2/ (poglavji `while loop statements` in `for loops`)
 - poglavje `Zanke` v https://lusy.fri.uni-lj.si/ucbenik/book/1203/index.html
 

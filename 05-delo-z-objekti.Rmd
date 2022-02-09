@@ -6,8 +6,10 @@
 }
 ```
 
-Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter6/ 
-in poglavje `Nizi` v https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html
+Gradivi za to poglavje sta
+
+- https://automatetheboringstuff.com/2e/chapter6/ 
+- poglavje `Nizi` v https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html
 
 Uporabna je tudi dokumentacija za različne tipe https://docs.python.org/3/tutorial/datastructures.html
 
