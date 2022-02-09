@@ -64,8 +64,7 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: docs # The folder the action should deploy.
           
-      - name: Upload book folder for debug
-        if: failure()
+      - name: Upload artfacts
         uses: actions/upload-artifact@main
         with:
           name: docs
