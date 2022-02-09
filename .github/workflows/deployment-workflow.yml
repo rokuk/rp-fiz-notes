@@ -65,6 +65,7 @@ jobs:
           folder: docs # The folder the action should deploy.
           
       - name: Upload artfacts
+        if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
           name: docs
