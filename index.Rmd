@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 url: https://rokuk.github.io/rp-fiz-notes
-cover-image: apple-touch-icon.png
+cover-image: ./images/apple-touch-icon.png
 description: "Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani."
 link-citations: yes
 github-repo: rokuk/rp-fiz-notes

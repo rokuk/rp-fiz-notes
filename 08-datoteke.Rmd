@@ -25,7 +25,7 @@ Primer: `C:\bacon\fizz\spam.txt`. Pot vsebuje vse mape, v katerih se datoteka
 nahaja, ločene z `\` (na Windowsu; na Linux in macOS je ločilo `/`), ime datoteke, 
 piko in končnico datoteke, ki določa njen tip.
 
-![Vir: https://automatetheboringstuff.com/2e/chapter9/ (Al Sweigart, [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/))](./paths.jpeg "Primer absolutnih in relativnih poti")
+![Vir: https://automatetheboringstuff.com/2e/chapter9/ (Al Sweigart, [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/))](./images/paths.jpeg "Primer absolutnih in relativnih poti")
 
 Relativna pot do datoteke je pot glede na neko drugo mapo. Za zgornji primer:
 glede na mapo `bacon` je relativna pot do datoteke `.\fizz\spam.txt`.
