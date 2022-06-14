@@ -1,7 +1,9 @@
 # Numpy
 
-Gradivo za to poglavje je https://numpy.org/doc/stable/user/absolute_beginners.html 
-ter https://numpy.org/doc/stable/user/quickstart.html
+Gradivi za to poglavje sta:
+
+- https://numpy.org/doc/stable/user/absolute_beginners.html 
+- https://numpy.org/doc/stable/user/quickstart.html
 
 Navaden seznam pretvorimo v Numpy seznam s funkcijo `array(seznam)`.
 
