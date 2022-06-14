@@ -147,7 +147,7 @@ Izvorna koda za strani je dostopna na \url{https://github.com/rokuk/rp-fiz-notes
 
 Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
 nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
-programov. Če imate težave, je opis problema dobro pogooglati, sicer pa pišite
+programov. Če imate težave, je opis problema dobro pogooglati, sicer pa lahko seveda vprašate sošolce, pišite
 asistentu ali postavite vprašanje na forumu.
 
 \hypertarget{namestitev-pythona}{%
@@ -157,15 +157,13 @@ asistentu ali postavite vprašanje na forumu.
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Namestite Python (najbolje kar verzijo 3.10) s te strani (zavihek \texttt{Downloads}): \url{https://www.python.org}
-  Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
-  starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tule: \url{https://www.python.org/downloads/}
+  Namestite Python (najbolje kar verzijo 3.10) s te strani (zavihek \texttt{Downloads}): \url{https://www.python.org}. Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte ``Add Python 3.x to PATH''. Nato nadaljujte z namestitvijo (opcija ``Install now'').
 \end{enumerate}
 
 \begin{quote}
-Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte
-``Add Python 3.x to PATH''.
-Nato nadaljujte z namestitvijo (opcija Install now).
+Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
+starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tule:
+\url{https://www.python.org/downloads/}
 \end{quote}
 
 \begin{enumerate}
@@ -174,14 +172,14 @@ Nato nadaljujte z namestitvijo (opcija Install now).
 \tightlist
 \item
   Preverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows)
-  ali Terminal (macOS in Linux), ki je že na vašem računalniku. V okno, ki se odpre
+  ali Terminal (macOS/Linux), ki je že na vašem računalniku. V okno, ki se odpre
   vpišite ukaz \texttt{python\ -\/-version} in pritisnite tipko Enter. Če je Python
   uspešno nameščen, bi se vam v novi vrstici moralo izpisati \texttt{Python\ 3.x.y}
   (kjer je \texttt{x.y} verzija nameščenega Pythona).
 \end{enumerate}
 
 \begin{quote}
-Če ste na Windowsu in ukaz \texttt{pyhon\ -\/-version} ne izpiše verzije, temveč javi napako, poskusite ukaz \texttt{py\ -\/-version}.
+Če ste na Windowsu in ukaz \texttt{python\ -\/-version} ne izpiše verzije, temveč se vam izpiše napaka ali ``Python not found'', poskusite ukaz \texttt{py\ -\/-version}.
 \end{quote}
 
 \hypertarget{namestitev-visual-studio-code}{%
@@ -194,40 +192,41 @@ Nato nadaljujte z namestitvijo (opcija Install now).
 \item
   Namestite Visual Studio Code: \url{https://code.visualstudio.com}
 \item
-  Namestite Python extension - Odprite Visual Studio Code. Morda se vam bo V
-  VSCode oknu pojavil zavihek z naslovom \texttt{Get\ Started}, ki ga lahko kar zaprete.
-  Na levi kliknite na Extensions (ikona s štirimi kvadratki), vpišite \texttt{Python},
+  Namestite Python extension. Odprite Visual Studio Code. Morda se vam bo v oknu VSCode pojavil zavihek z naslovom \texttt{Get\ Started}, ki ga lahko kar zaprete.
+  Na levem robu okna kliknite na Extensions (ikona s štirimi kvadratki), vpišite \texttt{Python},
   izberite \texttt{Python} in na desni kliknite \texttt{Install}. Morda se bo odprlo okno
   \texttt{Get\ Started}, ki ga lahko zaprete.
 \item
   Dobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali
-  vso vašo kodo. V VSCode v meniju kliknite \texttt{Open\ Folder...} in izberite to mapo.
+  vso vašo kodo. V VSCode v meniju File kliknite \texttt{Open\ Folder...} in izberite to mapo.
   Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek
   v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko
   (meni File \textgreater{} New File), jo shranite (meni File \textgreater{} Save) in jo poimenujte
   \texttt{test.py} (na Windowsu izberete \texttt{Save\ as\ type:\ Python}). Vsebina datoteke se vam
   odpre kot zavihek v VSCode. Vanj vpišite \texttt{print("Pozdravljen\ svet!")}. V desnem
-  zgornjem kotu bi morali imeti gumb (\texttt{\textbar{}\textgreater{}}), s katerim lahko poženete napisani program.
+  zgornjem kotu bi morali imeti gumb v obliki puščice, s katerim lahko poženete napisani program.
   Če ga nimate, si lahko namestite extension z imenom \texttt{Code\ Runner}. Sicer lahko
-  program poženete tudi tako, da desno kliknete v območju urejevalnika in nato v
+  program poženete tudi tako, da desno kliknete kjerkoli v območju urejevalnika besedila in nato v
   meniju, ki se pojavi, izberete \texttt{Run\ Python\ File\ in\ Terminal}. Ko poženete program,
   bi se vam v oknu terminala moralo izpisati ``Pozdravljen svet!''.
 \item
   Priporočam, da vklopite tudi ``linter''. To je program, ki je del VSCode in
   v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak,
-  mnoge pa zazna in vas nanje opozori, še preden poženete program.
+  mnoge zatipke pa zazna in vas nanje opozori, še preden poženete program, tako da jih podčrta.
   VSCode pritisnite Ctrl+Shift+P in vpišite ``linter'', kliknite na
-  \texttt{Python:\ Select\ Linter}. Pojavi se meni z različnimi možnostmi za različne linterje.
+  \texttt{Python:\ Select\ Linter}. Pojavi se meni z več možnostmi za linter.
   Priporočam \texttt{flake8}, ki nas poleg napak opozori tudi na kršitve priporočil za stil
-  PEP8. VSCode vas bo levo spodaj obvestil, da ta linter ni nameščen;
-  namestite ga tako, da kliknete \texttt{Install} v tem obvestilu. Po nekaj sekundah bo nameščen.
+  PEP8. Izberete ga s tipko Enter. VSCode vas bo desno spodaj obvestil, da ta linter ni nameščen;
+  namestite ga tako, da kliknete \texttt{Install} v tem obvestilu. Po nekaj sekundah bi se moral namestiti. Lahko ga preizkusite tako, da v datoteko s končnico .py nekaj narobe napišete npr. \texttt{prnt("Pozdravljen\ svet!")}
 \end{enumerate}
 
 VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju.
-Več o tem v uradni dokumentaciji: \url{https://code.visualstudio.com/docs/editor/codebasics}
+Več o tem piše v uradni dokumentaciji: \url{https://code.visualstudio.com/docs/editor/codebasics}
 
 \hypertarget{numpy}{%
 \section{Numpy}\label{numpy}}
+
+Potrebovali bomo še Pythonov paket Numpy. To je neke vrste dodatek za Python, ki nam omogoča lažje delo z vektorji in tabelami. Več o tem na prihodnjih vajah. Dodatne module za Python lahko nameščamo in odstranjujemo z modulom \texttt{pip}. To je modul, ki bi se moral avtomatsko namestiti skupaj s Pythonom.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -267,9 +266,9 @@ Več informacij o nameščanju modula \texttt{pip} je na \url{https://pip.pypa.i
 
 \begin{itemize}
 \item
-  Če pri poganjanju programa dobite napako \texttt{no\ module\ named\ numpy}, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisan postopek.
+  Če pri poganjanju programa dobite napako \texttt{no\ module\ named\ numpy}, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisani postopek.
 \item
-  Če imate na računalniku nameščenih več verzij Pythona (to so npr. vsi računalniki z macOS) se lahko ``python'' v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli .py datoteko in kliknete na ``Python 3.x.y'' v spodnjem levem vogalu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz \texttt{python3.10\ -m\ pip\ install\ numpy}, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz \texttt{py\ -3.10\ -m\ pip\ install\ numpy}.
+  Če imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko ``python'' v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na ``Python 3.x.y'' v spodnjem levem vogalu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz \texttt{python3.10\ -m\ pip\ install\ numpy}, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz \texttt{py\ -3.10\ -m\ pip\ install\ numpy}.
 \end{itemize}
 
 \hypertarget{uvod-v-ptyhon}{%
@@ -1074,8 +1073,15 @@ Zanka po parih v slovarju.
 \hypertarget{numpy-1}{%
 \chapter{Numpy}\label{numpy-1}}
 
-Gradivo za to poglavje je \url{https://numpy.org/doc/stable/user/absolute_beginners.html}
-ter \url{https://numpy.org/doc/stable/user/quickstart.html}
+Gradivi za to poglavje sta:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://numpy.org/doc/stable/user/absolute_beginners.html}
+\item
+  \url{https://numpy.org/doc/stable/user/quickstart.html}
+\end{itemize}
 
 Navaden seznam pretvorimo v Numpy seznam s funkcijo \texttt{array(seznam)}.
 
