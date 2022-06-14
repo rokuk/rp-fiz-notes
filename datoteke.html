@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 8 Datoteke | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 8 Datoteke | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://rokuk.github.io/rp-fiz-notes" />
   <meta property="og:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-02-17" />
+<meta name="date" content="2022-06-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="numpy-1.html"/>
 
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,12 +233,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="datoteke" class="section level1" number="8">
-<h1><span class="header-section-number">Poglavje 8</span> Datoteke</h1>
+<div id="datoteke" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Poglavje 8</span> Datoteke<a href="datoteke.html#datoteke" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Gradivo za to poglavje je <a href="https://automatetheboringstuff.com/2e/chapter9/" class="uri">https://automatetheboringstuff.com/2e/chapter9/</a></p>
 <p>Za tiste, ki vas zanima več tudi <a href="https://automatetheboringstuff.com/2e/chapter10/" class="uri">https://automatetheboringstuff.com/2e/chapter10/</a></p>
-<div id="datotečni-sistem" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Datotečni sistem</h2>
+<div id="datotečni-sistem" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Datotečni sistem<a href="datoteke.html#datotečni-sistem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, …).
 Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu
 imamo korensko mapo (root folder). Na Linux in macOS je to <code>/</code> na Windowsu pa
@@ -250,8 +249,8 @@ na več ločenih delov, ki jim rečemo particije. Primer: trdi disk z
 particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko
 (to velja za Windows, drugje je drugače), npr.
 USB ključi so pogosto pod <code>E</code> ali <code>F</code>.</p>
-<div id="absolutna-in-relativna-pot" class="section level3" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Absolutna in relativna pot</h3>
+<div id="absolutna-in-relativna-pot" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Absolutna in relativna pot<a href="datoteke.html#absolutna-in-relativna-pot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Vsaki datoteki ustreza ena absolutna pot. To je “naslov”, pod katero jo lahko najdemo.
 Primer: <code>C:\bacon\fizz\spam.txt</code>. Pot vsebuje vse mape, v katerih se datoteka
 nahaja, ločene z <code>\</code> (na Windowsu; na Linux in macOS je ločilo <code>/</code>), ime datoteke,
@@ -274,8 +273,8 @@ glede na <code>eggs</code> enaka <code>..\bacon\fizz\spam.txt</code>.</p>
 <code>fizz</code> v mapo <code>eggs</code> pridemo z <code>..\..\eggs</code>, itd.</p>
 <p>Za podrobnejši razlago in več primerov glej gradivo: <a href="https://automatetheboringstuff.com/2e/chapter9/" class="uri">https://automatetheboringstuff.com/2e/chapter9/</a></p>
 </div>
-<div id="delo-z-ukaznim-pozivom" class="section level3" number="8.1.2">
-<h3><span class="header-section-number">8.1.2</span> Delo z ukaznim pozivom</h3>
+<div id="delo-z-ukaznim-pozivom" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Delo z ukaznim pozivom<a href="datoteke.html#delo-z-ukaznim-pozivom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v
 nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD).
 Ta mapa je vedno napisana na začetku vrstice.
@@ -286,8 +285,8 @@ s presledki. Ukaz izvedemo s tipko Enter.</p>
 <p>Ukaz <code>dir</code> izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.</p>
 <p>Glej tudi: <a href="https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505" class="uri">https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505</a></p>
 </div>
-<div id="mape-in-datoteke-v-pythonu" class="section level3" number="8.1.3">
-<h3><span class="header-section-number">8.1.3</span> Mape in datoteke v Pythonu</h3>
+<div id="mape-in-datoteke-v-pythonu" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Mape in datoteke v Pythonu<a href="datoteke.html#mape-in-datoteke-v-pythonu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Za delo z datotečnim sistemom je na voljo knjižnica <code>os</code>.
 Posamezne funkcije, njihove parametre in uporabo lahko poiščete v uradni
 dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!</p>
@@ -312,8 +311,8 @@ dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!</p>
 </ul>
 </div>
 </div>
-<div id="pisanje" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Pisanje</h2>
+<div id="pisanje" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Pisanje<a href="datoteke.html#pisanje" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Datoteko odpremo v načinu za pisanje <code>mode="w"</code> in uporabimo funkcijo <code>write()</code>,
 ki zapiše niz v datoteko. Znak <code>\n</code> pomeni novo vrstico. Če želimo zapisati znak <code>\</code>
 moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pythonu: <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" class="uri">https://www.w3schools.com/python/gloss_python_escape_characters.asp</a></p>
@@ -327,10 +326,10 @@ moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pytho
 <p>Namesto <code>dat.write("niz")</code> se lahko uporablja tudi <code>print("niz", file=dat)</code>, kjer
 odprto datoteko podamo kot parameter.</p>
 </div>
-<div id="branje" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Branje</h2>
-<div id="read" class="section level3" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> read()</h3>
+<div id="branje" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Branje<a href="datoteke.html#branje" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="read" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> read()<a href="datoteke.html#read" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Datoteko odpremo v načinu za branje <code>mode="r"</code> in uporabimo metodo <code>read()</code>,
 ki vrne celotno vsebino datoteke naenkrat v obliki niza.</p>
 <div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="datoteke.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
@@ -346,8 +345,8 @@ nekoliko zastarel standard. Zato je dobra praksa uporaba parametra
 <code>encoding="utf-8"</code>, s čimer uporabimo Unicode, ki se danes
 uporablja skoraj povsod. Na macOS in Linux je vrednost <code>utf-8</code> že privzeta.</p>
 </div>
-<div id="readlines" class="section level3" number="8.3.2">
-<h3><span class="header-section-number">8.3.2</span> readlines()</h3>
+<div id="readlines" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> readlines()<a href="datoteke.html#readlines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Z metodo <code>readlines()</code> dobimo seznam, v katerem so posamezne
 vrstice iz datoteke.</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="datoteke.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
@@ -355,8 +354,8 @@ vrstice iz datoteke.</p>
 <span id="cb85-3"><a href="datoteke.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
-<div id="zanka" class="section level3" number="8.3.3">
-<h3><span class="header-section-number">8.3.3</span> zanka</h3>
+<div id="zanka" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> zanka<a href="datoteke.html#zanka" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Po vrsticah datoteke lahko gremo z zanko for.</p>
 <div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="datoteke.html#cb87-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
 <span id="cb87-2"><a href="datoteke.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
@@ -366,8 +365,8 @@ vrstice iz datoteke.</p>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
 </div>
-<div id="mode" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Mode</h2>
+<div id="mode" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Mode<a href="datoteke.html#mode" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>je neobvezni argument funkcije <code>open()</code>. Privzeta vrednost je <code>mode="rt"</code>. Zato
 nam v zgornjih primerih ni bilo treba pisati <code>t</code> (je že privzet poleg druge
 črke, ki jo podamo (<code>r</code> ali <code>w</code>)). S posameznimi črkami povemo, kaj želimo z

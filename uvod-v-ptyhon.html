@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://rokuk.github.io/rp-fiz-notes" />
   <meta property="og:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-02-17" />
+<meta name="date" content="2022-06-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="namestitev-okolja-za-vaje.html"/>
 <link rel="next" href="zanke.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,8 +233,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="uvod-v-ptyhon" class="section level1" number="2">
-<h1><span class="header-section-number">Poglavje 2</span> Uvod v Ptyhon</h1>
+<div id="uvod-v-ptyhon" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Poglavje 2</span> Uvod v Ptyhon<a href="uvod-v-ptyhon.html#uvod-v-ptyhon" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Gradiva za to poglavje so:</p>
 <ul>
 <li><a href="https://automatetheboringstuff.com/2e/chapter1/" class="uri">https://automatetheboringstuff.com/2e/chapter1/</a></li>
@@ -245,8 +244,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>poglavje <code>Izdelava samostojnih programov in pogojni stavki</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1202/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1202/index.html</a></li>
 <li>poglavje <code>Funkcije</code>v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1205/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1205/index.html</a></li>
 </ul>
-<div id="števila" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Števila</h2>
+<div id="števila" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Števila<a href="uvod-v-ptyhon.html#števila" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Za seštevanje uporabimo <code>+</code>, za odštevanje <code>-</code>, za množenje <code>*</code>, za potence <code>**</code>,
 za deljenje <code>/</code>, za celoštevilsko deljenje <code>//</code>, za ostanek pri deljenju <code>%</code>.
 Za vrstni red računanja operacij (če jih kombiniramo) veljajo enaka pravila kot
@@ -257,8 +256,8 @@ v matematiki.</p>
 <pre><code>## 2 4</code></pre>
 <p>Za zaokroževanje števila <code>stevilo</code> uporabimo funkcijo <code>round(stevilo, d)</code>, ki število zaokroži na <code>d</code> decimalnih mest.</p>
 </div>
-<div id="logične-operacije" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Logične operacije</h2>
+<div id="logične-operacije" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Logične operacije<a href="uvod-v-ptyhon.html#logične-operacije" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Logične operacije s ključnimi besedami <code>and</code>, <code>or</code> in <code>not</code> ustrezajo operacijam v matematiki.</p>
 <ul>
 <li><code>a and b</code> je True, če sta <code>a</code> in <code>b</code> enaka True, sicer je False</li>
@@ -274,8 +273,8 @@ Sicer ima operator <code>and</code> prednost pred <code>or</code>, <code>not</co
 <pre><code>## True</code></pre>
 <p>V logičnih operacijah se število 0 obnaša kot False, ostala števila pa kot True.</p>
 </div>
-<div id="relacijski-operatorji" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Relacijski operatorji</h2>
+<div id="relacijski-operatorji" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Relacijski operatorji<a href="uvod-v-ptyhon.html#relacijski-operatorji" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Če relacija velja ima izraz vrednost True, sicer pa False.</p>
 <ul>
 <li>primerjava števil <code>a &lt; b</code> ali <code>a &lt;= b</code></li>
@@ -285,8 +284,8 @@ Sicer ima operator <code>and</code> prednost pred <code>or</code>, <code>not</co
 <p>Logične operacije in relacije so binarne. Binarna operacija se izvede med tem,
 kar je na levi, in tem, kar je na desni.</p>
 </div>
-<div id="nekoliko-kompleksnejši-primer" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Nekoliko kompleksnejši primer</h2>
+<div id="nekoliko-kompleksnejši-primer" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Nekoliko kompleksnejši primer<a href="uvod-v-ptyhon.html#nekoliko-kompleksnejši-primer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Če želimo preveriti ali je spremenljivka <code>mesec</code> enaka 6 ali 7, ni prav, če napišemo</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="uvod-v-ptyhon.html#cb5-1" aria-hidden="true" tabindex="-1"></a>mesec <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb5-2"><a href="uvod-v-ptyhon.html#cb5-2" aria-hidden="true" tabindex="-1"></a>rezultat <span class="op">=</span> mesec <span class="op">==</span> <span class="dv">6</span> <span class="kw">or</span> <span class="dv">7</span></span>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 7 Numpy | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 7 Numpy | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://rokuk.github.io/rp-fiz-notes" />
   <meta property="og:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-02-17" />
+<meta name="date" content="2022-06-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="slovarji.html"/>
 <link rel="next" href="datoteke.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -234,8 +233,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="numpy-1" class="section level1" number="7">
-<h1><span class="header-section-number">Poglavje 7</span> Numpy</h1>
+<div id="numpy-1" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Poglavje 7</span> Numpy<a href="numpy-1.html#numpy-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Gradivo za to poglavje je <a href="https://numpy.org/doc/stable/user/absolute_beginners.html" class="uri">https://numpy.org/doc/stable/user/absolute_beginners.html</a>
 ter <a href="https://numpy.org/doc/stable/user/quickstart.html" class="uri">https://numpy.org/doc/stable/user/quickstart.html</a></p>
 <p>Navaden seznam pretvorimo v Numpy seznam s funkcijo <code>array(seznam)</code>.</p>
@@ -251,8 +250,8 @@ ter <a href="https://numpy.org/doc/stable/user/quickstart.html" class="uri">http
 ## 2
 ## 8</code></pre>
 <p>Sezname lahko združimo z <code>np.concatenate(sez1, sez2)</code>, ki vrne staknjen seznam.</p>
-<div id="ustvarjanje-tabel" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Ustvarjanje tabel</h2>
+<div id="ustvarjanje-tabel" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Ustvarjanje tabel<a href="numpy-1.html#ustvarjanje-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><code>np.zeros(oblika)</code> vrne tabelo ničel; <code>oblika</code> je nabor celih števil, ki predstavlja obliko tabele</li>
 <li><code>np.ones(oblika)</code> vrne tabelo enic</li>
@@ -263,8 +262,8 @@ vsak element v tabeli izračuna s klicem funkcije <code>funkcija</code>; funkcij
 <li><code>seznam.reshape(oblika)</code> spremeni obliko seznama</li>
 </ul>
 </div>
-<div id="rezine" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Rezine</h2>
+<div id="rezine" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Rezine<a href="numpy-1.html#rezine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 (<code>zacetek:konec:korak</code>), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.</p>
 <div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="numpy-1.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -297,8 +296,8 @@ vsak element v tabeli izračuna s klicem funkcije <code>funkcija</code>; funkcij
 ##  [ 35  36  37  38  39  40  41]
 ##  [ 42  43  44  45  46  47  48]]</code></pre>
 </div>
-<div id="uporabne-funkcije" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Uporabne funkcije</h2>
+<div id="uporabne-funkcije" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Uporabne funkcije<a href="numpy-1.html#uporabne-funkcije" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Glej predvsem uradno dokumentacijo: <a href="https://numpy.org/doc/stable/reference/routines.sort.html" class="uri">https://numpy.org/doc/stable/reference/routines.sort.html</a><br />
 Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
 <p>Pri mnogih funkcijah lahko podamo neobvezni parameter <code>axis=x</code>, kjer je <code>x</code>
@@ -322,8 +321,8 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
 ##  [2 5]
 ##  [3 6]]</code></pre>
 </div>
-<div id="matematika" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Matematika</h2>
+<div id="matematika" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Matematika<a href="numpy-1.html#matematika" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><code>np.sum(tabela)</code></li>
 <li><code>np.cumsum(tabela)</code></li>
