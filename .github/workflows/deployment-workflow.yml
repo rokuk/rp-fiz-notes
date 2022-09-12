@@ -52,6 +52,11 @@ jobs:
         run: |
           Rscript -e 'install.packages(c("rmarkdown","bookdown","tinytex","reticulate"))'
           Rscript -e 'tinytex::install_tinytex()'
+
+      - uses: actions/checkout@v2
+        with:
+          ref: 'output'
+          path: 'output'
         
       - name: Build
         run: |
