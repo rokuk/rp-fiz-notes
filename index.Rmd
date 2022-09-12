@@ -4,7 +4,7 @@ author: "Rok Kuk  -  kontakt@rokuk.org"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-url: https://rokuk.github.io/rp-fiz-notes
+url: https://python.rokuk.org
 cover-image: images/apple-touch-icon.png
 description: "Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani."
 link-citations: yes
@@ -18,9 +18,6 @@ Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. l
 Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.
 
 ___
-
-Ta spletna stran je dostopna na https://python.rokuk.org in 
-https://rokuk.github.io/rp-fiz-notes
 
 Vsebina teh strani je objavljena pod licenco <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
 Izvorna koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes
