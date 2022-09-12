@@ -70,7 +70,7 @@ jobs:
           author_email: 'kontakt@rokuk.org'
           cwd: 'output'
           push: 'origin output --set-upstream --force'
-          message: $(git rev-parse --short $GITHUB_SHA)
+          message: $GITHUB_SHA
 
       - name: Upload artfacts
         if: ${{ failure() }}
