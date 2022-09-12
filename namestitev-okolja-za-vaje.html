@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Poglavje 1 Namestitev okolja za vaje | Računalniški praktikum (fizika) - vaje</title>
+  <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Poglavje 1 Namestitev okolja za vaje | Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
+  <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
+  <meta name="github-repo" content="rokuk/rp-fiz-notes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Poglavje 1 Namestitev okolja za vaje | Računalniški praktikum (fizika) - vaje" />
+  
+  <meta name="twitter:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
+  <meta name="twitter:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
+
+<meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
+
+
+<meta name="date" content="2022-09-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="uvod-v-ptyhon.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Računalniški praktikum (fizika) - Vaje</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>O strani</a></li>
+<li class="chapter" data-level="1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html"><i class="fa fa-check"></i><b>1</b> Namestitev okolja za vaje</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-pythona"><i class="fa fa-check"></i><b>1.1</b> Namestitev Pythona</a></li>
+<li class="chapter" data-level="1.2" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#namestitev-visual-studio-code"><i class="fa fa-check"></i><b>1.2</b> Namestitev Visual Studio Code</a></li>
+<li class="chapter" data-level="1.3" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#numpy"><i class="fa fa-check"></i><b>1.3</b> Numpy</a></li>
+<li class="chapter" data-level="1.4" data-path="namestitev-okolja-za-vaje.html"><a href="namestitev-okolja-za-vaje.html#pogoste-težave"><i class="fa fa-check"></i><b>1.4</b> Pogoste težave</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html"><i class="fa fa-check"></i><b>2</b> Uvod v Ptyhon</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html#števila"><i class="fa fa-check"></i><b>2.1</b> Števila</a></li>
+<li class="chapter" data-level="2.2" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html#logične-operacije"><i class="fa fa-check"></i><b>2.2</b> Logične operacije</a></li>
+<li class="chapter" data-level="2.3" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html#relacijski-operatorji"><i class="fa fa-check"></i><b>2.3</b> Relacijski operatorji</a></li>
+<li class="chapter" data-level="2.4" data-path="uvod-v-ptyhon.html"><a href="uvod-v-ptyhon.html#nekoliko-kompleksnejši-primer"><i class="fa fa-check"></i><b>2.4</b> Nekoliko kompleksnejši primer</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="zanke.html"><a href="zanke.html"><i class="fa fa-check"></i><b>3</b> Zanke</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="zanke.html"><a href="zanke.html#zanka-for"><i class="fa fa-check"></i><b>3.1</b> Zanka for</a></li>
+<li class="chapter" data-level="3.2" data-path="zanke.html"><a href="zanke.html#zanka-while"><i class="fa fa-check"></i><b>3.2</b> Zanka while</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html"><i class="fa fa-check"></i><b>4</b> Seznami in nizi</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#skupne-lastnosti"><i class="fa fa-check"></i><b>4.1</b> Skupne lastnosti</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#indeksiranje"><i class="fa fa-check"></i><b>4.1.1</b> Indeksiranje</a></li>
+<li class="chapter" data-level="4.1.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#združevanje"><i class="fa fa-check"></i><b>4.1.2</b> Združevanje</a></li>
+<li class="chapter" data-level="4.1.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanosti"><i class="fa fa-check"></i><b>4.1.3</b> Preverjanje vsebovanosti</a></li>
+<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#sprehod-po-elementih"><i class="fa fa-check"></i><b>4.1.4</b> Sprehod po elementih</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#spreminjanje"><i class="fa fa-check"></i><b>4.2</b> Spreminjanje</a></li>
+<li class="chapter" data-level="4.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#nekaj-uporabnih-funkcij"><i class="fa fa-check"></i><b>4.3</b> Nekaj uporabnih funkcij</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html"><i class="fa fa-check"></i><b>5</b> Delo z objekti</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-nize"><i class="fa fa-check"></i><b>5.1</b> Metode za nize</a></li>
+<li class="chapter" data-level="5.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#metode-za-sezname"><i class="fa fa-check"></i><b>5.2</b> Metode za sezname</a></li>
+<li class="chapter" data-level="5.3" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#sortiranje-seznamov"><i class="fa fa-check"></i><b>5.3</b> Sortiranje seznamov</a></li>
+<li class="chapter" data-level="5.4" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#drugi-tipi"><i class="fa fa-check"></i><b>5.4</b> Drugi tipi</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#nabori"><i class="fa fa-check"></i><b>5.4.1</b> Nabori</a></li>
+<li class="chapter" data-level="5.4.2" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#množice"><i class="fa fa-check"></i><b>5.4.2</b> Množice</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html#pretvarjanje-med-tipi"><i class="fa fa-check"></i><b>5.5</b> Pretvarjanje med tipi</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="slovarji.html"><a href="slovarji.html"><i class="fa fa-check"></i><b>6</b> Slovarji</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="slovarji.html"><a href="slovarji.html#osnovne-operacije"><i class="fa fa-check"></i><b>6.1</b> Osnovne operacije</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="slovarji.html"><a href="slovarji.html#dostopanje-do-vrednosti"><i class="fa fa-check"></i><b>6.1.1</b> Dostopanje do vrednosti</a></li>
+<li class="chapter" data-level="6.1.2" data-path="slovarji.html"><a href="slovarji.html#spreminjanje-1"><i class="fa fa-check"></i><b>6.1.2</b> Spreminjanje</a></li>
+<li class="chapter" data-level="6.1.3" data-path="slovarji.html"><a href="slovarji.html#brisanje"><i class="fa fa-check"></i><b>6.1.3</b> Brisanje</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="slovarji.html"><a href="slovarji.html#metode-na-slovarjih"><i class="fa fa-check"></i><b>6.2</b> Metode na slovarjih</a></li>
+<li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
+<li class="chapter" data-level="6.4" data-path="slovarji.html"><a href="slovarji.html#zanke-1"><i class="fa fa-check"></i><b>6.4</b> Zanke</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="numpy-1.html"><a href="numpy-1.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="numpy-1.html"><a href="numpy-1.html#ustvarjanje-tabel"><i class="fa fa-check"></i><b>7.1</b> Ustvarjanje tabel</a></li>
+<li class="chapter" data-level="7.2" data-path="numpy-1.html"><a href="numpy-1.html#rezine"><i class="fa fa-check"></i><b>7.2</b> Rezine</a></li>
+<li class="chapter" data-level="7.3" data-path="numpy-1.html"><a href="numpy-1.html#uporabne-funkcije"><i class="fa fa-check"></i><b>7.3</b> Uporabne funkcije</a></li>
+<li class="chapter" data-level="7.4" data-path="numpy-1.html"><a href="numpy-1.html#matematika"><i class="fa fa-check"></i><b>7.4</b> Matematika</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="datoteke.html"><a href="datoteke.html"><i class="fa fa-check"></i><b>8</b> Datoteke</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="datoteke.html"><a href="datoteke.html#datotečni-sistem"><i class="fa fa-check"></i><b>8.1</b> Datotečni sistem</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="datoteke.html"><a href="datoteke.html#absolutna-in-relativna-pot"><i class="fa fa-check"></i><b>8.1.1</b> Absolutna in relativna pot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="datoteke.html"><a href="datoteke.html#delo-z-ukaznim-pozivom"><i class="fa fa-check"></i><b>8.1.2</b> Delo z ukaznim pozivom</a></li>
+<li class="chapter" data-level="8.1.3" data-path="datoteke.html"><a href="datoteke.html#mape-in-datoteke-v-pythonu"><i class="fa fa-check"></i><b>8.1.3</b> Mape in datoteke v Pythonu</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="datoteke.html"><a href="datoteke.html#pisanje"><i class="fa fa-check"></i><b>8.2</b> Pisanje</a></li>
+<li class="chapter" data-level="8.3" data-path="datoteke.html"><a href="datoteke.html#branje"><i class="fa fa-check"></i><b>8.3</b> Branje</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="datoteke.html"><a href="datoteke.html#read"><i class="fa fa-check"></i><b>8.3.1</b> read()</a></li>
+<li class="chapter" data-level="8.3.2" data-path="datoteke.html"><a href="datoteke.html#readlines"><i class="fa fa-check"></i><b>8.3.2</b> readlines()</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datoteke.html"><a href="datoteke.html#zanka"><i class="fa fa-check"></i><b>8.3.3</b> zanka</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="datoteke.html"><a href="datoteke.html#mode"><i class="fa fa-check"></i><b>8.4</b> Mode</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Računalniški praktikum (fizika) - vaje</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="namestitev-okolja-za-vaje" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Poglavje 1</span> Namestitev okolja za vaje<a href="namestitev-okolja-za-vaje.html#namestitev-okolja-za-vaje" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Da na računalniku uporabljate Python in rešujete naloge je potrebno namestiti
+nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave pri nameščanju
+programov. Če imate težave, je opis problema dobro pogooglati, sicer pa lahko seveda vprašate sošolce, pišite
+asistentu ali postavite vprašanje na forumu.</p>
+<div id="namestitev-pythona" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Namestitev Pythona<a href="namestitev-okolja-za-vaje.html#namestitev-pythona" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Namestite Python (najbolje kar verzijo 3.10) s te strani (zavihek <code>Downloads</code>): <a href="https://www.python.org" class="uri">https://www.python.org</a>. Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte “Add Python 3.x to PATH”. Nato nadaljujte z namestitvijo (opcija “Install now”).</li>
+</ol>
+<blockquote>
+<p>Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti
+starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tule:
+<a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Preverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows)
+ali Terminal (macOS/Linux), ki je že na vašem računalniku. V okno, ki se odpre
+vpišite ukaz <code>python --version</code> in pritisnite tipko Enter. Če je Python
+uspešno nameščen, bi se vam v novi vrstici moralo izpisati <code>Python 3.x.y</code>
+(kjer je <code>x.y</code> verzija nameščenega Pythona).</li>
+</ol>
+<blockquote>
+<p>Če ste na Windowsu in ukaz <code>python --version</code> ne izpiše verzije, temveč se vam izpiše napaka ali “Python not found”, poskusite ukaz <code>py --version</code>.</p>
+</blockquote>
+</div>
+<div id="namestitev-visual-studio-code" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Namestitev Visual Studio Code<a href="namestitev-okolja-za-vaje.html#namestitev-visual-studio-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol start="3" style="list-style-type: decimal">
+<li>Namestite Visual Studio Code: <a href="https://code.visualstudio.com" class="uri">https://code.visualstudio.com</a></li>
+<li>Namestite Python extension. Odprite Visual Studio Code. Morda se vam bo v oknu VSCode pojavil zavihek z naslovom <code>Get Started</code>, ki ga lahko kar zaprete.
+Na levem robu okna kliknite na Extensions (ikona s štirimi kvadratki), vpišite <code>Python</code>,
+izberite <code>Python</code> in na desni kliknite <code>Install</code>. Morda se bo odprlo okno
+<code>Get Started</code>, ki ga lahko zaprete.</li>
+<li>Dobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali
+vso vašo kodo. V VSCode v meniju File kliknite <code>Open Folder...</code> in izberite to mapo.
+Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek
+v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko
+(meni File &gt; New File), jo shranite (meni File &gt; Save) in jo poimenujte
+<code>test.py</code> (na Windowsu izberete <code>Save as type: Python</code>). Vsebina datoteke se vam
+odpre kot zavihek v VSCode. Vanj vpišite <code>print("Pozdravljen svet!")</code>. V desnem
+zgornjem kotu bi morali imeti gumb v obliki puščice, s katerim lahko poženete napisani program.
+Če ga nimate, si lahko namestite extension z imenom <code>Code Runner</code>. Sicer lahko
+program poženete tudi tako, da desno kliknete kjerkoli v območju urejevalnika besedila in nato v
+meniju, ki se pojavi, izberete <code>Run Python File in Terminal</code>. Ko poženete program,
+bi se vam v oknu terminala moralo izpisati “Pozdravljen svet!”.</li>
+<li>Priporočam, da vklopite tudi “linter”. To je program, ki je del VSCode in
+v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak,
+mnoge zatipke pa zazna in vas nanje opozori, še preden poženete program, tako da jih podčrta.
+VSCode pritisnite Ctrl+Shift+P in vpišite “linter”, kliknite na
+<code>Python: Select Linter</code>. Pojavi se meni z več možnostmi za linter.
+Priporočam <code>flake8</code>, ki nas poleg napak opozori tudi na kršitve priporočil za stil
+PEP8. Izberete ga s tipko Enter. VSCode vas bo desno spodaj obvestil, da ta linter ni nameščen;
+namestite ga tako, da kliknete <code>Install</code> v tem obvestilu. Po nekaj sekundah bi se moral namestiti. Lahko ga preizkusite tako, da v datoteko s končnico .py nekaj narobe napišete npr. <code>prnt("Pozdravljen svet!")</code></li>
+</ol>
+<p>VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju.
+Več o tem piše v uradni dokumentaciji: <a href="https://code.visualstudio.com/docs/editor/codebasics" class="uri">https://code.visualstudio.com/docs/editor/codebasics</a></p>
+</div>
+<div id="numpy" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Numpy<a href="namestitev-okolja-za-vaje.html#numpy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Potrebovali bomo še Pythonov paket Numpy. To je neke vrste dodatek za Python, ki nam omogoča lažje delo z vektorji in tabelami. Več o tem na prihodnjih vajah. Dodatne module za Python lahko nameščamo in odstranjujemo z modulom <code>pip</code>. To je modul, ki bi se moral avtomatsko namestiti skupaj s Pythonom.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Najprej v Ukazni poziv / Terminal vpišite in izvršite ukaz <code>python -m pip --version</code>
+(če ste na Windowsu boste morda dobili napako v stilu “python ne obstaja”,
+v tem primeru poskusite izvršiti ukaz <code>py -m pip --version</code>).
+Izpisati bi se vam moralo nekaj podobnega <code>pip X.Y.Z from ... (python 3.N.N)</code>.</li>
+</ol>
+<blockquote>
+<p>Več o tem na <a href="https://pip.pypa.io/en/stable/getting-started/" class="uri">https://pip.pypa.io/en/stable/getting-started/</a></p>
+</blockquote>
+<p>Če se vam izpiše to, lahko nadaljujete na 8. korak, sicer berite naprej.
+Če se vam izpiše nekaj v stilu “pip ne obstaja” ali “command not found”,
+morate namestiti Pythonov modul <code>pip</code>. To naredite z ukazom
+<code>python -m ensurepip --upgrade</code> (oz. na Windowsu morda <code>py -m ensurepip --upgrade</code>).</p>
+<blockquote>
+<p>Več informacij o nameščanju modula <code>pip</code> je na <a href="https://pip.pypa.io/en/stable/installation/#python" class="uri">https://pip.pypa.io/en/stable/installation/#python</a></p>
+</blockquote>
+<ol start="8" style="list-style-type: decimal">
+<li>Namestite Pythonov modul numpy. To naredite z ukazom <code>python -m pip install numpy</code>
+(oz. na Windowsu bo morda treba uporabiti <code>py -m pip install numpy</code>).</li>
+</ol>
+</div>
+<div id="pogoste-težave" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Pogoste težave<a href="namestitev-okolja-za-vaje.html#pogoste-težave" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Če pri poganjanju programa dobite napako <code>no module named numpy</code>, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisani postopek.</p></li>
+<li><p>Če imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko “python” v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na “Python 3.x.y” v spodnjem levem vogalu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz <code>python3.10 -m pip install numpy</code>, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz <code>py -3.10 -m pip install numpy</code>.</p></li>
+</ul>
+
+</div>
+</div>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d8ebf5d0a154ae689299389510ce8d9"}'></script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="uvod-v-ptyhon.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/01-setup.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub", "_main.docx"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "none",
+"scroll_hightlight": true
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
