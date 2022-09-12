@@ -70,11 +70,13 @@ jobs:
           author_email: 'kontakt@rokuk.org'
           cwd: 'output'
           push: 'origin output --set-upstream --force'
-          message: "Commit from GH Actions triggered by $(git rev-parse --short ${{ github.GITHUB_SHA }} )"
+          message: "Commit from GH Actions triggered by $(git rev-parse --short $GITHUB_SHA )"
 
       - name: test
         run: |
           echo $GITHUB_SHA
+          echo $(git rev-parse --short HEAD)
+          $(git rev-parse --short $GITHUB_SHA)
 
       - name: Upload artfacts
         if: ${{ failure() }}
