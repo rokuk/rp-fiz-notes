@@ -59,7 +59,7 @@ jobs:
           ./_build.sh
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.7
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: output # The branch the action should deploy to.
           folder: output # The folder the action should deploy.
