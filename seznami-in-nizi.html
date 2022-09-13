@@ -1,32 +1,21 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-    <head>
-        <title>Old Page</title>
-     <meta charset="UTF-8" />
-     <meta http-equiv="refresh" content="0; URL=https://python.rokuk.org/" />
-   </head>
-   <body>
-     <p>Ta spletna stran se je preselila. Kliknite <a href="https://python.rokuk.org/">https://python.rokuk.org/</a></p>
-   </body>
-=======
 <html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 4 Seznami in nizi | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 4 Seznami in nizi | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 4 Seznami in nizi | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="twitter:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
@@ -41,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="namestitev-okolja-za-vaje.html"/>
+<link rel="prev" href="zanke.html"/>
+<link rel="next" href="delo-z-objekti.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -244,21 +233,131 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Računalniški praktikum (fizika) - vaje</h1>
-<p class="author"><em>Rok Kuk - <a href="mailto:kontakt@rokuk.org" class="email">kontakt@rokuk.org</a></em></p>
-<p class="date"><em>2022-09-11</em></p>
-</div>
-<div id="o-strani" class="section level1 unnumbered hasAnchor">
-<h1>O strani<a href="index.html#o-strani" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>
-<p>Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.</p>
-<hr />
-<p>Ta spletna stran je dostopna na <a href="https://python.rokuk.org" class="uri">https://python.rokuk.org</a> in
-<a href="https://rokuk.github.io/rp-fiz-notes" class="uri">https://rokuk.github.io/rp-fiz-notes</a></p>
-<p>Vsebina teh strani je objavljena pod licenco <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
-Izvorna koda za strani je dostopna na <a href="https://github.com/rokuk/rp-fiz-notes" class="uri">https://github.com/rokuk/rp-fiz-notes</a></p>
+<div id="seznami-in-nizi" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Poglavje 4</span> Seznami in nizi<a href="seznami-in-nizi.html#seznami-in-nizi" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<style type="text/css">
+#nekaj-uporabnih-funkcij div.sourceCode {
+  margin-left: 2em !important;
+}
 
+#nekaj-uporabnih-funkcij pre:not(.sourceCode) {
+  margin-left: 2em !important;
+}
+</style>
+<p>Gradiva za to poglavje so:</p>
+<ul>
+<li><a href="https://automatetheboringstuff.com/2e/chapter4/" class="uri">https://automatetheboringstuff.com/2e/chapter4/</a></li>
+<li>poglavje <code>Tabele</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1204/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1204/index.html</a></li>
+<li>poglavje <code>Nizi</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html</a></li>
+</ul>
+<div id="skupne-lastnosti" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Skupne lastnosti<a href="seznami-in-nizi.html#skupne-lastnosti" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="indeksiranje" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Indeksiranje<a href="seznami-in-nizi.html#indeksiranje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Indeksi morajo biti cela števila, sicer pride do napake. Negativni indeksi so
+indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa).</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="seznami-in-nizi.html#cb13-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
+<span id="cb13-2"><a href="seznami-in-nizi.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam[<span class="dv">2</span>])</span>
+<span id="cb13-3"><a href="seznami-in-nizi.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam[<span class="op">-</span><span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## 42
+## True</code></pre>
+<p>Podsezname dobimo s sintakso <code>seznam[zacetni_indeks:koncni_indeks:korak]</code>. Nobeno
+od teh treh števil ni obvezno.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="seznami-in-nizi.html#cb15-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
+<span id="cb15-2"><a href="seznami-in-nizi.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam[<span class="dv">1</span>:<span class="dv">4</span>:<span class="dv">2</span>])</span>
+<span id="cb15-3"><a href="seznami-in-nizi.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam[:<span class="dv">2</span>])</span></code></pre></div>
+<pre><code>## [&#39;bat&#39;, True]
+## [&#39;cat&#39;, &#39;bat&#39;]</code></pre>
+</div>
+<div id="združevanje" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Združevanje<a href="seznami-in-nizi.html#združevanje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Nize in sezname staknemo s plusom.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="seznami-in-nizi.html#cb17-1" aria-hidden="true" tabindex="-1"></a>niz1 <span class="op">=</span> <span class="st">&quot;a&quot;</span></span>
+<span id="cb17-2"><a href="seznami-in-nizi.html#cb17-2" aria-hidden="true" tabindex="-1"></a>niz2 <span class="op">=</span> <span class="st">&quot;b&quot;</span></span>
+<span id="cb17-3"><a href="seznami-in-nizi.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(niz1 <span class="op">+</span> niz2)</span>
+<span id="cb17-4"><a href="seznami-in-nizi.html#cb17-4" aria-hidden="true" tabindex="-1"></a>sez1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb17-5"><a href="seznami-in-nizi.html#cb17-5" aria-hidden="true" tabindex="-1"></a>sez2 <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb17-6"><a href="seznami-in-nizi.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sez1 <span class="op">+</span> sez2)</span></code></pre></div>
+<pre><code>## ab
+## [1, 2, 3, 4, 5, 6]</code></pre>
+<p>Sezname lahko združimo tudi z metodo <code>extend</code>. Za zgornji primer: <code>seznam1.extend(seznam2)</code>.</p>
+</div>
+<div id="preverjanje-vsebovanosti" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Preverjanje vsebovanosti<a href="seznami-in-nizi.html#preverjanje-vsebovanosti" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>S ključno besedo <code>in</code> preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z <code>in</code> preverimo ali niz vsebuje nek znak.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="seznami-in-nizi.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;cat&#39;</span> <span class="kw">in</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>])</span>
+<span id="cb19-2"><a href="seznami-in-nizi.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;c&#39;</span> <span class="kw">in</span> <span class="st">&#39;beseda&#39;</span>)</span></code></pre></div>
+<pre><code>## True
+## False</code></pre>
+</div>
+<div id="sprehod-po-elementih" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Sprehod po elementih<a href="seznami-in-nizi.html#sprehod-po-elementih" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="seznami-in-nizi.html#cb21-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
+<span id="cb21-2"><a href="seznami-in-nizi.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> el <span class="kw">in</span> spam:</span>
+<span id="cb21-3"><a href="seznami-in-nizi.html#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(el)</span></code></pre></div>
+<pre><code>## cat
+## bat
+## 42
+## True
+## dog</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="seznami-in-nizi.html#cb23-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> <span class="st">&quot;abc&quot;</span></span>
+<span id="cb23-2"><a href="seznami-in-nizi.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> el <span class="kw">in</span> spam:</span>
+<span id="cb23-3"><a href="seznami-in-nizi.html#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(el)</span></code></pre></div>
+<pre><code>## a
+## b
+## c</code></pre>
+</div>
+</div>
+<div id="spreminjanje" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Spreminjanje<a href="seznami-in-nizi.html#spreminjanje" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Vrednost elementa v seznamu lahko spremenimo.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="seznami-in-nizi.html#cb25-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
+<span id="cb25-2"><a href="seznami-in-nizi.html#cb25-2" aria-hidden="true" tabindex="-1"></a>spam[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&#39;aardvark&#39;</span></span>
+<span id="cb25-3"><a href="seznami-in-nizi.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam)</span></code></pre></div>
+<pre><code>## [&#39;cat&#39;, &#39;aardvark&#39;, 42, True, &#39;dog&#39;]</code></pre>
+<p>Elemente seznama lahko zbrišemo s ključno besedo <code>del</code>.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="seznami-in-nizi.html#cb27-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
+<span id="cb27-2"><a href="seznami-in-nizi.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> spam[<span class="dv">2</span>]</span>
+<span id="cb27-3"><a href="seznami-in-nizi.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam)</span></code></pre></div>
+<pre><code>## [&#39;cat&#39;, &#39;bat&#39;, True, &#39;dog&#39;]</code></pre>
+<p>V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="seznami-in-nizi.html#cb29-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;abcdef&quot;</span></span>
+<span id="cb29-2"><a href="seznami-in-nizi.html#cb29-2" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb29-3"><a href="seznami-in-nizi.html#cb29-3" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> s[:index] <span class="op">+</span> <span class="st">&quot;ž&quot;</span> <span class="op">+</span> s[index <span class="op">+</span> <span class="dv">1</span>:]</span>
+<span id="cb29-4"><a href="seznami-in-nizi.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<pre><code>## abcžef</code></pre>
+</div>
+<div id="nekaj-uporabnih-funkcij" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Nekaj uporabnih funkcij<a href="seznami-in-nizi.html#nekaj-uporabnih-funkcij" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p><code>len(seznam_ali_niz)</code> vrne število elementov seznama oz. število znakov v nizu</p></li>
+<li><p><code>zip(seznam1, seznam2, ...)</code> vrne zaporedje naborov istoležnih elementov v podanih seznamih (poljubno število). Funkcija
+vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo <code>list()</code>.
+V for zanki lahko uporabimo <code>zip</code> brez <code>list</code>.</p></li>
+</ul>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="seznami-in-nizi.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])))</span></code></pre></div>
+<pre><code>## [(&#39;x&#39;, 10, 4), (&#39;y&#39;, 20, 5), (&#39;z&#39;, 30, 6)]</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="seznami-in-nizi.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]):</span>
+<span id="cb33-2"><a href="seznami-in-nizi.html#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## (&#39;x&#39;, 10, 4)
+## (&#39;y&#39;, 20, 5)
+## (&#39;z&#39;, 30, 6)</code></pre>
+<ul>
+<li><code>enumerate(seznam)</code> vrne zaporedje parov, v katerih so druge komponente vrednosti
+iz podanega seznama, prve pa njihovi indeksi.
+Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip
+pretvoriti s funkcijo <code>list()</code>. V for zanki lahko uporabimo <code>enumerate</code> brez <code>list</code>.</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="seznami-in-nizi.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>])))</span></code></pre></div>
+<pre><code>## [(0, &#39;a&#39;), (1, &#39;b&#39;), (2, &#39;c&#39;)]</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="seznami-in-nizi.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> indeks, element <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>]):</span>
+<span id="cb37-2"><a href="seznami-in-nizi.html#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(indeks, element)</span></code></pre></div>
+<pre><code>## 0 a
+## 1 b
+## 2 c</code></pre>
+
+</div>
 </div>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d8ebf5d0a154ae689299389510ce8d9"}'></script>
             </section>
@@ -266,8 +365,8 @@ Izvorna koda za strani je dostopna na <a href="https://github.com/rokuk/rp-fiz-n
           </div>
         </div>
       </div>
-
-<a href="namestitev-okolja-za-vaje.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="zanke.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="delo-z-objekti.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -288,7 +387,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/index.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/04-seznami-in-nizi.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -315,5 +414,4 @@ gitbook.start({
 
 </body>
 
->>>>>>> origin/gh-pages
 </html>

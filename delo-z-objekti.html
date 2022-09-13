@@ -1,32 +1,21 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-    <head>
-        <title>Old Page</title>
-     <meta charset="UTF-8" />
-     <meta http-equiv="refresh" content="0; URL=https://python.rokuk.org/" />
-   </head>
-   <body>
-     <p>Ta spletna stran se je preselila. Kliknite <a href="https://python.rokuk.org/">https://python.rokuk.org/</a></p>
-   </body>
-=======
 <html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 5 Delo z objekti | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="twitter:image" content="https://rokuk.github.io/rp-fiz-notes/images/apple-touch-icon.png" />
@@ -41,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="namestitev-okolja-za-vaje.html"/>
+<link rel="prev" href="seznami-in-nizi.html"/>
+<link rel="next" href="slovarji.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -244,21 +233,107 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Računalniški praktikum (fizika) - vaje</h1>
-<p class="author"><em>Rok Kuk - <a href="mailto:kontakt@rokuk.org" class="email">kontakt@rokuk.org</a></em></p>
-<p class="date"><em>2022-09-11</em></p>
+<div id="delo-z-objekti" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Poglavje 5</span> Delo z objekti<a href="delo-z-objekti.html#delo-z-objekti" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<style type="text/css">
+#metode-za-nize pre {
+  margin-left: 2em;
+}
+</style>
+<p>Gradivi za to poglavje sta</p>
+<ul>
+<li><a href="https://automatetheboringstuff.com/2e/chapter6/" class="uri">https://automatetheboringstuff.com/2e/chapter6/</a></li>
+<li>poglavje <code>Nizi</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html</a></li>
+</ul>
+<p>Uporabna je tudi dokumentacija za različne tipe <a href="https://docs.python.org/3/tutorial/datastructures.html" class="uri">https://docs.python.org/3/tutorial/datastructures.html</a></p>
+<p>Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" class="uri">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p>
+<p>Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo
+narediti (npr. s <code>python count characters in string</code> hitro najdemo <code>count()</code> in primere uporabe).</p>
+<div id="metode-za-nize" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Metode za nize<a href="delo-z-objekti.html#metode-za-nize" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>niz.count(znak)</code> vrne število pojavitev znaka v nizu</li>
+<li><code>niz.index(znak)</code> vrne indeks, na katerem se znak prvič pojavi; če ne obstaja sproži napako</li>
+<li><code>niz.replace(niz1, niz2)</code> vrne niz, kjer so podnizi enaki <code>niz1</code> zamenjani z <code>niz2</code></li>
+<li><code>niz.lower()</code> in <code>niz.upper()</code> vrne niz, kjer iz malih črk naredi velike ali obratno</li>
+<li><code>niz.islower()</code> in <code>niz.isupper()</code> vrne True, če je niz iz samih malih črk oz. velikih črk</li>
+<li><code>niz.strip()</code> vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, <code>\n</code>). Lahko podamo neobvezni argument, s katerim določimo, katere znake
+naj odstrani z leve in desne. Obstajata tudi metodi <code>.rstrip()</code> in <code>.lstrip()</code>, ki odstranjujeta le z leve in desne.</li>
+</ul>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="delo-z-objekti.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
+<pre><code>## Hello, World</code></pre>
+<ul>
+<li><code>"locilo".join(seznam)</code> združi elemente seznama v niz in postavi <code>locilo</code>
+med posamezne elemente</li>
+</ul>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="delo-z-objekti.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
+<pre><code>## MojeABCimeABCjeABCRok</code></pre>
+<ul>
+<li><code>niz.split(locilo)</code> vrne seznam, kjer so elementi posamezni deli niza, ki jih
+ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presledek.</li>
+</ul>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="delo-z-objekti.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
+<pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
 </div>
-<div id="o-strani" class="section level1 unnumbered hasAnchor">
-<h1>O strani<a href="index.html#o-strani" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani.</p>
-<p>Zapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.</p>
-<hr />
-<p>Ta spletna stran je dostopna na <a href="https://python.rokuk.org" class="uri">https://python.rokuk.org</a> in
-<a href="https://rokuk.github.io/rp-fiz-notes" class="uri">https://rokuk.github.io/rp-fiz-notes</a></p>
-<p>Vsebina teh strani je objavljena pod licenco <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
-Izvorna koda za strani je dostopna na <a href="https://github.com/rokuk/rp-fiz-notes" class="uri">https://github.com/rokuk/rp-fiz-notes</a></p>
+<div id="metode-za-sezname" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Metode za sezname<a href="delo-z-objekti.html#metode-za-sezname" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>sez.append(element)</code> doda element na konec seznama</li>
+<li><code>sez.extend(sez2)</code> na konec seznama <code>sez</code> pristavi seznam <code>sez2</code>, na kratko <code>sez += sez2</code></li>
+<li><code>sez.insert(i, x)</code> na mesto z indeksom <code>i</code> vstavi element <code>x</code></li>
+<li><code>sez.remove(x)</code> iz seznama odstrani prvo pojavitev elementa <code>x</code></li>
+<li><code>sez.pop(i)</code> odstrani element na indeksu <code>i</code> in ga vrne; če <code>i</code> ne podamo je to zadnji element</li>
+<li><code>sez.index(x)</code> vrne prvi indeks, na katerem se nahaja vrednost <code>x</code></li>
+<li><code>sez.count(x)</code> vrne število pojavitev <code>x</code> v seznamu</li>
+<li><code>sez.sort(reverse=False)</code> uredi seznam po velikosti naraščajoče / abecedi; če podamo neobvezni argument <code>reverse=True</code>, bo seznam urejen v nasprotnem vrstnem redu</li>
+</ul>
+</div>
+<div id="sortiranje-seznamov" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Sortiranje seznamov<a href="delo-z-objekti.html#sortiranje-seznamov" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Za sortiranje lahko uporabimo funkcijo <code>sorted(seznam)</code>, ki vrne sortiran seznam ali pa metodo <code>seznam.sort()</code>, ki spremeni originalni seznam, tako, da je sortiran.</p>
+<p>Obema funkcijama lahko podamo neobvezni argument <code>reversed=True</code>, ki seznam sortira v nasprotnem vrstnem redu. Podamo lahko tudi neobvezni argument <code>key=ime_funkcije</code>, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="delo-z-objekti.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sortirna_funkcija(element_seznama):</span>
+<span id="cb45-2"><a href="delo-z-objekti.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> element_seznama[<span class="dv">2</span>]</span>
+<span id="cb45-3"><a href="delo-z-objekti.html#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="delo-z-objekti.html#cb45-4" aria-hidden="true" tabindex="-1"></a>student_tuples <span class="op">=</span> [</span>
+<span id="cb45-5"><a href="delo-z-objekti.html#cb45-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;john&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="dv">15</span>),</span>
+<span id="cb45-6"><a href="delo-z-objekti.html#cb45-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;jane&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">12</span>),</span>
+<span id="cb45-7"><a href="delo-z-objekti.html#cb45-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;dave&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">10</span>),</span>
+<span id="cb45-8"><a href="delo-z-objekti.html#cb45-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb45-9"><a href="delo-z-objekti.html#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(student_tuples, key<span class="op">=</span>sortirna_funkcija))</span></code></pre></div>
+<pre><code>## [(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</code></pre>
+<p>Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z <code>return (element_seznama[1], element_seznama[2])</code> bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).</p>
+<p>Več o sortiranju v uradni dokumentaciji: <a href="https://docs.python.org/3/howto/sorting.html" class="uri">https://docs.python.org/3/howto/sorting.html</a></p>
+</div>
+<div id="drugi-tipi" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Drugi tipi<a href="delo-z-objekti.html#drugi-tipi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="nabori" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Nabori<a href="delo-z-objekti.html#nabori" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji <code>()</code>. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" class="uri">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></p>
+<p>Vrednosti v naborih lahko “odpakiramo” nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo <code>*</code>. V to spremenljivko se bo shranil seznam presežnih elementov.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="delo-z-objekti.html#cb47-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;črešnje&quot;</span>)</span>
+<span id="cb47-2"><a href="delo-z-objekti.html#cb47-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
+<span id="cb47-3"><a href="delo-z-objekti.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece, rumeno, zeleno)</span></code></pre></div>
+<pre><code>## črešnje banana jabolko</code></pre>
+</div>
+<div id="množice" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Množice<a href="delo-z-objekti.html#množice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji <code>{}</code>. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z <code>mnozica.add(element)</code>. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#sets" class="uri">https://docs.python.org/3/tutorial/datastructures.html#sets</a></p>
+</div>
+</div>
+<div id="pretvarjanje-med-tipi" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Pretvarjanje med tipi<a href="delo-z-objekti.html#pretvarjanje-med-tipi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Spremenljivko <code>a</code> lahko pretvorimo v najpogosteje uporabljane tipe z:</p>
+<ul>
+<li><code>int(a)</code> vrne celo število</li>
+<li><code>float(a)</code> vrne decimalno število</li>
+<li><code>str(a)</code> vrne niz</li>
+<li><code>list(a)</code> vrne seznam</li>
+<li><code>tuple(a)</code> vrne nabor</li>
+<li><code>set(a)</code> vrne množico</li>
+</ul>
 
+</div>
 </div>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d8ebf5d0a154ae689299389510ce8d9"}'></script>
             </section>
@@ -266,8 +341,8 @@ Izvorna koda za strani je dostopna na <a href="https://github.com/rokuk/rp-fiz-n
           </div>
         </div>
       </div>
-
-<a href="namestitev-okolja-za-vaje.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="seznami-in-nizi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="slovarji.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -288,7 +363,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/index.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/05-delo-z-objekti.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -315,5 +390,4 @@ gitbook.start({
 
 </body>
 
->>>>>>> origin/gh-pages
 </html>
