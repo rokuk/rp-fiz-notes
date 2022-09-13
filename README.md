@@ -5,8 +5,8 @@ V repozitorju je RMarkdown koda, ki generira spletno stran. Vsebina je dostopna 
 
 ## Deployment
 
-Strani gostujejo na GitHub Pages. Ob commitu na GitHub, se avtomatsko požene
-pretvorba iz Markdowna v HTML in nato objava na GitHub Pages.
+Push na main branch avtomatsko požene Github Action, ki naredi
+pretvorbo iz Markdowna v HTML. Rezultat se commita na output branch. Ob commitu na output branch se datoteke avtomatsko prenesejo na strežnik.
 
 ## Lokalno urejanje
 
@@ -15,4 +15,4 @@ Strani so napisane v RMarkdownu. Lahko se jih ureja kar na GitHubu.
 Datoteke je najlažje urejati urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj.
 Treba je imeti nameščen paket `bookdown`.
 
-Lokalno lahko vidimo "compiled" strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
+Lokalno lahko vidimo compiled strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
