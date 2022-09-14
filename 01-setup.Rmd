@@ -52,7 +52,7 @@ namestite ga tako, da kliknete `Install` v tem obvestilu. Po nekaj sekundah bi s
 VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju.
 Več o tem piše v uradni dokumentaciji: https://code.visualstudio.com/docs/editor/codebasics
 
-## Numpy
+## Namestitev paketa Numpy
 
 Potrebovali bomo še Pythonov paket Numpy. To je neke vrste dodatek za Python, ki nam omogoča lažje delo z vektorji in tabelami. Več o tem na prihodnjih vajah. Dodatne module za Python lahko nameščamo in odstranjujemo z modulom `pip`. To je modul, ki bi se moral avtomatsko namestiti skupaj s Pythonom.
 
