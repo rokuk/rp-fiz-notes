@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>404 Stran ne obstaja | Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 7 Numpy | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="404 Stran ne obstaja | Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 7 Numpy | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="404 Stran ne obstaja | Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 7 Numpy | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="twitter:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-
+<link rel="prev" href="slovarji.html"/>
+<link rel="next" href="datoteke.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -233,12 +233,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div id="numpy" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Poglavje 7</span> Numpy<a href="numpy.html#numpy" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Gradivi za to poglavje sta:</p>
+<ul>
+<li><a href="https://numpy.org/doc/stable/user/absolute_beginners.html" class="uri">https://numpy.org/doc/stable/user/absolute_beginners.html</a></li>
+<li><a href="https://numpy.org/doc/stable/user/quickstart.html" class="uri">https://numpy.org/doc/stable/user/quickstart.html</a></li>
+</ul>
+<p>Navaden seznam pretvorimo v Numpy seznam s funkcijo <code>array(seznam)</code>.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="numpy.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb67-2"><a href="numpy.html#cb67-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb67-3"><a href="numpy.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
+<span id="cb67-4"><a href="numpy.html#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.shape)</span>
+<span id="cb67-5"><a href="numpy.html#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.ndim)</span>
+<span id="cb67-6"><a href="numpy.html#cb67-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.size)</span></code></pre></div>
+<pre><code>## [[1 2 3 4]
+##  [5 6 7 8]]
+## (2, 4)
+## 2
+## 8</code></pre>
+<p>Sezname lahko združimo z <code>np.concatenate(sez1, sez2)</code>, ki vrne staknjen seznam.</p>
+<div id="ustvarjanje-tabel" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Ustvarjanje tabel<a href="numpy.html#ustvarjanje-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>np.zeros(oblika)</code> vrne tabelo ničel; <code>oblika</code> je nabor celih števil, ki predstavlja obliko tabele</li>
+<li><code>np.ones(oblika)</code> vrne tabelo enic</li>
+<li><code>np.linspace(zacetek, konec, num)</code> vrne seznam <code>num</code> števil z intervala od <code>zacetek</code> do <code>konec</code>, kjer so elementi ekvidistančni</li>
+<li><code>np.arange(zacetek, konec, korak)</code> vrne seznam od vrednosti parametra <code>zacetek</code> (neobvezen, privzeto je 0) do <code>konec</code> s koraki <code>korak</code> (neobvezen, privzeto je 1)</li>
+<li><code>np.fromfunction(ime_funkcije, oblika)</code> ustvari tabelo z obliko <code>oblika</code>, kjer
+vsak element v tabeli izračuna s klicem funkcije <code>funkcija</code>; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij</li>
+<li><code>seznam.reshape(oblika)</code> spremeni obliko seznama</li>
+</ul>
+</div>
+<div id="rezine" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Rezine<a href="numpy.html#rezine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
+(<code>zacetek:konec:korak</code>), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="numpy.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb69-2"><a href="numpy.html#cb69-2" aria-hidden="true" tabindex="-1"></a>tabela <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">49</span>).reshape(<span class="dv">7</span>, <span class="dv">7</span>)</span>
+<span id="cb69-3"><a href="numpy.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
+<pre><code>## [[ 0  1  2  3  4  5  6]
+##  [ 7  8  9 10 11 12 13]
+##  [14 15 16 17 18 19 20]
+##  [21 22 23 24 25 26 27]
+##  [28 29 30 31 32 33 34]
+##  [35 36 37 38 39 40 41]
+##  [42 43 44 45 46 47 48]]</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="numpy.html#cb71-1" aria-hidden="true" tabindex="-1"></a>razrezano <span class="op">=</span> tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>]</span>
+<span id="cb71-2"><a href="numpy.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(razrezano)</span></code></pre></div>
+<pre><code>## [[ 2  4  6]
+##  [ 9 11 13]
+##  [16 18 20]
+##  [23 25 27]]</code></pre>
+<p>Če želimo vse elemente v neki dimenziji napišemo <code>:</code>. Tako lahko dobimo posamezne stolpce.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="numpy.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela[:,<span class="dv">3</span>])</span></code></pre></div>
+<pre><code>## [ 3 10 17 24 31 38 45]</code></pre>
+<p>Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri <code>razrezano</code>) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="numpy.html#cb75-1" aria-hidden="true" tabindex="-1"></a>tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>] <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">112</span>).reshape(<span class="dv">4</span>,<span class="dv">3</span>)</span>
+<span id="cb75-2"><a href="numpy.html#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
+<pre><code>## [[  0   1 100   3 101   5 102]
+##  [  7   8 103  10 104  12 105]
+##  [ 14  15 106  17 107  19 108]
+##  [ 21  22 109  24 110  26 111]
+##  [ 28  29  30  31  32  33  34]
+##  [ 35  36  37  38  39  40  41]
+##  [ 42  43  44  45  46  47  48]]</code></pre>
+</div>
+<div id="uporabne-funkcije" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Uporabne funkcije<a href="numpy.html#uporabne-funkcije" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Glej predvsem uradno dokumentacijo: <a href="https://numpy.org/doc/stable/reference/routines.sort.html" class="uri">https://numpy.org/doc/stable/reference/routines.sort.html</a><br />
+Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
+<p>Pri mnogih funkcijah lahko podamo neobvezni parameter <code>axis=x</code>, kjer je <code>x</code>
+številka osi, po kateri želimo operacijo izvesti (0, 1, 2, …).</p>
+<p>Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.</p>
+<ul>
+<li><code>np.any(tabela)</code> vrne True, če je vsaj en element True</li>
+<li><code>np.all(tabela)</code> vrne True, če so vsi elementi True</li>
+<li><code>np.nonzero(tabela)</code> vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)</li>
+<li><code>np.flatten(tabela)</code> vrne “flat” obliko tabele (enodimenzionalni seznam zaporednih elementov)</li>
+<li><code>np.flatnonzero(tabela)</code> vrne indekse neničelnih elementov v “flat” obliki tabele (zaporedni indeks)</li>
+<li><code>np.where(pogoj, x, y)</code> vrne elemente iz <code>x</code>, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz <code>y</code>; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!</li>
+<li><code>tabela.T</code> vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele</li>
+</ul>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="numpy.html#cb77-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb77-2"><a href="numpy.html#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<pre><code>## [[1 2 3]
+##  [4 5 6]]</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="numpy.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.T)</span></code></pre></div>
+<pre><code>## [[1 4]
+##  [2 5]
+##  [3 6]]</code></pre>
+</div>
+<div id="matematika" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Matematika<a href="numpy.html#matematika" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>np.sum(tabela)</code></li>
+<li><code>np.cumsum(tabela)</code></li>
+<li><code>np.prod(tabela)</code></li>
+<li><code>np.log(tabela)</code></li>
+<li><code>np.exp(tabela)</code></li>
+</ul>
 
-
-
-<div id="stran-ne-obstaja" class="section level1">
-<h1>404 Stran ne obstaja</h1>
-<p>Ta stran ne obstaja.</p>
+</div>
 </div>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d8ebf5d0a154ae689299389510ce8d9"}'></script>
             </section>
@@ -246,8 +342,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-
+<a href="slovarji.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="datoteke.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -268,7 +364,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/_404.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/07-numpy.Rmd",
 "text": "Edit"
 },
 "history": {

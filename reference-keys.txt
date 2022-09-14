@@ -1,7 +1,7 @@
 namestitev-okolja-za-vaje
 namestitev-pythona
 namestitev-visual-studio-code
-numpy
+namestitev-paketa-numpy
 pogoste-težave
 uvod-v-ptyhon
 števila
@@ -35,7 +35,7 @@ brisanje
 metode-na-slovarjih
 preverjanje-vsebovanja
 zanke-1
-numpy-1
+numpy
 ustvarjanje-tabel
 rezine
 uporabne-funkcije
