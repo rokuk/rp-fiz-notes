@@ -10,8 +10,6 @@ bookdown::gitbook:
     download: ["pdf", "epub", "docx"]
     sharing: no
     info: false
-  includes:
-    after_body: cfbeacon.html
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
