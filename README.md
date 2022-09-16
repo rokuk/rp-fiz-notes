@@ -13,5 +13,3 @@ Strani so napisane v RMarkdownu. Lahko se jih ureja kar na GitHubu.
 Datoteke je najlažje urejati urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj. Treba je imeti nameščen paket `bookdown`.
 
 Lokalno lahko vidimo compiled strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
-
-V datoteki .Rprofile je treba spremeniti pot do verzije Pythona, ki jo želimo uporabiti za generiranje strani. Paket `numpy` mora biti nameščen za to verzijo.
