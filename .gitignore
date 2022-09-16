@@ -1,6 +1,7 @@
 output
 
 .Rproj.user
+.Rprofile
 .Rdata
 .Rhistory
 
