@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-09-28" />
+<meta name="date" content="2022-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -283,7 +283,7 @@ bi se vam v oknu terminala moralo izpisati “Pozdravljen svet!”.</li>
 <li>Priporočam, da vklopite tudi “linter”. To je program, ki je del VSCode in
 v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak,
 mnoge zatipke pa zazna in vas nanje opozori, še preden poženete program, tako da jih podčrta.
-VSCode pritisnite Ctrl+Shift+P in vpišite “linter”, kliknite na
+VSCode pritisnite Ctrl+Shift+P in vpišite “linter” (brez navednic), kliknite na
 <code>Python: Select Linter</code>. Pojavi se meni z več možnostmi za linter.
 Priporočam <code>flake8</code>, ki nas poleg napak opozori tudi na kršitve priporočil za stil
 PEP8. Izberete ga s tipko Enter. VSCode vas bo desno spodaj obvestil, da ta linter ni nameščen;
@@ -320,7 +320,7 @@ morate namestiti Pythonov modul <code>pip</code>. To naredite z ukazom
 <h2><span class="header-section-number">1.4</span> Pogoste težave<a href="namestitev-okolja-za-vaje.html#pogoste-težave" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Če pri poganjanju programa dobite napako <code>no module named numpy</code>, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisani postopek.</p></li>
-<li><p>Če imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko “python” v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na “Python 3.x.y” v spodnjem levem vogalu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz <code>python3.10 -m pip install numpy</code>, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz <code>py -3.10 -m pip install numpy</code>.</p></li>
+<li><p>Če imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko “python” v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na “Python 3.x.y” na spodnjem robu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz <code>python3.10 -m pip install numpy</code>, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz <code>py -3.10 -m pip install numpy</code>.</p></li>
 </ul>
 
 </div>
