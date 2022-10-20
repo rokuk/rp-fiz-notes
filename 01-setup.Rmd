@@ -19,7 +19,7 @@ vpišite ukaz `python --version` in pritisnite tipko Enter. Če je Python
 uspešno nameščen, bi se vam v novi vrstici moralo izpisati `Python 3.x.y` 
 (kjer je `x.y` verzija nameščenega Pythona).
 
-> Če ste na Windowsu in ukaz `python --version` ne izpiše verzije, temveč se vam izpiše napaka ali "Python not found", poskusite ukaz `py --version`.
+> Če ste na Windowsu in ukaz `python --version` ne izpiše verzije, ampak se vam izpiše napaka ali "Python not found", poskusite ukaz `py --version`.
 
 ## Namestitev Visual Studio Code
 
