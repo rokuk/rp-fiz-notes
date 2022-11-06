@@ -33,7 +33,7 @@ Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam.
 - `np.linspace(zacetek, konec, num)` vrne seznam `num` števil z intervala od `zacetek` do `konec`, kjer so elementi ekvidistančni
 - `np.arange(zacetek, konec, korak)` vrne seznam od vrednosti parametra `zacetek` (neobvezen, privzeto je 0) do `konec` s koraki `korak` (neobvezen, privzeto je 1)
 - `np.fromfunction(ime_funkcije, oblika)` ustvari tabelo z obliko `oblika`, kjer 
-vsak element v tabeli izračuna s klicem funkcije `funkcija`; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
+vsak element v tabeli izračuna s klicem funkcije `ime_funkcije`; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
 - `seznam.reshape(oblika)` spremeni obliko seznama
 
 ## Rezine

@@ -40,7 +40,19 @@ od teh treh števil ni obvezno.
 ```{python eval=FALSE}
 spam = ['cat', 'bat', 42, True, 'dog']
 print(spam[1:4:2])
-print(spam[:2])
+print(spam[:3])
+print(spam[::2])
+print(spam[::-1])
+```
+
+Podobno je za nize.
+
+```{python eval=FALSE}
+spam = "besedna zveza"
+print(spam[1:4])
+print(spam[:3])
+print(spam[::2])
+print(spam[::-1])
 ```
 
 ```
@@ -108,14 +120,6 @@ spam[1] = 'aardvark'
 print(spam)
 ```
 
-Elemente seznama lahko zbrišemo s ključno besedo `del`.
-
-```{python}
-spam = ['cat', 'bat', 42, True, 'dog']
-del spam[2]
-print(spam)
-```
-
 V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:
 
 ```{python}
@@ -123,6 +127,14 @@ s = "abcdef"
 index = 3
 s = s[:index] + "ž" + s[index + 1:]
 print(s)
+```
+
+Elemente seznama lahko zbrišemo s ključno besedo `del`.
+
+```{python}
+spam = ['cat', 'bat', 42, True, 'dog']
+del spam[2]
+print(spam)
 ```
 
 ## Nekaj uporabnih funkcij
