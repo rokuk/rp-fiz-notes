@@ -23,7 +23,7 @@ Gradiva za to poglavje so:
 Indeksi morajo biti cela števila, sicer pride do napake. Negativni indeksi so 
 indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa).
 
-```{python, eval=FALSE}
+```{python eval=FALSE}
 spam = ['cat', 'bat', 42, True, 'dog']
 print(spam[2])
 print(spam[-2])
@@ -45,6 +45,13 @@ print(spam[::2])
 print(spam[::-1])
 ```
 
+```
+## ['bat', True]
+## ['cat', 'bat', 42]
+## ['cat', 42, 'dog']
+## ['dog', True, 42, 'bat', 'cat']
+```
+
 Podobno je za nize.
 
 ```{python eval=FALSE}
@@ -56,15 +63,17 @@ print(spam[::-1])
 ```
 
 ```
-## ['bat', True]
-## ['cat', 'bat']
+## ese
+## bes
+## bsdazea
+## azevz andeseb
 ```
 
 ### Združevanje
 
 Nize in sezname staknemo s plusom.
 
-```{python, eval=FALSE}
+```{python eval=FALSE}
 niz1 = "a"
 niz2 = "b"
 print(niz1 + niz2)
@@ -84,7 +93,7 @@ Sezname lahko združimo tudi z metodo `extend`. Za zgornji primer: `seznam1.exte
 
 S ključno besedo `in` preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z `in` preverimo ali niz vsebuje nek znak.
 
-```{python, eval=FALSE}
+```{python eval=FALSE}
 print('cat' in ['cat', 'bat', 42, True, 'dog'])
 print('c' in 'beseda')
 ```
