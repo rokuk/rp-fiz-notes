@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-10-20" />
+<meta name="date" content="2022-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -260,19 +260,19 @@ narediti (npr. s <code>python count characters in string</code> hitro najdemo <c
 <li><code>niz.strip()</code> vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, <code>\n</code>). Lahko podamo neobvezni argument, s katerim določimo, katere znake
 naj odstrani z leve in desne. Obstajata tudi metodi <code>.rstrip()</code> in <code>.lstrip()</code>, ki odstranjujeta le z leve in desne.</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="delo-z-objekti.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="delo-z-objekti.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;    Hello, World    </span><span class="ch">\n</span><span class="st">&#39;</span>.strip())</span></code></pre></div>
 <pre><code>## Hello, World</code></pre>
 <ul>
 <li><code>"locilo".join(seznam)</code> združi elemente seznama v niz in postavi <code>locilo</code>
 med posamezne elemente</li>
 </ul>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="delo-z-objekti.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="delo-z-objekti.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;ABC&#39;</span>.join([<span class="st">&#39;Moje&#39;</span>, <span class="st">&#39;ime&#39;</span>, <span class="st">&#39;je&#39;</span>, <span class="st">&#39;Rok&#39;</span>]))</span></code></pre></div>
 <pre><code>## MojeABCimeABCjeABCRok</code></pre>
 <ul>
 <li><code>niz.split(locilo)</code> vrne seznam, kjer so elementi posamezni deli niza, ki jih
 ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presledek.</li>
 </ul>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="delo-z-objekti.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="delo-z-objekti.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moje ime je Rok.&quot;</span>.split())</span></code></pre></div>
 <pre><code>## [&#39;Moje&#39;, &#39;ime&#39;, &#39;je&#39;, &#39;Rok.&#39;]</code></pre>
 </div>
 <div id="metode-za-sezname" class="section level2 hasAnchor" number="5.2">
@@ -292,15 +292,15 @@ ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presled
 <h2><span class="header-section-number">5.3</span> Sortiranje seznamov<a href="delo-z-objekti.html#sortiranje-seznamov" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Za sortiranje lahko uporabimo funkcijo <code>sorted(seznam)</code>, ki vrne sortiran seznam ali pa metodo <code>seznam.sort()</code>, ki spremeni originalni seznam, tako, da je sortiran.</p>
 <p>Obema funkcijama lahko podamo neobvezni argument <code>reversed=True</code>, ki seznam sortira v nasprotnem vrstnem redu. Podamo lahko tudi neobvezni argument <code>key=ime_funkcije</code>, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="delo-z-objekti.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sortirna_funkcija(element_seznama):</span>
-<span id="cb45-2"><a href="delo-z-objekti.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> element_seznama[<span class="dv">2</span>]</span>
-<span id="cb45-3"><a href="delo-z-objekti.html#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-4"><a href="delo-z-objekti.html#cb45-4" aria-hidden="true" tabindex="-1"></a>student_tuples <span class="op">=</span> [</span>
-<span id="cb45-5"><a href="delo-z-objekti.html#cb45-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;john&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="dv">15</span>),</span>
-<span id="cb45-6"><a href="delo-z-objekti.html#cb45-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;jane&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">12</span>),</span>
-<span id="cb45-7"><a href="delo-z-objekti.html#cb45-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;dave&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">10</span>),</span>
-<span id="cb45-8"><a href="delo-z-objekti.html#cb45-8" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb45-9"><a href="delo-z-objekti.html#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(student_tuples, key<span class="op">=</span>sortirna_funkcija))</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="delo-z-objekti.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sortirna_funkcija(element_seznama):</span>
+<span id="cb46-2"><a href="delo-z-objekti.html#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> element_seznama[<span class="dv">2</span>]</span>
+<span id="cb46-3"><a href="delo-z-objekti.html#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="delo-z-objekti.html#cb46-4" aria-hidden="true" tabindex="-1"></a>student_tuples <span class="op">=</span> [</span>
+<span id="cb46-5"><a href="delo-z-objekti.html#cb46-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;john&#39;</span>, <span class="st">&#39;A&#39;</span>, <span class="dv">15</span>),</span>
+<span id="cb46-6"><a href="delo-z-objekti.html#cb46-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;jane&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">12</span>),</span>
+<span id="cb46-7"><a href="delo-z-objekti.html#cb46-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&#39;dave&#39;</span>, <span class="st">&#39;B&#39;</span>, <span class="dv">10</span>),</span>
+<span id="cb46-8"><a href="delo-z-objekti.html#cb46-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb46-9"><a href="delo-z-objekti.html#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(student_tuples, key<span class="op">=</span>sortirna_funkcija))</span></code></pre></div>
 <pre><code>## [(&#39;dave&#39;, &#39;B&#39;, 10), (&#39;jane&#39;, &#39;B&#39;, 12), (&#39;john&#39;, &#39;A&#39;, 15)]</code></pre>
 <p>Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z <code>return (element_seznama[1], element_seznama[2])</code> bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).</p>
 <p>Več o sortiranju v uradni dokumentaciji: <a href="https://docs.python.org/3/howto/sorting.html" class="uri">https://docs.python.org/3/howto/sorting.html</a></p>
@@ -311,9 +311,9 @@ ločuje <code>locilo</code>. Privzeta vrednost za <code>locilo</code> je presled
 <h3><span class="header-section-number">5.4.1</span> Nabori<a href="delo-z-objekti.html#nabori" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji <code>()</code>. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" class="uri">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></p>
 <p>Vrednosti v naborih lahko “odpakiramo” nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo <code>*</code>. V to spremenljivko se bo shranil seznam presežnih elementov.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="delo-z-objekti.html#cb47-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;črešnje&quot;</span>)</span>
-<span id="cb47-2"><a href="delo-z-objekti.html#cb47-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
-<span id="cb47-3"><a href="delo-z-objekti.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece, rumeno, zeleno)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="delo-z-objekti.html#cb48-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;črešnje&quot;</span>)</span>
+<span id="cb48-2"><a href="delo-z-objekti.html#cb48-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
+<span id="cb48-3"><a href="delo-z-objekti.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece, rumeno, zeleno)</span></code></pre></div>
 <pre><code>## črešnje banana jabolko</code></pre>
 </div>
 <div id="množice" class="section level3 hasAnchor" number="5.4.2">

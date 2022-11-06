@@ -33,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Računalniški praktikum (fizika) - vaje},
-  pdfauthor={Rok Kuk - kontakt@rokuk.org},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -114,10 +106,18 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Računalniški praktikum (fizika) - vaje},
+  pdfauthor={Rok Kuk - kontakt@rokuk.org},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-10-20}
+\date{2022-11-06}
 
 \begin{document}
 \maketitle
@@ -511,7 +511,21 @@ od teh treh števil ni obvezno.
 \begin{Highlighting}[]
 \NormalTok{spam }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}cat\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bat\textquotesingle{}}\NormalTok{, }\DecValTok{42}\NormalTok{, }\VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{}dog\textquotesingle{}}\NormalTok{]}
 \BuiltInTok{print}\NormalTok{(spam[}\DecValTok{1}\NormalTok{:}\DecValTok{4}\NormalTok{:}\DecValTok{2}\NormalTok{])}
-\BuiltInTok{print}\NormalTok{(spam[:}\DecValTok{2}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[:}\DecValTok{3}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[::}\DecValTok{2}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[::}\OperatorTok{{-}}\DecValTok{1}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+Podobno je za nize.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{spam }\OperatorTok{=} \StringTok{"besedna zveza"}
+\BuiltInTok{print}\NormalTok{(spam[}\DecValTok{1}\NormalTok{:}\DecValTok{4}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[:}\DecValTok{3}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[::}\DecValTok{2}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(spam[::}\OperatorTok{{-}}\DecValTok{1}\NormalTok{])}
 \end{Highlighting}
 \end{Shaded}
 
@@ -612,20 +626,6 @@ Vrednost elementa v seznamu lahko spremenimo.
 ## ['cat', 'aardvark', 42, True, 'dog']
 \end{verbatim}
 
-Elemente seznama lahko zbrišemo s ključno besedo \texttt{del}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{spam }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}cat\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bat\textquotesingle{}}\NormalTok{, }\DecValTok{42}\NormalTok{, }\VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{}dog\textquotesingle{}}\NormalTok{]}
-\KeywordTok{del}\NormalTok{ spam[}\DecValTok{2}\NormalTok{]}
-\BuiltInTok{print}\NormalTok{(spam)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## ['cat', 'bat', True, 'dog']
-\end{verbatim}
-
 V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:
 
 \begin{Shaded}
@@ -639,6 +639,20 @@ V nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:
 
 \begin{verbatim}
 ## abcžef
+\end{verbatim}
+
+Elemente seznama lahko zbrišemo s ključno besedo \texttt{del}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{spam }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}cat\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bat\textquotesingle{}}\NormalTok{, }\DecValTok{42}\NormalTok{, }\VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{}dog\textquotesingle{}}\NormalTok{]}
+\KeywordTok{del}\NormalTok{ spam[}\DecValTok{2}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(spam)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['cat', 'bat', True, 'dog']
 \end{verbatim}
 
 \hypertarget{nekaj-uporabnih-funkcij}{%
@@ -1118,7 +1132,7 @@ Sezname lahko združimo z \texttt{np.concatenate(sez1,\ sez2)}, ki vrne staknjen
   \texttt{np.arange(zacetek,\ konec,\ korak)} vrne seznam od vrednosti parametra \texttt{zacetek} (neobvezen, privzeto je 0) do \texttt{konec} s koraki \texttt{korak} (neobvezen, privzeto je 1)
 \item
   \texttt{np.fromfunction(ime\_funkcije,\ oblika)} ustvari tabelo z obliko \texttt{oblika}, kjer
-  vsak element v tabeli izračuna s klicem funkcije \texttt{funkcija}; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
+  vsak element v tabeli izračuna s klicem funkcije \texttt{ime\_funkcije}; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
 \item
   \texttt{seznam.reshape(oblika)} spremeni obliko seznama
 \end{itemize}
@@ -1478,10 +1492,19 @@ nam v zgornjih primerih ni bilo treba pisati \texttt{t} (je že privzet poleg dr
 črke, ki jo podamo (\texttt{r} ali \texttt{w})). S posameznimi črkami povemo, kaj želimo z
 datoteko početi.
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-oznaka & opis & opomba \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4444}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4444}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+oznaka
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+opis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+opomba
+\end{minipage} \\
+\midrule()
 \endhead
 r & branje & če ne obstaja, sproži napako \\
 w & pisanje & če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke \\
@@ -1490,15 +1513,42 @@ x & ustvari datoteko, pisanje & če že obstaja, sproži napako \\
 + & pisanje in branje & \\
 t & za delo s tekstovnimi datotekami & npr. .txt, .csv, .tex, .html, .py \\
 b & za delo s binarnimi datotekami & npr. slike \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 Nekaj lastnosti je zbranih v spodnji tabeli:
 
-\begin{longtable}[]{@{}lcccccccc@{}}
-\toprule
-lastnost     \textbackslash{}     kombinacija črk & r & r+ & x & x+ & w & w+ & a & a+ \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.4030}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}
+  >{\centering\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0746}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+lastnost     \textbackslash{}     kombinacija črk
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+r
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+r+
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+x
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+x+
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+w
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+w+
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+a
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+a+
+\end{minipage} \\
+\midrule()
 \endhead
 branje & x & x & & x & & x & & x \\
 pisanje & & x & x & x & x & x & x & x \\
@@ -1506,7 +1556,7 @@ datoteka mora obstajati & x & x & & & & & & \\
 datoteka ne sme obstajati & & & x & x & & & & \\
 zbriše prejšnjo vsebino datoteke & & & & & x & x & & \\
 pisanje na konec datoteke & & & & & & & x & x \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 K zgornjim kombinacijam lahko dodamo še \texttt{t} ali \texttt{b}.
