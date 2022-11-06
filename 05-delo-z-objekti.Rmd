@@ -83,10 +83,18 @@ Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`
 
 Vrednosti v naborih lahko "odpakiramo" nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov.
 
-```{python}
-sadje = ("jabolko", "banana", "črešnje")
+```{python eval=FALSE}
+sadje = ("jabolko", "banana", "češnja")
 zeleno, rumeno, rdece = sadje
-print(rdece, rumeno, zeleno)
+print(zeleno)
+print(rumeno)
+print(rdece)
+```
+
+```
+## jabolko
+## banana
+## češnja
 ```
 
 ### Množice
@@ -95,7 +103,7 @@ Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji 
 
 ## Pretvarjanje med tipi
 
-Spremenljivko `a` lahko pretvorimo v najpogosteje uporabljane tipe z:
+Spremenljivko `a` lahko pretvorimo v najpogosteje uporabljane tipe:
 
 - `int(a)` vrne celo število
 - `float(a)` vrne decimalno število
