@@ -20,8 +20,8 @@ Gradiva za to poglavje so:
 
 ### Indeksiranje
 
-Indeksi morajo biti cela števila, sicer pride do napake. Negativni indeksi so 
-indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa).
+Indeksi morajo biti cela števila, sicer pride do napake. Indeksi se začnejo z 0 (prvi element). Negativni indeksi so 
+indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa, -2 predzadnjega). Če podamo indeks, ki je večji od indeksa zadnjega elementa, Python javi `IndexError`.
 
 ```{python eval=FALSE}
 spam = ['cat', 'bat', 42, True, 'dog']
@@ -69,6 +69,22 @@ print(spam[::-1])
 ## azevz andeseb
 ```
 
+### Dolžina
+
+Število elementov seznama ali število znakov v nizu dobimo s funkcijo `len(seznam_ali_niz)`.
+
+```{python eval=FALSE}
+c = [1, 2, 3, "abeceda"]
+print(len(c))
+d = "terminologija"
+print(len(d))
+```
+
+```
+## 4
+## 13
+```
+
 ### Združevanje
 
 Nize in sezname staknemo s plusom.
@@ -103,7 +119,7 @@ print('c' in 'beseda')
 ## False
 ```
 
-### Sprehod po elementih
+### Zanke
 
 Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 
@@ -143,6 +159,16 @@ Elemente seznama lahko zbrišemo s ključno besedo `del`.
 ```{python}
 spam = ['cat', 'bat', 42, True, 'dog']
 del spam[2]
+print(spam)
+```
+
+### Dodajanje elementov
+
+Element lahko dodamo na konec seznama z metodo:
+
+```{python}
+spam = ['cat', 'bat', 42, True, 'dog']
+spam.append(3)
 print(spam)
 ```
 
