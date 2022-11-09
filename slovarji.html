@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 6 Slovarji | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 6 Slovarji | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-11-06" />
+<meta name="date" content="2022-11-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,11 +161,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#skupne-lastnosti"><i class="fa fa-check"></i><b>4.1</b> Skupne lastnosti</a>
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#indeksiranje"><i class="fa fa-check"></i><b>4.1.1</b> Indeksiranje</a></li>
-<li class="chapter" data-level="4.1.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#združevanje"><i class="fa fa-check"></i><b>4.1.2</b> Združevanje</a></li>
-<li class="chapter" data-level="4.1.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanosti"><i class="fa fa-check"></i><b>4.1.3</b> Preverjanje vsebovanosti</a></li>
-<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#sprehod-po-elementih"><i class="fa fa-check"></i><b>4.1.4</b> Sprehod po elementih</a></li>
+<li class="chapter" data-level="4.1.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#dolžina"><i class="fa fa-check"></i><b>4.1.2</b> Dolžina</a></li>
+<li class="chapter" data-level="4.1.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#združevanje"><i class="fa fa-check"></i><b>4.1.3</b> Združevanje</a></li>
+<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanosti"><i class="fa fa-check"></i><b>4.1.4</b> Preverjanje vsebovanosti</a></li>
+<li class="chapter" data-level="4.1.5" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#zanke-1"><i class="fa fa-check"></i><b>4.1.5</b> Zanke</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#spreminjanje"><i class="fa fa-check"></i><b>4.2</b> Spreminjanje</a></li>
+<li class="chapter" data-level="4.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#spreminjanje"><i class="fa fa-check"></i><b>4.2</b> Spreminjanje</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#dodajanje-elementov"><i class="fa fa-check"></i><b>4.2.1</b> Dodajanje elementov</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#nekaj-uporabnih-funkcij"><i class="fa fa-check"></i><b>4.3</b> Nekaj uporabnih funkcij</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="delo-z-objekti.html"><a href="delo-z-objekti.html"><i class="fa fa-check"></i><b>5</b> Delo z objekti</a>
@@ -190,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="slovarji.html"><a href="slovarji.html#metode-na-slovarjih"><i class="fa fa-check"></i><b>6.2</b> Metode na slovarjih</a></li>
 <li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
-<li class="chapter" data-level="6.4" data-path="slovarji.html"><a href="slovarji.html#zanke-1"><i class="fa fa-check"></i><b>6.4</b> Zanke</a></li>
+<li class="chapter" data-level="6.4" data-path="slovarji.html"><a href="slovarji.html#zanke-2"><i class="fa fa-check"></i><b>6.4</b> Zanke</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
 <ul>
@@ -245,28 +249,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="dostopanje-do-vrednosti" class="section level3 hasAnchor" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Dostopanje do vrednosti<a href="slovarji.html#dostopanje-do-vrednosti" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabimo ključe.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="slovarji.html#cb51-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb51-2"><a href="slovarji.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s[<span class="st">&#39;b&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="slovarji.html#cb55-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb55-2"><a href="slovarji.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s[<span class="st">&#39;b&#39;</span>])</span></code></pre></div>
 <pre><code>## test</code></pre>
 <p>Če ključ ne obstaja pride do napake. Temu se lahko izognemo z metodo <code>get</code></p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="slovarji.html#cb53-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb53-2"><a href="slovarji.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="slovarji.html#cb57-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb57-2"><a href="slovarji.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
 <pre><code>## 6</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="slovarji.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;ž&#39;</span>, <span class="dv">0</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="slovarji.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;ž&#39;</span>, <span class="dv">0</span>))</span></code></pre></div>
 <pre><code>## 0</code></pre>
 </div>
 <div id="spreminjanje-1" class="section level3 hasAnchor" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Spreminjanje<a href="slovarji.html#spreminjanje-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="slovarji.html#cb57-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb57-2"><a href="slovarji.html#cb57-2" aria-hidden="true" tabindex="-1"></a>s[<span class="st">&#39;a&#39;</span>] <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb57-3"><a href="slovarji.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="slovarji.html#cb61-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb61-2"><a href="slovarji.html#cb61-2" aria-hidden="true" tabindex="-1"></a>s[<span class="st">&#39;a&#39;</span>] <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb61-3"><a href="slovarji.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
 <pre><code>## {&#39;a&#39;: 10, &#39;b&#39;: &#39;test&#39;, 123: True}</code></pre>
 </div>
 <div id="brisanje" class="section level3 hasAnchor" number="6.1.3">
 <h3><span class="header-section-number">6.1.3</span> Brisanje<a href="slovarji.html#brisanje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="slovarji.html#cb59-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb59-2"><a href="slovarji.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> s[<span class="st">&#39;a&#39;</span>]</span>
-<span id="cb59-3"><a href="slovarji.html#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="slovarji.html#cb63-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb63-2"><a href="slovarji.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> s[<span class="st">&#39;a&#39;</span>]</span>
+<span id="cb63-3"><a href="slovarji.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
 <pre><code>## {&#39;b&#39;: &#39;test&#39;, 123: True}</code></pre>
 </div>
 </div>
@@ -284,34 +288,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="preverjanje-vsebovanja" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Preverjanje vsebovanja<a href="slovarji.html#preverjanje-vsebovanja" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Kot pri seznamih in nizih porabimo ključno besedo <code>in</code></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="slovarji.html#cb61-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb61-2"><a href="slovarji.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;test&#39;</span> <span class="kw">in</span> s.values())</span>
-<span id="cb61-3"><a href="slovarji.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;b&#39;</span> <span class="kw">in</span> s.keys())</span>
-<span id="cb61-4"><a href="slovarji.html#cb61-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="st">&#39;a&#39;</span>, <span class="dv">6</span>) <span class="kw">in</span> s.items())</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="slovarji.html#cb65-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb65-2"><a href="slovarji.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;test&#39;</span> <span class="kw">in</span> s.values())</span>
+<span id="cb65-3"><a href="slovarji.html#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;b&#39;</span> <span class="kw">in</span> s.keys())</span>
+<span id="cb65-4"><a href="slovarji.html#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="st">&#39;a&#39;</span>, <span class="dv">6</span>) <span class="kw">in</span> s.items())</span></code></pre></div>
 <pre><code>## True
 ## True
 ## True</code></pre>
 </div>
-<div id="zanke-1" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Zanke<a href="slovarji.html#zanke-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="zanke-2" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Zanke<a href="slovarji.html#zanke-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Zanka po vrednostih v slovarju.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="slovarji.html#cb63-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb63-2"><a href="slovarji.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> s.values():</span>
-<span id="cb63-3"><a href="slovarji.html#cb63-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(v)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="slovarji.html#cb67-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb67-2"><a href="slovarji.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> v <span class="kw">in</span> s.values():</span>
+<span id="cb67-3"><a href="slovarji.html#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(v)</span></code></pre></div>
 <pre><code>## 6
 ## test
 ## True</code></pre>
 <p>Zanka po ključih v slovarju.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="slovarji.html#cb65-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb65-2"><a href="slovarji.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> s.keys(): <span class="co"># lahko tudi &quot;for k in s:&quot;</span></span>
-<span id="cb65-3"><a href="slovarji.html#cb65-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="slovarji.html#cb69-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb69-2"><a href="slovarji.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> s.keys(): <span class="co"># lahko tudi &quot;for k in s:&quot;</span></span>
+<span id="cb69-3"><a href="slovarji.html#cb69-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(k)</span></code></pre></div>
 <pre><code>## a
 ## b
 ## 123</code></pre>
 <p>Zanka po parih v slovarju.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="slovarji.html#cb67-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
-<span id="cb67-2"><a href="slovarji.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> kljuc, vrednost <span class="kw">in</span> s.items():</span>
-<span id="cb67-3"><a href="slovarji.html#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kljuc, <span class="st">&#39;-&gt;&#39;</span>, vrednost)</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="slovarji.html#cb71-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
+<span id="cb71-2"><a href="slovarji.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> kljuc, vrednost <span class="kw">in</span> s.items():</span>
+<span id="cb71-3"><a href="slovarji.html#cb71-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kljuc, <span class="st">&#39;-&gt;&#39;</span>, vrednost)</span></code></pre></div>
 <pre><code>## a -&gt; 6
 ## b -&gt; test
 ## 123 -&gt; True</code></pre>

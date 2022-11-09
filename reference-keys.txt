@@ -14,10 +14,12 @@ zanka-while
 seznami-in-nizi
 skupne-lastnosti
 indeksiranje
+dolžina
 združevanje
 preverjanje-vsebovanosti
-sprehod-po-elementih
+zanke-1
 spreminjanje
+dodajanje-elementov
 nekaj-uporabnih-funkcij
 delo-z-objekti
 metode-za-nize
@@ -34,7 +36,7 @@ spreminjanje-1
 brisanje
 metode-na-slovarjih
 preverjanje-vsebovanja
-zanke-1
+zanke-2
 numpy
 ustvarjanje-tabel
 rezine

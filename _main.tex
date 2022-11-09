@@ -117,7 +117,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-11-06}
+\date{2022-11-09}
 
 \begin{document}
 \maketitle
@@ -488,8 +488,8 @@ Gradiva za to poglavje so:
 \hypertarget{indeksiranje}{%
 \subsection{Indeksiranje}\label{indeksiranje}}
 
-Indeksi morajo biti cela števila, sicer pride do napake. Negativni indeksi so
-indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa).
+Indeksi morajo biti cela števila, sicer pride do napake. Indeksi se začnejo z 0 (prvi element). Negativni indeksi so
+indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa, -2 predzadnjega). Če podamo indeks, ki je večji od indeksa zadnjega elementa, Python javi \texttt{IndexError}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -543,6 +543,25 @@ Podobno je za nize.
 ## azevz andeseb
 \end{verbatim}
 
+\hypertarget{dolux17eina}{%
+\subsection{Dolžina}\label{dolux17eina}}
+
+Število elementov seznama ali število znakov v nizu dobimo s funkcijo \texttt{len(seznam\_ali\_niz)}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{c }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\StringTok{"abeceda"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{len}\NormalTok{(c))}
+\NormalTok{d }\OperatorTok{=} \StringTok{"terminologija"}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{len}\NormalTok{(d))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 4
+## 13
+\end{verbatim}
+
 \hypertarget{zdruux17eevanje}{%
 \subsection{Združevanje}\label{zdruux17eevanje}}
 
@@ -583,8 +602,8 @@ S ključno besedo \texttt{in} preverimo ali seznam vsebuje nek element, kar lahk
 ## False
 \end{verbatim}
 
-\hypertarget{sprehod-po-elementih}{%
-\subsection{Sprehod po elementih}\label{sprehod-po-elementih}}
+\hypertarget{zanke-1}{%
+\subsection{Zanke}\label{zanke-1}}
 
 Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 
@@ -662,6 +681,23 @@ Elemente seznama lahko zbrišemo s ključno besedo \texttt{del}.
 
 \begin{verbatim}
 ## ['cat', 'bat', True, 'dog']
+\end{verbatim}
+
+\hypertarget{dodajanje-elementov}{%
+\subsection{Dodajanje elementov}\label{dodajanje-elementov}}
+
+Element lahko dodamo na konec seznama z metodo:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{spam }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}cat\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bat\textquotesingle{}}\NormalTok{, }\DecValTok{42}\NormalTok{, }\VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{}dog\textquotesingle{}}\NormalTok{]}
+\NormalTok{spam.append(}\DecValTok{3}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(spam)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['cat', 'bat', 42, True, 'dog', 3]
 \end{verbatim}
 
 \hypertarget{nekaj-uporabnih-funkcij}{%
@@ -1043,8 +1079,8 @@ Kot pri seznamih in nizih porabimo ključno besedo \texttt{in}
 ## True
 \end{verbatim}
 
-\hypertarget{zanke-1}{%
-\section{Zanke}\label{zanke-1}}
+\hypertarget{zanke-2}{%
+\section{Zanke}\label{zanke-2}}
 
 Zanka po vrednostih v slovarju.
 
