@@ -117,7 +117,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-11-09}
+\date{2022-11-23}
 
 \begin{document}
 \maketitle
@@ -636,6 +636,28 @@ Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 ## b
 ## c
 \end{verbatim}
+
+Ko v zanki potrebujemo indekse, pride prav spodnji pristop.
+
+Primer: zanima nas razlika med zaporednimi elementi seznama.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{seznam }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{]}
+\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\BuiltInTok{len}\NormalTok{(seznam) }\OperatorTok{{-}} \DecValTok{1}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(seznam[i}\OperatorTok{+}\DecValTok{1}\NormalTok{] }\OperatorTok{{-}}\NormalTok{ seznam[i])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+## 1
+## 2
+## 1
+## 1
+\end{verbatim}
+
+Tretji pristop k sprehodu po elementih seznama / znakih niza pa je funkcija \texttt{enumerate} (glej dno te strani za primer).
 
 \hypertarget{spreminjanje}{%
 \section{Spreminjanje}\label{spreminjanje}}

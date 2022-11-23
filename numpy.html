@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-11-09" />
+<meta name="date" content="2022-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -245,12 +245,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://numpy.org/doc/stable/user/quickstart.html" class="uri">https://numpy.org/doc/stable/user/quickstart.html</a></li>
 </ul>
 <p>Navaden seznam pretvorimo v Numpy seznam s funkcijo <code>array(seznam)</code>.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="numpy.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb73-2"><a href="numpy.html#cb73-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
-<span id="cb73-3"><a href="numpy.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
-<span id="cb73-4"><a href="numpy.html#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.shape)</span>
-<span id="cb73-5"><a href="numpy.html#cb73-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.ndim)</span>
-<span id="cb73-6"><a href="numpy.html#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.size)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="numpy.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb75-2"><a href="numpy.html#cb75-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb75-3"><a href="numpy.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
+<span id="cb75-4"><a href="numpy.html#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.shape)</span>
+<span id="cb75-5"><a href="numpy.html#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.ndim)</span>
+<span id="cb75-6"><a href="numpy.html#cb75-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.size)</span></code></pre></div>
 <pre><code>## [[1 2 3 4]
 ##  [5 6 7 8]]
 ## (2, 4)
@@ -273,9 +273,9 @@ vsak element v tabeli izračuna s klicem funkcije <code>ime_funkcije</code>; fun
 <h2><span class="header-section-number">7.2</span> Rezine<a href="numpy.html#rezine" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih
 (<code>zacetek:konec:korak</code>), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="numpy.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb75-2"><a href="numpy.html#cb75-2" aria-hidden="true" tabindex="-1"></a>tabela <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">49</span>).reshape(<span class="dv">7</span>, <span class="dv">7</span>)</span>
-<span id="cb75-3"><a href="numpy.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="numpy.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb77-2"><a href="numpy.html#cb77-2" aria-hidden="true" tabindex="-1"></a>tabela <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">49</span>).reshape(<span class="dv">7</span>, <span class="dv">7</span>)</span>
+<span id="cb77-3"><a href="numpy.html#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
 <pre><code>## [[ 0  1  2  3  4  5  6]
 ##  [ 7  8  9 10 11 12 13]
 ##  [14 15 16 17 18 19 20]
@@ -283,18 +283,18 @@ vsak element v tabeli izračuna s klicem funkcije <code>ime_funkcije</code>; fun
 ##  [28 29 30 31 32 33 34]
 ##  [35 36 37 38 39 40 41]
 ##  [42 43 44 45 46 47 48]]</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="numpy.html#cb77-1" aria-hidden="true" tabindex="-1"></a>razrezano <span class="op">=</span> tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>]</span>
-<span id="cb77-2"><a href="numpy.html#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(razrezano)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="numpy.html#cb79-1" aria-hidden="true" tabindex="-1"></a>razrezano <span class="op">=</span> tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>]</span>
+<span id="cb79-2"><a href="numpy.html#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(razrezano)</span></code></pre></div>
 <pre><code>## [[ 2  4  6]
 ##  [ 9 11 13]
 ##  [16 18 20]
 ##  [23 25 27]]</code></pre>
 <p>Če želimo vse elemente v neki dimenziji napišemo <code>:</code>. Tako lahko dobimo posamezne stolpce.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="numpy.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela[:,<span class="dv">3</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="numpy.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela[:,<span class="dv">3</span>])</span></code></pre></div>
 <pre><code>## [ 3 10 17 24 31 38 45]</code></pre>
 <p>Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri <code>razrezano</code>) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="numpy.html#cb81-1" aria-hidden="true" tabindex="-1"></a>tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>] <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">112</span>).reshape(<span class="dv">4</span>,<span class="dv">3</span>)</span>
-<span id="cb81-2"><a href="numpy.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="numpy.html#cb83-1" aria-hidden="true" tabindex="-1"></a>tabela[<span class="dv">0</span>:<span class="dv">4</span>,<span class="dv">2</span>:<span class="dv">7</span>:<span class="dv">2</span>] <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">112</span>).reshape(<span class="dv">4</span>,<span class="dv">3</span>)</span>
+<span id="cb83-2"><a href="numpy.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabela)</span></code></pre></div>
 <pre><code>## [[  0   1 100   3 101   5 102]
 ##  [  7   8 103  10 104  12 105]
 ##  [ 14  15 106  17 107  19 108]
@@ -319,11 +319,11 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
 <li><code>np.where(pogoj, x, y)</code> vrne elemente iz <code>x</code>, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz <code>y</code>; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!</li>
 <li><code>tabela.T</code> vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele</li>
 </ul>
-<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="numpy.html#cb83-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
-<span id="cb83-2"><a href="numpy.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="numpy.html#cb85-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb85-2"><a href="numpy.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## [[1 2 3]
 ##  [4 5 6]]</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="numpy.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.T)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="numpy.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.T)</span></code></pre></div>
 <pre><code>## [[1 4]
 ##  [2 5]
 ##  [3 6]]</code></pre>
