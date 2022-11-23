@@ -135,6 +135,18 @@ for el in spam:
     print(el)
 ```
 
+Ko v zanki potrebujemo indekse, pride prav spodnji pristop. 
+
+Primer: zanima nas razlika med zaporednimi elementi seznama.
+
+```{python}
+seznam = [1, 2, 3, 5, 6, 7]
+for i in range(len(seznam) - 1):
+    print(seznam[i+1] - seznam[i])
+```
+
+Tretji pristop k sprehodu po elementih seznama / znakih niza pa je funkcija `enumerate` (glej dno te strani za primer).
+
 ## Spreminjanje
 
 Vrednost elementa v seznamu lahko spremenimo.
