@@ -51,7 +51,7 @@ print(s)
 
 ## Preverjanje vsebovanja
 
-Kot pri seznamih in nizih porabimo ključno besedo `in`
+Kot pri seznamih in nizih uporabimo ključno besedo `in`.
 
 ```{python eval=FALSE}
 s = {'a': 6, 'b': 'test', 123: True}

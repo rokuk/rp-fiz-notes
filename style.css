@@ -29,7 +29,9 @@ blockquote > p:first-child {
 }
 
 .header-section-number {
-  font-weight: 1000;
+  font-weight: 600;
+  padding-right: 0.4em;
+  
 }
 
 .level1 h1 {
