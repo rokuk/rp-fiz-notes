@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-11-26}
+\date{2022-11-29}
 
 \begin{document}
 \maketitle
@@ -587,8 +587,8 @@ Nize in sezname staknemo s plusom.
 
 Sezname lahko združimo tudi z metodo \texttt{extend}. Za zgornji primer: \texttt{seznam1.extend(seznam2)}.
 
-\hypertarget{preverjanje-vsebovanosti}{%
-\subsection{Preverjanje vsebovanosti}\label{preverjanje-vsebovanosti}}
+\hypertarget{preverjanje-vsebovanja}{%
+\subsection{Preverjanje vsebovanja}\label{preverjanje-vsebovanja}}
 
 S ključno besedo \texttt{in} preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z \texttt{in} preverimo ali niz vsebuje nek znak.
 
@@ -1083,8 +1083,8 @@ Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabim
   \texttt{s.items()} za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo \texttt{list} pretvorimo v seznam
 \end{itemize}
 
-\hypertarget{preverjanje-vsebovanja}{%
-\section{Preverjanje vsebovanja}\label{preverjanje-vsebovanja}}
+\hypertarget{preverjanje-vsebovanja-1}{%
+\section{Preverjanje vsebovanja}\label{preverjanje-vsebovanja-1}}
 
 Kot pri seznamih in nizih uporabimo ključno besedo \texttt{in}.
 
@@ -1579,10 +1579,10 @@ opomba
 \end{minipage} \\
 \midrule()
 \endhead
-r & branje & če ne obstaja, sproži napako \\
-w & pisanje & če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke \\
-a & append & če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine \\
-x & ustvari datoteko, pisanje & če že obstaja, sproži napako \\
+r & branje & če datoteka ne obstaja, sproži napako \\
+w & pisanje & če datoteka ne obstaja, ustvari novo; če obstaja, izbriše prejšnjo vsebino datoteke \\
+a & append & če datoteka ne obstaja, ustvari novo; če obstaja ne izbriše prejšnje vsebine \\
+x & ustvari datoteko, pisanje & če datoteka že obstaja, sproži napako \\
 + & pisanje in branje & \\
 t & za delo s tekstovnimi datotekami & npr. .txt, .csv, .tex, .html, .py \\
 b & za delo s binarnimi datotekami & npr. slike \\

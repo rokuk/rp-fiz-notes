@@ -16,7 +16,7 @@ skupne-lastnosti
 indeksiranje
 dolžina
 združevanje
-preverjanje-vsebovanosti
+preverjanje-vsebovanja
 zanke-1
 spreminjanje
 dodajanje-elementov
@@ -35,7 +35,7 @@ dostopanje-do-vrednosti
 spreminjanje-1
 brisanje
 metode-na-slovarjih
-preverjanje-vsebovanja
+preverjanje-vsebovanja-1
 zanke-2
 numpy
 ustvarjanje-tabel

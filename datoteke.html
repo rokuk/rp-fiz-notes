@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-11-26" />
+<meta name="date" content="2022-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#indeksiranje"><i class="fa fa-check"></i><b>4.1.1</b> Indeksiranje</a></li>
 <li class="chapter" data-level="4.1.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#dolžina"><i class="fa fa-check"></i><b>4.1.2</b> Dolžina</a></li>
 <li class="chapter" data-level="4.1.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#združevanje"><i class="fa fa-check"></i><b>4.1.3</b> Združevanje</a></li>
-<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanosti"><i class="fa fa-check"></i><b>4.1.4</b> Preverjanje vsebovanosti</a></li>
+<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>4.1.4</b> Preverjanje vsebovanja</a></li>
 <li class="chapter" data-level="4.1.5" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#zanke-1"><i class="fa fa-check"></i><b>4.1.5</b> Zanke</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#spreminjanje"><i class="fa fa-check"></i><b>4.2</b> Spreminjanje</a>
@@ -193,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.3" data-path="slovarji.html"><a href="slovarji.html#brisanje"><i class="fa fa-check"></i><b>6.1.3</b> Brisanje</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="slovarji.html"><a href="slovarji.html#metode-na-slovarjih"><i class="fa fa-check"></i><b>6.2</b> Metode na slovarjih</a></li>
-<li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
+<li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja-1"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
 <li class="chapter" data-level="6.4" data-path="slovarji.html"><a href="slovarji.html#zanke-2"><i class="fa fa-check"></i><b>6.4</b> Zanke</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
@@ -392,22 +392,22 @@ datoteko početi.</p>
 <tr class="odd">
 <td>r</td>
 <td>branje</td>
-<td>če ne obstaja, sproži napako</td>
+<td>če datoteka ne obstaja, sproži napako</td>
 </tr>
 <tr class="even">
 <td>w</td>
 <td>pisanje</td>
-<td>če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke</td>
+<td>če datoteka ne obstaja, ustvari novo; če obstaja, izbriše prejšnjo vsebino datoteke</td>
 </tr>
 <tr class="odd">
 <td>a</td>
 <td>append</td>
-<td>če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine</td>
+<td>če datoteka ne obstaja, ustvari novo; če obstaja ne izbriše prejšnje vsebine</td>
 </tr>
 <tr class="even">
 <td>x</td>
 <td>ustvari datoteko, pisanje</td>
-<td>če že obstaja, sproži napako</td>
+<td>če datoteka že obstaja, sproži napako</td>
 </tr>
 <tr class="odd">
 <td>+</td>

@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-11-26" />
+<meta name="date" content="2022-11-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.1" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#indeksiranje"><i class="fa fa-check"></i><b>4.1.1</b> Indeksiranje</a></li>
 <li class="chapter" data-level="4.1.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#dolžina"><i class="fa fa-check"></i><b>4.1.2</b> Dolžina</a></li>
 <li class="chapter" data-level="4.1.3" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#združevanje"><i class="fa fa-check"></i><b>4.1.3</b> Združevanje</a></li>
-<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanosti"><i class="fa fa-check"></i><b>4.1.4</b> Preverjanje vsebovanosti</a></li>
+<li class="chapter" data-level="4.1.4" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>4.1.4</b> Preverjanje vsebovanja</a></li>
 <li class="chapter" data-level="4.1.5" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#zanke-1"><i class="fa fa-check"></i><b>4.1.5</b> Zanke</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="seznami-in-nizi.html"><a href="seznami-in-nizi.html#spreminjanje"><i class="fa fa-check"></i><b>4.2</b> Spreminjanje</a>
@@ -193,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1.3" data-path="slovarji.html"><a href="slovarji.html#brisanje"><i class="fa fa-check"></i><b>6.1.3</b> Brisanje</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="slovarji.html"><a href="slovarji.html#metode-na-slovarjih"><i class="fa fa-check"></i><b>6.2</b> Metode na slovarjih</a></li>
-<li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
+<li class="chapter" data-level="6.3" data-path="slovarji.html"><a href="slovarji.html#preverjanje-vsebovanja-1"><i class="fa fa-check"></i><b>6.3</b> Preverjanje vsebovanja</a></li>
 <li class="chapter" data-level="6.4" data-path="slovarji.html"><a href="slovarji.html#zanke-2"><i class="fa fa-check"></i><b>6.4</b> Zanke</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>7</b> Numpy</a>
@@ -285,8 +285,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>s.items()</code> za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo <code>list</code> pretvorimo v seznam</li>
 </ul>
 </div>
-<div id="preverjanje-vsebovanja" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Preverjanje vsebovanja<a href="slovarji.html#preverjanje-vsebovanja" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="preverjanje-vsebovanja-1" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Preverjanje vsebovanja<a href="slovarji.html#preverjanje-vsebovanja-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Kot pri seznamih in nizih uporabimo ključno besedo <code>in</code>.</p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="slovarji.html#cb67-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
 <span id="cb67-2"><a href="slovarji.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;test&#39;</span> <span class="kw">in</span> s.values())</span>
