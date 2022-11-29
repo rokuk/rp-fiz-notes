@@ -156,10 +156,10 @@ datoteko početi.
 
 oznaka | opis | opomba
 --- | ------------ | ------------
-r | branje | če ne obstaja, sproži napako
-w | pisanje | če ne obstaja, ustvari novo, izbriše prejšnjo vsebino datoteke
-a | append | če ne obstaja, ustvari novo, ne izbriše prejšnje vsebine
-x | ustvari datoteko, pisanje | če že obstaja, sproži napako
+r | branje | če datoteka ne obstaja, sproži napako
+w | pisanje | če datoteka ne obstaja, ustvari novo; če obstaja, izbriše prejšnjo vsebino datoteke
+a | append | če datoteka ne obstaja, ustvari novo; če obstaja ne izbriše prejšnje vsebine
+x | ustvari datoteko, pisanje | če datoteka že obstaja, sproži napako
 \+ | pisanje in branje
 t | za delo s tekstovnimi datotekami | npr. .txt, .csv, .tex, .html, .py
 b | za delo s binarnimi datotekami | npr. slike
