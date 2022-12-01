@@ -54,7 +54,7 @@ print(s)
 
 ## Preverjanje vsebovanja
 
-Kot pri seznamih in nizih uporabimo ključno besedo `in`.
+Kot pri seznamih in nizih uporabimo ključno besedo `in`, da preverimo ali se nek ključ/vrednost/par nahaja v slovarju.
 
 ```{python eval=FALSE}
 s = {'a': 6, 'b': 'test', 123: True}
