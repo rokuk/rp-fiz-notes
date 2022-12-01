@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-11-29}
+\date{2022-12-01}
 
 \begin{document}
 \maketitle
@@ -1026,28 +1026,31 @@ Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabim
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(s.get(}\StringTok{\textquotesingle{}ž\textquotesingle{}}\NormalTok{, }\DecValTok{0}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(s.get(}\StringTok{\textquotesingle{}ž\textquotesingle{}}\NormalTok{, }\DecValTok{100000}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## 0
+## 100000
 \end{verbatim}
 
-\hypertarget{spreminjanje-1}{%
-\subsection{Spreminjanje}\label{spreminjanje-1}}
+\hypertarget{spreminjanje-in-dodajanje}{%
+\subsection{Spreminjanje in dodajanje}\label{spreminjanje-in-dodajanje}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{s }\OperatorTok{=}\NormalTok{ \{}\StringTok{\textquotesingle{}a\textquotesingle{}}\NormalTok{: }\DecValTok{6}\NormalTok{, }\StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{: }\StringTok{\textquotesingle{}test\textquotesingle{}}\NormalTok{, }\DecValTok{123}\NormalTok{: }\VariableTok{True}\NormalTok{\}}
 \NormalTok{s[}\StringTok{\textquotesingle{}a\textquotesingle{}}\NormalTok{] }\OperatorTok{=} \DecValTok{10}
+\NormalTok{s[}\StringTok{\textquotesingle{}abcd\textquotesingle{}}\NormalTok{] }\OperatorTok{=} \VariableTok{False}
 \BuiltInTok{print}\NormalTok{(s)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## {'a': 10, 'b': 'test', 123: True}
+## {'a': 10, 'b': 'test', 123: True, 'abcd': False}
 \end{verbatim}
+
+Nov par ključ-vrednost dodamo tako kot piše v tretji vrstici zgornjega primera. Pri dodajanju ni pomembno, če ključ še ne obstaja v slovarju, ampak se neobstoječi ključ doda in njegova vrednost se nastavi na vrednost desno od enačaja.
 
 \hypertarget{brisanje}{%
 \subsection{Brisanje}\label{brisanje}}

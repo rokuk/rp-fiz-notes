@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-11-29" />
+<meta name="date" content="2022-12-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="slovarji.html"><a href="slovarji.html#osnovne-operacije"><i class="fa fa-check"></i><b>6.1</b> Osnovne operacije</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="slovarji.html"><a href="slovarji.html#dostopanje-do-vrednosti"><i class="fa fa-check"></i><b>6.1.1</b> Dostopanje do vrednosti</a></li>
-<li class="chapter" data-level="6.1.2" data-path="slovarji.html"><a href="slovarji.html#spreminjanje-1"><i class="fa fa-check"></i><b>6.1.2</b> Spreminjanje</a></li>
+<li class="chapter" data-level="6.1.2" data-path="slovarji.html"><a href="slovarji.html#spreminjanje-in-dodajanje"><i class="fa fa-check"></i><b>6.1.2</b> Spreminjanje in dodajanje</a></li>
 <li class="chapter" data-level="6.1.3" data-path="slovarji.html"><a href="slovarji.html#brisanje"><i class="fa fa-check"></i><b>6.1.3</b> Brisanje</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="slovarji.html"><a href="slovarji.html#metode-na-slovarjih"><i class="fa fa-check"></i><b>6.2</b> Metode na slovarjih</a></li>
@@ -256,15 +256,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="slovarji.html#cb59-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
 <span id="cb59-2"><a href="slovarji.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
 <pre><code>## 6</code></pre>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="slovarji.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;ž&#39;</span>, <span class="dv">0</span>))</span></code></pre></div>
-<pre><code>## 0</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="slovarji.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s.get(<span class="st">&#39;ž&#39;</span>, <span class="dv">100000</span>))</span></code></pre></div>
+<pre><code>## 100000</code></pre>
 </div>
-<div id="spreminjanje-1" class="section level3 hasAnchor" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Spreminjanje<a href="slovarji.html#spreminjanje-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="spreminjanje-in-dodajanje" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Spreminjanje in dodajanje<a href="slovarji.html#spreminjanje-in-dodajanje" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="slovarji.html#cb63-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">6</span>, <span class="st">&#39;b&#39;</span>: <span class="st">&#39;test&#39;</span>, <span class="dv">123</span>: <span class="va">True</span>}</span>
 <span id="cb63-2"><a href="slovarji.html#cb63-2" aria-hidden="true" tabindex="-1"></a>s[<span class="st">&#39;a&#39;</span>] <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb63-3"><a href="slovarji.html#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
-<pre><code>## {&#39;a&#39;: 10, &#39;b&#39;: &#39;test&#39;, 123: True}</code></pre>
+<span id="cb63-3"><a href="slovarji.html#cb63-3" aria-hidden="true" tabindex="-1"></a>s[<span class="st">&#39;abcd&#39;</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb63-4"><a href="slovarji.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<pre><code>## {&#39;a&#39;: 10, &#39;b&#39;: &#39;test&#39;, 123: True, &#39;abcd&#39;: False}</code></pre>
+<p>Nov par ključ-vrednost dodamo tako kot piše v tretji vrstici zgornjega primera. Pri dodajanju ni pomembno, če ključ še ne obstaja v slovarju, ampak se neobstoječi ključ doda in njegova vrednost se nastavi na vrednost desno od enačaja.</p>
 </div>
 <div id="brisanje" class="section level3 hasAnchor" number="6.1.3">
 <h3><span class="header-section-number">6.1.3</span> Brisanje<a href="slovarji.html#brisanje" class="anchor-section" aria-label="Anchor link to header"></a></h3>

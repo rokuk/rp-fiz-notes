@@ -32,7 +32,7 @@ pretvarjanje-med-tipi
 slovarji
 osnovne-operacije
 dostopanje-do-vrednosti
-spreminjanje-1
+spreminjanje-in-dodajanje
 brisanje
 metode-na-slovarjih
 preverjanje-vsebovanja-1
