@@ -24,7 +24,7 @@ print(s.get('a'))
 print(s.get('ž', 100000))
 ```
 
-### Spreminjanje
+### Spreminjanje in dodajanje
 
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
@@ -32,6 +32,8 @@ s['a'] = 10
 s['abcd'] = False
 print(s)
 ```
+
+Nov par ključ-vrednost dodamo tako kot piše v tretji vrstici zgornjega primera. Pri dodajanju ni pomembno, če ključ še ne obstaja v slovarju, ampak se neobstoječi ključ doda in njegova vrednost se nastavi na vrednost desno od enačaja.
 
 ### Brisanje
 
