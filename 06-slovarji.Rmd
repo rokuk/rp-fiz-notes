@@ -21,7 +21,7 @@ print(s['b'])
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
 print(s.get('a'))
-print(s.get('ž', 0))
+print(s.get('ž', 100000))
 ```
 
 ### Spreminjanje
@@ -29,6 +29,7 @@ print(s.get('ž', 0))
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
 s['a'] = 10
+s['abcd'] = False
 print(s)
 ```
 
