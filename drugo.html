@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje</title>
+  <title>Poglavje 9 Drugo | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje" />
+  <meta property="og:title" content="Poglavje 9 Drugo | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
   <meta property="og:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="github-repo" content="rokuk/rp-fiz-notes" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Poglavje 2 Uvod v Ptyhon | Računalniški praktikum (fizika) - vaje" />
+  <meta name="twitter:title" content="Poglavje 9 Drugo | Računalniški praktikum (fizika) - vaje" />
   
   <meta name="twitter:description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
   <meta name="twitter:image" content="https://python.rokuk.org/images/apple-touch-icon.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="prev" href="namestitev-okolja-za-vaje.html"/>
-<link rel="next" href="zanke.html"/>
+<link rel="prev" href="datoteke.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -249,76 +249,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="uvod-v-ptyhon" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Poglavje 2</span> Uvod v Ptyhon<a href="uvod-v-ptyhon.html#uvod-v-ptyhon" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Gradiva za to poglavje so:</p>
-<ul>
-<li><a href="https://automatetheboringstuff.com/2e/chapter1/" class="uri">https://automatetheboringstuff.com/2e/chapter1/</a></li>
-<li><a href="https://automatetheboringstuff.com/2e/chapter2/" class="uri">https://automatetheboringstuff.com/2e/chapter2/</a> (do poglavja <code>while loop statements</code>)</li>
-<li><a href="https://automatetheboringstuff.com/2e/chapter3/" class="uri">https://automatetheboringstuff.com/2e/chapter3/</a></li>
-<li>poglavje <code>Osnovni koncepti programiranja</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1201/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1201/index.html</a></li>
-<li>poglavje <code>Izdelava samostojnih programov in pogojni stavki</code> v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1202/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1202/index.html</a></li>
-<li>poglavje <code>Funkcije</code>v <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1205/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1205/index.html</a></li>
-</ul>
-<div id="števila" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Števila<a href="uvod-v-ptyhon.html#števila" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Za seštevanje uporabimo <code>+</code>, za odštevanje <code>-</code>, za množenje <code>*</code>, za potence <code>**</code>,
-za deljenje <code>/</code>, za celoštevilsko deljenje <code>//</code>, za ostanek pri deljenju <code>%</code>.
-Za vrstni red računanja operacij (če jih kombiniramo) veljajo enaka pravila kot
-v matematiki.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="uvod-v-ptyhon.html#cb1-1" aria-hidden="true" tabindex="-1"></a>celidel <span class="op">=</span> <span class="dv">20</span> <span class="op">//</span> <span class="dv">8</span></span>
-<span id="cb1-2"><a href="uvod-v-ptyhon.html#cb1-2" aria-hidden="true" tabindex="-1"></a>ostanek <span class="op">=</span> <span class="dv">20</span> <span class="op">%</span> <span class="dv">8</span></span>
-<span id="cb1-3"><a href="uvod-v-ptyhon.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(celidel, ostanek)</span></code></pre></div>
-<pre><code>## 2 4</code></pre>
-<p>Za zaokroževanje števila <code>stevilo</code> uporabimo funkcijo <code>round(stevilo, d)</code>, ki število zaokroži na <code>d</code> decimalnih mest.</p>
+<div id="drugo" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Poglavje 9</span> Drugo<a href="drugo.html#drugo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="kako-deluje-računalnik" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Kako deluje računalnik?<a href="drugo.html#kako-deluje-računalnik" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s tem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.</p>
+<p>Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.</p>
+<div id="crash-course-computer-science" class="section level3 unnumbered hasAnchor">
+<h3>Crash Course Computer Science<a href="drugo.html#crash-course-computer-science" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov.
+<a href="https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1" class="uri">https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1</a>
+Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min).</p>
 </div>
-<div id="logične-operacije" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Logične operacije<a href="uvod-v-ptyhon.html#logične-operacije" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Logične operacije s ključnimi besedami <code>and</code>, <code>or</code> in <code>not</code> ustrezajo operacijam v matematiki.</p>
-<ul>
-<li><code>a and b</code> je True, če sta <code>a</code> in <code>b</code> enaka True, sicer je False</li>
-<li><code>a or b</code> je False, le če sta <code>a</code> in <code>b</code> enaka False</li>
-<li><code>not a</code> je True, če je <code>a</code> enak False, sicer je True</li>
-</ul>
-<p>Logične operacije lahko kombiniramo. Vrstni red operacij lahko določimo z oklepaji.
-Sicer ima operator <code>and</code> prednost pred <code>or</code>, <code>not</code> pa ima prednost pred obema.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="uvod-v-ptyhon.html#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-2"><a href="uvod-v-ptyhon.html#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-3"><a href="uvod-v-ptyhon.html#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb3-4"><a href="uvod-v-ptyhon.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((a <span class="kw">or</span> b) <span class="kw">and</span> (a <span class="kw">or</span> c))</span></code></pre></div>
-<pre><code>## True</code></pre>
-<p>V logičnih operacijah se število 0 obnaša kot False, ostala števila pa kot True.</p>
+<div id="posamezne-teme" class="section level3 unnumbered hasAnchor">
+<h3>Posamezne teme<a href="drugo.html#posamezne-teme" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:</p>
+<div id="computer-basics---what-is-inside-a-computer" class="section level4 unnumbered hasAnchor">
+<h4>Computer basics - What is inside a computer?<a href="drugo.html#computer-basics---what-is-inside-a-computer" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Komponente računalnika. Osnovno - lahko preskočite.
+<a href="https://www.youtube.com/watch?v=HB4I2CgkcCo" class="uri">https://www.youtube.com/watch?v=HB4I2CgkcCo</a></p>
 </div>
-<div id="relacijski-operatorji" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Relacijski operatorji<a href="uvod-v-ptyhon.html#relacijski-operatorji" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Če relacija velja ima izraz vrednost True, sicer pa False.</p>
-<ul>
-<li>primerjava števil <code>a &lt; b</code> ali <code>a &lt;= b</code></li>
-<li>preverjanje enakosti <code>a == b</code></li>
-<li>preverjanje različnosti (nista enaka) <code>a != b</code></li>
-</ul>
-<p>Logične operacije in relacije so binarne. Binarna operacija se izvede med tem,
-kar je na levi, in tem, kar je na desni.</p>
+<div id="sebastian-lague---exploring-how-computers-work" class="section level4 unnumbered hasAnchor">
+<h4>Sebastian Lague - Exploring How Computers Work<a href="drugo.html#sebastian-lague---exploring-how-computers-work" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Izvrstena demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.
+<a href="https://www.youtube.com/watch?v=QZwneRb-zqA" class="uri">https://www.youtube.com/watch?v=QZwneRb-zqA</a></p>
 </div>
-<div id="nekoliko-kompleksnejši-primer" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Nekoliko kompleksnejši primer<a href="uvod-v-ptyhon.html#nekoliko-kompleksnejši-primer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Če želimo preveriti ali je spremenljivka <code>mesec</code> enaka 6 ali 7, ni prav, če napišemo</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="uvod-v-ptyhon.html#cb5-1" aria-hidden="true" tabindex="-1"></a>mesec <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb5-2"><a href="uvod-v-ptyhon.html#cb5-2" aria-hidden="true" tabindex="-1"></a>rezultat <span class="op">=</span> mesec <span class="op">==</span> <span class="dv">6</span> <span class="kw">or</span> <span class="dv">7</span></span>
-<span id="cb5-3"><a href="uvod-v-ptyhon.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rezultat)</span></code></pre></div>
-<pre><code>## 7</code></pre>
-<p>V zgornjem izrazu se najprej izvede primerjava med <code>mesec</code> in 6. Ker 4 ni enako 6,
-nam to da False. Nato se izvede operacija <code>or</code> med False in 7. Ker se 7 obnaša
-kot True bi pričakovali, da dobimo True. Operacija <code>or</code> deluje tako, da vrne prvo
-vrednost, ki ni False. Ponavadi primerjamo True in False vrednosti, zato ima
-operacija rezultat True, če je ena od vrednosti True.
-Na levi strani je pri nas False, na desni pa 7, zato ima celoten izraz desno
-od enačaja vrednost 7 (ker je prva vrednost, ki ni False).</p>
-<p>Pravilna rešitev bi bila</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="uvod-v-ptyhon.html#cb7-1" aria-hidden="true" tabindex="-1"></a>mesec <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb7-2"><a href="uvod-v-ptyhon.html#cb7-2" aria-hidden="true" tabindex="-1"></a>rezultat <span class="op">=</span> (mesec <span class="op">==</span> <span class="dv">6</span>) <span class="kw">or</span> (mesec <span class="op">==</span> <span class="dv">7</span>)</span>
-<span id="cb7-3"><a href="uvod-v-ptyhon.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rezultat)</span></code></pre></div>
-<pre><code>## False</code></pre>
+<div id="tom-scott---whats-your-computer-actually-doing" class="section level4 unnumbered hasAnchor">
+<h4>Tom Scott - What’s Your Computer Actually Doing?<a href="drugo.html#tom-scott---whats-your-computer-actually-doing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.
+<a href="https://www.youtube.com/watch?v=Z5JC9Ve1sfI" class="uri">https://www.youtube.com/watch?v=Z5JC9Ve1sfI</a></p>
+</div>
+<div id="how-do-computers-read-code" class="section level4 unnumbered hasAnchor">
+<h4>How do computers read code?<a href="drugo.html#how-do-computers-read-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.
+<a href="https://www.youtube.com/watch?v=QXjU9qTsYCc" class="uri">https://www.youtube.com/watch?v=QXjU9qTsYCc</a></p>
+</div>
+<div id="ben-eater---learn-how-computers-add-numbers-and-build-a-4-bit-adder-circuit" class="section level4 unnumbered hasAnchor">
+<h4>Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit<a href="drugo.html#ben-eater---learn-how-computers-add-numbers-and-build-a-4-bit-adder-circuit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.
+<a href="https://www.youtube.com/watch?v=wvJc9CZcvBc" class="uri">https://www.youtube.com/watch?v=wvJc9CZcvBc</a></p>
+</div>
+<div id="sebastian-lague---how-do-computers-remember" class="section level4 unnumbered hasAnchor">
+<h4>Sebastian Lague - How Do Computers Remember?<a href="drugo.html#sebastian-lague---how-do-computers-remember" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.
+<a href="https://www.youtube.com/watch?v=I0-izyq6q5s&amp;t=613s" class="uri">https://www.youtube.com/watch?v=I0-izyq6q5s&amp;t=613s</a></p>
+</div>
+<div id="dr.-phil-moriarty---physics-of-computer-chips" class="section level4 unnumbered hasAnchor">
+<h4>Dr. Phil Moriarty - Physics of Computer Chips<a href="drugo.html#dr.-phil-moriarty---physics-of-computer-chips" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.
+<a href="https://www.youtube.com/watch?v=xkLAhU74f3s" class="uri">https://www.youtube.com/watch?v=xkLAhU74f3s</a></p>
+</div>
+<div id="izdelava-čipov" class="section level4 unnumbered hasAnchor">
+<h4>Izdelava čipov<a href="drugo.html#izdelava-čipov" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.
+<a href="https://www.youtube.com/watch?v=bor0qLifjz4" class="uri">https://www.youtube.com/watch?v=bor0qLifjz4</a></p>
+</div>
+<div id="why-do-computers-use-1s-and-0s" class="section level4 hasAnchor" number="9.1.0.1">
+<h4><span class="header-section-number">9.1.0.1</span> Why do computers use 1’s and 0’s?<a href="drugo.html#why-do-computers-use-1s-and-0s" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><a href="https://www.youtube.com/watch?v=Xpk67YzOn5w" class="uri">https://www.youtube.com/watch?v=Xpk67YzOn5w</a></p>
+</div>
+</div>
+</div>
+<div id="rekurzija" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Rekurzija<a href="drugo.html#rekurzija" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje <em>Using Recursion and a Python Class</em> lahko preskočite.
+<a href="https://realpython.com/fibonacci-sequence-python/" class="uri">https://realpython.com/fibonacci-sequence-python/</a></p>
+</div>
+<div id="nabori-1" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Nabori<a href="drugo.html#nabori-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>V delu.</p>
+</div>
+<div id="množice-1" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Množice<a href="drugo.html#množice-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="izpljani-seznamislovarjimnožice" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Izpljani seznami/slovarji/množice<a href="drugo.html#izpljani-seznamislovarjimnožice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -327,8 +332,8 @@ od enačaja vrednost 7 (ker je prva vrednost, ki ni False).</p>
           </div>
         </div>
       </div>
-<a href="namestitev-okolja-za-vaje.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="zanke.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datoteke.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -349,7 +354,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/02-uvod-v-python.Rmd",
+"link": "https://github.com/rokuk/rp-fiz-notes/blob/main/09-drugo.Rmd",
 "text": "Edit"
 },
 "history": {
