@@ -1,0 +1,63 @@
+# Drugo
+
+## Kako deluje računalnik?
+
+Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s tem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
+
+Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.
+
+### Crash Course Computer Science {-}
+Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. 
+https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1
+Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min).
+
+### Posamezne teme {-}
+Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:
+
+#### Computer basics - What is inside a computer? {-}
+Komponente računalnika. Osnovno - lahko preskočite.
+https://www.youtube.com/watch?v=HB4I2CgkcCo
+
+#### Sebastian Lague - Exploring How Computers Work {-}
+Izvrstena demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.
+https://www.youtube.com/watch?v=QZwneRb-zqA
+
+#### Tom Scott - What's Your Computer Actually Doing? {-}
+Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.
+https://www.youtube.com/watch?v=Z5JC9Ve1sfI
+
+#### How do computers read code? {-}
+Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.
+https://www.youtube.com/watch?v=QXjU9qTsYCc
+
+#### Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit {-}
+Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.
+https://www.youtube.com/watch?v=wvJc9CZcvBc
+
+#### Sebastian Lague - How Do Computers Remember? {-}
+Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.
+https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s
+
+#### Dr. Phil Moriarty - Physics of Computer Chips {-}
+Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.
+https://www.youtube.com/watch?v=xkLAhU74f3s
+
+#### Izdelava čipov {-}
+Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.
+https://www.youtube.com/watch?v=bor0qLifjz4
+
+#### Why do computers use 1's and 0's?
+https://www.youtube.com/watch?v=Xpk67YzOn5w
+
+## Rekurzija
+
+Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
+https://realpython.com/fibonacci-sequence-python/
+
+## Nabori
+
+V delu.
+
+## Množice
+
+## Izpljani seznami/slovarji/množice
