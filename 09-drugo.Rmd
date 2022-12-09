@@ -6,47 +6,48 @@ Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo o
 
 Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.
 
-### Crash Course Computer Science {-}
+#### Crash Course Computer Science {-}
 Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. 
-https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1
+https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1 <br>
 Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min).
 
-### Posamezne teme {-}
+#### Posamezne teme {-}
 Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:
 
-#### Computer basics - What is inside a computer? {-}
-Komponente računalnika. Osnovno - lahko preskočite.
+1. **Computer basics - What is inside a computer?**<br>
+Komponente računalnika. Osnovno - lahko preskočite.<br>
 https://www.youtube.com/watch?v=HB4I2CgkcCo
 
-#### Sebastian Lague - Exploring How Computers Work {-}
-Izvrstena demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.
+2. **Sebastian Lague - Exploring How Computers Work**<br>
+Izvrstna demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.<br>
 https://www.youtube.com/watch?v=QZwneRb-zqA
 
-#### Tom Scott - What's Your Computer Actually Doing? {-}
-Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.
+3. **Tom Scott - What's Your Computer Actually Doing?**<br>
+Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.<br>
 https://www.youtube.com/watch?v=Z5JC9Ve1sfI
 
-#### How do computers read code? {-}
-Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.
+4. **How do computers read code?**<br>
+Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.<br>
 https://www.youtube.com/watch?v=QXjU9qTsYCc
 
-#### Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit {-}
-Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.
+5. **Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit**<br>
+Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.<br>
 https://www.youtube.com/watch?v=wvJc9CZcvBc
 
-#### Sebastian Lague - How Do Computers Remember? {-}
-Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.
+6. **Sebastian Lague - How Do Computers Remember?**<br>
+Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.<br>
 https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s
 
-#### Dr. Phil Moriarty - Physics of Computer Chips {-}
-Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.
+7. **Dr. Phil Moriarty - Physics of Computer Chips**<br>
+Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.<br>
 https://www.youtube.com/watch?v=xkLAhU74f3s
 
-#### Izdelava čipov {-}
-Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.
+8. **Izdelava čipov**<br>
+Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.<br>
 https://www.youtube.com/watch?v=bor0qLifjz4
 
-#### Why do computers use 1's and 0's?
+9. **Why do computers use 1's and 0's?**<br>
+Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.<br>
 https://www.youtube.com/watch?v=Xpk67YzOn5w
 
 ## Rekurzija
