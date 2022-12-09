@@ -55,7 +55,6 @@ zanka
 mode
 drugo
 kako-deluje-računalnik
-why-do-computers-use-1s-and-0s
 rekurzija
 nabori-1
 množice-1
