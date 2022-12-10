@@ -8,8 +8,9 @@ Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in d
 
 #### Crash Course Computer Science {-}
 Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. 
-https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1 <br>
-Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min).
+https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1
+
+Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo -- bolj kot zanimivosti.
 
 #### Posamezne teme {-}
 Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:
@@ -38,15 +39,19 @@ https://www.youtube.com/watch?v=wvJc9CZcvBc
 Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.<br>
 https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s
 
-7. **Physics of Computer Chips - Dr. Phil Moriarty**<br>
+7. **Visualizing Binary Data with 7-segment displays - Sebastian Lague**<br>
+Demonstracija, kako lahko z vezji prikažemo binarna števila na zaslonu.
+https://www.youtube.com/watch?v=hEDQpqhY2MA
+
+8. **Physics of Computer Chips - Dr. Phil Moriarty**<br>
 Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.<br>
 https://www.youtube.com/watch?v=xkLAhU74f3s
 
-8. **Izdelava čipov**<br>
+9. **Izdelava čipov**<br>
 Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.<br>
 https://www.youtube.com/watch?v=bor0qLifjz4
 
-9. **Why do computers use 1's and 0's?**<br>
+10. **Why do computers use 1's and 0's?**<br>
 Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.<br>
 https://www.youtube.com/watch?v=Xpk67YzOn5w
 
