@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-12-09" />
+<meta name="date" content="2022-12-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -223,10 +223,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9" data-path="drugo.html"><a href="drugo.html"><i class="fa fa-check"></i><b>9</b> Drugo</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="drugo.html"><a href="drugo.html#kako-deluje-računalnik"><i class="fa fa-check"></i><b>9.1</b> Kako deluje računalnik?</a></li>
-<li class="chapter" data-level="9.2" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.2</b> Rekurzija</a></li>
-<li class="chapter" data-level="9.3" data-path="drugo.html"><a href="drugo.html#nabori-1"><i class="fa fa-check"></i><b>9.3</b> Nabori</a></li>
-<li class="chapter" data-level="9.4" data-path="drugo.html"><a href="drugo.html#množice-1"><i class="fa fa-check"></i><b>9.4</b> Množice</a></li>
-<li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#izpljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.5</b> Izpljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.2" data-path="drugo.html"><a href="drugo.html#latex"><i class="fa fa-check"></i><b>9.2</b> LaTeX</a></li>
+<li class="chapter" data-level="9.3" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.3</b> Rekurzija</a></li>
+<li class="chapter" data-level="9.4" data-path="drugo.html"><a href="drugo.html#nabori-1"><i class="fa fa-check"></i><b>9.4</b> Nabori</a></li>
+<li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#množice-1"><i class="fa fa-check"></i><b>9.5</b> Množice</a></li>
+<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#izpljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.6</b> Izpljani seznami/slovarji/množice</a></li>
 </ul></li>
 </ul>
 
@@ -252,13 +253,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://numpy.org/doc/stable/user/absolute_beginners.html" class="uri">https://numpy.org/doc/stable/user/absolute_beginners.html</a></li>
 <li><a href="https://numpy.org/doc/stable/user/quickstart.html" class="uri">https://numpy.org/doc/stable/user/quickstart.html</a></li>
 </ul>
-<p>Navaden seznam pretvorimo v Numpy seznam s funkcijo <code>array(seznam)</code>.</p>
+<p>Navaden seznam pretvorimo v Numpy seznam s funkcijo <code>np.array(seznam)</code>.</p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="numpy.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb75-2"><a href="numpy.html#cb75-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
-<span id="cb75-3"><a href="numpy.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
-<span id="cb75-4"><a href="numpy.html#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.shape)</span>
-<span id="cb75-5"><a href="numpy.html#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.ndim)</span>
-<span id="cb75-6"><a href="numpy.html#cb75-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.size)</span></code></pre></div>
+<span id="cb75-2"><a href="numpy.html#cb75-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-3"><a href="numpy.html#cb75-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb75-4"><a href="numpy.html#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
+<span id="cb75-5"><a href="numpy.html#cb75-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.shape)</span>
+<span id="cb75-6"><a href="numpy.html#cb75-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.ndim)</span>
+<span id="cb75-7"><a href="numpy.html#cb75-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a.size)</span></code></pre></div>
 <pre><code>## [[1 2 3 4]
 ##  [5 6 7 8]]
 ## (2, 4)

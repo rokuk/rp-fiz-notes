@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-12-09}
+\date{2022-12-10}
 
 \begin{document}
 \maketitle
@@ -1170,11 +1170,12 @@ Gradivi za to poglavje sta:
   \url{https://numpy.org/doc/stable/user/quickstart.html}
 \end{itemize}
 
-Navaden seznam pretvorimo v Numpy seznam s funkcijo \texttt{array(seznam)}.
+Navaden seznam pretvorimo v Numpy seznam s funkcijo \texttt{np.array(seznam)}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
 \NormalTok{a }\OperatorTok{=}\NormalTok{ np.array([[}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{], [}\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{]])}
 \BuiltInTok{print}\NormalTok{(a)}
 \BuiltInTok{print}\NormalTok{(a.shape)}
@@ -1668,27 +1669,27 @@ Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem 
   Komponente računalnika. Osnovno - lahko preskočite.
   \url{https://www.youtube.com/watch?v=HB4I2CgkcCo}
 \item
-  \textbf{Sebastian Lague - Exploring How Computers Work}
-  Izvrstna demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.
+  \textbf{Exploring How Computers Work - Sebastian Lague}
+  Izvrstna demonstracija tega, kako elektronska vezja omogočajo računanje. \emph{Če si boste pogledali le eno stvar, si poglejte tole.}
   \url{https://www.youtube.com/watch?v=QZwneRb-zqA}
 \item
-  \textbf{Tom Scott - What's Your Computer Actually Doing?}
-  Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.
+  \textbf{What's Your Computer Actually Doing? - Tom Scott}
+  Poenostavljen opis kako računalniški procesor izvaja naše programe.
   \url{https://www.youtube.com/watch?v=Z5JC9Ve1sfI}
 \item
   \textbf{How do computers read code?}
-  Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.
+  Kako naš program pove računalniku kaj mora narediti? \emph{Če si boste pogledali le dve stvari, si poglejte še tole.}
   \url{https://www.youtube.com/watch?v=QXjU9qTsYCc}
 \item
-  \textbf{Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit}
+  \textbf{Learn how computers add numbers and build a 4 bit adder circuit - Ben Eater}
   Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.
   \url{https://www.youtube.com/watch?v=wvJc9CZcvBc}
 \item
-  \textbf{Sebastian Lague - How Do Computers Remember?}
+  \textbf{How Do Computers Remember? - Sebastian Lague}
   Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.
   \url{https://www.youtube.com/watch?v=I0-izyq6q5s\&t=613s}
 \item
-  \textbf{Dr.~Phil Moriarty - Physics of Computer Chips}
+  \textbf{Physics of Computer Chips - Dr.~Phil Moriarty}
   Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.
   \url{https://www.youtube.com/watch?v=xkLAhU74f3s}
 \item
@@ -1700,6 +1701,19 @@ Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem 
   Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.
   \url{https://www.youtube.com/watch?v=Xpk67YzOn5w}
 \end{enumerate}
+
+\hypertarget{latex}{%
+\section{LaTeX}\label{latex}}
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki.
+
+V slovenščini je na voljo priročnik \href{https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf}{Ne najkrajši uvod v LaTeX}, ki je primeren za začetnike.
+
+Dobra referenca je \href{https://www.overleaf.com/learn}{Overleaf}, ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej \href{https://www.latex-project.org/get/}{namestiti}. Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v \emph{Visual Studio Code}, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je \href{https://www.texstudio.org}{TeXstudio}, \href{https://www.lyx.org}{LyX} (omogoča način urejanja podoben Wordu) ali \href{https://www.overleaf.com}{Overleaf} (omogoča hkratno delo več oseb preko spleta).
 
 \hypertarget{rekurzija}{%
 \section{Rekurzija}\label{rekurzija}}

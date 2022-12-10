@@ -55,6 +55,7 @@ zanka
 mode
 drugo
 kako-deluje-računalnik
+latex
 rekurzija
 nabori-1
 množice-1
