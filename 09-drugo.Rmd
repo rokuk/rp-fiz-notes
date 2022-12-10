@@ -18,27 +18,27 @@ Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem 
 Komponente računalnika. Osnovno - lahko preskočite.<br>
 https://www.youtube.com/watch?v=HB4I2CgkcCo
 
-2. **Sebastian Lague - Exploring How Computers Work**<br>
-Izvrstna demonstracija tega, kako elektronska vezija omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole.<br>
+2. **Exploring How Computers Work - Sebastian Lague**<br>
+Izvrstna demonstracija tega, kako elektronska vezja omogočajo računanje. *Če si boste pogledali le eno stvar, si poglejte tole.*<br>
 https://www.youtube.com/watch?v=QZwneRb-zqA
 
-3. **Tom Scott - What's Your Computer Actually Doing?**<br>
-Poenostavljen opis kako računalniški procesor dejansko izvaja naše programe.<br>
+3. **What's Your Computer Actually Doing? - Tom Scott**<br>
+Poenostavljen opis kako računalniški procesor izvaja naše programe.<br>
 https://www.youtube.com/watch?v=Z5JC9Ve1sfI
 
 4. **How do computers read code?**<br>
-Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole.<br>
+Kako naš program pove računalniku kaj mora narediti? *Če si boste pogledali le dve stvari, si poglejte še tole.*<br>
 https://www.youtube.com/watch?v=QXjU9qTsYCc
 
-5. **Ben Eater - Learn how computers add numbers and build a 4 bit adder circuit**<br>
+5. **Learn how computers add numbers and build a 4 bit adder circuit - Ben Eater**<br>
 Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.<br>
 https://www.youtube.com/watch?v=wvJc9CZcvBc
 
-6. **Sebastian Lague - How Do Computers Remember?**<br>
+6. **How Do Computers Remember? - Sebastian Lague**<br>
 Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.<br>
 https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s
 
-7. **Dr. Phil Moriarty - Physics of Computer Chips**<br>
+7. **Physics of Computer Chips - Dr. Phil Moriarty**<br>
 Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.<br>
 https://www.youtube.com/watch?v=xkLAhU74f3s
 
@@ -49,6 +49,18 @@ https://www.youtube.com/watch?v=bor0qLifjz4
 9. **Why do computers use 1's and 0's?**<br>
 Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.<br>
 https://www.youtube.com/watch?v=Xpk67YzOn5w
+
+## LaTeX
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki.
+
+V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), ki je primeren za začetnike.
+
+Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](), *LyX* (omogoča način urejanja podoben Wordu) ali *Overleaf* (omogoča hkratno delo več oseb preko spleta).
 
 ## Rekurzija
 

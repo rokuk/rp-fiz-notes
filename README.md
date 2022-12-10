@@ -4,11 +4,11 @@ Repozitorij za zapiske vaj pri predmetu računalniški praktikum v 1. letniku š
 
 ## Deployment
 
-Push na main branch avtomatsko požene Github Action, ki naredi pretvorbo iz Markdowna v HTML. Rezultat se commita na output branch. Ob commitu na output branch se datoteke avtomatsko prenesejo na strežnik.
+Push na main branch avtomatsko požene Github Action, ki naredi pretvorbo iz Markdowna v HTML. Rezultat se commita na output branch. Ob commitu na output branch se datoteke avtomatsko prenesejo na strežnik v nekaj minutah.
 
 ## Lokalno urejanje
 
-Strani so napisane v RMarkdownu. Lahko se jih ureja kar na GitHubu.
+Strani so napisane v RMarkdown. Lahko se jih ureja kar na GitHubu.
 
 Datoteke je najlažje urejati urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj. Treba je imeti nameščen paket `bookdown`.
 

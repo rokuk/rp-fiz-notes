@@ -5,10 +5,11 @@ Gradivi za to poglavje sta:
 - https://numpy.org/doc/stable/user/absolute_beginners.html 
 - https://numpy.org/doc/stable/user/quickstart.html
 
-Navaden seznam pretvorimo v Numpy seznam s funkcijo `array(seznam)`.
+Navaden seznam pretvorimo v Numpy seznam s funkcijo `np.array(seznam)`.
 
 ```{python, eval=FALSE}
 import numpy as np
+
 a = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 print(a)
 print(a.shape)
