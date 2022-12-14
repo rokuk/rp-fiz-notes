@@ -130,7 +130,7 @@ with open("datoteka.txt", mode="r", encoding="utf-8") as datoteka:
 print(vrstice)
 ```
 
-### zanka
+### Zanka for
 
 Po vrsticah datoteke lahko gremo z zanko for.
 
@@ -153,7 +153,7 @@ oznaka | opis | opomba
 --- | ------------ | ------------
 r | branje | če datoteka ne obstaja, sproži napako
 w | pisanje | če datoteka ne obstaja, ustvari novo; če obstaja, izbriše prejšnjo vsebino datoteke
-a | append | če datoteka ne obstaja, ustvari novo; če obstaja ne izbriše prejšnje vsebine
+a | append | če datoteka ne obstaja, ustvari novo; če obstaja, *NE* izbriše prejšnje vsebine
 x | ustvari datoteko, pisanje | če datoteka že obstaja, sproži napako
 \+ | pisanje in branje
 t | za delo s tekstovnimi datotekami | npr. .txt, .csv, .tex, .html, .py
