@@ -59,4 +59,5 @@ latex
 rekurzija
 nabori-1
 množice-1
-izpljani-seznamislovarjimnožice
+izpeljani-seznamislovarjimnožice
+merjenje-časa-izvajanja-programa

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 9 Drugo | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 9 Drugo | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-12-10" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.3</b> Rekurzija</a></li>
 <li class="chapter" data-level="9.4" data-path="drugo.html"><a href="drugo.html#nabori-1"><i class="fa fa-check"></i><b>9.4</b> Nabori</a></li>
 <li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#množice-1"><i class="fa fa-check"></i><b>9.5</b> Množice</a></li>
-<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#izpljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.6</b> Izpljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#izpeljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.6</b> Izpeljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.7" data-path="drugo.html"><a href="drugo.html#merjenje-časa-izvajanja-programa"><i class="fa fa-check"></i><b>9.7</b> Merjenje časa izvajanja programa</a></li>
 </ul></li>
 </ul>
 
@@ -250,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Poglavje 9</span> Drugo<a href="drugo.html#drugo" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="kako-deluje-računalnik" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Kako deluje računalnik?<a href="drugo.html#kako-deluje-računalnik" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s tem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.</p>
-<p>Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.</p>
+<p>Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s programiranjem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.</p>
+<p>Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme.</p>
 <div id="crash-course-computer-science" class="section level4 unnumbered hasAnchor">
 <h4>Crash Course Computer Science<a href="drugo.html#crash-course-computer-science" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov.
@@ -315,8 +316,12 @@ Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil 
 <div id="množice-1" class="section level2 hasAnchor" number="9.5">
 <h2><span class="header-section-number">9.5</span> Množice<a href="drugo.html#množice-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="izpljani-seznamislovarjimnožice" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> Izpljani seznami/slovarji/množice<a href="drugo.html#izpljani-seznamislovarjimnožice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="izpeljani-seznamislovarjimnožice" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Izpeljani seznami/slovarji/množice<a href="drugo.html#izpeljani-seznamislovarjimnožice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="merjenje-časa-izvajanja-programa" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Merjenje časa izvajanja programa<a href="drugo.html#merjenje-časa-izvajanja-programa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Glej <a href="https://docs.python.org/3/library/timeit.html" class="uri">https://docs.python.org/3/library/timeit.html</a></p>
 
 </div>
 </div>

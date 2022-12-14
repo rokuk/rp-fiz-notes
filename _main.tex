@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-12-10}
+\date{2022-12-14}
 
 \begin{document}
 \maketitle
@@ -1358,30 +1358,26 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 
 Gradivo za to poglavje je \url{https://automatetheboringstuff.com/2e/chapter9/}
 
-Za tiste, ki vas zanima več tudi \url{https://automatetheboringstuff.com/2e/chapter10/}
+Če vas zanima več, tudi \url{https://automatetheboringstuff.com/2e/chapter10/}
 
 \hypertarget{datoteux10dni-sistem}{%
 \section{Datotečni sistem}\label{datoteux10dni-sistem}}
 
-Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, \ldots).
-Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu
-imamo korensko mapo (root folder). Na Linux in macOS je to \texttt{/} na Windowsu pa
-\texttt{C:\textbackslash{}}, kjer je \texttt{C} ime particije.
-
-Prostor, ki je na voljo na nosilcu lahko razdelimo
+Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, \ldots). Prostor, ki je na voljo na nosilcu lahko razdelimo
 na več ločenih delov, ki jim rečemo particije. Primer: trdi disk z
 1000 GB bi lahko razdelili na dve particiji \texttt{C} z 100 GB in \texttt{D} z 900 GB. Vsaka
 particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko
 (to velja za Windows, drugje je drugače), npr.
 USB ključi so pogosto pod \texttt{E} ali \texttt{F}.
 
+Na računalniku datoteke organiziramo v mape, ki so lahko gnezdene. Na vrhu
+imamo korensko mapo (root folder). Na Linux in macOS je to \texttt{/} na Windowsu pa
+\texttt{C:\textbackslash{}}, kjer je \texttt{C} ime particije.
+
 \hypertarget{absolutna-in-relativna-pot}{%
 \subsection{Absolutna in relativna pot}\label{absolutna-in-relativna-pot}}
 
-Vsaki datoteki ustreza ena absolutna pot. To je ``naslov'', pod katero jo lahko najdemo.
-Primer: \texttt{C:\textbackslash{}bacon\textbackslash{}fizz\textbackslash{}spam.txt}. Pot vsebuje vse mape, v katerih se datoteka
-nahaja, ločene z \texttt{\textbackslash{}} (na Windowsu; na Linux in macOS je ločilo \texttt{/}), ime datoteke,
-piko in končnico datoteke, ki določa njen tip.
+Vsaki datoteki ustreza ena absolutna pot. To je ``naslov'', pod katero jo lahko najdemo. Primer: \texttt{C:\textbackslash{}bacon\textbackslash{}fizz\textbackslash{}spam.txt}. Pot vsebuje vse mape, v katerih se datoteka nahaja, ločene z \texttt{\textbackslash{}} (na Windowsu; na Linux in macOS je ločilo \texttt{/}), ime datoteke, piko in končnico datoteke, ki določa njen tip.
 
 \begin{figure}
 \centering
@@ -1413,9 +1409,7 @@ Za podrobnejši razlago in več primerov glej gradivo: \url{https://automatetheb
 
 Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v
 nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD).
-Ta mapa je vedno napisana na začetku vrstice.
-V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene
-s presledki. Ukaz izvedemo s tipko Enter.
+Ta mapa je vedno napisana na začetku vrstice. V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene s presledki. Ukaz izvedemo s tipko Enter.
 
 V neko mapo se lahko premaknemo z ukazom \texttt{cd}, ki mu kot argument podamo pot
 (relativno ali absolutno do mape, v katero se želimo premakniti.
@@ -1644,9 +1638,9 @@ K zgornjim kombinacijam lahko dodamo še \texttt{t} ali \texttt{b}.
 \hypertarget{kako-deluje-raux10dunalnik}{%
 \section{Kako deluje računalnik?}\label{kako-deluje-raux10dunalnik}}
 
-Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s tem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
+Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s programiranjem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
 
-Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.
+Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme.
 
 \hypertarget{crash-course-computer-science}{%
 \subsubsection*{Crash Course Computer Science}\label{crash-course-computer-science}}
@@ -1734,7 +1728,12 @@ V delu.
 \hypertarget{mnoux17eice-1}{%
 \section{Množice}\label{mnoux17eice-1}}
 
-\hypertarget{izpljani-seznamislovarjimnoux17eice}{%
-\section{Izpljani seznami/slovarji/množice}\label{izpljani-seznamislovarjimnoux17eice}}
+\hypertarget{izpeljani-seznamislovarjimnoux17eice}{%
+\section{Izpeljani seznami/slovarji/množice}\label{izpeljani-seznamislovarjimnoux17eice}}
+
+\hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
+\section{Merjenje časa izvajanja programa}\label{merjenje-ux10dasa-izvajanja-programa}}
+
+Glej \url{https://docs.python.org/3/library/timeit.html}
 
 \end{document}

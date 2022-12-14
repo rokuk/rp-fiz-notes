@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 8 Datoteke | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 8 Datoteke | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-12-10" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.3" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.3</b> Rekurzija</a></li>
 <li class="chapter" data-level="9.4" data-path="drugo.html"><a href="drugo.html#nabori-1"><i class="fa fa-check"></i><b>9.4</b> Nabori</a></li>
 <li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#množice-1"><i class="fa fa-check"></i><b>9.5</b> Množice</a></li>
-<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#izpljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.6</b> Izpljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#izpeljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.6</b> Izpeljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.7" data-path="drugo.html"><a href="drugo.html#merjenje-časa-izvajanja-programa"><i class="fa fa-check"></i><b>9.7</b> Merjenje časa izvajanja programa</a></li>
 </ul></li>
 </ul>
 
@@ -249,25 +250,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="datoteke" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Poglavje 8</span> Datoteke<a href="datoteke.html#datoteke" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Gradivo za to poglavje je <a href="https://automatetheboringstuff.com/2e/chapter9/" class="uri">https://automatetheboringstuff.com/2e/chapter9/</a></p>
-<p>Za tiste, ki vas zanima več tudi <a href="https://automatetheboringstuff.com/2e/chapter10/" class="uri">https://automatetheboringstuff.com/2e/chapter10/</a></p>
+<p>Če vas zanima več, tudi <a href="https://automatetheboringstuff.com/2e/chapter10/" class="uri">https://automatetheboringstuff.com/2e/chapter10/</a></p>
 <div id="datotečni-sistem" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Datotečni sistem<a href="datoteke.html#datotečni-sistem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, …).
-Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu
-imamo korensko mapo (root folder). Na Linux in macOS je to <code>/</code> na Windowsu pa
-<code>C:\</code>, kjer je <code>C</code> ime particije.</p>
-<p>Prostor, ki je na voljo na nosilcu lahko razdelimo
+<p>Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, …). Prostor, ki je na voljo na nosilcu lahko razdelimo
 na več ločenih delov, ki jim rečemo particije. Primer: trdi disk z
 1000 GB bi lahko razdelili na dve particiji <code>C</code> z 100 GB in <code>D</code> z 900 GB. Vsaka
 particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko
 (to velja za Windows, drugje je drugače), npr.
 USB ključi so pogosto pod <code>E</code> ali <code>F</code>.</p>
+<p>Na računalniku datoteke organiziramo v mape, ki so lahko gnezdene. Na vrhu
+imamo korensko mapo (root folder). Na Linux in macOS je to <code>/</code> na Windowsu pa
+<code>C:\</code>, kjer je <code>C</code> ime particije.</p>
 <div id="absolutna-in-relativna-pot" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> Absolutna in relativna pot<a href="datoteke.html#absolutna-in-relativna-pot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Vsaki datoteki ustreza ena absolutna pot. To je “naslov”, pod katero jo lahko najdemo.
-Primer: <code>C:\bacon\fizz\spam.txt</code>. Pot vsebuje vse mape, v katerih se datoteka
-nahaja, ločene z <code>\</code> (na Windowsu; na Linux in macOS je ločilo <code>/</code>), ime datoteke,
-piko in končnico datoteke, ki določa njen tip.</p>
+<p>Vsaki datoteki ustreza ena absolutna pot. To je “naslov”, pod katero jo lahko najdemo. Primer: <code>C:\bacon\fizz\spam.txt</code>. Pot vsebuje vse mape, v katerih se datoteka nahaja, ločene z <code>\</code> (na Windowsu; na Linux in macOS je ločilo <code>/</code>), ime datoteke, piko in končnico datoteke, ki določa njen tip.</p>
 <div class="figure">
 <img src="images/paths.jpeg" title="Primer absolutnih in relativnih poti" alt="" />
 <p class="caption">Vir: <a href="https://automatetheboringstuff.com/2e/chapter9/" class="uri">https://automatetheboringstuff.com/2e/chapter9/</a> (Al Sweigart, <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>)</p>
@@ -290,9 +287,7 @@ glede na <code>eggs</code> enaka <code>..\bacon\fizz\spam.txt</code>.</p>
 <h3><span class="header-section-number">8.1.2</span> Delo z ukaznim pozivom<a href="datoteke.html#delo-z-ukaznim-pozivom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v
 nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD).
-Ta mapa je vedno napisana na začetku vrstice.
-V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene
-s presledki. Ukaz izvedemo s tipko Enter.</p>
+Ta mapa je vedno napisana na začetku vrstice. V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene s presledki. Ukaz izvedemo s tipko Enter.</p>
 <p>V neko mapo se lahko premaknemo z ukazom <code>cd</code>, ki mu kot argument podamo pot
 (relativno ali absolutno do mape, v katero se želimo premakniti.</p>
 <p>Ukaz <code>dir</code> izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.</p>
