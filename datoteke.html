@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.3.1" data-path="datoteke.html"><a href="datoteke.html#read"><i class="fa fa-check"></i><b>8.3.1</b> read()</a></li>
 <li class="chapter" data-level="8.3.2" data-path="datoteke.html"><a href="datoteke.html#readlines"><i class="fa fa-check"></i><b>8.3.2</b> readlines()</a></li>
-<li class="chapter" data-level="8.3.3" data-path="datoteke.html"><a href="datoteke.html#zanka"><i class="fa fa-check"></i><b>8.3.3</b> zanka</a></li>
+<li class="chapter" data-level="8.3.3" data-path="datoteke.html"><a href="datoteke.html#zanka-for-1"><i class="fa fa-check"></i><b>8.3.3</b> Zanka for</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="datoteke.html"><a href="datoteke.html#mode"><i class="fa fa-check"></i><b>8.4</b> Mode</a></li>
 </ul></li>
@@ -362,8 +362,8 @@ vrstice iz datoteke.</p>
 <span id="cb93-3"><a href="datoteke.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vrstice)</span></code></pre></div>
 <pre><code>## [&#39;To je en stavek.\n&#39;, &#39;To je drugi.&#39;]</code></pre>
 </div>
-<div id="zanka" class="section level3 hasAnchor" number="8.3.3">
-<h3><span class="header-section-number">8.3.3</span> zanka<a href="datoteke.html#zanka" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="zanka-for-1" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Zanka for<a href="datoteke.html#zanka-for-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Po vrsticah datoteke lahko gremo z zanko for.</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="datoteke.html#cb95-1" aria-hidden="true" tabindex="-1"></a>vrstice <span class="op">=</span> []</span>
 <span id="cb95-2"><a href="datoteke.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;datoteka.txt&quot;</span>, mode<span class="op">=</span><span class="st">&quot;r&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> datoteka:</span>
@@ -406,7 +406,7 @@ datoteko početi.</p>
 <tr class="odd">
 <td>a</td>
 <td>append</td>
-<td>če datoteka ne obstaja, ustvari novo; če obstaja ne izbriše prejšnje vsebine</td>
+<td>če datoteka ne obstaja, ustvari novo; če obstaja, <em>NE</em> izbriše prejšnje vsebine</td>
 </tr>
 <tr class="even">
 <td>x</td>

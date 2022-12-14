@@ -51,7 +51,7 @@ pisanje
 branje
 read
 readlines
-zanka
+zanka-for-1
 mode
 drugo
 kako-deluje-računalnik
