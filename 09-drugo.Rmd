@@ -2,9 +2,9 @@
 
 ## Kako deluje računalnik?
 
-Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s tem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
+Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s programiranjem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
 
-Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme. Upam, da vam bodo pomagala.
+Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Žal nisem našel enega samega gradiva in sem jih zato pokrpal skupaj več, ki pokrivajo različne teme.
 
 #### Crash Course Computer Science {-}
 Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. 
@@ -78,4 +78,8 @@ V delu.
 
 ## Množice
 
-## Izpljani seznami/slovarji/množice
+## Izpeljani seznami/slovarji/množice
+
+## Merjenje časa izvajanja programa
+
+Glej https://docs.python.org/3/library/timeit.html

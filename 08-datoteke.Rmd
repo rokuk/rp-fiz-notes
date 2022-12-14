@@ -2,28 +2,24 @@
 
 Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter9/
 
-Za tiste, ki vas zanima več tudi https://automatetheboringstuff.com/2e/chapter10/
+Če vas zanima več, tudi https://automatetheboringstuff.com/2e/chapter10/
 
 ## Datotečni sistem
 
-Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, ...).
-Na računalniku datoteke organiziramo po mapah, ki so lahko gnezdene. Na vrhu 
-imamo korensko mapo (root folder). Na Linux in macOS je to `/` na Windowsu pa 
-`C:\`, kjer je `C` ime particije.
-
-Prostor, ki je na voljo na nosilcu lahko razdelimo 
+Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, ...). Prostor, ki je na voljo na nosilcu lahko razdelimo 
 na več ločenih delov, ki jim rečemo particije. Primer: trdi disk z 
 1000 GB bi lahko razdelili na dve particiji `C` z 100 GB in `D` z 900 GB. Vsaka
 particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko 
 (to velja za Windows, drugje je drugače), npr. 
 USB ključi so pogosto pod `E` ali `F`.
 
+Na računalniku datoteke organiziramo v mape, ki so lahko gnezdene. Na vrhu 
+imamo korensko mapo (root folder). Na Linux in macOS je to `/` na Windowsu pa 
+`C:\`, kjer je `C` ime particije.
+
 ### Absolutna in relativna pot
 
-Vsaki datoteki ustreza ena absolutna pot. To je "naslov", pod katero jo lahko najdemo.
-Primer: `C:\bacon\fizz\spam.txt`. Pot vsebuje vse mape, v katerih se datoteka 
-nahaja, ločene z `\` (na Windowsu; na Linux in macOS je ločilo `/`), ime datoteke, 
-piko in končnico datoteke, ki določa njen tip.
+Vsaki datoteki ustreza ena absolutna pot. To je "naslov", pod katero jo lahko najdemo. Primer: `C:\bacon\fizz\spam.txt`. Pot vsebuje vse mape, v katerih se datoteka nahaja, ločene z `\` (na Windowsu; na Linux in macOS je ločilo `/`), ime datoteke, piko in končnico datoteke, ki določa njen tip.
 
 ![Vir: https://automatetheboringstuff.com/2e/chapter9/ (Al Sweigart, [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/))](./images/paths.jpeg "Primer absolutnih in relativnih poti")
 
@@ -43,11 +39,10 @@ glede na `eggs` enaka `..\bacon\fizz\spam.txt`.
 Za podrobnejši razlago in več primerov glej gradivo: https://automatetheboringstuff.com/2e/chapter9/
 
 ### Delo z ukaznim pozivom
+
 Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v 
 nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD). 
-Ta mapa je vedno napisana na začetku vrstice.
-V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene 
-s presledki. Ukaz izvedemo s tipko Enter.
+Ta mapa je vedno napisana na začetku vrstice. V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene s presledki. Ukaz izvedemo s tipko Enter.
 
 V neko mapo se lahko premaknemo z ukazom `cd`, ki mu kot argument podamo pot 
 (relativno ali absolutno do mape, v katero se želimo premakniti.
