@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-12-14" />
+<meta name="date" content="2022-12-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -295,7 +295,7 @@ Ta mapa je vedno napisana na začetku vrstice. V ukaznem pozivu najprej napišem
 </div>
 <div id="mape-in-datoteke-v-pythonu" class="section level3 hasAnchor" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Mape in datoteke v Pythonu<a href="datoteke.html#mape-in-datoteke-v-pythonu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Za delo z datotečnim sistemom je na voljo knjižnica <code>os</code>.
+<p>Za delo z datotečnim sistemom je na voljo modul <code>os</code>.
 Posamezne funkcije, njihove parametre in uporabo lahko poiščete v uradni
 dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!</p>
 <p>Nekaj najbolj uporabnih:</p>
@@ -322,8 +322,7 @@ dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!</p>
 <div id="pisanje" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Pisanje<a href="datoteke.html#pisanje" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Datoteko odpremo v načinu za pisanje <code>mode="w"</code> in uporabimo funkcijo <code>write()</code>,
-ki zapiše niz v datoteko. Znak <code>\n</code> pomeni novo vrstico. Če želimo zapisati znak <code>\</code>
-moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pythonu: <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" class="uri">https://www.w3schools.com/python/gloss_python_escape_characters.asp</a></p>
+ki zapiše niz v datoteko. Znak <code>\n</code> pomeni novo vrstico. Če želimo zapisati znak <code>\</code> moramo v Pythonu napisati <code>\\</code>. Več o uporabi <code>\</code> v Pythonu: <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" class="uri">https://www.w3schools.com/python/gloss_python_escape_characters.asp</a></p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="datoteke.html#cb89-1" aria-hidden="true" tabindex="-1"></a>potdodatoteke <span class="op">=</span> <span class="st">&quot;datoteka.txt&quot;</span></span>
 <span id="cb89-2"><a href="datoteke.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(potdodatoteke, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>, encoding<span class="op">=</span><span class="st">&quot;utf-8&quot;</span>) <span class="im">as</span> dat:</span>
 <span id="cb89-3"><a href="datoteke.html#cb89-3" aria-hidden="true" tabindex="-1"></a>    dat.write(<span class="st">&quot;To je &quot;</span>)</span>
