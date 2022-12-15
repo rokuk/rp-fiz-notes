@@ -53,7 +53,7 @@ Glej tudi: https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505
 
 ### Mape in datoteke v Pythonu
 
-Za delo z datotečnim sistemom je na voljo knjižnica `os`.
+Za delo z datotečnim sistemom je na voljo modul `os`.
 Posamezne funkcije, njihove parametre in uporabo lahko poiščete v uradni 
 dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!
 
@@ -79,8 +79,7 @@ Za delo s potmi je na voljo knjižnica `os.path`, kjer so pogosto uporabljane fu
 ## Pisanje
 
 Datoteko odpremo v načinu za pisanje `mode="w"` in uporabimo funkcijo `write()`, 
-ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če želimo zapisati znak `\`
-moramo v Pythonu napisati `\\`. Več o uporabi `\` v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp
+ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če želimo zapisati znak `\` moramo v Pythonu napisati `\\`. Več o uporabi `\` v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp
 
 ```python
 potdodatoteke = "datoteka.txt"
