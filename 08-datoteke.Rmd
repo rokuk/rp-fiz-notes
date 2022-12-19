@@ -4,6 +4,8 @@ Gradivo za to poglavje je https://automatetheboringstuff.com/2e/chapter9/
 
 Če vas zanima več, tudi https://automatetheboringstuff.com/2e/chapter10/
 
+Primer branja iz datoteke z vaj: [temp.txt](https://r2.rokuk.org/temp.txt) (Vir: ARSO), [temp.csv](https://r2.rokuk.org/temp.csv) (Vir: ARSO), [temp.py](https://r2.rokuk.org/temp.py)
+
 ## Datotečni sistem
 
 Datoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, ...). Prostor, ki je na voljo na nosilcu lahko razdelimo 
