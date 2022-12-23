@@ -5,6 +5,10 @@ Gradivi za to poglavje sta:
 - https://numpy.org/doc/stable/user/absolute_beginners.html 
 - https://numpy.org/doc/stable/user/quickstart.html
 
+Vizualna reprecentacija operacij z Numpy seznami: http://jalammar.github.io/visual-numpy/
+
+## Ustvarjanje tabel
+
 Navaden seznam pretvorimo v Numpy seznam s funkcijo `np.array(seznam)`.
 
 ```{python, eval=FALSE}
@@ -25,9 +29,7 @@ print(a.size)
 ## 8
 ```
 
-Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam.
-
-## Ustvarjanje tabel
+Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato raje je ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
 
 - `np.zeros(oblika)` vrne tabelo ničel; `oblika` je nabor celih števil, ki predstavlja obliko tabele
 - `np.ones(oblika)` vrne tabelo enic
