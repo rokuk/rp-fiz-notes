@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-12-19}
+\date{2022-12-23}
 
 \begin{document}
 \maketitle
@@ -1170,6 +1170,11 @@ Gradivi za to poglavje sta:
   \url{https://numpy.org/doc/stable/user/quickstart.html}
 \end{itemize}
 
+Vizualna reprecentacija operacij z Numpy seznami: \url{http://jalammar.github.io/visual-numpy/}
+
+\hypertarget{ustvarjanje-tabel}{%
+\section{Ustvarjanje tabel}\label{ustvarjanje-tabel}}
+
 Navaden seznam pretvorimo v Numpy seznam s funkcijo \texttt{np.array(seznam)}.
 
 \begin{Shaded}
@@ -1192,10 +1197,7 @@ Navaden seznam pretvorimo v Numpy seznam s funkcijo \texttt{np.array(seznam)}.
 ## 8
 \end{verbatim}
 
-Sezname lahko združimo z \texttt{np.concatenate(sez1,\ sez2)}, ki vrne staknjen seznam.
-
-\hypertarget{ustvarjanje-tabel}{%
-\section{Ustvarjanje tabel}\label{ustvarjanje-tabel}}
+Sezname lahko združimo z \texttt{np.concatenate(sez1,\ sez2)}, ki vrne staknjen seznam. To je počasna operacija, zato raje je ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
 
 \begin{itemize}
 \tightlist
