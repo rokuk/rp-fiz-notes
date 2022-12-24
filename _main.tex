@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-12-23}
+\date{2022-12-24}
 
 \begin{document}
 \maketitle
@@ -927,37 +927,6 @@ Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor kom
 
 Več o sortiranju v uradni dokumentaciji: \url{https://docs.python.org/3/howto/sorting.html}
 
-\hypertarget{drugi-tipi}{%
-\section{Drugi tipi}\label{drugi-tipi}}
-
-\hypertarget{nabori}{%
-\subsection{Nabori}\label{nabori}}
-
-Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji \texttt{()}. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#tuples-and-sequences}
-
-Vrednosti v naborih lahko ``odpakiramo'' nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo \texttt{*}. V to spremenljivko se bo shranil seznam presežnih elementov.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{sadje }\OperatorTok{=}\NormalTok{ (}\StringTok{"jabolko"}\NormalTok{, }\StringTok{"banana"}\NormalTok{, }\StringTok{"češnja"}\NormalTok{)}
-\NormalTok{zeleno, rumeno, rdece }\OperatorTok{=}\NormalTok{ sadje}
-\BuiltInTok{print}\NormalTok{(zeleno)}
-\BuiltInTok{print}\NormalTok{(rumeno)}
-\BuiltInTok{print}\NormalTok{(rdece)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## jabolko
-## banana
-## češnja
-\end{verbatim}
-
-\hypertarget{mnoux17eice}{%
-\subsection{Množice}\label{mnoux17eice}}
-
-Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo \texttt{set()}. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z \texttt{mnozica.add(element)}. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#sets}
-
 \hypertarget{pretvarjanje-med-tipi}{%
 \section{Pretvarjanje med tipi}\label{pretvarjanje-med-tipi}}
 
@@ -1341,6 +1310,8 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 \hypertarget{matematika}{%
 \section{Matematika}\label{matematika}}
 
+Dokumentacija: \url{https://numpy.org/doc/stable/reference/routines.math.html}
+
 \begin{itemize}
 \tightlist
 \item
@@ -1353,6 +1324,10 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
   \texttt{np.log(tabela)}
 \item
   \texttt{np.exp(tabela)}
+\item
+  \texttt{np.sin(tabela}
+\item
+  itd.
 \end{itemize}
 
 \hypertarget{datoteke}{%
@@ -1636,7 +1611,64 @@ pisanje na konec datoteke & & & & & & & x & x \\
 K zgornjim kombinacijam lahko dodamo še \texttt{t} ali \texttt{b}.
 
 \hypertarget{drugo}{%
-\chapter{Drugo}\label{drugo}}
+\chapter{Drugo*}\label{drugo}}
+
+\hypertarget{latex}{%
+\section{LaTeX}\label{latex}}
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.
+
+V slovenščini je na voljo priročnik \href{https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf}{Ne najkrajši uvod v LaTeX}, ki je primeren za začetnike.
+
+Dobra referenca je \href{https://www.overleaf.com/learn}{Overleaf}, ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej \href{https://www.latex-project.org/get/}{namestiti}. Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v \emph{Visual Studio Code}, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je \href{https://www.texstudio.org}{TeXstudio}, \href{https://www.lyx.org}{LyX} (omogoča način urejanja podoben Wordu) ali \href{https://www.overleaf.com}{Overleaf} (omogoča hkratno delo več oseb preko spleta).
+
+\hypertarget{nabori}{%
+\section{Nabori}\label{nabori}}
+
+Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji \texttt{()}. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#tuples-and-sequences}
+
+Vrednosti v naborih lahko ``odpakiramo'' nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo \texttt{*}. V to spremenljivko se bo shranil seznam presežnih elementov.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sadje }\OperatorTok{=}\NormalTok{ (}\StringTok{"jabolko"}\NormalTok{, }\StringTok{"banana"}\NormalTok{, }\StringTok{"češnja"}\NormalTok{)}
+\NormalTok{zeleno, rumeno, rdece }\OperatorTok{=}\NormalTok{ sadje}
+\BuiltInTok{print}\NormalTok{(zeleno)}
+\BuiltInTok{print}\NormalTok{(rumeno)}
+\BuiltInTok{print}\NormalTok{(rdece)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## jabolko
+## banana
+## češnja
+\end{verbatim}
+
+\hypertarget{mnoux17eice}{%
+\section{Množice}\label{mnoux17eice}}
+
+Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo \texttt{set()}. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z \texttt{mnozica.add(element)}. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#sets}
+
+\hypertarget{izpeljani-seznamislovarjimnoux17eice}{%
+\section{Izpeljani seznami/slovarji/množice}\label{izpeljani-seznamislovarjimnoux17eice}}
+
+V delu.
+
+\hypertarget{rekurzija}{%
+\section{Rekurzija}\label{rekurzija}}
+
+Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje \emph{Using Recursion and a Python Class} lahko preskočite.
+\url{https://realpython.com/fibonacci-sequence-python/}
+
+\hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
+\section{Merjenje časa izvajanja programa}\label{merjenje-ux10dasa-izvajanja-programa}}
+
+Glej \url{https://docs.python.org/3/library/timeit.html}
 
 \hypertarget{kako-deluje-raux10dunalnik}{%
 \section{Kako deluje računalnik?}\label{kako-deluje-raux10dunalnik}}
@@ -1703,40 +1735,5 @@ Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem 
   Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.
   \url{https://www.youtube.com/watch?v=Xpk67YzOn5w}
 \end{enumerate}
-
-\hypertarget{latex}{%
-\section{LaTeX}\label{latex}}
-
-LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki.
-
-V slovenščini je na voljo priročnik \href{https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf}{Ne najkrajši uvod v LaTeX}, ki je primeren za začetnike.
-
-Dobra referenca je \href{https://www.overleaf.com/learn}{Overleaf}, ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
-
-LaTeX je potrebno najprej \href{https://www.latex-project.org/get/}{namestiti}. Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
-
-LaTeX dokumente lahko ustvarjate v \emph{Visual Studio Code}, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je \href{https://www.texstudio.org}{TeXstudio}, \href{https://www.lyx.org}{LyX} (omogoča način urejanja podoben Wordu) ali \href{https://www.overleaf.com}{Overleaf} (omogoča hkratno delo več oseb preko spleta).
-
-\hypertarget{rekurzija}{%
-\section{Rekurzija}\label{rekurzija}}
-
-Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje \emph{Using Recursion and a Python Class} lahko preskočite.
-\url{https://realpython.com/fibonacci-sequence-python/}
-
-\hypertarget{nabori-1}{%
-\section{Nabori}\label{nabori-1}}
-
-V delu.
-
-\hypertarget{mnoux17eice-1}{%
-\section{Množice}\label{mnoux17eice-1}}
-
-\hypertarget{izpeljani-seznamislovarjimnoux17eice}{%
-\section{Izpeljani seznami/slovarji/množice}\label{izpeljani-seznamislovarjimnoux17eice}}
-
-\hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
-\section{Merjenje časa izvajanja programa}\label{merjenje-ux10dasa-izvajanja-programa}}
-
-Glej \url{https://docs.python.org/3/library/timeit.html}
 
 \end{document}

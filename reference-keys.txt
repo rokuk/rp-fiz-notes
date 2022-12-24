@@ -25,9 +25,6 @@ delo-z-objekti
 metode-za-nize
 metode-za-sezname
 sortiranje-seznamov
-drugi-tipi
-nabori
-množice
 pretvarjanje-med-tipi
 slovarji
 osnovne-operacije
@@ -54,10 +51,10 @@ readlines
 zanka-for-1
 mode
 drugo
-kako-deluje-računalnik
 latex
-rekurzija
-nabori-1
-množice-1
+nabori
+množice
 izpeljani-seznamislovarjimnožice
+rekurzija
 merjenje-časa-izvajanja-programa
+kako-deluje-računalnik
