@@ -72,34 +72,7 @@ print(sorted(student_tuples, key=sortirna_funkcija))
 
 Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z `return (element_seznama[1], element_seznama[2])` bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).
 
-
 Več o sortiranju v uradni dokumentaciji: https://docs.python.org/3/howto/sorting.html
-
-## Drugi tipi
-
-### Nabori
-
-Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
-
-Vrednosti v naborih lahko "odpakiramo" nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov.
-
-```{python eval=FALSE}
-sadje = ("jabolko", "banana", "češnja")
-zeleno, rumeno, rdece = sadje
-print(zeleno)
-print(rumeno)
-print(rdece)
-```
-
-```
-## jabolko
-## banana
-## češnja
-```
-
-### Množice
-
-Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#sets
 
 ## Pretvarjanje med tipi
 

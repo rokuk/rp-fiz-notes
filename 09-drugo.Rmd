@@ -1,4 +1,53 @@
-# Drugo
+# Drugo*
+
+## LaTeX
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.
+
+V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), ki je primeren za začetnike.
+
+Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](https://www.texstudio.org), [LyX](https://www.lyx.org) (omogoča način urejanja podoben Wordu) ali [Overleaf](https://www.overleaf.com) (omogoča hkratno delo več oseb preko spleta).
+
+## Nabori
+
+Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+
+Vrednosti v naborih lahko "odpakiramo" nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov.
+
+```{python eval=FALSE}
+sadje = ("jabolko", "banana", "češnja")
+zeleno, rumeno, rdece = sadje
+print(zeleno)
+print(rumeno)
+print(rdece)
+```
+
+```
+## jabolko
+## banana
+## češnja
+```
+
+## Množice
+
+Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#sets
+
+## Izpeljani seznami/slovarji/množice
+
+V delu.
+
+## Rekurzija
+
+Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
+https://realpython.com/fibonacci-sequence-python/
+
+## Merjenje časa izvajanja programa
+
+Glej https://docs.python.org/3/library/timeit.html
 
 ## Kako deluje računalnik?
 
@@ -54,32 +103,3 @@ https://www.youtube.com/watch?v=bor0qLifjz4
 10. **Why do computers use 1's and 0's?**<br>
 Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.<br>
 https://www.youtube.com/watch?v=Xpk67YzOn5w
-
-## LaTeX
-
-LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki.
-
-V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), ki je primeren za začetnike.
-
-Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
-
-LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
-
-LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](https://www.texstudio.org), [LyX](https://www.lyx.org) (omogoča način urejanja podoben Wordu) ali [Overleaf](https://www.overleaf.com) (omogoča hkratno delo več oseb preko spleta).
-
-## Rekurzija
-
-Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
-https://realpython.com/fibonacci-sequence-python/
-
-## Nabori
-
-V delu.
-
-## Množice
-
-## Izpeljani seznami/slovarji/množice
-
-## Merjenje časa izvajanja programa
-
-Glej https://docs.python.org/3/library/timeit.html
