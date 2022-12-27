@@ -12,6 +12,8 @@ LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Wi
 
 LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](https://www.texstudio.org), [LyX](https://www.lyx.org) (omogoča način urejanja podoben Wordu) ali [Overleaf](https://www.overleaf.com) (omogoča hkratno delo več oseb preko spleta).
 
+Zelo uporabno orodje je [Mathpix](https://mathpix.com), ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX.
+
 ## Nabori
 
 Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
