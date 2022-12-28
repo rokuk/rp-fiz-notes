@@ -52,6 +52,7 @@ zanka-for-1
 mode
 drugo
 latex
+matplotlib
 nabori
 množice
 izpeljani-seznamislovarjimnožice
