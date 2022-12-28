@@ -14,6 +14,12 @@ LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension
 
 Zelo uporabno orodje je [Mathpix](https://mathpix.com), ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX.
 
+## Matplotlib
+
+Za risanje grafov s Pythonom je najbolj priljubljena knjižnica [matlotlib](http://matplotlib.org/). Za začetek je uporaben [Tutorial](https://matplotlib.org/stable/tutorials/index.html), dobra referenca pa so [Primeri](https://matplotlib.org/stable/gallery/index.html).
+
+Z matplotlib je mogoče grafe shraniti v različnih formatih. Ponavadi je uporaben `.png`, ki shrani rastersko sliko. To lahko naredimo s klicem funkcije `matplotlib.pyplot.savefig(pot.png, dpi=300)`. Parameter `dpi` določa resolucijo slike. Vrednost 300 bi morala biti dovolj. Če pišemo v LaTeXu, je dobro grafe shraniti v vektorskem formatu npr. `.pgf`. Ta omogoča, da so grafi ostri, ne glede na to koliko so povečani, oznake in številke na grafu pa so v fontu LaTeXa.
+
 ## Nabori
 
 Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
