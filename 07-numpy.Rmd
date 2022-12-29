@@ -80,7 +80,7 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 - `np.nonzero(tabela)` vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)
 - `np.flatten(tabela)` vrne "flat" obliko tabele (enodimenzionalni seznam zaporednih elementov)
 - `np.flatnonzero(tabela)` vrne indekse neničelnih elementov v "flat" obliki tabele (zaporedni indeks)
-- `np.where(pogoj, x, y)` vrne elemente iz `x`, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz `y`; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!
+- `np.where(pogoj, x, y)` vrne elemente iz `x`, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz `y`; pogoj se ovrednoti za vsak element posebej; glej primere v dokumentaciji!
 - `tabela.T` vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele
 
 ```{python}

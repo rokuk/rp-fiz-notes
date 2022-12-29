@@ -44,14 +44,53 @@ print(rdece)
 
 Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#sets
 
-## Izpeljani seznami/slovarji/množice
-
-V delu.
-
 ## Rekurzija
 
 Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
 https://realpython.com/fibonacci-sequence-python/
+
+## Uvažanje modulov
+
+Delo z modul lepo opisuje [dokumentacija](https://docs.python.org/3/tutorial/modules.html) (predvsem prva polovica strani).
+
+## Izpeljani seznami/slovarji/množice
+
+Če želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:
+
+```{python}
+kvadrati = []
+for i in range(10):
+    kvadrati.append(i * i)
+print(kvadrati)
+```
+
+Na kratko lahko tak seznam ustvarimo z izpeljanim seznamom:
+
+```{python}
+kvadrati2 = [i * i for i in range(10)]
+print(kvadrati2)
+```
+
+Dodamo lahko tudi pogoj:
+
+```{python}
+poved = 'the rocket came back from mars'
+samoglasniki_poved = [i for i in poved if i in 'aeiou']
+print(samoglasniki_poved)
+```
+
+Podoben pristop lahko uporabimo tudi za slovarje in množice.
+
+```{python}
+kvadrati3 = {i: i * i for i in range(10)}
+print(kvadrati3)
+```
+
+```{python}
+poved = "life, uh, finds a way"
+samoglasniki_poved = {i for i in poved if i in 'aeiou'}
+print(samoglasniki_poved)
+```
 
 ## Merjenje časa izvajanja programa
 
