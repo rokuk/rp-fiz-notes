@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2022-12-28}
+\date{2022-12-29}
 
 \begin{document}
 \maketitle
@@ -1278,7 +1278,7 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 \item
   \texttt{np.flatnonzero(tabela)} vrne indekse neničelnih elementov v ``flat'' obliki tabele (zaporedni indeks)
 \item
-  \texttt{np.where(pogoj,\ x,\ y)} vrne elemente iz \texttt{x}, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz \texttt{y}; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!
+  \texttt{np.where(pogoj,\ x,\ y)} vrne elemente iz \texttt{x}, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz \texttt{y}; pogoj se ovrednoti za vsak element posebej; glej primere v dokumentaciji!
 \item
   \texttt{tabela.T} vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele
 \end{itemize}
@@ -1663,16 +1663,86 @@ Vrednosti v naborih lahko ``odpakiramo'' nazaj v spremenljivke. Nabor lahko odpa
 
 Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo \texttt{set()}. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z \texttt{mnozica.add(element)}. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#sets}
 
-\hypertarget{izpeljani-seznamislovarjimnoux17eice}{%
-\section{Izpeljani seznami/slovarji/množice}\label{izpeljani-seznamislovarjimnoux17eice}}
-
-V delu.
-
 \hypertarget{rekurzija}{%
 \section{Rekurzija}\label{rekurzija}}
 
 Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje \emph{Using Recursion and a Python Class} lahko preskočite.
 \url{https://realpython.com/fibonacci-sequence-python/}
+
+\hypertarget{uvaux17eanje-modulov}{%
+\section{Uvažanje modulov}\label{uvaux17eanje-modulov}}
+
+Delo z modul lepo opisuje \href{https://docs.python.org/3/tutorial/modules.html}{dokumentacija} (predvsem prva polovica strani).
+
+\hypertarget{izpeljani-seznamislovarjimnoux17eice}{%
+\section{Izpeljani seznami/slovarji/množice}\label{izpeljani-seznamislovarjimnoux17eice}}
+
+Če želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kvadrati }\OperatorTok{=}\NormalTok{ []}
+\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{10}\NormalTok{):}
+\NormalTok{    kvadrati.append(i }\OperatorTok{*}\NormalTok{ i)}
+\BuiltInTok{print}\NormalTok{(kvadrati)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+\end{verbatim}
+
+Na kratko lahko tak seznam ustvarimo z izpeljanim seznamom:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kvadrati2 }\OperatorTok{=}\NormalTok{ [i }\OperatorTok{*}\NormalTok{ i }\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{10}\NormalTok{)]}
+\BuiltInTok{print}\NormalTok{(kvadrati2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+\end{verbatim}
+
+Dodamo lahko tudi pogoj:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{poved }\OperatorTok{=} \StringTok{\textquotesingle{}the rocket came back from mars\textquotesingle{}}
+\NormalTok{samoglasniki\_poved }\OperatorTok{=}\NormalTok{ [i }\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in}\NormalTok{ poved }\ControlFlowTok{if}\NormalTok{ i }\KeywordTok{in} \StringTok{\textquotesingle{}aeiou\textquotesingle{}}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(samoglasniki\_poved)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['e', 'o', 'e', 'a', 'e', 'a', 'o', 'a']
+\end{verbatim}
+
+Podoben pristop lahko uporabimo tudi za slovarje in množice.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kvadrati3 }\OperatorTok{=}\NormalTok{ \{i: i }\OperatorTok{*}\NormalTok{ i }\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{10}\NormalTok{)\}}
+\BuiltInTok{print}\NormalTok{(kvadrati3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{poved }\OperatorTok{=} \StringTok{"life, uh, finds a way"}
+\NormalTok{samoglasniki\_poved }\OperatorTok{=}\NormalTok{ \{i }\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in}\NormalTok{ poved }\ControlFlowTok{if}\NormalTok{ i }\KeywordTok{in} \StringTok{\textquotesingle{}aeiou\textquotesingle{}}\NormalTok{\}}
+\BuiltInTok{print}\NormalTok{(samoglasniki\_poved)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {'a', 'e', 'u', 'i'}
+\end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
 \section{Merjenje časa izvajanja programa}\label{merjenje-ux10dasa-izvajanja-programa}}

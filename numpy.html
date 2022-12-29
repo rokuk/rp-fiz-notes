@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2022-12-28" />
+<meta name="date" content="2022-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -221,10 +221,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2" data-path="drugo.html"><a href="drugo.html#matplotlib"><i class="fa fa-check"></i><b>9.2</b> Matplotlib</a></li>
 <li class="chapter" data-level="9.3" data-path="drugo.html"><a href="drugo.html#nabori"><i class="fa fa-check"></i><b>9.3</b> Nabori</a></li>
 <li class="chapter" data-level="9.4" data-path="drugo.html"><a href="drugo.html#množice"><i class="fa fa-check"></i><b>9.4</b> Množice</a></li>
-<li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#izpeljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.5</b> Izpeljani seznami/slovarji/množice</a></li>
-<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.6</b> Rekurzija</a></li>
-<li class="chapter" data-level="9.7" data-path="drugo.html"><a href="drugo.html#merjenje-časa-izvajanja-programa"><i class="fa fa-check"></i><b>9.7</b> Merjenje časa izvajanja programa</a></li>
-<li class="chapter" data-level="9.8" data-path="drugo.html"><a href="drugo.html#kako-deluje-računalnik"><i class="fa fa-check"></i><b>9.8</b> Kako deluje računalnik?</a></li>
+<li class="chapter" data-level="9.5" data-path="drugo.html"><a href="drugo.html#rekurzija"><i class="fa fa-check"></i><b>9.5</b> Rekurzija</a></li>
+<li class="chapter" data-level="9.6" data-path="drugo.html"><a href="drugo.html#uvažanje-modulov"><i class="fa fa-check"></i><b>9.6</b> Uvažanje modulov</a></li>
+<li class="chapter" data-level="9.7" data-path="drugo.html"><a href="drugo.html#izpeljani-seznamislovarjimnožice"><i class="fa fa-check"></i><b>9.7</b> Izpeljani seznami/slovarji/množice</a></li>
+<li class="chapter" data-level="9.8" data-path="drugo.html"><a href="drugo.html#merjenje-časa-izvajanja-programa"><i class="fa fa-check"></i><b>9.8</b> Merjenje časa izvajanja programa</a></li>
+<li class="chapter" data-level="9.9" data-path="drugo.html"><a href="drugo.html#kako-deluje-računalnik"><i class="fa fa-check"></i><b>9.9</b> Kako deluje računalnik?</a></li>
 </ul></li>
 </ul>
 
@@ -324,7 +325,7 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.</p>
 <li><code>np.nonzero(tabela)</code> vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)</li>
 <li><code>np.flatten(tabela)</code> vrne “flat” obliko tabele (enodimenzionalni seznam zaporednih elementov)</li>
 <li><code>np.flatnonzero(tabela)</code> vrne indekse neničelnih elementov v “flat” obliki tabele (zaporedni indeks)</li>
-<li><code>np.where(pogoj, x, y)</code> vrne elemente iz <code>x</code>, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz <code>y</code>; pogoj se evalvira za vsak element posebej; glej primere v dokumentaciji!</li>
+<li><code>np.where(pogoj, x, y)</code> vrne elemente iz <code>x</code>, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz <code>y</code>; pogoj se ovrednoti za vsak element posebej; glej primere v dokumentaciji!</li>
 <li><code>tabela.T</code> vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele</li>
 </ul>
 <div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="numpy.html#cb83-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>

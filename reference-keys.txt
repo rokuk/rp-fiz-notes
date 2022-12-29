@@ -55,7 +55,8 @@ latex
 matplotlib
 nabori
 množice
-izpeljani-seznamislovarjimnožice
 rekurzija
+uvažanje-modulov
+izpeljani-seznamislovarjimnožice
 merjenje-časa-izvajanja-programa
 kako-deluje-računalnik
