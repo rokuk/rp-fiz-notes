@@ -4,7 +4,7 @@
 
 LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.
 
-V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), ki je primeren za začetnike.
+V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), za začetek pa je morda še primernejši [Praktičen uvod v LaTeX](https://e6.ijs.si/~jslak/files/prakticen_uvod_v_latex.pdf)
 
 Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
 
