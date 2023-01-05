@@ -14,6 +14,8 @@ LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension
 
 Zelo uporabno orodje je [Mathpix](https://mathpix.com), ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX.
 
+Priročna je tudi spletna stran [Table generator](https://www.tablesgenerator.com), ki omogoča generiranje kode za LaTeX tabele iz Excelovih ali .csv datotek.
+
 ## Matplotlib
 
 Za risanje grafov s Pythonom je najbolj priljubljena knjižnica [matlotlib](http://matplotlib.org/). Za začetek je uporaben [Tutorial](https://matplotlib.org/stable/tutorials/index.html), dobra referenca pa so [Primeri](https://matplotlib.org/stable/gallery/index.html).
