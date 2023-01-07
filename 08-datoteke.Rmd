@@ -81,7 +81,7 @@ Za delo s potmi je na voljo knjižnica `os.path`, kjer so pogosto uporabljane fu
 ## Pisanje
 
 Datoteko odpremo v načinu za pisanje `mode="w"` in uporabimo funkcijo `write()`, 
-ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če želimo zapisati znak `\` moramo v Pythonu napisati `\\`. Več o uporabi `\` v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp
+ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če želimo zapisati znak `\` moramo v Pythonu napisati `\\`. Več o uporabi posebnih znakov v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp
 
 ```python
 potdodatoteke = "datoteka.txt"
