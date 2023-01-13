@@ -26,7 +26,7 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Ponavadi je uporab
 
 Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
 
-Vrednosti v naborih lahko "odpakiramo" nazaj v spremenljivke. Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov.
+Vrednosti v naborih lahko "odpakiramo" nazaj v spremenljivke.
 
 ```{python eval=FALSE}
 sadje = ("jabolko", "banana", "češnja")
@@ -42,18 +42,20 @@ print(rdece)
 ## češnja
 ```
 
+Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov. Glej npr. https://www.w3schools.com/python/python_tuples_unpack.asp
+
 ## Množice
 
 Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#sets
 
 ## Rekurzija
 
-Dober članek o Fibbonaccijevem zaporedju v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
+Dober članek o uporabi rekurzije za izračun Fibbonaccijevega zaporedja v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite.
 https://realpython.com/fibonacci-sequence-python/
 
 ## Uvažanje modulov
 
-Delo z modul lepo opisuje [dokumentacija](https://docs.python.org/3/tutorial/modules.html) (predvsem prva polovica strani).
+Delo z moduli lepo opisuje [dokumentacija](https://docs.python.org/3/tutorial/modules.html) (predvsem prva polovica strani).
 
 ## Izpeljani seznami/slovarji/množice
 
