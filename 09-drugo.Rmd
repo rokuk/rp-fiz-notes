@@ -59,7 +59,7 @@ klicem funkcije `plt.savefig(pot.pgf)`. Sliko nato
 bolje uporabiti `.png`, sicer je stavljenje dokumenta z LaTeXom lahko zelo
 počasno.
 2.  Sliko shranimo v rastrskem formatu `.png`. To lahko naredimo s
-klicem funkcije `plt.savefig(pot.png, dpi=300)`. Parameter `dpi` (dots per inch) dolča resolucijo slike. Sliko nato
+klicem funkcije `plt.savefig(pot.png, dpi=300)`. Parameter `dpi` (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300. Sliko nato
     dodamo v LaTeX dokument z `\includegraphics{pot.png}`. Privzeto
     fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko
     nastavimo z
