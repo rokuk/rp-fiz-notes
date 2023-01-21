@@ -49,7 +49,7 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 
 1.  Sliko shranimo v vektorskem formatu `.pgf`. To lahko naredimo s
 klicem funkcije `plt.savefig(pot.pgf)`. Sliko nato
-    dodamo v LaTeX dokument z `\input{pot.pgf}`.
+    dodamo v LaTeX dokument z `\input{pot.pgf}`, pred tem pa uvozimo `\usepackage{pgf}`.
     Prednost vektorske slike je, da slika ohrani ostrino ne glede na to,
     koliko povečana je, in da so fonti številk in oznak na sliki enaki
     kot v LaTeXu ter prave velikosti.  Da se tudi nastaviti, da je širina slike npr. ravno
