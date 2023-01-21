@@ -119,7 +119,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2023-01-19}
+\date{2023-01-21}
 
 \begin{document}
 \maketitle
@@ -1670,7 +1670,7 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 \item
   Sliko shranimo v vektorskem formatu \texttt{.pgf}. To lahko naredimo s
   klicem funkcije \texttt{plt.savefig(pot.pgf)}. Sliko nato
-  dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}.
+  dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}, pred tem pa uvozimo \texttt{\textbackslash{}usepackage\{pgf\}}.
   Prednost vektorske slike je, da slika ohrani ostrino ne glede na to,
   koliko povečana je, in da so fonti številk in oznak na sliki enaki
   kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno
@@ -1681,7 +1681,7 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
   počasno.
 \item
   Sliko shranimo v rastrskem formatu \texttt{.png}. To lahko naredimo s
-  klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Sliko nato
+  klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300. Sliko nato
   dodamo v LaTeX dokument z \texttt{\textbackslash{}includegraphics\{pot.png\}}. Privzeto
   fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko
   nastavimo z
@@ -1816,7 +1816,7 @@ Podoben pristop lahko uporabimo tudi za slovarje in množice.
 \end{Shaded}
 
 \begin{verbatim}
-## {'i', 'u', 'a', 'e'}
+## {'e', 'u', 'i', 'a'}
 \end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
