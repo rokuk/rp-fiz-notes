@@ -10,5 +10,4 @@ Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
 Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::word_document2')"
 
 cp -R images output
-cp _headers output
 cp favicon.ico output
