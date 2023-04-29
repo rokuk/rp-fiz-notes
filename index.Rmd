@@ -1,6 +1,6 @@
 --- 
 title: "Računalniški praktikum (fizika) - vaje"
-author: "<a href='https://rokuk.org'>Rok Kuk</a> - kontakt@rokuk.org"
+author: "<a href=\"https://rokuk.org\">Rok Kuk</a> - kontakt@rokuk.org"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: report
@@ -12,6 +12,8 @@ favicon: "favicon.ico"
 description: "Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani."
 link-citations: yes
 github-repo: rokuk/rp-fiz-notes
+lang: sl
+babel-lang: slovene
 ---
 
 # O strani {-}
