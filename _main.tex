@@ -100,8 +100,17 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{slovene}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \usepackage[utf8]{inputenc}
-\usepackage[slovene]{babel}
+\usepackage{babel}
 \usepackage{booktabs}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -114,6 +123,7 @@
 \hypersetup{
   pdftitle={Računalniški praktikum (fizika) - vaje},
   pdfauthor={Rok Kuk - kontakt@rokuk.org},
+  pdflang={sl},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
@@ -1763,7 +1773,7 @@ Podoben pristop lahko uporabimo tudi za slovarje in množice.
 \end{Shaded}
 
 \begin{verbatim}
-## {'i', 'u', 'a', 'e'}
+## {'i', 'e', 'u', 'a'}
 \end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
