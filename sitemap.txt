@@ -1,0 +1,10 @@
+https://python.rokuk.org/index
+https://python.rokuk.org/namestitev-okolja-za-vaje
+https://python.rokuk.org/uvod-v-python
+https://python.rokuk.org/zanke
+https://python.rokuk.org/seznami-in-nizi
+https://python.rokuk.org/delo-z-objekti
+https://python.rokuk.org/slovarji
+https://python.rokuk.org/numpy
+https://python.rokuk.org/datoteke
+https://python.rokuk.org/drugo
