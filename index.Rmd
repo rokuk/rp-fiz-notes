@@ -16,7 +16,7 @@ lang: sl
 babel-lang: slovene
 ---
 
-# O strani {-}
+## O strani {-}
 
 Na tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani.
 

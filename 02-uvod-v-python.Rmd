@@ -1,4 +1,4 @@
-# Uvod v Ptyhon
+# Uvod v Python
 
 Gradiva za to poglavje so:
 
