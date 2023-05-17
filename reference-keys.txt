@@ -3,7 +3,7 @@ namestitev-pythona
 namestitev-visual-studio-code
 namestitev-paketa-numpy
 pogoste-težave
-uvod-v-ptyhon
+uvod-v-python
 števila
 logične-operacije
 relacijski-operatorji
