@@ -1,4 +1,4 @@
-https://python.rokuk.org/index
+https://python.rokuk.org
 https://python.rokuk.org/namestitev-okolja-za-vaje
 https://python.rokuk.org/uvod-v-python
 https://python.rokuk.org/zanke
