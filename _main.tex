@@ -1654,9 +1654,9 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Sliko shranimo v vektorskem formatu \texttt{.pgf}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.pgf)}. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}, znotraj okolja \texttt{figure} pred tem pa na začetku datoteke uvozimo \texttt{\textbackslash{}usepackage\{pgf\}}. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: \url{https://timodenk.com/blog/exporting-matplotlib-plots-to-latex} Za grafe z veliko točkami (\textgreater10000) pa je bolje uporabiti \texttt{.png}, sicer lahko stavljenje dokumenta z LaTeXom traja več minut.
+  Sliko shranimo v vektorskem formatu (npr. \texttt{.pgf}) To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.pgf)}. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}, znotraj okolja \texttt{figure} pred tem pa pri vrhu datoteke uvozimo \texttt{\textbackslash{}usepackage\{pgf\}}. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: \url{https://timodenk.com/blog/exporting-matplotlib-plots-to-latex} Za veliko grafov z veliko točkami (\textgreater10000) je bolje uporabiti rastrski format (npr. \texttt{.png}), sicer lahko stavljenje dokumenta z LaTeXom traja več minut.
 \item
-  Sliko shranimo v rastrskem formatu \texttt{.png}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}includegraphics\{pot.png\}} znotraj okolja \texttt{figure}. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
+  Sliko shranimo v rastrskem formatu (npr. \texttt{.png}). To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}includegraphics\{pot.png\}} znotraj okolja \texttt{figure}. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
 \end{enumerate}
 
 \begin{Shaded}
@@ -1668,9 +1668,9 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 \hypertarget{nabori}{%
 \section{Nabori}\label{nabori}}
 
-Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji \texttt{()}. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Ne moremo dodati novih elementov. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#tuples-and-sequences}
+Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji \texttt{()}. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Naboru ne moremo dodati novih elementov, ko je enkrat ustvarjen. Glej tudi: \url{https://docs.python.org/3/tutorial/datastructures.html\#tuples-and-sequences}
 
-Vrednosti v naborih lahko ``odpakiramo'' nazaj v spremenljivke.
+Vrednosti v naborih lahko ``odpakiramo'' (\emph{ang.} unpacking) nazaj v spremenljivke.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1772,7 +1772,7 @@ Podoben pristop lahko uporabimo tudi za slovarje in množice.
 \end{Shaded}
 
 \begin{verbatim}
-## {'i', 'u', 'a', 'e'}
+## {'a', 'e', 'u', 'i'}
 \end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
