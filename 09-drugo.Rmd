@@ -24,8 +24,8 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 
 Če pišemo v LaTeXu, imamo dve glavni možnosti:
 
-1.  Sliko shranimo v vektorskem formatu `.pgf`. To lahko naredimo s klicem funkcije `plt.savefig(pot.pgf)`. Sliko nato dodamo v LaTeX dokument z `\input{pot.pgf}`, pred tem pa na začetku datoteke uvozimo `\usepackage{pgf}`. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <https://timodenk.com/blog/exporting-matplotlib-plots-to-latex> Za grafe z veliko točkami (\>1000) pa je bolje uporabiti `.png`, sicer je stavljenje dokumenta z LaTeXom lahko zelo počasno.
-2.  Sliko shranimo v rastrskem formatu `.png`. To lahko naredimo s klicem funkcije `plt.savefig(pot.png, dpi=300)`. Parameter `dpi` (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300. Sliko nato dodamo v LaTeX dokument z `\includegraphics{pot.png}`. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
+1.  Sliko shranimo v vektorskem formatu `.pgf`. To lahko naredimo s klicem funkcije `plt.savefig(pot.pgf)`. Sliko nato dodamo v LaTeX dokument z `\input{pot.pgf}`, znotraj okolja `figure` pred tem pa na začetku datoteke uvozimo `\usepackage{pgf}`. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <https://timodenk.com/blog/exporting-matplotlib-plots-to-latex> Za grafe z veliko točkami (\>10000) pa je bolje uporabiti `.png`, sicer lahko stavljenje dokumenta z LaTeXom traja več minut.
+2.  Sliko shranimo v rastrskem formatu `.png`. To lahko naredimo s klicem funkcije `plt.savefig(pot.png, dpi=300)`. Parameter `dpi` (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z `\includegraphics{pot.png}` znotraj okolja `figure`. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
 
 ```{python eval=FALSE}
 plt.rcParams.update({"text.usetex": True})
@@ -45,9 +45,11 @@ print(rumeno)
 print(rdece)
 ```
 
-    ## jabolko
-    ## banana
-    ## češnja
+```         
+## jabolko
+## banana
+## češnja
+```
 
 Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov. Glej npr. <https://www.w3schools.com/python/python_tuples_unpack.asp>
 
@@ -114,7 +116,7 @@ Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in d
 
 #### Crash Course Computer Science {.unnumbered}
 
-Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1>
+Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1>
 
 Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo -- bolj kot zanimivosti.
 

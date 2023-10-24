@@ -135,7 +135,7 @@ for el in spam:
     print(el)
 ```
 
-Ko v zanki potrebujemo indekse, pride prav spodnji pristop. 
+Ko v zanki potrebujemo indekse, pride prav pristop, kjer do elementov seznama dostopamo z indeksi. 
 
 Primer: zanima nas razlika med zaporednimi elementi seznama.
 
@@ -176,7 +176,7 @@ print(spam)
 
 ### Dodajanje elementov
 
-Element lahko dodamo na konec seznama z metodo:
+Element lahko dodamo na konec seznama z metodo `append`.
 
 ```{python}
 spam = ['cat', 'bat', 42, True, 'dog']
@@ -188,21 +188,7 @@ print(spam)
 
 - `len(seznam_ali_niz)` vrne število elementov seznama oz. število znakov v nizu
 
-- `zip(seznam1, seznam2, ...)` vrne zaporedje naborov istoležnih elementov v podanih seznamih (poljubno število). Funkcija 
-vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo `list()`.
-V for zanki lahko uporabimo `zip` brez `list`.
-
-```{python}
-print(list(zip('xyz', [10, 20, 30], [4, 5, 6])))
-```
-
-```{python}
-for x in zip('xyz', [10, 20, 30], [4, 5, 6]):
-    print(x)
-```
-
-- `enumerate(seznam)` vrne zaporedje parov, v katerih so druge komponente vrednosti 
-iz podanega seznama, prve pa njihovi indeksi.
+- `enumerate(seznam)` vrne zaporedje parov, v katerih so na drugem mestu vrednosti iz podanega seznama, na prvem mestu pa so njihovi indeksi.
 Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip 
 pretvoriti s funkcijo `list()`. V for zanki lahko uporabimo `enumerate` brez `list`.
 
@@ -213,4 +199,17 @@ print(list(enumerate(["a", "b", "c"])))
 ```{python}
 for indeks, element in enumerate(["a", "b", "c"]):
     print(indeks, element)
+```
+
+- `zip(seznam1, seznam2, ...)` vrne zaporedje naborov istoležnih elementov v podanih seznamih. Funkcija 
+vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo `list()`.
+V for zanki lahko uporabimo `zip` brez `list`.
+
+```{python}
+print(list(zip('xyz', [10, 20, 30], [4, 5, 6])))
+```
+
+```{python}
+for x in zip('xyz', [10, 20, 30], [4, 5, 6]):
+    print(x)
 ```
