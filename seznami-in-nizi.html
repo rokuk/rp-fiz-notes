@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 4 Seznami in nizi | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 4 Seznami in nizi | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2023-06-25" />
+<meta name="date" content="2023-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -346,7 +346,7 @@ od teh treh števil ni obvezno.</p>
 <pre><code>## a
 ## b
 ## c</code></pre>
-<p>Ko v zanki potrebujemo indekse, pride prav spodnji pristop.</p>
+<p>Ko v zanki potrebujemo indekse, pride prav pristop, kjer do elementov seznama dostopamo z indeksi.</p>
 <p>Primer: zanima nas razlika med zaporednimi elementi seznama.</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="seznami-in-nizi.html#cb29-1" aria-hidden="true" tabindex="-1"></a>seznam <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
 <span id="cb29-2"><a href="seznami-in-nizi.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(seznam) <span class="op">-</span> <span class="dv">1</span>):</span>
@@ -379,7 +379,7 @@ od teh treh števil ni obvezno.</p>
 <pre><code>## [&#39;cat&#39;, &#39;bat&#39;, True, &#39;dog&#39;]</code></pre>
 <div id="dodajanje-elementov" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Dodajanje elementov<a href="seznami-in-nizi.html#dodajanje-elementov" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Element lahko dodamo na konec seznama z metodo:</p>
+<p>Element lahko dodamo na konec seznama z metodo <code>append</code>.</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="seznami-in-nizi.html#cb37-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> [<span class="st">&#39;cat&#39;</span>, <span class="st">&#39;bat&#39;</span>, <span class="dv">42</span>, <span class="va">True</span>, <span class="st">&#39;dog&#39;</span>]</span>
 <span id="cb37-2"><a href="seznami-in-nizi.html#cb37-2" aria-hidden="true" tabindex="-1"></a>spam.append(<span class="dv">3</span>)</span>
 <span id="cb37-3"><a href="seznami-in-nizi.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(spam)</span></code></pre></div>
@@ -390,30 +390,29 @@ od teh treh števil ni obvezno.</p>
 <h2><span class="header-section-number">4.3</span> Nekaj uporabnih funkcij<a href="seznami-in-nizi.html#nekaj-uporabnih-funkcij" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p><code>len(seznam_ali_niz)</code> vrne število elementov seznama oz. število znakov v nizu</p></li>
-<li><p><code>zip(seznam1, seznam2, ...)</code> vrne zaporedje naborov istoležnih elementov v podanih seznamih (poljubno število). Funkcija
-vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo <code>list()</code>.
-V for zanki lahko uporabimo <code>zip</code> brez <code>list</code>.</p></li>
-</ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="seznami-in-nizi.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])))</span></code></pre></div>
-<pre><code>## [(&#39;x&#39;, 10, 4), (&#39;y&#39;, 20, 5), (&#39;z&#39;, 30, 6)]</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="seznami-in-nizi.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]):</span>
-<span id="cb41-2"><a href="seznami-in-nizi.html#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
-<pre><code>## (&#39;x&#39;, 10, 4)
-## (&#39;y&#39;, 20, 5)
-## (&#39;z&#39;, 30, 6)</code></pre>
-<ul>
-<li><code>enumerate(seznam)</code> vrne zaporedje parov, v katerih so druge komponente vrednosti
-iz podanega seznama, prve pa njihovi indeksi.
+<li><p><code>enumerate(seznam)</code> vrne zaporedje parov, v katerih so na drugem mestu vrednosti iz podanega seznama, na prvem mestu pa so njihovi indeksi.
 Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip
-pretvoriti s funkcijo <code>list()</code>. V for zanki lahko uporabimo <code>enumerate</code> brez <code>list</code>.</li>
+pretvoriti s funkcijo <code>list()</code>. V for zanki lahko uporabimo <code>enumerate</code> brez <code>list</code>.</p></li>
 </ul>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="seznami-in-nizi.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>])))</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="seznami-in-nizi.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>])))</span></code></pre></div>
 <pre><code>## [(0, &#39;a&#39;), (1, &#39;b&#39;), (2, &#39;c&#39;)]</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="seznami-in-nizi.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> indeks, element <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>]):</span>
-<span id="cb45-2"><a href="seznami-in-nizi.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(indeks, element)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="seznami-in-nizi.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> indeks, element <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>]):</span>
+<span id="cb41-2"><a href="seznami-in-nizi.html#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(indeks, element)</span></code></pre></div>
 <pre><code>## 0 a
 ## 1 b
 ## 2 c</code></pre>
+<ul>
+<li><code>zip(seznam1, seznam2, ...)</code> vrne zaporedje naborov istoležnih elementov v podanih seznamih. Funkcija
+vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo <code>list()</code>.
+V for zanki lahko uporabimo <code>zip</code> brez <code>list</code>.</li>
+</ul>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="seznami-in-nizi.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(<span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])))</span></code></pre></div>
+<pre><code>## [(&#39;x&#39;, 10, 4), (&#39;y&#39;, 20, 5), (&#39;z&#39;, 30, 6)]</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="seznami-in-nizi.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">zip</span>(<span class="st">&#39;xyz&#39;</span>, [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]):</span>
+<span id="cb45-2"><a href="seznami-in-nizi.html#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## (&#39;x&#39;, 10, 4)
+## (&#39;y&#39;, 20, 5)
+## (&#39;z&#39;, 30, 6)</code></pre>
 
 </div>
 </div>

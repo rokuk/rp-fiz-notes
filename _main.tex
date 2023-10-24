@@ -129,7 +129,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2023-06-25}
+\date{2023-10-24}
 
 \begin{document}
 \maketitle
@@ -649,7 +649,7 @@ Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 ## c
 \end{verbatim}
 
-Ko v zanki potrebujemo indekse, pride prav spodnji pristop.
+Ko v zanki potrebujemo indekse, pride prav pristop, kjer do elementov seznama dostopamo z indeksi.
 
 Primer: zanima nas razlika med zaporednimi elementi seznama.
 
@@ -720,7 +720,7 @@ Elemente seznama lahko zbrišemo s ključno besedo \texttt{del}.
 \hypertarget{dodajanje-elementov}{%
 \subsection{Dodajanje elementov}\label{dodajanje-elementov}}
 
-Element lahko dodamo na konec seznama z metodo:
+Element lahko dodamo na konec seznama z metodo \texttt{append}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -741,39 +741,7 @@ Element lahko dodamo na konec seznama z metodo:
 \item
   \texttt{len(seznam\_ali\_niz)} vrne število elementov seznama oz. število znakov v nizu
 \item
-  \texttt{zip(seznam1,\ seznam2,\ ...)} vrne zaporedje naborov istoležnih elementov v podanih seznamih (poljubno število). Funkcija
-  vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo \texttt{list()}.
-  V for zanki lahko uporabimo \texttt{zip} brez \texttt{list}.
-\end{itemize}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(}\BuiltInTok{list}\NormalTok{(}\BuiltInTok{zip}\NormalTok{(}\StringTok{\textquotesingle{}xyz\textquotesingle{}}\NormalTok{, [}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{], [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{])))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [('x', 10, 4), ('y', 20, 5), ('z', 30, 6)]
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in} \BuiltInTok{zip}\NormalTok{(}\StringTok{\textquotesingle{}xyz\textquotesingle{}}\NormalTok{, [}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{], [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{]):}
-    \BuiltInTok{print}\NormalTok{(x)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## ('x', 10, 4)
-## ('y', 20, 5)
-## ('z', 30, 6)
-\end{verbatim}
-
-\begin{itemize}
-\tightlist
-\item
-  \texttt{enumerate(seznam)} vrne zaporedje parov, v katerih so druge komponente vrednosti
-  iz podanega seznama, prve pa njihovi indeksi.
+  \texttt{enumerate(seznam)} vrne zaporedje parov, v katerih so na drugem mestu vrednosti iz podanega seznama, na prvem mestu pa so njihovi indeksi.
   Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip
   pretvoriti s funkcijo \texttt{list()}. V for zanki lahko uporabimo \texttt{enumerate} brez \texttt{list}.
 \end{itemize}
@@ -799,6 +767,37 @@ Element lahko dodamo na konec seznama z metodo:
 ## 0 a
 ## 1 b
 ## 2 c
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{zip(seznam1,\ seznam2,\ ...)} vrne zaporedje naborov istoležnih elementov v podanih seznamih. Funkcija
+  vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo \texttt{list()}.
+  V for zanki lahko uporabimo \texttt{zip} brez \texttt{list}.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{list}\NormalTok{(}\BuiltInTok{zip}\NormalTok{(}\StringTok{\textquotesingle{}xyz\textquotesingle{}}\NormalTok{, [}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{], [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{])))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [('x', 10, 4), ('y', 20, 5), ('z', 30, 6)]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in} \BuiltInTok{zip}\NormalTok{(}\StringTok{\textquotesingle{}xyz\textquotesingle{}}\NormalTok{, [}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{], [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{]):}
+    \BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ('x', 10, 4)
+## ('y', 20, 5)
+## ('z', 30, 6)
 \end{verbatim}
 
 \hypertarget{delo-z-objekti}{%
@@ -1655,9 +1654,9 @@ Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem graf
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Sliko shranimo v vektorskem formatu \texttt{.pgf}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.pgf)}. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}, pred tem pa na začetku datoteke uvozimo \texttt{\textbackslash{}usepackage\{pgf\}}. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: \url{https://timodenk.com/blog/exporting-matplotlib-plots-to-latex} Za grafe z veliko točkami (\textgreater1000) pa je bolje uporabiti \texttt{.png}, sicer je stavljenje dokumenta z LaTeXom lahko zelo počasno.
+  Sliko shranimo v vektorskem formatu \texttt{.pgf}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.pgf)}. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}input\{pot.pgf\}}, znotraj okolja \texttt{figure} pred tem pa na začetku datoteke uvozimo \texttt{\textbackslash{}usepackage\{pgf\}}. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: \url{https://timodenk.com/blog/exporting-matplotlib-plots-to-latex} Za grafe z veliko točkami (\textgreater10000) pa je bolje uporabiti \texttt{.png}, sicer lahko stavljenje dokumenta z LaTeXom traja več minut.
 \item
-  Sliko shranimo v rastrskem formatu \texttt{.png}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}includegraphics\{pot.png\}}. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
+  Sliko shranimo v rastrskem formatu \texttt{.png}. To lahko naredimo s klicem funkcije \texttt{plt.savefig(pot.png,\ dpi=300)}. Parameter \texttt{dpi} (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z \texttt{\textbackslash{}includegraphics\{pot.png\}} znotraj okolja \texttt{figure}. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
 \end{enumerate}
 
 \begin{Shaded}
@@ -1773,7 +1772,7 @@ Podoben pristop lahko uporabimo tudi za slovarje in množice.
 \end{Shaded}
 
 \begin{verbatim}
-## {'a', 'e', 'u', 'i'}
+## {'i', 'u', 'a', 'e'}
 \end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
@@ -1792,7 +1791,7 @@ Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in d
 \subsubsection*{Crash Course Computer Science}\label{crash-course-computer-science}}
 \addcontentsline{toc}{subsubsection}{Crash Course Computer Science}
 
-Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. \url{https://www.youtube.com/watch?v=tpIctyqH29Q\&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye\&index=1}
+Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. \url{https://www.youtube.com/watch?v=tpIctyqH29Q\&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye\&index=1}
 
 Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo -- bolj kot zanimivosti.
 

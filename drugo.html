@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Poglavje 9 Drugo* | Računalniški praktikum (fizika) - vaje</title>
   <meta name="description" content="Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Poglavje 9 Drugo* | Računalniški praktikum (fizika) - vaje" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2023-06-25" />
+<meta name="date" content="2023-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -266,8 +266,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem grafov je dobro nastaviti velikost slike s <code>plt.figure(figsize=(sirina, visina))</code>, kjer sta višina in širina v inčih.</p>
 <p>Če pišemo v LaTeXu, imamo dve glavni možnosti:</p>
 <ol style="list-style-type: decimal">
-<li>Sliko shranimo v vektorskem formatu <code>.pgf</code>. To lahko naredimo s klicem funkcije <code>plt.savefig(pot.pgf)</code>. Sliko nato dodamo v LaTeX dokument z <code>\input{pot.pgf}</code>, pred tem pa na začetku datoteke uvozimo <code>\usepackage{pgf}</code>. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <a href="https://timodenk.com/blog/exporting-matplotlib-plots-to-latex" class="uri">https://timodenk.com/blog/exporting-matplotlib-plots-to-latex</a> Za grafe z veliko točkami (&gt;1000) pa je bolje uporabiti <code>.png</code>, sicer je stavljenje dokumenta z LaTeXom lahko zelo počasno.</li>
-<li>Sliko shranimo v rastrskem formatu <code>.png</code>. To lahko naredimo s klicem funkcije <code>plt.savefig(pot.png, dpi=300)</code>. Parameter <code>dpi</code> (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300. Sliko nato dodamo v LaTeX dokument z <code>\includegraphics{pot.png}</code>. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z</li>
+<li>Sliko shranimo v vektorskem formatu <code>.pgf</code>. To lahko naredimo s klicem funkcije <code>plt.savefig(pot.pgf)</code>. Sliko nato dodamo v LaTeX dokument z <code>\input{pot.pgf}</code>, znotraj okolja <code>figure</code> pred tem pa na začetku datoteke uvozimo <code>\usepackage{pgf}</code>. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <a href="https://timodenk.com/blog/exporting-matplotlib-plots-to-latex" class="uri">https://timodenk.com/blog/exporting-matplotlib-plots-to-latex</a> Za grafe z veliko točkami (&gt;10000) pa je bolje uporabiti <code>.png</code>, sicer lahko stavljenje dokumenta z LaTeXom traja več minut.</li>
+<li>Sliko shranimo v rastrskem formatu <code>.png</code>. To lahko naredimo s klicem funkcije <code>plt.savefig(pot.png, dpi=300)</code>. Parameter <code>dpi</code> (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z <code>\includegraphics{pot.png}</code> znotraj okolja <code>figure</code>. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z</li>
 </ol>
 <div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="drugo.html#cb95-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">&quot;text.usetex&quot;</span>: <span class="va">True</span>})</span></code></pre></div>
 </div>
@@ -321,7 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="drugo.html#cb106-1" aria-hidden="true" tabindex="-1"></a>poved <span class="op">=</span> <span class="st">&quot;life, uh, finds a way&quot;</span></span>
 <span id="cb106-2"><a href="drugo.html#cb106-2" aria-hidden="true" tabindex="-1"></a>samoglasniki_poved <span class="op">=</span> {i <span class="cf">for</span> i <span class="kw">in</span> poved <span class="cf">if</span> i <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>}</span>
 <span id="cb106-3"><a href="drugo.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(samoglasniki_poved)</span></code></pre></div>
-<pre><code>## {&#39;e&#39;, &#39;u&#39;, &#39;a&#39;, &#39;i&#39;}</code></pre>
+<pre><code>## {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;, &#39;u&#39;}</code></pre>
 </div>
 <div id="merjenje-časa-izvajanja-programa" class="section level2 hasAnchor" number="9.8">
 <h2><span class="header-section-number">9.8</span> Merjenje časa izvajanja programa<a href="drugo.html#merjenje-časa-izvajanja-programa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -333,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Nekatere teme so dobro razložene v poglavju Sistemi učbenika <a href="https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html" class="uri">https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html</a></p>
 <div id="crash-course-computer-science" class="section level4 unnumbered hasAnchor">
 <h4>Crash Course Computer Science<a href="drugo.html#crash-course-computer-science" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Obširen tečaj računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <a href="https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1" class="uri">https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1</a></p>
+<p>Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <a href="https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1" class="uri">https://www.youtube.com/watch?v=tpIctyqH29Q&amp;list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&amp;index=1</a></p>
 <p>Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo – bolj kot zanimivosti.</p>
 </div>
 <div id="posamezne-teme" class="section level4 unnumbered hasAnchor">
