@@ -23,7 +23,7 @@
 <meta name="author" content="Rok Kuk - kontakt@rokuk.org" />
 
 
-<meta name="date" content="2023-10-24" />
+<meta name="date" content="2023-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -269,17 +269,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Sliko shranimo v vektorskem formatu (npr. <code>.pgf</code>) To lahko naredimo s klicem funkcije <code>plt.savefig(pot.pgf)</code>. Sliko nato dodamo v LaTeX dokument z <code>\input{pot.pgf}</code>, znotraj okolja <code>figure</code> pred tem pa pri vrhu datoteke uvozimo <code>\usepackage{pgf}</code>. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <a href="https://timodenk.com/blog/exporting-matplotlib-plots-to-latex" class="uri">https://timodenk.com/blog/exporting-matplotlib-plots-to-latex</a> Za veliko grafov z veliko točkami (&gt;10000) je bolje uporabiti rastrski format (npr. <code>.png</code>), sicer lahko stavljenje dokumenta z LaTeXom traja več minut.</li>
 <li>Sliko shranimo v rastrskem formatu (npr. <code>.png</code>). To lahko naredimo s klicem funkcije <code>plt.savefig(pot.png, dpi=300)</code>. Parameter <code>dpi</code> (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z <code>\includegraphics{pot.png}</code> znotraj okolja <code>figure</code>. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z</li>
 </ol>
-<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="drugo.html#cb95-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">&quot;text.usetex&quot;</span>: <span class="va">True</span>})</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="drugo.html#cb97-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">&quot;text.usetex&quot;</span>: <span class="va">True</span>})</span></code></pre></div>
 </div>
 <div id="nabori" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Nabori<a href="drugo.html#nabori" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji <code>()</code>. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Naboru ne moremo dodati novih elementov, ko je enkrat ustvarjen. Glej tudi: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" class="uri">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></p>
 <p>Vrednosti v naborih lahko “odpakiramo” (<em>ang.</em> unpacking) nazaj v spremenljivke.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb96-1"><a href="drugo.html#cb96-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;češnja&quot;</span>)</span>
-<span id="cb96-2"><a href="drugo.html#cb96-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
-<span id="cb96-3"><a href="drugo.html#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeleno)</span>
-<span id="cb96-4"><a href="drugo.html#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rumeno)</span>
-<span id="cb96-5"><a href="drugo.html#cb96-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="drugo.html#cb98-1" aria-hidden="true" tabindex="-1"></a>sadje <span class="op">=</span> (<span class="st">&quot;jabolko&quot;</span>, <span class="st">&quot;banana&quot;</span>, <span class="st">&quot;češnja&quot;</span>)</span>
+<span id="cb98-2"><a href="drugo.html#cb98-2" aria-hidden="true" tabindex="-1"></a>zeleno, rumeno, rdece <span class="op">=</span> sadje</span>
+<span id="cb98-3"><a href="drugo.html#cb98-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeleno)</span>
+<span id="cb98-4"><a href="drugo.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rumeno)</span>
+<span id="cb98-5"><a href="drugo.html#cb98-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rdece)</span></code></pre></div>
 <pre><code>## jabolko
 ## banana
 ## češnja</code></pre>
@@ -300,28 +300,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="izpeljani-seznamislovarjimnožice" class="section level2 hasAnchor" number="9.7">
 <h2><span class="header-section-number">9.7</span> Izpeljani seznami/slovarji/množice<a href="drugo.html#izpeljani-seznamislovarjimnožice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Če želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="drugo.html#cb98-1" aria-hidden="true" tabindex="-1"></a>kvadrati <span class="op">=</span> []</span>
-<span id="cb98-2"><a href="drugo.html#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb98-3"><a href="drugo.html#cb98-3" aria-hidden="true" tabindex="-1"></a>    kvadrati.append(i <span class="op">*</span> i)</span>
-<span id="cb98-4"><a href="drugo.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="drugo.html#cb100-1" aria-hidden="true" tabindex="-1"></a>kvadrati <span class="op">=</span> []</span>
+<span id="cb100-2"><a href="drugo.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb100-3"><a href="drugo.html#cb100-3" aria-hidden="true" tabindex="-1"></a>    kvadrati.append(i <span class="op">*</span> i)</span>
+<span id="cb100-4"><a href="drugo.html#cb100-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati)</span></code></pre></div>
 <pre><code>## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
 <p>Na kratko lahko tak seznam ustvarimo z izpeljanim seznamom:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="drugo.html#cb100-1" aria-hidden="true" tabindex="-1"></a>kvadrati2 <span class="op">=</span> [i <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span>
-<span id="cb100-2"><a href="drugo.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati2)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="drugo.html#cb102-1" aria-hidden="true" tabindex="-1"></a>kvadrati2 <span class="op">=</span> [i <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span>
+<span id="cb102-2"><a href="drugo.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati2)</span></code></pre></div>
 <pre><code>## [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
 <p>Dodamo lahko tudi pogoj:</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="drugo.html#cb102-1" aria-hidden="true" tabindex="-1"></a>poved <span class="op">=</span> <span class="st">&#39;the rocket came back from mars&#39;</span></span>
-<span id="cb102-2"><a href="drugo.html#cb102-2" aria-hidden="true" tabindex="-1"></a>samoglasniki_poved <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> poved <span class="cf">if</span> i <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>]</span>
-<span id="cb102-3"><a href="drugo.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(samoglasniki_poved)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="drugo.html#cb104-1" aria-hidden="true" tabindex="-1"></a>poved <span class="op">=</span> <span class="st">&#39;the rocket came back from mars&#39;</span></span>
+<span id="cb104-2"><a href="drugo.html#cb104-2" aria-hidden="true" tabindex="-1"></a>samoglasniki_poved <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> poved <span class="cf">if</span> i <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>]</span>
+<span id="cb104-3"><a href="drugo.html#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(samoglasniki_poved)</span></code></pre></div>
 <pre><code>## [&#39;e&#39;, &#39;o&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;o&#39;, &#39;a&#39;]</code></pre>
 <p>Podoben pristop lahko uporabimo tudi za slovarje in množice.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="drugo.html#cb104-1" aria-hidden="true" tabindex="-1"></a>kvadrati3 <span class="op">=</span> {i: i <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)}</span>
-<span id="cb104-2"><a href="drugo.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati3)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="drugo.html#cb106-1" aria-hidden="true" tabindex="-1"></a>kvadrati3 <span class="op">=</span> {i: i <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)}</span>
+<span id="cb106-2"><a href="drugo.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kvadrati3)</span></code></pre></div>
 <pre><code>## {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}</code></pre>
-<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="drugo.html#cb106-1" aria-hidden="true" tabindex="-1"></a>poved <span class="op">=</span> <span class="st">&quot;life, uh, finds a way&quot;</span></span>
-<span id="cb106-2"><a href="drugo.html#cb106-2" aria-hidden="true" tabindex="-1"></a>samoglasniki_poved <span class="op">=</span> {i <span class="cf">for</span> i <span class="kw">in</span> poved <span class="cf">if</span> i <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>}</span>
-<span id="cb106-3"><a href="drugo.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(samoglasniki_poved)</span></code></pre></div>
-<pre><code>## {&#39;a&#39;, &#39;e&#39;, &#39;u&#39;, &#39;i&#39;}</code></pre>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="drugo.html#cb108-1" aria-hidden="true" tabindex="-1"></a>poved <span class="op">=</span> <span class="st">&quot;life, uh, finds a way&quot;</span></span>
+<span id="cb108-2"><a href="drugo.html#cb108-2" aria-hidden="true" tabindex="-1"></a>samoglasniki_poved <span class="op">=</span> {i <span class="cf">for</span> i <span class="kw">in</span> poved <span class="cf">if</span> i <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>}</span>
+<span id="cb108-3"><a href="drugo.html#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(samoglasniki_poved)</span></code></pre></div>
+<pre><code>## {&#39;i&#39;, &#39;e&#39;, &#39;a&#39;, &#39;u&#39;}</code></pre>
 </div>
 <div id="merjenje-časa-izvajanja-programa" class="section level2 hasAnchor" number="9.8">
 <h2><span class="header-section-number">9.8</span> Merjenje časa izvajanja programa<a href="drugo.html#merjenje-časa-izvajanja-programa" class="anchor-section" aria-label="Anchor link to header"></a></h2>

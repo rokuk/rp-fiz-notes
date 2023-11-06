@@ -129,7 +129,7 @@
 
 \title{Računalniški praktikum (fizika) - vaje}
 \author{Rok Kuk - \href{mailto:kontakt@rokuk.org}{\nolinkurl{kontakt@rokuk.org}}}
-\date{2023-10-24}
+\date{2023-11-06}
 
 \begin{document}
 \maketitle
@@ -541,6 +541,7 @@ Podobno je za nize.
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{spam }\OperatorTok{=} \StringTok{"besedna zveza"}
+\BuiltInTok{print}\NormalTok{(spam[}\DecValTok{2}\NormalTok{])}
 \BuiltInTok{print}\NormalTok{(spam[}\DecValTok{1}\NormalTok{:}\DecValTok{4}\NormalTok{])}
 \BuiltInTok{print}\NormalTok{(spam[:}\DecValTok{3}\NormalTok{])}
 \BuiltInTok{print}\NormalTok{(spam[::}\DecValTok{2}\NormalTok{])}
@@ -577,16 +578,16 @@ Podobno je za nize.
 \hypertarget{zdruux17eevanje}{%
 \subsection{Združevanje}\label{zdruux17eevanje}}
 
-Nize in sezname staknemo s plusom.
+Več seznamov / več nizov staknemo s plusom.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{niz1 }\OperatorTok{=} \StringTok{"a"}
-\NormalTok{niz2 }\OperatorTok{=} \StringTok{"b"}
-\BuiltInTok{print}\NormalTok{(niz1 }\OperatorTok{+}\NormalTok{ niz2)}
 \NormalTok{sez1 }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{]}
 \NormalTok{sez2 }\OperatorTok{=}\NormalTok{ [}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{]}
 \BuiltInTok{print}\NormalTok{(sez1 }\OperatorTok{+}\NormalTok{ sez2)}
+\NormalTok{niz1 }\OperatorTok{=} \StringTok{"a"}
+\NormalTok{niz2 }\OperatorTok{=} \StringTok{"b"}
+\BuiltInTok{print}\NormalTok{(niz1 }\OperatorTok{+}\NormalTok{ niz2)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -622,8 +623,8 @@ Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{spam }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}cat\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bat\textquotesingle{}}\NormalTok{, }\DecValTok{42}\NormalTok{, }\VariableTok{True}\NormalTok{, }\StringTok{\textquotesingle{}dog\textquotesingle{}}\NormalTok{]}
-\ControlFlowTok{for}\NormalTok{ el }\KeywordTok{in}\NormalTok{ spam:}
-    \BuiltInTok{print}\NormalTok{(el)}
+\ControlFlowTok{for}\NormalTok{ element }\KeywordTok{in}\NormalTok{ spam:}
+    \BuiltInTok{print}\NormalTok{(element)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -638,8 +639,8 @@ Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{spam }\OperatorTok{=} \StringTok{"abc"}
-\ControlFlowTok{for}\NormalTok{ el }\KeywordTok{in}\NormalTok{ spam:}
-    \BuiltInTok{print}\NormalTok{(el)}
+\ControlFlowTok{for}\NormalTok{ element }\KeywordTok{in}\NormalTok{ spam:}
+    \BuiltInTok{print}\NormalTok{(element)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -649,7 +650,7 @@ Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 ## c
 \end{verbatim}
 
-Ko v zanki potrebujemo indekse, pride prav pristop, kjer do elementov seznama dostopamo z indeksi.
+Ko v zanki potrebujemo indekse, pride prav spodnji pristop, kjer do elementov seznama dostopamo z indeksi.
 
 Primer: zanima nas razlika med zaporednimi elementi seznama.
 
@@ -732,6 +733,20 @@ Element lahko dodamo na konec seznama z metodo \texttt{append}.
 
 \begin{verbatim}
 ## ['cat', 'bat', 42, True, 'dog', 3]
+\end{verbatim}
+
+Pri nizih ne moremo uporabiti metode append, lahko pa dodamo elemente z operatorjem \texttt{+}. Tudi tu lahko uporabimo okrajšavo \texttt{+=}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{s }\OperatorTok{=} \StringTok{"abcd"}
+\NormalTok{s }\OperatorTok{+=} \StringTok{"e"}
+\BuiltInTok{print}\NormalTok{(s)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## abcde
 \end{verbatim}
 
 \hypertarget{nekaj-uporabnih-funkcij}{%
@@ -1772,7 +1787,7 @@ Podoben pristop lahko uporabimo tudi za slovarje in množice.
 \end{Shaded}
 
 \begin{verbatim}
-## {'a', 'e', 'u', 'i'}
+## {'a', 'e', 'i', 'u'}
 \end{verbatim}
 
 \hypertarget{merjenje-ux10dasa-izvajanja-programa}{%
