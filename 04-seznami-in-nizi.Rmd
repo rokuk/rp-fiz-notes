@@ -64,6 +64,7 @@ print(spam[::-1])
 ```
 
 ```
+## s
 ## ese
 ## bes
 ## bsdazea
