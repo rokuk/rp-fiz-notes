@@ -54,9 +54,9 @@ print("Moje ime je Rok.".split())
 
 ## Sortiranje seznamov
 
-Za sortiranje lahko uporabimo funkcijo `sorted(seznam)`, ki vrne sortiran seznam ali pa metodo `seznam.sort()`, ki spremeni originalni seznam, tako, da je sortiran.
+Za sortiranje lahko uporabimo funkcijo `sorted(seznam)`, ki vrne sortiran seznam ali pa metodo `seznam.sort()`, ki spremeni originalni seznam, tako, da je sortiran. Obema funkcijama lahko podamo neobvezni argument `reversed=True`, ki seznam sortira v nasprotnem vrstnem redu. 
 
-Obema funkcijama lahko podamo neobvezni argument `reversed=True`, ki seznam sortira v nasprotnem vrstnem redu. Podamo lahko tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
+<sup>*</sup>Podamo lahko tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
 
 ```{python}
 def sortirna_funkcija(element_seznama):
