@@ -31,14 +31,14 @@ jobs:
           cache: 'pip'
       - run: pip install jupyter
       - run: pip install -r requirements.txt
-
-      - name: Render
-        uses: quarto-dev/quarto-actions/render@v2
-        
+      
       - uses: actions/checkout@v4
         with:
           ref: 'production'
           path: 'output'
+
+      - name: Render
+        uses: quarto-dev/quarto-actions/render@v2
         
       - name: Commit to production branch
         uses: EndBug/add-and-commit@v9
