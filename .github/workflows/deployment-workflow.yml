@@ -45,11 +45,10 @@ jobs:
         with:
           author_name: 'GH Actions deployment workflow'
           author_email: 'kontakt@rokuk.org'
-          add: 'output -f'
+          cwd: 'output'
           push: 'origin production --set-upstream --force'
         
       - name: Upload artifacts
-        if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
           name: output
