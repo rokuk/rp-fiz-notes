@@ -47,9 +47,10 @@ jobs:
           author_email: 'kontakt@rokuk.org'
           cwd: 'output'
           add: '. -f'
-          push: 'origin production --set-upstream --force'
+          push: 'origin HEAD:production --set-upstream --force'
         
       - name: Upload artifacts
+        if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
           name: output
