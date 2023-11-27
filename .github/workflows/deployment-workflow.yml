@@ -41,7 +41,6 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
         
       - name: Upload artifacts
-        if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
           name: output
