@@ -35,14 +35,19 @@ jobs:
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
         
+      - uses: actions/checkout@v4
+        with:
+          ref: 'production'
+          path: 'output'
+        
       - name: Commit to production branch
         uses: EndBug/add-and-commit@v9
         with:
           author_name: 'GH Actions deployment workflow'
           author_email: 'kontakt@rokuk.org'
           cwd: 'output'
-          push: 'origin production --set-upstream --force'
           add: '. -f'
+          push: 'origin production --set-upstream --force'
         
       - name: Upload artifacts
         if: ${{ failure() }}
