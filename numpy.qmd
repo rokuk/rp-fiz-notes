@@ -13,7 +13,7 @@ Vizualna reprecentacija operacij z Numpy seznami: <http://jalammar.github.io/vis
 
 Navaden seznam pretvorimo v Numpy seznam s funkcijo `np.array(seznam)`.
 
-```{python, eval=FALSE}
+```{python}
 import numpy as np
 
 a = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
@@ -21,14 +21,6 @@ print(a)
 print(a.shape)
 print(a.ndim)
 print(a.size)
-```
-
-```         
-## [[1 2 3 4]
-##  [5 6 7 8]]
-## (2, 4)
-## 2
-## 8
 ```
 
 Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato raje je ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:

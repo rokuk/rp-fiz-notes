@@ -31,16 +31,20 @@ jobs:
           cache: 'pip'
       - run: pip install jupyter
       - run: pip install -r requirements.txt
-      
-      - name: Build
-        run: |
-          chmod +x ./_build.sh
-          ./_build.sh
 
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
         
+      - name: Commit to production branch
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: 'GH Actions deployment workflow'
+          author_email: 'kontakt@rokuk.org'
+          cwd: 'output'
+          push: 'origin production --set-upstream --force'
+        
       - name: Upload artifacts
+        if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
           name: output

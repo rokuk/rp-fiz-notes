@@ -1,20 +1,13 @@
 # Delo z objekti
 
-```{css}
-#| echo: false
-#metode-za-nize pre {
-  margin-left: 2em;
-}
-```
-
 Gradivi za to poglavje sta
 
 -   <https://automatetheboringstuff.com/2e/chapter6/>
 -   poglavje [Nizi](https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html)
 
-Uporabna je tudi dokumentacija za različne tipe https://docs.python.org/3/tutorial/datastructures.html
+Uporabna je tudi dokumentacija za različne tipe <https://docs.python.org/3/tutorial/datastructures.html>
 
-Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: https://docs.python.org/3/library/stdtypes.html#string-methods
+Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: <https://docs.python.org/3/library/stdtypes.html#string-methods>
 
 Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo narediti (npr. s `python count characters in string` hitro najdemo `count()` in primere uporabe).
 

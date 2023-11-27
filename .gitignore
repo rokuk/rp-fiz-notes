@@ -6,3 +6,4 @@ output
 .idea
 _main.log
 .quarto
+/.quarto/

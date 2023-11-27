@@ -39,11 +39,23 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
+    highlight-style: github
+    code-copy: true
     link-external-icon: true
     link-external-newwindow: true
+    number-depth: 1
   pdf:
     documentclass: scrreprt
+    include-in-header: 
+      text: |
+        \usepackage[utf8]{inputenc}
+        \usepackage{babel}
+        \usepackage{booktabs}
+  epub:
+    title: "Računalniški praktikum (fizika) - Vaje"
 
 
 
