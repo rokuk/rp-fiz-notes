@@ -10,12 +10,18 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+<<<<<<< HEAD
+=======
+  
+name: Quarto publish and commit
+>>>>>>> 56e0950 (Starting move to Quarto.)
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -41,12 +47,34 @@ jobs:
         with:
           ref: 'output'
           path: 'output'
+=======
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        
+      - name: Install Python and Dependencies
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - run: pip install jupyter
+      - run: pip install -r requirements.txt
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: production
+          path: output
+>>>>>>> 56e0950 (Starting move to Quarto.)
         
       - name: Build
         run: |
           chmod +x ./_build.sh
           ./_build.sh
 
+<<<<<<< HEAD
       - name: Commit to output branch
         uses: EndBug/add-and-commit@v9.1.2
         with:
@@ -55,6 +83,8 @@ jobs:
           cwd: 'output'
           push: 'origin output --set-upstream --force'
 
+=======
+>>>>>>> 56e0950 (Starting move to Quarto.)
       - name: Upload artfacts
         if: ${{ failure() }}
         uses: actions/upload-artifact@main

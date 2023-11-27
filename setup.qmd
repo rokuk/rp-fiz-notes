@@ -1,0 +1,42 @@
+# Namestitev okolja za vaje
+
+Da lahko na svojem računalniku uporabljate Python in rešujete naloge je potrebno namestiti nekaj programov. Spodaj je opisan okvirni postopek in pogoste težave. Če imate težave, je opis problema dobro pogooglati, sicer pa lahko seveda vprašate sošolce, pišite asistentu ali postavite vprašanje na forumu.
+
+## Namestitev Pythona
+
+1.  Namestite Python (najbolje kar verzijo 3.12) s te strani (zavihek `Downloads`): <https://www.python.org>. Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte "Add Python 3.x to PATH". Nato nadaljujte z namestitvijo (opcija "Install now").
+
+> Če uporabljate Windows 7 ali še starejši Windows, boste morali namestiti starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tu: <https://www.python.org/downloads/>
+
+2.  Preverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows) ali Terminal (macOS/Linux), ki je že na vašem računalniku. V okno, ki se odpre vpišite ukaz `python --version` in pritisnite tipko Enter. Če je Python uspešno nameščen, bi se vam v novi vrstici moralo izpisati `Python 3.x.y` (kjer je `x.y` verzija nameščenega Pythona).
+
+> Če ste na Windowsu in ukaz `python --version` ne izpiše verzije, ampak se vam izpiše napaka ali "Python not found", poskusite ukaz `py --version`.
+
+## Namestitev Visual Studio Code
+
+3.  Namestite Visual Studio Code: <https://code.visualstudio.com>
+4.  Namestite Python extension. Odprite Visual Studio Code. Morda se vam bo v oknu VSCode pojavil zavihek z naslovom `Get Started`, ki ga lahko kar zaprete. Na levem robu okna kliknite na Extensions (ikona s štirimi kvadratki), vpišite `Python`, izberite `Python` in na desni kliknite `Install`. Morda se bo odprlo okno `Get Started`, ki ga lahko zaprete.
+5.  Dobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali vso vašo kodo. V VSCode v meniju File kliknite `Open Folder...` in izberite to mapo. Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko (meni File \> New File), jo shranite (meni File \> Save) in jo poimenujte `test.py` (na Windowsu izberete `Save as type: Python`). Vsebina datoteke se vam odpre kot zavihek v VSCode. Vanj vpišite `print("Pozdravljen svet!")`. V desnem zgornjem kotu bi morali imeti gumb v obliki puščice, s katerim lahko poženete napisani program. Če ga nimate, si lahko namestite extension z imenom `Code Runner`. Sicer lahko program poženete tudi tako, da desno kliknete kjerkoli v območju urejevalnika besedila in nato v meniju, ki se pojavi, izberete `Run Python File in Terminal`. Ko poženete program, bi se vam v oknu terminala moralo izpisati "Pozdravljen svet!".
+6.  Priporočam, da vklopite tudi "linter". To je program, ki je del VSCode in v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak, mnoge zatipke pa zazna in vas nanje opozori, še preden poženete program, tako da jih podčrta. VSCode pritisnite Ctrl+Shift+P in vpišite "linter" (brez navednic), kliknite na `Python: Select Linter`. Pojavi se meni z več možnostmi za linter. Priporočam `flake8`, ki nas poleg napak opozori tudi na kršitve priporočil za stil PEP8. Izberete ga s tipko Enter. VSCode vas bo desno spodaj obvestil, da ta linter ni nameščen; namestite ga tako, da kliknete `Install` v tem obvestilu. Po nekaj sekundah bi se moral namestiti. Lahko ga preizkusite tako, da v datoteko s končnico .py nekaj narobe napišete npr. `prnt("Pozdravljen svet!")`
+
+VSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju. Več o tem piše v uradni dokumentaciji: <https://code.visualstudio.com/docs/editor/codebasics>
+
+## Namestitev paketa Numpy
+
+Potrebovali bomo še Pythonov paket Numpy. To je neke vrste dodatek za Python, ki nam omogoča lažje delo z vektorji in tabelami. Več o tem na prihodnjih vajah. Dodatne module za Python lahko nameščamo in odstranjujemo z modulom `pip`. To je modul, ki bi se moral avtomatsko namestiti skupaj s Pythonom.
+
+7.  Najprej v Ukazni poziv / Terminal vpišite in izvršite ukaz `python -m pip --version` (če ste na Windowsu boste morda dobili napako v stilu "python ne obstaja", v tem primeru poskusite izvršiti ukaz `py -m pip --version`). Izpisati bi se vam moralo nekaj podobnega `pip X.Y.Z from ... (python 3.N.N)`.
+
+> Več o tem na <https://pip.pypa.io/en/stable/getting-started/>
+
+Če se vam izpiše to, lahko nadaljujete na 8. korak, sicer berite naprej. Če se vam izpiše nekaj v stilu "pip ne obstaja" ali "command not found", morate namestiti Pythonov modul `pip`. To naredite z ukazom `python -m ensurepip --upgrade` (oz. na Windowsu morda `py -m ensurepip --upgrade`).
+
+> Več informacij o nameščanju modula `pip` je na <https://pip.pypa.io/en/stable/installation/#python>
+
+8.  Namestite Pythonov modul numpy. To naredite z ukazom `python -m pip install numpy` (oz. na Windowsu bo morda treba uporabiti `py -m pip install numpy`).
+
+## Pogoste težave
+
+-   Če pri poganjanju programa dobite napako `no module named numpy`, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisani postopek.
+
+-   Če imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko "python" v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na "Python 3.x.y" na spodnjem robu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz `python3.10 -m pip install numpy`, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz `py -3.10 -m pip install numpy`.

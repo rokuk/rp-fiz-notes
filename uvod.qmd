@@ -1,0 +1,71 @@
+# Uvod v Python
+
+Gradiva za to poglavje so:
+
+-   <https://automatetheboringstuff.com/2e/chapter1/>
+-   <https://automatetheboringstuff.com/2e/chapter2/> (do poglavja `while loop statements`)
+-   <https://automatetheboringstuff.com/2e/chapter3/>
+-   poglavje [Osnovni koncepti programiranja](https://lusy.fri.uni-lj.si/ucbenik/book/1201/index.html)
+-   poglavje [Izdelava samostojnih programov in pogojni stavki](https://lusy.fri.uni-lj.si/ucbenik/book/1202/index.html)
+-   poglavje [Funkcije](https://lusy.fri.uni-lj.si/ucbenik/book/1205/index.html)
+
+## Števila
+
+Za seštevanje uporabimo `+`, za odštevanje `-`, za množenje `*`, za potence `**`, za deljenje `/`, za celoštevilsko deljenje `//`, za ostanek pri deljenju `%`. Za vrstni red računanja operacij (če jih kombiniramo) veljajo enaka pravila kot v matematiki.
+
+```{python}
+celidel = 20 // 8
+ostanek = 20 % 8
+print(celidel, ostanek)
+```
+
+Za zaokroževanje števila `stevilo` uporabimo funkcijo `round(stevilo, d)`, ki število zaokroži na `d` decimalnih mest.
+
+## Logične operacije
+
+Logične operacije s ključnimi besedami `and`, `or` in `not` ustrezajo operacijam v matematiki.
+
+-   `a and b` je True, če sta `a` in `b` enaka True, sicer je False
+-   `a or b` je False, le če sta `a` in `b` enaka False
+-   `not a` je True, če je `a` enak False, sicer je True
+
+Logične operacije lahko kombiniramo. Vrstni red operacij lahko določimo z oklepaji. Sicer ima operator `and` prednost pred `or`, `not` pa ima prednost pred obema.
+
+```{python}
+a = True
+b = True
+c = False
+print((a or b) and (a or c))
+```
+
+V logičnih operacijah se število 0 obnaša kot False, ostala števila pa kot True.
+
+## Relacijski operatorji
+
+Če relacija velja ima izraz vrednost True, sicer pa False.
+
+-   primerjava števil `a < b` ali `a <= b`
+-   preverjanje enakosti `a == b`
+-   preverjanje različnosti (nista enaka) `a != b`
+
+Logične operacije in relacije so binarne. Binarna operacija se izvede med tem, kar je na levi, in tem, kar je na desni.
+
+## Nekoliko kompleksnejši primer
+
+Če želimo preveriti ali je spremenljivka `mesec` enaka 6 ali 7, ni prav, če napišemo
+
+```{python}
+mesec = 4
+rezultat = mesec == 6 or 7
+print(rezultat)
+```
+
+V zgornjem izrazu se najprej izvede primerjava med `mesec` in 6. Ker 4 ni enako 6, nam to da False. Nato se izvede operacija `or` med False in 7. Ker se 7 obnaša kot True bi pričakovali, da dobimo True. Operacija `or` deluje tako, da vrne prvo vrednost, ki ni False. Ponavadi primerjamo True in False vrednosti, zato ima operacija rezultat True, če je ena od vrednosti True. Na levi strani je pri nas False, na desni pa 7, zato ima celoten izraz desno od enačaja vrednost 7 (ker je prva vrednost, ki ni False).
+
+Pravilna rešitev bi bila
+
+```{python}
+mesec = 4
+rezultat = (mesec == 6) or (mesec == 7)
+print(rezultat)
+```

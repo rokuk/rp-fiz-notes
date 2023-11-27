@@ -1,0 +1,146 @@
+# Drugo\*
+
+## LaTeX
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.
+
+V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), za začetek pa je morda še primernejši [Praktičen uvod v LaTeX](https://e6.ijs.si/~jslak/files/prakticen_uvod_v_latex.pdf)
+
+Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](https://www.texstudio.org), [LyX](https://www.lyx.org) (omogoča način urejanja podoben Wordu) ali [Overleaf](https://www.overleaf.com) (omogoča hkratno delo več oseb preko spleta).
+
+Zelo uporabno orodje je [Mathpix](https://mathpix.com), ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX ukaze.
+
+Priročna je tudi spletna stran [Table generator](https://www.tablesgenerator.com), ki omogoča generiranje kode za LaTeX tabele iz Excelovih ali .csv datotek.
+
+## Matplotlib
+
+Za risanje grafov s Pythonom je najbolj priljubljena knjižnica [matplotlib](http://matplotlib.org/). Za začetek je uporaben [Tutorial](https://matplotlib.org/stable/tutorials/index.html), dobra referenca pa so [Primeri](https://matplotlib.org/stable/gallery/index.html).
+
+Z matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem grafov je dobro nastaviti velikost slike s `plt.figure(figsize=(sirina, visina))`, kjer sta višina in širina v inčih.
+
+Če pišemo v LaTeXu, imamo dve glavni možnosti:
+
+1.  Sliko shranimo v vektorskem formatu (npr. `.pgf`) To lahko naredimo s klicem funkcije `plt.savefig(pot.pgf)`. Sliko nato dodamo v LaTeX dokument z `\input{pot.pgf}`, znotraj okolja `figure` pred tem pa pri vrhu datoteke uvozimo `\usepackage{pgf}`. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: <https://timodenk.com/blog/exporting-matplotlib-plots-to-latex> Za veliko grafov z veliko točkami (\>10000) je bolje uporabiti rastrski format (npr. `.png`), sicer lahko stavljenje dokumenta z LaTeXom traja več minut.
+2.  Sliko shranimo v rastrskem formatu (npr. `.png`). To lahko naredimo s klicem funkcije `plt.savefig(pot.png, dpi=300)`. Parameter `dpi` (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z `\includegraphics{pot.png}` znotraj okolja `figure`. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z
+
+```{python}
+#| eval: false
+plt.rcParams.update({"text.usetex": True})
+```
+
+## Nabori
+
+Nabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji `()`. Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Naboru ne moremo dodati novih elementov, ko je enkrat ustvarjen. Glej tudi: <https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences>
+
+Vrednosti v naborih lahko "odpakiramo" (*ang.* unpacking) nazaj v spremenljivke.
+
+```{python eval=FALSE}
+sadje = ("jabolko", "banana", "češnja")
+zeleno, rumeno, rdece = sadje
+print(zeleno)
+print(rumeno)
+print(rdece)
+```
+
+```         
+## jabolko
+## banana
+## češnja
+```
+
+Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov. Glej npr. <https://www.w3schools.com/python/python_tuples_unpack.asp>
+
+## Množice
+
+Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: <https://docs.python.org/3/tutorial/datastructures.html#sets>
+
+## Rekurzija
+
+Dober članek o uporabi rekurzije za izračun Fibbonaccijevega zaporedja v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite. <https://realpython.com/fibonacci-sequence-python/>
+
+## Uvažanje modulov
+
+Delo z moduli lepo opisuje [dokumentacija](https://docs.python.org/3/tutorial/modules.html) (predvsem prva polovica strani).
+
+## Izpeljani seznami/slovarji/množice
+
+Če želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:
+
+```{python}
+kvadrati = []
+for i in range(10):
+    kvadrati.append(i * i)
+print(kvadrati)
+```
+
+Na kratko lahko tak seznam ustvarimo z izpeljanim seznamom:
+
+```{python}
+kvadrati2 = [i * i for i in range(10)]
+print(kvadrati2)
+```
+
+Dodamo lahko tudi pogoj:
+
+```{python}
+poved = 'the rocket came back from mars'
+samoglasniki_poved = [i for i in poved if i in 'aeiou']
+print(samoglasniki_poved)
+```
+
+Podoben pristop lahko uporabimo tudi za slovarje in množice.
+
+```{python}
+kvadrati3 = {i: i * i for i in range(10)}
+print(kvadrati3)
+```
+
+```{python}
+poved = "life, uh, finds a way"
+samoglasniki_poved = {i for i in poved if i in 'aeiou'}
+print(samoglasniki_poved)
+```
+
+## Merjenje časa izvajanja programa
+
+Glej <https://docs.python.org/3/library/timeit.html>
+
+## Kako deluje računalnik?
+
+Pri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s programiranjem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.
+
+Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Nekatere teme so dobro razložene v poglavju Sistemi učbenika <https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html>
+
+#### Crash Course Computer Science {.unnumbered}
+
+Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1>
+
+Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo -- bolj kot zanimivosti.
+
+#### Posamezne teme {.unnumbered}
+
+Spodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:
+
+1.  **Computer basics - What is inside a computer?**<br> Komponente računalnika. Osnovno - lahko preskočite.<br> <https://www.youtube.com/watch?v=HB4I2CgkcCo>
+
+2.  **Exploring How Computers Work - Sebastian Lague**<br> Izvrstna demonstracija tega, kako elektronska vezja omogočajo računanje. *Če si boste pogledali le eno stvar, si poglejte tole.*<br> <https://www.youtube.com/watch?v=QZwneRb-zqA>
+
+3.  **What's Your Computer Actually Doing? - Tom Scott**<br> Poenostavljen opis kako računalniški procesor izvaja naše programe.<br> <https://www.youtube.com/watch?v=Z5JC9Ve1sfI>
+
+4.  **How do computers read code?**<br> Kako naš program pove računalniku kaj mora narediti? *Če si boste pogledali le dve stvari, si poglejte še tole.*<br> <https://www.youtube.com/watch?v=QXjU9qTsYCc>
+
+5.  **Learn how computers add numbers and build a 4 bit adder circuit - Ben Eater**<br> Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti.<br> <https://www.youtube.com/watch?v=wvJc9CZcvBc>
+
+6.  **How Do Computers Remember? - Sebastian Lague**<br> Demonstracija elektronskih vezij, ki lahko shranijo vrednosti.<br> <https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s>
+
+7.  **Visualizing Binary Data with 7-segment displays - Sebastian Lague**<br> Demonstracija, kako lahko z vezji prikažemo binarna števila na zaslonu. <https://www.youtube.com/watch?v=hEDQpqhY2MA>
+
+8.  **Physics of Computer Chips - Dr. Phil Moriarty**<br> Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja.<br> <https://www.youtube.com/watch?v=xkLAhU74f3s>
+
+9.  **Izdelava čipov**<br> Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov.<br> <https://www.youtube.com/watch?v=bor0qLifjz4>
+
+10. **Why do computers use 1's and 0's?**<br> Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk.<br> <https://www.youtube.com/watch?v=Xpk67YzOn5w>

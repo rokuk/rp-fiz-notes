@@ -1,0 +1,35 @@
+# Zanke
+
+Gradivi za to poglavje sta
+
+-   <https://automatetheboringstuff.com/2e/chapter2/> (poglavji `while loop statements` in `for loops`)
+-   poglavje [Zanke](https://lusy.fri.uni-lj.si/ucbenik/book/1203/index.html)
+
+## Zanka for
+
+Zanko for uporabimo, ko vemo kolikokrat želimo nekaj ponoviti.
+
+```{python}
+zacetek = 3
+konec = 10
+korak = 2
+for i in range(zacetek, konec, korak):
+    print(i)
+```
+
+Če tretjega parametra ne podamo, bo korak 1. Če podamo le en parameter bo šla zanka od 0 do vrednosti tega parametra.
+
+## Zanka while
+
+Zanko while uporabimo, ko želimo zanko izvajati, dokler je nek pogoj izpolnjen.
+
+```{python}
+i = 3
+while i < 10:
+    print(i)
+    i += 2
+```
+
+V zgornjem primeru bi lahko `i < 10` nadomestili s kakršnokoli logično operacijo, ki vrne True ali False. Zanka se izvaja, dokler je pogoj True.
+
+Pozor: Paziti moramo, da ne napišemo neskončne zanke, kjer je pogoj vedno True! V tem primeru se izvajanje programa nikoli ne konča. Izvedbo programa lahko v Ukaznem pozivu / Terminalu prekinemo s kombinacijo tipk `Ctrl+C`.
