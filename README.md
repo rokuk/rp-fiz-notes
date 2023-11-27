@@ -10,8 +10,6 @@ Push na main branch avtomatsko požene Github Action, ki naredi pretvorbo iz Mar
 
 ## Lokalno urejanje
 
-Strani so napisane v RMarkdown. Lahko se jih ureja kar na GitHubu.
+Strani so napisane v okolju Quarto. Lahko se jih ureja kar na GitHubu.
 
-Datoteke je najlažje urejati urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj. Treba je imeti nameščen paket `bookdown`.
-
-Lokalno lahko vidimo compiled strani z ukazom `bookdown::serve_book()`, kar požene lokalni strežnik in odpre strani v brskalniku. Ko spremenjeno Markdown datoteko shranimo, se stran osveži.
+Datoteke je najlažje urejati urejati v RStudio, kjer odpremo rp-fiz-notes.Rproj.

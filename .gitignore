@@ -5,7 +5,4 @@ output
 .Rhistory
 .idea
 _main.log
-<<<<<<< HEAD
-=======
 .quarto
->>>>>>> 56e0950 (Starting move to Quarto.)
