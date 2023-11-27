@@ -41,7 +41,7 @@ jobs:
           target: production
           path: output
         
-      - name: Upload artefacts
+      - name: Upload artifacts
         if: ${{ failure() }}
         uses: actions/upload-artifact@main
         with:
