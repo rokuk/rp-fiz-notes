@@ -45,8 +45,7 @@ jobs:
         with:
           author_name: 'GH Actions deployment workflow'
           author_email: 'kontakt@rokuk.org'
-          cwd: 'output'
-          add: '. -f'
+          add: 'output -f'
           push: 'origin production --set-upstream --force'
         
       - name: Upload artifacts
