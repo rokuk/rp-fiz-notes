@@ -60,4 +60,4 @@ format:
     title: "Računalniški praktikum (fizika) - Vaje"
 
 execute:
-  cache: true
+  cache: false
