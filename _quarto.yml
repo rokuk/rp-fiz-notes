@@ -8,7 +8,7 @@ project:
 book:
   title: "Računalniški praktikum (fizika) - Vaje"
   author: "<a href=\"https://rokuk.org\">Rok Kuk</a> - kontakt@rokuk.org"
-  date: "2023-11-26"
+  date: "2023-11-30"
   description: "Zapiski vaj za predmet računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani."
   output-file: "rpfiz-vaje"
   downloads: ["pdf", "epub"]  
@@ -16,15 +16,12 @@ book:
   license: "CC BY-NC-SA 4.0"
   url: "https://python.rokuk.org"
   site-url: "https://python.rokuk.org"
-  repo-url: "https://github.com/rokuk/rp-fiz-notes"
-  repo-actions: [edit, issue]
-  issue-url: "https://github.com/rokuk/rp-fiz-notes/issues/new"
   favicon: "favicon.ico"
   page-navigation: true
   back-to-top-navigation: true
   search: true
   sidebar: 
-    title: "RP (FIZ) - Vaje"
+    title: "Računalniški praktikum (fizika) - Vaje"
   chapters:
     - index.qmd
     - setup.qmd
@@ -36,15 +33,20 @@ book:
     - datoteke.qmd
     - numpy.qmd
     - drugo.qmd
+    - part: "Dodatno"
+      chapters:
+      - racunalnik.qmd
+      - latex.qmd
+      - matplotlib.qmd
+      - sortiranje.qmd
 
 format:
   html:
     theme:
-      light: cosmo
+      light: [cosmo, custom.scss]
       dark: darkly
     highlight-style: github
     code-copy: true
-    link-external-icon: true
     link-external-newwindow: true
     number-depth: 1
   pdf:
@@ -57,5 +59,5 @@ format:
   epub:
     title: "Računalniški praktikum (fizika) - Vaje"
 
-
-
+execute:
+  cache: true

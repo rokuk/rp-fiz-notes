@@ -8,9 +8,7 @@ Gradiva za to poglavje so:
 -   poglavje
     [Nizi](https://lusy.fri.uni-lj.si/ucbenik/book/1206/index.html)
 
-## Skupne lastnosti
-
-### Indeksiranje
+## Indeksiranje
 
 Indeksi morajo biti cela števila, sicer pride do napake. Indeksi se
 začnejo z 0 (prvi element). Negativni indeksi so indeksi šteti s konca
@@ -47,7 +45,7 @@ print(spam[::2])
 print(spam[::-1])
 ```
 
-### Dolžina
+## Dolžina
 
 Število elementov seznama ali število znakov v nizu dobimo s funkcijo
 `len(seznam_ali_niz)`.
@@ -55,11 +53,12 @@ print(spam[::-1])
 ```{python}
 c = [1, 2, 3, "abeceda"]
 print(len(c))
+
 d = "terminologija"
 print(len(d))
 ```
 
-### Združevanje
+## Združevanje
 
 Več seznamov / več nizov staknemo s plusom.
 
@@ -67,6 +66,7 @@ Več seznamov / več nizov staknemo s plusom.
 sez1 = [1, 2, 3]
 sez2 = [4, 5, 6]
 print(sez1 + sez2)
+
 niz1 = "a"
 niz2 = "b"
 print(niz1 + niz2)
@@ -75,7 +75,7 @@ print(niz1 + niz2)
 Sezname lahko združimo tudi z metodo `extend`. Za zgornji primer:
 `seznam1.extend(seznam2)`.
 
-### Preverjanje vsebovanja
+## Preverjanje vsebovanja
 
 S ključno besedo `in` preverimo ali seznam vsebuje nek element, kar
 lahko uporabimo npr. v if stavku. Podobno lahko z `in` preverimo ali niz
@@ -86,7 +86,7 @@ print('cat' in ['cat', 'bat', 42, True, 'dog'])
 print('c' in 'beseda')
 ```
 
-### Zanke
+## Zanke
 
 Po elementih seznama / znakih niza se lahko sprehodimo z zanko for.
 
@@ -143,7 +143,7 @@ del spam[2]
 print(spam)
 ```
 
-### Dodajanje elementov
+## Dodajanje elementov
 
 Element lahko dodamo na konec seznama z metodo `append`.
 
@@ -158,7 +158,7 @@ operatorjem `+`. Tudi tu lahko uporabimo okrajšavo `+=`.
 
 ```{python}
 s = "abcd"
-s += "e"
+s += "e" # oziroma s = s + "e"
 print(s)
 ```
 

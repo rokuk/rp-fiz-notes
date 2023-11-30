@@ -1,0 +1,27 @@
+# Sortiranje
+
+Za osnove sortiranja glej [Delo z objekti](delo-z-objekti.qmd#sortiranje-seznamov)
+
+Bolj podrobno je sortiranje opisano v dokumentaciji: <https://docs.python.org/3/howto/sorting.html>
+
+Podamo lahko tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
+
+```{python}
+def sortirna_funkcija(element_seznama):
+    return element_seznama[2]
+
+student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+print(sorted(student_tuples, key=sortirna_funkcija))
+```
+
+Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija 
+```{python}
+def sortirna_funkcija(element_seznama):
+    return  (element_seznama[1], element_seznama[2])
+```
+bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).
+

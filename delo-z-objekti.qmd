@@ -1,3 +1,11 @@
+---
+filters:
+  - line-highlight
+format:
+    html: 
+      code-link: true
+---
+
 # Delo z objekti
 
 Gradivi za to poglavje sta
@@ -9,7 +17,18 @@ Uporabna je tudi dokumentacija za različne tipe <https://docs.python.org/3/tuto
 
 Metod za sezname in nize je veliko. Spodaj je naštetih nekaj najpogosteje uporabljanih. Celoten seznam je v uradni dokumentaciji: <https://docs.python.org/3/library/stdtypes.html#string-methods>
 
-Ponavadi lahko z Googlom, najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo narediti (npr. s `python count characters in string` hitro najdemo `count()` in primere uporabe).
+Ponavadi lahko z Googlom hitro najdemo metodo, ki jo potrebujemo, če opišemo, kaj želimo narediti (npr. s `python count characters in string` hitro najdemo `count()` in primere uporabe).
+
+## Pretvarjanje med tipi
+
+Spremenljivko `a` lahko pretvorimo v drug tip s funkcijami:
+
+-   `int(a)` vrne celo število
+-   `float(a)` vrne decimalno število
+-   `str(a)` vrne niz
+-   `list(a)` vrne seznam
+-   `tuple(a)` vrne nabor
+-   `set(a)` vrne množico
 
 ## Metode za nize
 
@@ -45,37 +64,23 @@ print("Moje ime je Rok.".split())
 -   `sez.pop(i)` odstrani element na indeksu `i` in ga vrne; če `i` ne podamo je to zadnji element
 -   `sez.index(x)` vrne prvi indeks, na katerem se nahaja vrednost `x`
 -   `sez.count(x)` vrne število pojavitev `x` v seznamu
--   `sez.sort(reverse=False)` uredi seznam po velikosti naraščajoče / abecedi; če podamo neobvezni argument `reverse=True`, bo seznam urejen v nasprotnem vrstnem redu
+-   `sez.sort()` razvrsti seznam števil po velikosti / nizov po abecedi
 
 ## Sortiranje seznamov
 
-Za sortiranje lahko uporabimo funkcijo `sorted(seznam)`, ki vrne sortiran seznam ali pa metodo `seznam.sort()`, ki spremeni originalni seznam, tako, da je sortiran. Obema funkcijama lahko podamo neobvezni argument `reversed=True`, ki seznam sortira v nasprotnem vrstnem redu.
-
-<sup>\*</sup>Podamo lahko tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
+Za sortiranje lahko uporabimo funkcijo `sorted(seznam)`, ki vrne sortiran seznam ali pa metodo `seznam.sort()`, ki spremeni originalni seznam, tako, da je sortiran. Metoda `.sort()` ne vrne nič. Obema funkcijama lahko podamo neobvezni argument `reversed=True`, ki seznam sortira v nasprotnem vrstnem redu.
 
 ```{python}
-def sortirna_funkcija(element_seznama):
-    return element_seznama[2]
-
-student_tuples = [
-    ('john', 'A', 15),
-    ('jane', 'B', 12),
-    ('dave', 'B', 10),
-]
-print(sorted(student_tuples, key=sortirna_funkcija))
+seznam = [9, 1, 4, 5, 6, 4] #<<
+print("prej:  ", seznam)
+sortiran_seznam = sorted(seznam) #<<
+print("potem: ", seznam)
+print("vrnjen:", sortiran_seznam)
 ```
 
-Sortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z `return (element_seznama[1], element_seznama[2])` bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).
-
-Več o sortiranju v uradni dokumentaciji: <https://docs.python.org/3/howto/sorting.html>
-
-## Pretvarjanje med tipi
-
-Spremenljivko `a` lahko pretvorimo v najpogosteje uporabljane tipe:
-
--   `int(a)` vrne celo število
--   `float(a)` vrne decimalno število
--   `str(a)` vrne niz
--   `list(a)` vrne seznam
--   `tuple(a)` vrne nabor
--   `set(a)` vrne množico
+```{python}
+seznam = [9, 1, 4, 5, 6, 4] #<<
+print("prej: ", seznam)
+seznam.sort() #<<
+print("potem:", seznam)
+```

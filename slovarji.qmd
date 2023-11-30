@@ -5,9 +5,7 @@ Gradivi za to poglavje sta
 -   <https://automatetheboringstuff.com/2e/chapter5/>
 -   poglavje [Slovar](https://lusy.fri.uni-lj.si/ucbenik/book/1212/index.html)
 
-## Osnovne operacije
-
-### Dostopanje do vrednosti
+## Dostopanje do vrednosti
 
 Do vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabimo ključe.
 
@@ -24,7 +22,7 @@ print(s.get('a'))
 print(s.get('ž', 100000))
 ```
 
-### Spreminjanje in dodajanje
+## Spreminjanje in dodajanje
 
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
@@ -35,7 +33,7 @@ print(s)
 
 Nov par ključ-vrednost dodamo tako kot piše v tretji vrstici zgornjega primera. Pri dodajanju ni pomembno, če ključ še ne obstaja v slovarju, ampak se neobstoječi ključ doda, vrednost pa se nastavi na vrednost desno od enačaja.
 
-### Brisanje
+## Brisanje
 
 ```{python}
 s = {'a': 6, 'b': 'test', 123: True}
@@ -43,7 +41,7 @@ del s['a']
 print(s)
 ```
 
-## Metode na slovarjih
+## Metode
 
 -   `s.get(kljuc, privzeta_vrednost)` vrne vrednost, ki ustreza ključu `kljuc`, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezni parameter `privzeta_vrednost`, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani
 -   `s.pop(kljuc)` iz slovarja odstrani par s ključem `kljuc` in vrne vrednost

@@ -23,7 +23,7 @@ print(a.ndim)
 print(a.size)
 ```
 
-Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato raje je ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
+Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato je raje ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
 
 -   `np.zeros(oblika)` vrne tabelo ničel; `oblika` je nabor celih števil, ki predstavlja obliko tabele
 -   `np.ones(oblika)` vrne tabelo enic

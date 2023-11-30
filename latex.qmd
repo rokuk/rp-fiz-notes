@@ -1,0 +1,15 @@
+# LaTeX
+
+LaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.
+
+V slovenščini je na voljo priročnik [Ne najkrajši uvod v LaTeX](https://users.fmf.uni-lj.si/plestenjak/Vaje/LaTeX/lshort.pdf), za začetek pa je morda še primernejši [Praktičen uvod v LaTeX](https://e6.ijs.si/~jslak/files/prakticen_uvod_v_latex.pdf)
+
+Dobra referenca je [Overleaf](https://www.overleaf.com/learn), ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).
+
+LaTeX je potrebno najprej [namestiti](https://www.latex-project.org/get/). Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.
+
+LaTeX dokumente lahko ustvarjate v *Visual Studio Code*, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je [TeXstudio](https://www.texstudio.org), [LyX](https://www.lyx.org) (omogoča način urejanja podoben Wordu) ali [Overleaf](https://www.overleaf.com) (omogoča hkratno delo več oseb preko spleta).
+
+Zelo uporabno orodje je [Mathpix](https://mathpix.com), ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX ukaze.
+
+Priročna je tudi spletna stran [Table generator](https://www.tablesgenerator.com), ki omogoča generiranje kode za LaTeX tabele iz Excelovih ali .csv datotek.

@@ -7,7 +7,7 @@ Gradivi za to poglavje sta
 
 ## Zanka for
 
-Zanko for uporabimo, ko vemo kolikokrat želimo nekaj ponoviti.
+Zanko for uporabimo, ko **vemo kolikokrat želimo nekaj ponoviti**.
 
 ```{python}
 zacetek = 3
@@ -21,7 +21,7 @@ for i in range(zacetek, konec, korak):
 
 ## Zanka while
 
-Zanko while uporabimo, ko želimo zanko izvajati, dokler je nek pogoj izpolnjen.
+Zanko while uporabimo, ko želimo zanko izvajati, **dokler je nek pogoj izpolnjen**.
 
 ```{python}
 i = 3
