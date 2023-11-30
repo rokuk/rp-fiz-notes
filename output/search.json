@@ -1,0 +1,275 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Računalniški praktikum (fizika) - Vaje",
+    "section": "",
+    "text": "O strani\nNa tej strani so zbrani zapiski za vaje predmeta računalniški praktikum v 1. letniku študija fizike na Fakulteti za matematiko in fiziko Univerze v Ljubljani.\nZapiski so mišljeni le kot opora pri izvajanju vaj in ne obsegajo čisto vseh obravnavanih vsebin. Zapiski zato ne morejo nadomestiti obiskovanja predavanj in vaj.\n\nVsebina teh strani je objavljena pod licenco CC BY-NC-SA 4.0. Markdown koda za strani je dostopna na https://github.com/rokuk/rp-fiz-notes"
+  },
+  {
+    "objectID": "setup.html#namestitev-pythona",
+    "href": "setup.html#namestitev-pythona",
+    "title": "1  Namestitev okolja za vaje",
+    "section": "Namestitev Pythona",
+    "text": "Namestitev Pythona\n\nNamestite Python (najbolje kar verzijo 3.12) s te strani (zavihek Downloads): https://www.python.org. Ko poženete program za namestitev, v oknu, ki se odpre, odkljukajte “Add Python 3.x to PATH”. Nato nadaljujte z namestitvijo (opcija “Install now”).\n\n\nČe uporabljate Windows 7 ali še starejši Windows, boste morali namestiti starejšo verzijo Pythona (npr. 3.8.9 ali manj). Najdete jo tu: https://www.python.org/downloads/\n\n\nPreverite ali se je Python uspešno namestil. Odprite program Ukazni poziv (Windows) ali Terminal (macOS/Linux), ki je že na vašem računalniku. V okno, ki se odpre vpišite ukaz python --version in pritisnite tipko Enter. Če je Python uspešno nameščen, bi se vam v novi vrstici moralo izpisati Python 3.x.y (kjer je x.y verzija nameščenega Pythona).\n\n\nČe ste na Windowsu in ukaz python --version ne izpiše verzije, ampak se vam izpiše napaka ali “Python not found”, poskusite ukaz py --version."
+  },
+  {
+    "objectID": "setup.html#namestitev-visual-studio-code",
+    "href": "setup.html#namestitev-visual-studio-code",
+    "title": "1  Namestitev okolja za vaje",
+    "section": "Namestitev Visual Studio Code",
+    "text": "Namestitev Visual Studio Code\n\nNamestite Visual Studio Code: https://code.visualstudio.com\nNamestite Python extension. Odprite Visual Studio Code. Morda se vam bo v oknu VSCode pojavil zavihek z naslovom Get Started, ki ga lahko kar zaprete. Na levem robu okna kliknite na Extensions (ikona s štirimi kvadratki), vpišite Python, izberite Python in na desni kliknite Install. Morda se bo odprlo okno Get Started, ki ga lahko zaprete.\nDobro je, da si nekje na računalniku ustvarite mapo, v katero boste shranjevali vso vašo kodo. V VSCode v meniju File kliknite Open Folder... in izberite to mapo. Morda se bo pojavilo okno, ki vas sprašuje, če zaupate avtorju datotek v tej mapi: kliknite Yes, ker sebi zaupate. Ustvarite novo datoteko (meni File &gt; New File), jo shranite (meni File &gt; Save) in jo poimenujte test.py (na Windowsu izberete Save as type: Python). Vsebina datoteke se vam odpre kot zavihek v VSCode. Vanj vpišite print(\"Pozdravljen svet!\"). V desnem zgornjem kotu bi morali imeti gumb v obliki puščice, s katerim lahko poženete napisani program. Če ga nimate, si lahko namestite extension z imenom Code Runner. Sicer lahko program poženete tudi tako, da desno kliknete kjerkoli v območju urejevalnika besedila in nato v meniju, ki se pojavi, izberete Run Python File in Terminal. Ko poženete program, bi se vam v oknu terminala moralo izpisati “Pozdravljen svet!”.\nPriporočam, da vklopite tudi “linter”. To je program, ki je del VSCode in v vaši kodi sproti preverja ali ste se kje zmotili. Ne ujame vseh možnih napak, mnoge zatipke pa zazna in vas nanje opozori, še preden poženete program, tako da jih podčrta. VSCode pritisnite Ctrl+Shift+P in vpišite “linter” (brez navednic), kliknite na Python: Select Linter. Pojavi se meni z več možnostmi za linter. Priporočam flake8, ki nas poleg napak opozori tudi na kršitve priporočil za stil PEP8. Izberete ga s tipko Enter. VSCode vas bo desno spodaj obvestil, da ta linter ni nameščen; namestite ga tako, da kliknete Install v tem obvestilu. Po nekaj sekundah bi se moral namestiti. Lahko ga preizkusite tako, da v datoteko s končnico .py nekaj narobe napišete npr. prnt(\"Pozdravljen svet!\")\n\nVSCode ima veliko funkcionalnosti, ki nam lahko pomagajo pri programiranju. Več o tem piše v uradni dokumentaciji: https://code.visualstudio.com/docs/editor/codebasics"
+  },
+  {
+    "objectID": "setup.html#namestitev-paketa-numpy",
+    "href": "setup.html#namestitev-paketa-numpy",
+    "title": "1  Namestitev okolja za vaje",
+    "section": "Namestitev paketa Numpy",
+    "text": "Namestitev paketa Numpy\nPotrebovali bomo še Pythonov paket Numpy. To je neke vrste dodatek za Python, ki nam omogoča lažje delo z vektorji in tabelami. Več o tem na prihodnjih vajah. Dodatne module za Python lahko nameščamo in odstranjujemo z modulom pip. To je modul, ki bi se moral avtomatsko namestiti skupaj s Pythonom.\n\nNajprej v Ukazni poziv / Terminal vpišite in izvršite ukaz python -m pip --version (če ste na Windowsu boste morda dobili napako v stilu “python ne obstaja”, v tem primeru poskusite izvršiti ukaz py -m pip --version). Izpisati bi se vam moralo nekaj podobnega pip X.Y.Z from ... (python 3.N.N).\n\n\nVeč o tem na https://pip.pypa.io/en/stable/getting-started/\n\nČe se vam izpiše to, lahko nadaljujete na 8. korak, sicer berite naprej. Če se vam izpiše nekaj v stilu “pip ne obstaja” ali “command not found”, morate namestiti Pythonov modul pip. To naredite z ukazom python -m ensurepip --upgrade (oz. na Windowsu morda py -m ensurepip --upgrade).\n\nVeč informacij o nameščanju modula pip je na https://pip.pypa.io/en/stable/installation/#python\n\n\nNamestite Pythonov modul numpy. To naredite z ukazom python -m pip install numpy (oz. na Windowsu bo morda treba uporabiti py -m pip install numpy)."
+  },
+  {
+    "objectID": "setup.html#pogoste-težave",
+    "href": "setup.html#pogoste-težave",
+    "title": "1  Namestitev okolja za vaje",
+    "section": "Pogoste težave",
+    "text": "Pogoste težave\n\nČe pri poganjanju programa dobite napako no module named numpy, to pomeni, da Numpy ni nameščen. Če ste ga že namestili, je morda težava, da ste ga namestili za napačno verzijo Pythona (glej spodnjo alinejo). Če ga še niste namestili, poskusite zgoraj opisani postopek.\nČe imate na računalniku nameščenih več verzij Pythona (to so npr. mnogi računalniki z macOS) se lahko “python” v ukazni vrstici / terminalu nanaša na drugo verzijo, kot je tista, ki jo uporabljate za poganjanje svojih programov v VSCode. Katera verzija se uporablja v VSCode lahko izberete tako, da odprete katerokoli datoteko s končnico .py in kliknete na “Python 3.x.y” na spodnjem robu okna. Pokaže se okno z vsemi nameščenimi verzijami. Da namestite Numpy za določeno verzijo Pythona lahko poskusite ukaz python3.10 -m pip install numpy, kjer 3.10 zamenjate z želeno verzijo Pythona. Na Windowsu bi moral delovati ukaz py -3.10 -m pip install numpy."
+  },
+  {
+    "objectID": "uvod.html#števila",
+    "href": "uvod.html#števila",
+    "title": "2  Uvod v Python",
+    "section": "Števila",
+    "text": "Števila\nZa seštevanje uporabimo +, za odštevanje -, za množenje *, za potence **, za deljenje /, za celoštevilsko deljenje //, za ostanek pri deljenju %. Za vrstni red računanja operacij (če jih kombiniramo) veljajo enaka pravila kot v matematiki.\n\ncelidel = 20 // 8\nostanek = 20 % 8\nprint(celidel, ostanek)\n\n2 4\n\n\nZa zaokroževanje števila stevilo uporabimo funkcijo round(stevilo, d), ki število zaokroži na d decimalnih mest."
+  },
+  {
+    "objectID": "uvod.html#logične-operacije",
+    "href": "uvod.html#logične-operacije",
+    "title": "2  Uvod v Python",
+    "section": "Logične operacije",
+    "text": "Logične operacije\nLogične operacije s ključnimi besedami and, or in not ustrezajo operacijam v matematiki.\n\na and b je True, če sta a in b enaka True, sicer je False\na or b je False, le če sta a in b enaka False\nnot a je True, če je a enak False, sicer je True\n\nLogične operacije lahko kombiniramo. Vrstni red operacij lahko določimo z oklepaji. Sicer ima operator and prednost pred or, not pa ima prednost pred obema.\n\na = True\nb = True\nc = False\nprint((a or b) and (a or c))\n\nTrue\n\n\nV logičnih operacijah se število 0 obnaša kot False, ostala števila pa kot True."
+  },
+  {
+    "objectID": "uvod.html#relacijski-operatorji",
+    "href": "uvod.html#relacijski-operatorji",
+    "title": "2  Uvod v Python",
+    "section": "Relacijski operatorji",
+    "text": "Relacijski operatorji\nČe relacija velja ima izraz vrednost True, sicer pa False.\n\nprimerjava števil a &lt; b ali a &lt;= b\npreverjanje enakosti a == b\npreverjanje različnosti (nista enaka) a != b\n\nLogične operacije in relacije so binarne. Binarna operacija se izvede med tem, kar je na levi, in tem, kar je na desni."
+  },
+  {
+    "objectID": "uvod.html#nekoliko-kompleksnejši-primer",
+    "href": "uvod.html#nekoliko-kompleksnejši-primer",
+    "title": "2  Uvod v Python",
+    "section": "Nekoliko kompleksnejši primer",
+    "text": "Nekoliko kompleksnejši primer\nČe želimo preveriti ali je spremenljivka mesec enaka 6 ali 7, ni prav, če napišemo\n\nmesec = 4\nrezultat = mesec == 6 or 7\nprint(rezultat)\n\n7\n\n\nV zgornjem izrazu se najprej izvede primerjava med mesec in 6. Ker 4 ni enako 6, nam to da False. Nato se izvede operacija or med False in 7. Ker se 7 obnaša kot True bi pričakovali, da dobimo True. Operacija or deluje tako, da vrne prvo vrednost, ki ni False. Ponavadi primerjamo True in False vrednosti, zato ima operacija rezultat True, če je ena od vrednosti True. Na levi strani je pri nas False, na desni pa 7, zato ima celoten izraz desno od enačaja vrednost 7 (ker je prva vrednost, ki ni False).\nPravilna rešitev bi bila\n\nmesec = 4\nrezultat = (mesec == 6) or (mesec == 7)\nprint(rezultat)\n\nFalse"
+  },
+  {
+    "objectID": "zanke.html#zanka-for",
+    "href": "zanke.html#zanka-for",
+    "title": "3  Zanke",
+    "section": "Zanka for",
+    "text": "Zanka for\nZanko for uporabimo, ko vemo kolikokrat želimo nekaj ponoviti.\n\nzacetek = 3\nkonec = 10\nkorak = 2\nfor i in range(zacetek, konec, korak):\n    print(i)\n\n3\n5\n7\n9\n\n\nČe tretjega parametra ne podamo, bo korak 1. Če podamo le en parameter bo šla zanka od 0 do vrednosti tega parametra."
+  },
+  {
+    "objectID": "zanke.html#zanka-while",
+    "href": "zanke.html#zanka-while",
+    "title": "3  Zanke",
+    "section": "Zanka while",
+    "text": "Zanka while\nZanko while uporabimo, ko želimo zanko izvajati, dokler je nek pogoj izpolnjen.\n\ni = 3\nwhile i &lt; 10:\n    print(i)\n    i += 2\n\n3\n5\n7\n9\n\n\nV zgornjem primeru bi lahko i &lt; 10 nadomestili s kakršnokoli logično operacijo, ki vrne True ali False. Zanka se izvaja, dokler je pogoj True.\nPozor: Paziti moramo, da ne napišemo neskončne zanke, kjer je pogoj vedno True! V tem primeru se izvajanje programa nikoli ne konča. Izvedbo programa lahko v Ukaznem pozivu / Terminalu prekinemo s kombinacijo tipk Ctrl+C."
+  },
+  {
+    "objectID": "seznami-in-nizi.html#skupne-lastnosti",
+    "href": "seznami-in-nizi.html#skupne-lastnosti",
+    "title": "4  Seznami in nizi",
+    "section": "Skupne lastnosti",
+    "text": "Skupne lastnosti\n\nIndeksiranje\nIndeksi morajo biti cela števila, sicer pride do napake. Indeksi se začnejo z 0 (prvi element). Negativni indeksi so indeksi šteti s konca seznama proti začetku (-1 je indeks zadnjega elementa, -2 predzadnjega). Če podamo indeks, ki je večji od indeksa zadnjega elementa, Python javi IndexError.\n\nspam = ['cat', 'bat', 42, True, 'dog']\nprint(spam[2])\nprint(spam[-2])\n\n42\nTrue\n\n\nPodsezname dobimo s sintakso seznam[zacetni_indeks:koncni_indeks:korak]. Nobeno od teh treh števil ni obvezno.\n\nspam = ['cat', 'bat', 42, True, 'dog']\nprint(spam[1:4:2])\nprint(spam[:3])\nprint(spam[::2])\nprint(spam[::-1])\n\n['bat', True]\n['cat', 'bat', 42]\n['cat', 42, 'dog']\n['dog', True, 42, 'bat', 'cat']\n\n\nPodobno je za nize.\n\nspam = \"besedna zveza\"\nprint(spam[2])\nprint(spam[1:4])\nprint(spam[:3])\nprint(spam[::2])\nprint(spam[::-1])\n\ns\nese\nbes\nbsdazea\nazevz andeseb\n\n\n\n\nDolžina\nŠtevilo elementov seznama ali število znakov v nizu dobimo s funkcijo len(seznam_ali_niz).\n\nc = [1, 2, 3, \"abeceda\"]\nprint(len(c))\nd = \"terminologija\"\nprint(len(d))\n\n4\n13\n\n\n\n\nZdruževanje\nVeč seznamov / več nizov staknemo s plusom.\n\nsez1 = [1, 2, 3]\nsez2 = [4, 5, 6]\nprint(sez1 + sez2)\nniz1 = \"a\"\nniz2 = \"b\"\nprint(niz1 + niz2)\n\n[1, 2, 3, 4, 5, 6]\nab\n\n\nSezname lahko združimo tudi z metodo extend. Za zgornji primer: seznam1.extend(seznam2).\n\n\nPreverjanje vsebovanja\nS ključno besedo in preverimo ali seznam vsebuje nek element, kar lahko uporabimo npr. v if stavku. Podobno lahko z in preverimo ali niz vsebuje nek znak.\n\nprint('cat' in ['cat', 'bat', 42, True, 'dog'])\nprint('c' in 'beseda')\n\nTrue\nFalse\n\n\n\n\nZanke\nPo elementih seznama / znakih niza se lahko sprehodimo z zanko for.\n\nspam = ['cat', 'bat', 42, True, 'dog']\nfor element in spam:\n    print(element)\n\ncat\nbat\n42\nTrue\ndog\n\n\n\nspam = \"abc\"\nfor element in spam:\n    print(element)\n\na\nb\nc\n\n\nKo v zanki potrebujemo indekse, pride prav spodnji pristop, kjer do elementov seznama dostopamo z indeksi.\nPrimer: zanima nas razlika med zaporednimi elementi seznama.\n\nseznam = [1, 2, 3, 5, 6, 7]\nfor i in range(len(seznam) - 1):\n    print(seznam[i+1] - seznam[i])\n\n1\n1\n2\n1\n1\n\n\nTretji pristop k sprehodu po elementih seznama / znakih niza pa je funkcija enumerate (glej dno te strani za primer)."
+  },
+  {
+    "objectID": "seznami-in-nizi.html#spreminjanje",
+    "href": "seznami-in-nizi.html#spreminjanje",
+    "title": "4  Seznami in nizi",
+    "section": "Spreminjanje",
+    "text": "Spreminjanje\nVrednost elementa v seznamu lahko spremenimo.\n\nspam = ['cat', 'bat', 42, True, 'dog']\nspam[1] = 'aardvark'\nprint(spam)\n\n['cat', 'aardvark', 42, True, 'dog']\n\n\nV nizu znakov ne moremo tako spreminjati! Uporabimo pa lahko podsezname:\n\ns = \"abcdef\"\nindex = 3\ns = s[:index] + \"ž\" + s[index + 1:]\nprint(s)\n\nabcžef\n\n\nElemente seznama lahko zbrišemo s ključno besedo del.\n\nspam = ['cat', 'bat', 42, True, 'dog']\ndel spam[2]\nprint(spam)\n\n['cat', 'bat', True, 'dog']\n\n\n\nDodajanje elementov\nElement lahko dodamo na konec seznama z metodo append.\n\nspam = ['cat', 'bat', 42, True, 'dog']\nspam.append(3)\nprint(spam)\n\n['cat', 'bat', 42, True, 'dog', 3]\n\n\nPri nizih ne moremo uporabiti metode append, lahko pa dodamo elemente z operatorjem +. Tudi tu lahko uporabimo okrajšavo +=.\n\ns = \"abcd\"\ns += \"e\"\nprint(s)\n\nabcde"
+  },
+  {
+    "objectID": "seznami-in-nizi.html#nekaj-uporabnih-funkcij",
+    "href": "seznami-in-nizi.html#nekaj-uporabnih-funkcij",
+    "title": "4  Seznami in nizi",
+    "section": "Nekaj uporabnih funkcij",
+    "text": "Nekaj uporabnih funkcij\n\nlen(seznam_ali_niz) vrne število elementov seznama oz. število znakov v nizu\nenumerate(seznam) vrne zaporedje parov, v katerih so na drugem mestu vrednosti iz podanega seznama, na prvem mestu pa so njihovi indeksi. Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo list(). V for zanki lahko uporabimo enumerate brez list.\n\n\nprint(list(enumerate([\"a\", \"b\", \"c\"])))\n\n[(0, 'a'), (1, 'b'), (2, 'c')]\n\n\n\nfor indeks, element in enumerate([\"a\", \"b\", \"c\"]):\n    print(indeks, element)\n\n0 a\n1 b\n2 c\n\n\n\nzip(seznam1, seznam2, ...) vrne zaporedje naborov istoležnih elementov v podanih seznamih. Funkcija vrne poseben tip - da dobimo seznam, moramo ta tip pretvoriti s funkcijo list(). V for zanki lahko uporabimo zip brez list.\n\n\nprint(list(zip('xyz', [10, 20, 30], [4, 5, 6])))\n\n[('x', 10, 4), ('y', 20, 5), ('z', 30, 6)]\n\n\n\nfor x in zip('xyz', [10, 20, 30], [4, 5, 6]):\n    print(x)\n\n('x', 10, 4)\n('y', 20, 5)\n('z', 30, 6)"
+  },
+  {
+    "objectID": "delo-z-objekti.html#metode-za-nize",
+    "href": "delo-z-objekti.html#metode-za-nize",
+    "title": "5  Delo z objekti",
+    "section": "Metode za nize",
+    "text": "Metode za nize\n\nniz.count(znak) vrne število pojavitev znaka v nizu\nniz.index(znak) vrne indeks, na katerem se znak prvič pojavi; če ne obstaja sproži napako\nniz.replace(niz1, niz2) vrne niz, kjer so podnizi enaki niz1 zamenjani z niz2\nniz.lower() in niz.upper() vrne niz, kjer iz malih črk naredi velike ali obratno\nniz.islower() in niz.isupper() vrne True, če je niz iz samih malih črk oz. velikih črk\nniz.strip() vrne niz, kjer z leve in desne strani odstrani “whitespace characters” (presledki, tab, \\n). Lahko podamo neobvezni argument, s katerim določimo, katere znake naj odstrani z leve in desne. Obstajata tudi metodi .rstrip() in .lstrip(), ki odstranjujeta le z leve in desne.\n\n\nprint('    Hello, World    \\n'.strip())\n\nHello, World\n\n\n\n\"locilo\".join(seznam) združi elemente seznama v niz in postavi locilo med posamezne elemente\n\n\nprint('ABC'.join(['Moje', 'ime', 'je', 'Rok']))\n\nMojeABCimeABCjeABCRok\n\n\n\nniz.split(locilo) vrne seznam, kjer so elementi posamezni deli niza, ki jih ločuje locilo. Privzeta vrednost za locilo je presledek.\n\n\nprint(\"Moje ime je Rok.\".split())\n\n['Moje', 'ime', 'je', 'Rok.']"
+  },
+  {
+    "objectID": "delo-z-objekti.html#metode-za-sezname",
+    "href": "delo-z-objekti.html#metode-za-sezname",
+    "title": "5  Delo z objekti",
+    "section": "Metode za sezname",
+    "text": "Metode za sezname\n\nsez.append(element) doda element na konec seznama\nsez.extend(sez2) na konec seznama sez pristavi seznam sez2, na kratko sez += sez2\nsez.insert(i, x) na mesto z indeksom i vstavi element x\nsez.remove(x) iz seznama odstrani prvo pojavitev elementa x\nsez.pop(i) odstrani element na indeksu i in ga vrne; če i ne podamo je to zadnji element\nsez.index(x) vrne prvi indeks, na katerem se nahaja vrednost x\nsez.count(x) vrne število pojavitev x v seznamu\nsez.sort(reverse=False) uredi seznam po velikosti naraščajoče / abecedi; če podamo neobvezni argument reverse=True, bo seznam urejen v nasprotnem vrstnem redu"
+  },
+  {
+    "objectID": "delo-z-objekti.html#sortiranje-seznamov",
+    "href": "delo-z-objekti.html#sortiranje-seznamov",
+    "title": "5  Delo z objekti",
+    "section": "Sortiranje seznamov",
+    "text": "Sortiranje seznamov\nZa sortiranje lahko uporabimo funkcijo sorted(seznam), ki vrne sortiran seznam ali pa metodo seznam.sort(), ki spremeni originalni seznam, tako, da je sortiran. Obema funkcijama lahko podamo neobvezni argument reversed=True, ki seznam sortira v nasprotnem vrstnem redu.\n*Podamo lahko tudi neobvezni argument key=ime_funkcije, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:\n\ndef sortirna_funkcija(element_seznama):\n    return element_seznama[2]\n\nstudent_tuples = [\n    ('john', 'A', 15),\n    ('jane', 'B', 12),\n    ('dave', 'B', 10),\n]\nprint(sorted(student_tuples, key=sortirna_funkcija))\n\n[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]\n\n\nSortiramo lahko tudi po več komponentah nabora, če v funkciji vrnemo nabor komponent, po katerih želimo sortirati. npr. funkcija z return (element_seznama[1], element_seznama[2]) bi seznam najprej sortirala po drugem elementu nabora, nato pa še po tretjem (tisti elementi seznama, ki imajo enak drugi element nabora, bi bili sortirani še po tretjem).\nVeč o sortiranju v uradni dokumentaciji: https://docs.python.org/3/howto/sorting.html"
+  },
+  {
+    "objectID": "delo-z-objekti.html#pretvarjanje-med-tipi",
+    "href": "delo-z-objekti.html#pretvarjanje-med-tipi",
+    "title": "5  Delo z objekti",
+    "section": "Pretvarjanje med tipi",
+    "text": "Pretvarjanje med tipi\nSpremenljivko a lahko pretvorimo v najpogosteje uporabljane tipe:\n\nint(a) vrne celo število\nfloat(a) vrne decimalno število\nstr(a) vrne niz\nlist(a) vrne seznam\ntuple(a) vrne nabor\nset(a) vrne množico"
+  },
+  {
+    "objectID": "slovarji.html#osnovne-operacije",
+    "href": "slovarji.html#osnovne-operacije",
+    "title": "6  Slovarji",
+    "section": "Osnovne operacije",
+    "text": "Osnovne operacije\n\nDostopanje do vrednosti\nDo vrednosti dostopamo podobno kot pri seznamih, le da namesto indeksov uporabimo ključe.\n\ns = {'a': 6, 'b': 'test', 123: True}\nprint(s['b'])\n\ntest\n\n\nČe ključ ne obstaja pride do napake. Temu se lahko izognemo z metodo get\n\ns = {'a': 6, 'b': 'test', 123: True}\nprint(s.get('a'))\nprint(s.get('ž', 100000))\n\n6\n100000\n\n\n\n\nSpreminjanje in dodajanje\n\ns = {'a': 6, 'b': 'test', 123: True}\ns['a'] = 10\ns['abcd'] = False\nprint(s)\n\n{'a': 10, 'b': 'test', 123: True, 'abcd': False}\n\n\nNov par ključ-vrednost dodamo tako kot piše v tretji vrstici zgornjega primera. Pri dodajanju ni pomembno, če ključ še ne obstaja v slovarju, ampak se neobstoječi ključ doda, vrednost pa se nastavi na vrednost desno od enačaja.\n\n\nBrisanje\n\ns = {'a': 6, 'b': 'test', 123: True}\ndel s['a']\nprint(s)\n\n{'b': 'test', 123: True}"
+  },
+  {
+    "objectID": "slovarji.html#metode-na-slovarjih",
+    "href": "slovarji.html#metode-na-slovarjih",
+    "title": "6  Slovarji",
+    "section": "Metode na slovarjih",
+    "text": "Metode na slovarjih\n\ns.get(kljuc, privzeta_vrednost) vrne vrednost, ki ustreza ključu kljuc, če ključ ne obstaja v slovarju vrne None; lahko podamo še neobvezni parameter privzeta_vrednost, ki jo vrne, če ključ ne obstaja; glej primer na vrhu strani\ns.pop(kljuc) iz slovarja odstrani par s ključem kljuc in vrne vrednost\ns.update(s2) k slovarju s doda pare slovarja s2\ns.values() za uporabo v zankah; vrne vrednosti v slovarju; s funkcijo list pretvorimo v seznam\ns.keys() za uporabo v zankah; vrne ključe v slovarju; s funkcijo list pretvorimo v seznam\ns.items() za uporabo v zankah; vrne nabore ključev in vrednosti; s funkcijo list pretvorimo v seznam"
+  },
+  {
+    "objectID": "slovarji.html#preverjanje-vsebovanja",
+    "href": "slovarji.html#preverjanje-vsebovanja",
+    "title": "6  Slovarji",
+    "section": "Preverjanje vsebovanja",
+    "text": "Preverjanje vsebovanja\nKot pri seznamih in nizih uporabimo ključno besedo in, da preverimo ali se nek ključ/vrednost/par nahaja v slovarju.\n\ns = {'a': 6, 'b': 'test', 123: True}\nprint('test' in s.values())\nprint('b' in s.keys())\nprint(('a', 6) in s.items())\n\nTrue\nTrue\nTrue\n\n\n## True\n## True\n## True"
+  },
+  {
+    "objectID": "slovarji.html#zanke",
+    "href": "slovarji.html#zanke",
+    "title": "6  Slovarji",
+    "section": "Zanke",
+    "text": "Zanke\nZanka po vrednostih v slovarju.\n\ns = {'a': 6, 'b': 'test', 123: True}\nfor v in s.values():\n    print(v)\n\n6\ntest\nTrue\n\n\nZanka po ključih v slovarju.\n\ns = {'a': 6, 'b': 'test', 123: True}\nfor k in s.keys(): # lahko tudi \"for k in s:\"\n    print(k)\n\na\nb\n123\n\n\nZanka po parih v slovarju.\n\ns = {'a': 6, 'b': 'test', 123: True}\nfor kljuc, vrednost in s.items():\n    print(kljuc, '-&gt;', vrednost)\n\na -&gt; 6\nb -&gt; test\n123 -&gt; True"
+  },
+  {
+    "objectID": "datoteke.html#datotečni-sistem",
+    "href": "datoteke.html#datotečni-sistem",
+    "title": "7  Datoteke",
+    "section": "Datotečni sistem",
+    "text": "Datotečni sistem\nDatoteke so shranjene na različnih nosilcih (npr. trdi disk, SSD, DVD, USB ključ, …). Prostor, ki je na voljo na nosilcu lahko razdelimo na več ločenih delov, ki jim rečemo particije. Primer: trdi disk z 1000 GB bi lahko razdelili na dve particiji C z 100 GB in D z 900 GB. Vsaka particija na nosilcih, ki so priklopljeni na računalnik, dobi svojo črko (to velja za Windows, drugje je drugače), npr. USB ključi so pogosto pod E ali F.\nNa računalniku datoteke organiziramo v mape, ki so lahko gnezdene. Na vrhu imamo korensko mapo (root folder). Na Linux in macOS je to / na Windowsu pa C:\\, kjer je C ime particije.\n\nAbsolutna in relativna pot\nVsaki datoteki ustreza ena absolutna pot. To je “naslov”, pod katero jo lahko najdemo. Primer: C:\\bacon\\fizz\\spam.txt. Pot vsebuje vse mape, v katerih se datoteka nahaja, ločene z \\ (na Windowsu; na Linux in macOS je ločilo /), ime datoteke, piko in končnico datoteke, ki določa njen tip.\n\n\n\nVir: https://automatetheboringstuff.com/2e/chapter9/ (Al Sweigart, CC BY-NC-SA 3.0)\n\n\nRelativna pot do datoteke je pot glede na neko drugo mapo. Za zgornji primer: glede na mapo bacon je relativna pot do datoteke .\\fizz\\spam.txt.\n\nPika pomeni trenutno mapo.\n\nČe bi bila trenutna mapa eggs, bi bila relativna pot do prejšnje datoteke glede na eggs enaka ..\\bacon\\fizz\\spam.txt.\n\nDve piki pomenita eno mapo višje v hierarhiji (parent folder) glede na trenutno mapo.\n\nČe bi želeli iti dve mapi višje bi uporabili ..\\.., npr. iz mape fizz v mapo eggs pridemo z ..\\..\\eggs, itd.\nZa podrobnejši razlago in več primerov glej gradivo: https://automatetheboringstuff.com/2e/chapter9/\n\n\nDelo z ukaznim pozivom\nPodobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu (Terminal) v nekem trenutku nahajamo v neki mapi (ang. Current working directory ali CWD). Ta mapa je vedno napisana na začetku vrstice. V ukaznem pozivu najprej napišemo ukaz nato parametre, ki jih želimo podati, ločene s presledki. Ukaz izvedemo s tipko Enter.\nV neko mapo se lahko premaknemo z ukazom cd, ki mu kot argument podamo pot (relativno ali absolutno do mape, v katero se želimo premakniti.\nUkaz dir izpiše vse datoteke in mape, ki se nahajajo v trenutni mapi.\nGlej tudi: https://ucilnica.fmf.uni-lj.si/mod/page/view.php?id=2505\n\n\nMape in datoteke v Pythonu\nZa delo z datotečnim sistemom je na voljo modul os. Posamezne funkcije, njihove parametre in uporabo lahko poiščete v uradni dokumentaciji ali drugod na spletu. Spodaj parametri funkcij niso napisani!\nNekaj najbolj uporabnih:\n\nos.getcwd() vrne trenutno mapo (CWD)\nos.chdir() nastavi trenutno mapo na podano pot\nos.listdir() vrne seznam poti do datotek in map, ki se nahajajo v mapi, do katere vodi pot\nos.mkdir() ustvari novo mapo, ki se nahaja na podani poti\nos.rename() preimenuje mapo, prvi parameter je pot mape, drugi pa nova pot (z novim imenom)\nos.remove() izbriše datoteko, ki se nahaja na podani poti\nos.rmdir() izbriše prazno mapo, ki se nahaja na podani poti\n\nZa delo s potmi je na voljo knjižnica os.path, kjer so pogosto uporabljane funkcije:\n\nos.path.exists() vrne True, če podana pot obstaja\nos.path.join() stakne dve poti v eno, pri čemer ustrezno poskrbi za prava ločila glede na OS\nos.path.abspath() vrne absolutno pot, ki ustreza podani relativni poti (glede na trenutno mapo)\nos.path.relpath() vrne relativno pot, ki ustreza podani absolutni poti (glede na trenutno mapo)\nos.path.isfile() vrne True, če pot vodi do datoteke\nos.path.isdir() vrne True, če pot vodi do mape"
+  },
+  {
+    "objectID": "datoteke.html#pisanje",
+    "href": "datoteke.html#pisanje",
+    "title": "7  Datoteke",
+    "section": "Pisanje",
+    "text": "Pisanje\nDatoteko odpremo v načinu za pisanje mode=\"w\" in uporabimo funkcijo write(), ki zapiše niz v datoteko. Znak \\n pomeni novo vrstico. Če želimo zapisati znak \\ moramo v Pythonu napisati \\\\. Več o uporabi posebnih znakov v Pythonu: https://www.w3schools.com/python/gloss_python_escape_characters.asp\npotdodatoteke = \"datoteka.txt\"\nwith open(potdodatoteke, mode=\"w\", encoding=\"utf-8\") as dat:\n    dat.write(\"To je \")\n    dat.write(\"en stavek.\\nTo je drugi.\")\n\nwith open(\"datoteka.txt\", mode=\"r\", encoding=\"utf-8\") as dat:\n    print(\"datoteka.txt\")\n    print(dat.read())\n\ndatoteka.txt\nTo je en stavek.\nTo je drugi.\n\n\nNamesto dat.write(\"niz\") se lahko uporablja tudi print(\"niz\", file=dat), kjer odprto datoteko podamo kot parameter."
+  },
+  {
+    "objectID": "datoteke.html#branje",
+    "href": "datoteke.html#branje",
+    "title": "7  Datoteke",
+    "section": "Branje",
+    "text": "Branje\n\nread()\nDatoteko odpremo v načinu za branje mode=\"r\" in uporabimo metodo read(), ki vrne celotno vsebino datoteke naenkrat v obliki niza.\n\nwith open(\"datoteka.txt\", mode=\"r\", encoding=\"utf-8\") as datoteka:\n    vsebina = datoteka.read()\nprint(vsebina)\n\nTo je en stavek.\nTo je drugi.\n\n\nUporaba argumenta mode je opisana na dnu strani. Klicu open lahko podamo tudi neobvezni argument encoding, ki poda kodno tabelo, v kateri je napisana datoteka. Privzeta vrednost tega argumenta je na šolskih (in najverjetneje tudi vaših) Windows računalnikih windows-1252, kar je nekoliko zastarel standard. Zato je dobra praksa uporaba parametra encoding=\"utf-8\", s čimer uporabimo Unicode, ki se danes uporablja skoraj povsod. Na macOS in Linux je vrednost utf-8 že privzeta.\n\n\nreadlines()\nZ metodo readlines() dobimo seznam, v katerem so posamezne vrstice iz datoteke.\n\nwith open(\"datoteka.txt\", mode=\"r\", encoding=\"utf-8\") as datoteka:\n    vrstice = datoteka.readlines()\nprint(vrstice)\n\n['To je en stavek.\\n', 'To je drugi.']\n\n\n\n\nZanka for\nPo vrsticah datoteke lahko gremo z zanko for.\n\nvrstice = []\nwith open(\"datoteka.txt\", mode=\"r\", encoding=\"utf-8\") as datoteka:\n    for line in datoteka:\n        vrstice.append(line)\nprint(vrstice)\n\n['To je en stavek.\\n', 'To je drugi.']"
+  },
+  {
+    "objectID": "datoteke.html#mode",
+    "href": "datoteke.html#mode",
+    "title": "7  Datoteke",
+    "section": "Mode",
+    "text": "Mode\nje neobvezni argument funkcije open(). Privzeta vrednost je mode=\"rt\". Zato nam v zgornjih primerih ni bilo treba pisati t (je že privzet poleg druge črke, ki jo podamo (r ali w)). S posameznimi črkami povemo, kaj želimo z datoteko početi.\n\n\n\n\n\n\n\n\noznaka\nopis\nopomba\n\n\n\n\nr\nbranje\nče datoteka ne obstaja, sproži napako\n\n\nw\npisanje\nče datoteka ne obstaja, ustvari novo; če obstaja, izbriše prejšnjo vsebino datoteke\n\n\na\nappend\nče datoteka ne obstaja, ustvari novo; če obstaja, NE izbriše prejšnje vsebine\n\n\nx\nustvari datoteko, pisanje\nče datoteka že obstaja, sproži napako\n\n\n+\npisanje in branje\n\n\n\nt\nza delo s tekstovnimi datotekami\nnpr. .txt, .csv, .tex, .html, .py\n\n\nb\nza delo s binarnimi datotekami\nnpr. slike\n\n\n\nNekaj lastnosti je zbranih v spodnji tabeli:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlastnost     \\     kombinacija črk\nr\nr+\nx\nx+\nw\nw+\na\na+\n\n\n\n\nbranje\nx\nx\n\nx\n\nx\n\nx\n\n\npisanje\n\nx\nx\nx\nx\nx\nx\nx\n\n\ndatoteka mora obstajati\nx\nx\n\n\n\n\n\n\n\n\ndatoteka ne sme obstajati\n\n\nx\nx\n\n\n\n\n\n\nzbriše prejšnjo vsebino datoteke\n\n\n\n\nx\nx\n\n\n\n\npisanje na konec datoteke\n\n\n\n\n\n\nx\nx\n\n\n\nK zgornjim kombinacijam lahko dodamo še t ali b."
+  },
+  {
+    "objectID": "numpy.html#ustvarjanje-tabel",
+    "href": "numpy.html#ustvarjanje-tabel",
+    "title": "8  Numpy",
+    "section": "Ustvarjanje tabel",
+    "text": "Ustvarjanje tabel\nNavaden seznam pretvorimo v Numpy seznam s funkcijo np.array(seznam).\n\nimport numpy as np\n\na = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])\nprint(a)\nprint(a.shape)\nprint(a.ndim)\nprint(a.size)\n\n[[1 2 3 4]\n [5 6 7 8]]\n(2, 4)\n2\n8\n\n\nSezname lahko združimo z np.concatenate(sez1, sez2), ki vrne staknjen seznam. To je počasna operacija, zato raje je ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:\n\nnp.zeros(oblika) vrne tabelo ničel; oblika je nabor celih števil, ki predstavlja obliko tabele\nnp.ones(oblika) vrne tabelo enic\nnp.linspace(zacetek, konec, num) vrne seznam num števil z intervala od zacetek do konec, kjer so elementi ekvidistančni\nnp.arange(zacetek, konec, korak) vrne seznam od vrednosti parametra zacetek (neobvezen, privzeto je 0) do konec s koraki korak (neobvezen, privzeto je 1)\nnp.fromfunction(ime_funkcije, oblika) ustvari tabelo z obliko oblika, kjer vsak element v tabeli izračuna s klicem funkcije ime_funkcije; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij\nseznam.reshape(oblika) spremeni obliko seznama"
+  },
+  {
+    "objectID": "numpy.html#rezine",
+    "href": "numpy.html#rezine",
+    "title": "8  Numpy",
+    "section": "Rezine",
+    "text": "Rezine\nDo elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih (zacetek:konec:korak), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.\n\nimport numpy as np\ntabela = np.arange(0, 49).reshape(7, 7)\nprint(tabela)\nrazrezano = tabela[0:4,2:7:2]\nprint(razrezano)\n\n[[ 0  1  2  3  4  5  6]\n [ 7  8  9 10 11 12 13]\n [14 15 16 17 18 19 20]\n [21 22 23 24 25 26 27]\n [28 29 30 31 32 33 34]\n [35 36 37 38 39 40 41]\n [42 43 44 45 46 47 48]]\n[[ 2  4  6]\n [ 9 11 13]\n [16 18 20]\n [23 25 27]]\n\n\nČe želimo vse elemente v neki dimenziji napišemo :. Tako lahko dobimo posamezne stolpce.\n\nprint(tabela[:,3])\n\n[ 3 10 17 24 31 38 45]\n\n\nKo imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri razrezano) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:\n\ntabela[0:4,2:7:2] = np.arange(100, 112).reshape(4,3)\nprint(tabela)\n\n[[  0   1 100   3 101   5 102]\n [  7   8 103  10 104  12 105]\n [ 14  15 106  17 107  19 108]\n [ 21  22 109  24 110  26 111]\n [ 28  29  30  31  32  33  34]\n [ 35  36  37  38  39  40  41]\n [ 42  43  44  45  46  47  48]]"
+  },
+  {
+    "objectID": "numpy.html#uporabne-funkcije",
+    "href": "numpy.html#uporabne-funkcije",
+    "title": "8  Numpy",
+    "section": "Uporabne funkcije",
+    "text": "Uporabne funkcije\nGlej predvsem uradno dokumentacijo: https://numpy.org/doc/stable/reference/routines.sort.html\nVsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.\nPri mnogih funkcijah lahko podamo neobvezni parameter axis=x, kjer je x številka osi, po kateri želimo operacijo izvesti (0, 1, 2, …).\nPozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.\n\nnp.any(tabela) vrne True, če je vsaj en element True\nnp.all(tabela) vrne True, če so vsi elementi True\nnp.nonzero(tabela) vrne indekse neničelnih elementov v vsaki dimenziji posebej (koordinate teh elementov)\nnp.flatten(tabela) vrne “flat” obliko tabele (enodimenzionalni seznam zaporednih elementov)\nnp.flatnonzero(tabela) vrne indekse neničelnih elementov v “flat” obliki tabele (zaporedni indeks)\nnp.where(pogoj, x, y) vrne elemente iz x, kjer je pogoj izpolnjen, sicer vrne ustrezni element iz y; pogoj se ovrednoti za vsak element posebej; glej primere v dokumentaciji!\ntabela.T vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele\n\n\na = np.array([[1, 2, 3], [4, 5, 6]])\nprint(a)\nprint(a.T)\n\n[[1 2 3]\n [4 5 6]]\n[[1 4]\n [2 5]\n [3 6]]"
+  },
+  {
+    "objectID": "numpy.html#matematika",
+    "href": "numpy.html#matematika",
+    "title": "8  Numpy",
+    "section": "Matematika",
+    "text": "Matematika\nDokumentacija: https://numpy.org/doc/stable/reference/routines.math.html\n\nnp.sum(tabela)\nnp.cumsum(tabela)\nnp.prod(tabela)\nnp.log(tabela)\nnp.exp(tabela)\nnp.sin(tabela)\nitd."
+  },
+  {
+    "objectID": "drugo.html#latex",
+    "href": "drugo.html#latex",
+    "title": "9  Drugo*",
+    "section": "LaTeX",
+    "text": "LaTeX\nLaTeX je program za urejanje besedil. Odlikuje se v izdelavi matematičnih dokumentov, zato je standard za znanstvene članke in poročila v matematiki in fiziki. Omogoča tudi avtomatsko generiranje bibliografij.\nV slovenščini je na voljo priročnik Ne najkrajši uvod v LaTeX, za začetek pa je morda še primernejši Praktičen uvod v LaTeX\nDobra referenca je Overleaf, ki omogoča tudi ustvarjanje LaTeX dokumentov preko spletnega vmesnika. Preko spleta je urejanje nekoliko nerodno in počasno, zato priporočam, da si namestite enega od urejevalnikov (glej spodaj).\nLaTeX je potrebno najprej namestiti. Na Windowsu je verjetno najbolje namestiti MiKTeX, na macOS pa MacTeX.\nLaTeX dokumente lahko ustvarjate v Visual Studio Code, če namestite Extension z imenom Latex Workshop. Na voljo so tudi drugi specializirani urejevalniki, kot je TeXstudio, LyX (omogoča način urejanja podoben Wordu) ali Overleaf (omogoča hkratno delo več oseb preko spleta).\nZelo uporabno orodje je Mathpix, ki omogoča pretvorbo enačb napisanih na roko ali v PDF datotekah v LaTeX ukaze.\nPriročna je tudi spletna stran Table generator, ki omogoča generiranje kode za LaTeX tabele iz Excelovih ali .csv datotek."
+  },
+  {
+    "objectID": "drugo.html#matplotlib",
+    "href": "drugo.html#matplotlib",
+    "title": "9  Drugo*",
+    "section": "Matplotlib",
+    "text": "Matplotlib\nZa risanje grafov s Pythonom je najbolj priljubljena knjižnica matplotlib. Za začetek je uporaben Tutorial, dobra referenca pa so Primeri.\nZ matplotlib je mogoče grafe shraniti v različnih formatih. Pred risanjem grafov je dobro nastaviti velikost slike s plt.figure(figsize=(sirina, visina)), kjer sta višina in širina v inčih.\nČe pišemo v LaTeXu, imamo dve glavni možnosti:\n\nSliko shranimo v vektorskem formatu (npr. .pgf) To lahko naredimo s klicem funkcije plt.savefig(pot.pgf). Sliko nato dodamo v LaTeX dokument z \\input{pot.pgf}, znotraj okolja figure pred tem pa pri vrhu datoteke uvozimo \\usepackage{pgf}. Prednost vektorske slike je, da slika ohrani ostrino ne glede na to, koliko povečana je, in da so fonti številk in oznak na sliki enaki kot v LaTeXu ter prave velikosti. Da se tudi nastaviti, da je širina slike npr. ravno polovico širine dokumenta. Vse skupaj je opisano tu: https://timodenk.com/blog/exporting-matplotlib-plots-to-latex Za veliko grafov z veliko točkami (&gt;10000) je bolje uporabiti rastrski format (npr. .png), sicer lahko stavljenje dokumenta z LaTeXom traja več minut.\nSliko shranimo v rastrskem formatu (npr. .png). To lahko naredimo s klicem funkcije plt.savefig(pot.png, dpi=300). Parameter dpi (dots per inch) dolča resolucijo slike. Ponavadi zadošča 300 ali manj. Sliko nato dodamo v LaTeX dokument z \\includegraphics{pot.png} znotraj okolja figure. Privzeto fonti ne bodo taki kot v LaTeXu, kar ni najlepše. Prave fonte lahko nastavimo z\n\n\nplt.rcParams.update({\"text.usetex\": True})"
+  },
+  {
+    "objectID": "drugo.html#nabori",
+    "href": "drugo.html#nabori",
+    "title": "9  Drugo*",
+    "section": "Nabori",
+    "text": "Nabori\nNabori so urejeni in nespremenljivi. Definira se jih z običajnimi oklepaji (). Do elementov dostopamo z indeksi od 0 naprej, kot pri seznamih. Naboru ne moremo dodati novih elementov, ko je enkrat ustvarjen. Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences\nVrednosti v naborih lahko “odpakiramo” (ang. unpacking) nazaj v spremenljivke.\n\nsadje = (\"jabolko\", \"banana\", \"češnja\")\nzeleno, rumeno, rdece = sadje\nprint(zeleno)\nprint(rumeno)\nprint(rdece)\n\njabolko\nbanana\nčešnja\n\n\n## jabolko\n## banana\n## češnja\nNabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo *. V to spremenljivko se bo shranil seznam presežnih elementov. Glej npr. https://www.w3schools.com/python/python_tuples_unpack.asp"
+  },
+  {
+    "objectID": "drugo.html#množice",
+    "href": "drugo.html#množice",
+    "title": "9  Drugo*",
+    "section": "Množice",
+    "text": "Množice\nMnožice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo set(). Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z mnozica.add(element). Glej tudi: https://docs.python.org/3/tutorial/datastructures.html#sets"
+  },
+  {
+    "objectID": "drugo.html#rekurzija",
+    "href": "drugo.html#rekurzija",
+    "title": "9  Drugo*",
+    "section": "Rekurzija",
+    "text": "Rekurzija\nDober članek o uporabi rekurzije za izračun Fibbonaccijevega zaporedja v Pythonu. Poglavje Using Recursion and a Python Class lahko preskočite. https://realpython.com/fibonacci-sequence-python/"
+  },
+  {
+    "objectID": "drugo.html#uvažanje-modulov",
+    "href": "drugo.html#uvažanje-modulov",
+    "title": "9  Drugo*",
+    "section": "Uvažanje modulov",
+    "text": "Uvažanje modulov\nDelo z moduli lepo opisuje dokumentacija (predvsem prva polovica strani)."
+  },
+  {
+    "objectID": "drugo.html#izpeljani-seznamislovarjimnožice",
+    "href": "drugo.html#izpeljani-seznamislovarjimnožice",
+    "title": "9  Drugo*",
+    "section": "Izpeljani seznami/slovarji/množice",
+    "text": "Izpeljani seznami/slovarji/množice\nČe želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:\n\nkvadrati = []\nfor i in range(10):\n    kvadrati.append(i * i)\nprint(kvadrati)\n\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n\nNa kratko lahko tak seznam ustvarimo z izpeljanim seznamom:\n\nkvadrati2 = [i * i for i in range(10)]\nprint(kvadrati2)\n\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n\nDodamo lahko tudi pogoj:\n\npoved = 'the rocket came back from mars'\nsamoglasniki_poved = [i for i in poved if i in 'aeiou']\nprint(samoglasniki_poved)\n\n['e', 'o', 'e', 'a', 'e', 'a', 'o', 'a']\n\n\nPodoben pristop lahko uporabimo tudi za slovarje in množice.\n\nkvadrati3 = {i: i * i for i in range(10)}\nprint(kvadrati3)\n\n{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}\n\n\n\npoved = \"life, uh, finds a way\"\nsamoglasniki_poved = {i for i in poved if i in 'aeiou'}\nprint(samoglasniki_poved)\n\n{'e', 'a', 'u', 'i'}"
+  },
+  {
+    "objectID": "drugo.html#merjenje-časa-izvajanja-programa",
+    "href": "drugo.html#merjenje-časa-izvajanja-programa",
+    "title": "9  Drugo*",
+    "section": "Merjenje časa izvajanja programa",
+    "text": "Merjenje časa izvajanja programa\nGlej https://docs.python.org/3/library/timeit.html"
+  },
+  {
+    "objectID": "drugo.html#kako-deluje-računalnik",
+    "href": "drugo.html#kako-deluje-računalnik",
+    "title": "9  Drugo*",
+    "section": "Kako deluje računalnik?",
+    "text": "Kako deluje računalnik?\nPri programiranju je pogosto dobro vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Za potrebe fizikov, ki se s programiranjem šele začenjajo ukvarjati, je to čisto dovolj. Če pa vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in tudi univerzitetnih učbenikov.\nSpodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Nekatere teme so dobro razložene v poglavju Sistemi učbenika https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html\n\nCrash Course Computer Science\nObširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1\nČe nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo – bolj kot zanimivosti.\n\n\nPosamezne teme\nSpodaj je navedenih nekaj tem o delovanju računalnika. Predlagam ogled v takem vrstnem redu:\n\nComputer basics - What is inside a computer? Komponente računalnika. Osnovno - lahko preskočite. https://www.youtube.com/watch?v=HB4I2CgkcCo\nExploring How Computers Work - Sebastian Lague Izvrstna demonstracija tega, kako elektronska vezja omogočajo računanje. Če si boste pogledali le eno stvar, si poglejte tole. https://www.youtube.com/watch?v=QZwneRb-zqA\nWhat’s Your Computer Actually Doing? - Tom Scott Poenostavljen opis kako računalniški procesor izvaja naše programe. https://www.youtube.com/watch?v=Z5JC9Ve1sfI\nHow do computers read code? Kako naš program pove računalniku kaj mora narediti? Če si boste pogledali le dve stvari, si poglejte še tole. https://www.youtube.com/watch?v=QXjU9qTsYCc\nLearn how computers add numbers and build a 4 bit adder circuit - Ben Eater Razlaga vezja za seštevanje in demonstracija, kako ga sestaviti. https://www.youtube.com/watch?v=wvJc9CZcvBc\nHow Do Computers Remember? - Sebastian Lague Demonstracija elektronskih vezij, ki lahko shranijo vrednosti. https://www.youtube.com/watch?v=I0-izyq6q5s&t=613s\nVisualizing Binary Data with 7-segment displays - Sebastian Lague Demonstracija, kako lahko z vezji prikažemo binarna števila na zaslonu. https://www.youtube.com/watch?v=hEDQpqhY2MA\nPhysics of Computer Chips - Dr. Phil Moriarty Intervju z nanofizikom, ki opiše, kako so narejene komponente procesorja. https://www.youtube.com/watch?v=xkLAhU74f3s\nIzdelava čipov Tole je sicer PR video, a dobro pokaže kompleksnost in proces izdelave čipov. https://www.youtube.com/watch?v=bor0qLifjz4\nWhy do computers use 1’s and 0’s? Kaj je binarni številski sistem in kako se uporablja za reprecentacijo števil in črk. https://www.youtube.com/watch?v=Xpk67YzOn5w"
+  }
+]
