@@ -32,7 +32,9 @@ jobs:
       - run: pip install jupyter
       - run: pip install -r requirements.txt
       
-      - run: quarto render --cache-refresh --to output
+      - run: quarto render --cache-refresh --to html
+      - run: quarto render --cache-refresh --to pdf
+      - run: quarto render --cache-refresh --to epub
         
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
