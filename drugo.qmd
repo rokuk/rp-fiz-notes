@@ -14,12 +14,6 @@ print(rumeno)
 print(rdece)
 ```
 
-```         
-## jabolko
-## banana
-## češnja
-```
-
 Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od spremenljivk pred ime dodamo `*`. V to spremenljivko se bo shranil seznam presežnih elementov. Glej npr. <https://www.w3schools.com/python/python_tuples_unpack.asp>
 
 ## Množice

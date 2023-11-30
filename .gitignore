@@ -7,3 +7,4 @@ output
 _main.log
 .quarto
 /.quarto/
+.jupyter_cache/
