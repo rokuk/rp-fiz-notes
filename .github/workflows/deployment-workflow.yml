@@ -32,25 +32,16 @@ jobs:
       - run: pip install jupyter
       - run: pip install -r requirements.txt
       
-      - uses: actions/checkout@v4
-        with:
-          ref: 'production'
-          path: 'output'
-          
-      - run: git status
-      - run: ls
-
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
         
-      - name: Commit to production branch
-        uses: EndBug/add-and-commit@v9.1.2
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          author_name: 'GH Actions deployment workflow'
-          author_email: 'kontakt@rokuk.org'
-          cwd: 'output'
-          add: '. -f'
-          push: 'origin HEAD:production --set-upstream --force'
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: rp-fiz-notes
+          directory: output
         
       - name: Upload artifacts
         if: ${{ failure() }}
