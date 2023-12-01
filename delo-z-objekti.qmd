@@ -72,15 +72,16 @@ Za sortiranje lahko uporabimo funkcijo `sorted(seznam)`, ki vrne sortiran seznam
 
 ```{python}
 seznam = [9, 1, 4, 5, 6, 4] #<<
-print("prej:  ", seznam)
+print("prej:   ", seznam)
 sortiran_seznam = sorted(seznam) #<<
-print("potem: ", seznam)
-print("vrnjen:", sortiran_seznam)
+print("potem:  ", seznam)
+print("vrnjeno:", sortiran_seznam)
 ```
 
 ```{python}
 seznam = [9, 1, 4, 5, 6, 4] #<<
-print("prej: ", seznam)
-seznam.sort() #<<
-print("potem:", seznam)
+print("prej:   ", seznam)
+a = seznam.sort() #<<
+print("potem:  ", seznam)
+print("vrnjeno:", a)
 ```
