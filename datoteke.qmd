@@ -110,14 +110,15 @@ Datoteko odpremo v načinu za pisanje `mode="w"` in uporabimo funkcijo
 posebnih znakov v Pythonu:
 <https://www.w3schools.com/python/gloss_python_escape_characters.asp>
 
-``` python
-potdodatoteke = "datoteka.txt"
-with open(potdodatoteke, mode="w", encoding="utf-8") as dat:
+```{python}
+pot_do_datoteke = "datoteka.txt"
+with open(pot_do_datoteke, mode="w", encoding="utf-8") as dat:
     dat.write("To je ")
     dat.write("en stavek.\nTo je drugi.")
 ```
 
-```{python, echo=FALSE}
+```{python}
+#| echo: false
 with open("datoteka.txt", mode="r", encoding="utf-8") as dat:
     print("datoteka.txt")
     print(dat.read())
@@ -159,9 +160,9 @@ with open("datoteka.txt", mode="r", encoding="utf-8") as datoteka:
 print(vrstice)
 ```
 
-### Zanka for
+### for zanka
 
-Po vrsticah datoteke lahko gremo z zanko for.
+Po vrsticah datoteke lahko gremo s for zanko.
 
 ```{python}
 vrstice = []

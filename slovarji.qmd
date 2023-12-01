@@ -54,17 +54,11 @@ print(s)
 
 Kot pri seznamih in nizih uporabimo ključno besedo `in`, da preverimo ali se nek ključ/vrednost/par nahaja v slovarju.
 
-```{python eval=FALSE}
+```{python}
 s = {'a': 6, 'b': 'test', 123: True}
 print('test' in s.values())
 print('b' in s.keys())
 print(('a', 6) in s.items())
-```
-
-```         
-## True
-## True
-## True
 ```
 
 ## Zanke
