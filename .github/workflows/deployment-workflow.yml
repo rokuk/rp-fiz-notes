@@ -32,8 +32,10 @@ jobs:
 
       - run: pip install -r requirements.txt
       
-      - name: Quarto render all formats
-        run: ./render.sh
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: all
         
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
