@@ -29,10 +29,11 @@ jobs:
         with:
           python-version: '3.12'
           cache: 'pip'
-      - run: pip install jupyter
+
       - run: pip install -r requirements.txt
       
-      - run: quarto render --cache-refresh --to html
+      - name: Quarto render all formats
+        run: ./render.sh
         
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
