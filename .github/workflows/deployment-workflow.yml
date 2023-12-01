@@ -33,8 +33,6 @@ jobs:
       - run: pip install -r requirements.txt
       
       - run: quarto render --cache-refresh --to html
-      - run: quarto render --to pdf
-      - run: quarto render --to epub
         
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
