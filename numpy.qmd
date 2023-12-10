@@ -5,6 +5,8 @@ Gradivi za to poglavje sta:
 -   <https://numpy.org/doc/stable/user/absolute_beginners.html>
 -   <https://numpy.org/doc/stable/user/quickstart.html>
 
+Povezave in osnovna navodila za namestitev knjižnice numpy na domači računalnik so v @sec-numpy-install .
+
 Vizualna reprecentacija operacij z Numpy seznami: <http://jalammar.github.io/visual-numpy/>
 
 Še več vizualnih reprezentacij (ta stran vsebuje veliko več kot bomo mi obravnavali): <https://betterprogramming.pub/numpy-illustrated-the-visual-guide-to-numpy-3b1d4976de1d>
