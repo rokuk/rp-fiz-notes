@@ -7,9 +7,11 @@ Gradivi za to poglavje sta:
 
 Povezave in osnovna navodila za namestitev knjižnice numpy na domači računalnik so v @sec-numpy-install .
 
-Vizualna reprecentacija operacij z Numpy seznami: <http://jalammar.github.io/visual-numpy/>
+::: {.callout-tip}
+<https://slides.com/rokkuk/numpy-1>
+:::
 
-Še več vizualnih reprezentacij (ta stran vsebuje veliko več kot bomo mi obravnavali): <https://betterprogramming.pub/numpy-illustrated-the-visual-guide-to-numpy-3b1d4976de1d>
+Vizualna reprecentacija operacij z Numpy seznami: <http://jalammar.github.io/visual-numpy/>
 
 ## Ustvarjanje tabel
 
@@ -25,37 +27,46 @@ print(a.ndim)
 print(a.size)
 ```
 
-Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato je raje ne uporabljamo. Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
+Sezname lahko združimo z `np.concatenate(sez1, sez2)`, ki vrne staknjen seznam. To je počasna operacija, zato je raje ne uporabljajmo. 
 
--   `np.zeros(oblika)` vrne tabelo ničel; `oblika` je nabor celih števil, ki predstavlja obliko tabele
--   `np.ones(oblika)` vrne tabelo enic
--   `np.linspace(zacetek, konec, num)` vrne seznam `num` števil z intervala od `zacetek` do `konec`, kjer so elementi ekvidistančni
--   `np.arange(zacetek, konec, korak)` vrne seznam od vrednosti parametra `zacetek` (neobvezen, privzeto je 0) do `konec` s koraki `korak` (neobvezen, privzeto je 1)
--   `np.fromfunction(ime_funkcije, oblika)` ustvari tabelo z obliko `oblika`, kjer vsak element v tabeli izračuna s klicem funkcije `ime_funkcije`; funkcija mora sprejeti toliko argumentov, kolikor je dimenzij
+Če je le mogoče vnaprej ustvarimo nov seznam znane dolžine z eno od spodnjih metod:
+
+-   `np.zeros(oblika)` parameter `oblika` je nabor celih števil, ki predstavlja obliko tabele npr. (3, 2) ustvari tabelo z tremi vrsticami in dvema stolpcema
+-   `np.ones(oblika)`
+-   `np.linspace(zacetek, konec, num)` vrne enakomerno razporejena števila na intervalu
+-   `np.arange(zacetek, konec, korak)` vrne števila ločena za korak (če ni podan, je 1)
+-   `np.fromfunction(ime_funkcije, oblika)`
 -   `seznam.reshape(oblika)` spremeni obliko seznama
+
+```{python}
+print(np.zeros((3, 2))) # tri vrstice, dva stolpca
+```
 
 ## Rezine
 
-Do elementov tabel dostopamo s podobno sintakso kot pri običajnih seznamih (`zacetek:konec:korak`), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.
+Do elementov tabel dostopamo podobno kot pri običajnih seznamih (`zacetek:konec:korak`), le da to naredimo za vsako dimenzijo posebej ločeno z vejicami.
 
 ```{python}
-import numpy as np
 tabela = np.arange(0, 49).reshape(7, 7)
 print(tabela)
-razrezano = tabela[0:4,2:7:2]
+
+razrezano = tabela[0:4,2:7:2] # prve štiri vrstice, vsak drugi stolpec od tretjega do sedmega
 print(razrezano)
 ```
 
 Če želimo vse elemente v neki dimenziji napišemo `:`. Tako lahko dobimo posamezne stolpce.
 
 ```{python}
-print(tabela[:,3])
+print(tabela[:,3]) # četrti stolpec
 ```
 
-Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti preberemo iz tabele in shranimo v spremenljivko (kot je to zgoraj pri `razrezano`) ali pa na ta izbrana mesta v tabeli shranimo neke vrednosti. Shranjujemo lahko tudi cele tabele:
+Ko imamo enkrat izbrane želene vrstice in stolpce, lahko te vrednosti shranimo v spremenljivko (kot je to zgoraj pri `razrezano`). Lahko pa pa na ta izbrana mesta v tabeli shranimo neke druge vrednosti. Shranjujemo lahko tudi cele tabele naenkrat:
 
 ```{python}
-tabela[0:4,2:7:2] = np.arange(100, 112).reshape(4,3)
+minitabela = np.arange(100, 112).reshape(4,3)
+print(minitabela)
+
+tabela[0:4,2:7:2] = minitabela # na izbrana mesta shranimo vrednosti iz minitabela
 print(tabela)
 ```
 
@@ -66,7 +77,9 @@ Vsaka funkcija ima opis parametrov in zelo nazorne primere uporabe.
 
 Pri mnogih funkcijah lahko podamo neobvezni parameter `axis=x`, kjer je `x` številka osi, po kateri želimo operacijo izvesti (0, 1, 2, ...).
 
-Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
+::: {.callout-warning}
+Vrednost True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
+:::
 
 -   `np.any(tabela)` vrne True, če je vsaj en element True
 -   `np.all(tabela)` vrne True, če so vsi elementi True
@@ -77,6 +90,7 @@ Pozor: True se obnaša kot 1 in False se obnaša kot 0 ter obratno.
 -   `tabela.T` vrne transponiramo tabelo (to pomeni, da so elementi zrcaljeni preko diagonale); deluje tudi za nekvadratne tabele
 
 ```{python}
+import numpy as np
 a = np.array([[1, 2, 3], [4, 5, 6]])
 print(a)
 print(a.T)
