@@ -20,19 +20,19 @@ Nabor lahko odpakiramo v manj spremenljivk, kot je elementov nabora, če eni od 
 
 Množice niso urejene in so nespremenljive. Definira se jih z zavitimi oklepaji. Prazno množico lahko dobimo tako, da pokličemo funkcijo `set()`. Vrednosti v množici so unikatne (ne moremo dodati dveh enakih). Do elementov lahko dostopamo z zanko. Nove elemente lahko dodamo z `mnozica.add(element)`. Glej tudi: <https://docs.python.org/3/tutorial/datastructures.html#sets>
 
-## Rekurzija
+## *Rekurzija
 
 Dober članek o uporabi rekurzije za izračun Fibbonaccijevega zaporedja v Pythonu. Poglavje *Using Recursion and a Python Class* lahko preskočite. <https://realpython.com/fibonacci-sequence-python/>
 
-## Uvažanje modulov
+## *Uvažanje modulov
 
 Delo z moduli lepo opisuje [dokumentacija](https://docs.python.org/3/tutorial/modules.html) (predvsem prva polovica strani).
 
-## Merjenje časa izvajanja programa
+## *Merjenje časa izvajanja programa
 
 Glej <https://docs.python.org/3/library/timeit.html>
 
-## Izpeljani seznami/slovarji/množice
+## *Izpeljani seznami/slovarji/množice
 
 Če želimo ustvariti seznam s kvadrati celih števil, lahko to naredimo z zanko:
 
