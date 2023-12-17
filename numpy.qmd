@@ -9,6 +9,8 @@ Povezave in osnovna navodila za namestitev knjižnice numpy na domači računaln
 
 ::: {.callout-tip}
 <https://slides.com/rokkuk/numpy-1>
+
+<https://slides.com/rokkuk/numpy-2>
 :::
 
 Vizualna reprecentacija operacij z Numpy seznami: <http://jalammar.github.io/visual-numpy/>
