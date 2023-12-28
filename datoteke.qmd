@@ -55,7 +55,7 @@ datoteke glede na `eggs` enaka `..\bacon\fizz\spam.txt`.
 Za podrobnejši razlago in več primerov glej gradivo:
 https://automatetheboringstuff.com/2e/chapter9/
 
-### Delo z ukaznim pozivom
+### *Delo z ukaznim pozivom
 
 Podobno kot v Raziskovalcu (File Explorer) se tudi v ukaznem pozivu
 (Terminal) v nekem trenutku nahajamo v neki mapi (ang. Current working
