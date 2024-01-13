@@ -102,6 +102,7 @@ print(a.T)
 
 Dokumentacija: <https://numpy.org/doc/stable/reference/routines.math.html>
 
+-   `np.abs(tabela)`
 -   `np.sum(tabela)`
 -   `np.cumsum(tabela)`
 -   `np.prod(tabela)`
