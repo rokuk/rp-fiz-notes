@@ -4,7 +4,7 @@ Za osnove sortiranja glej [Delo z objekti](delo-z-objekti.qmd#sortiranje-seznamo
 
 Bolj podrobno je sortiranje opisano v dokumentaciji: <https://docs.python.org/3/howto/sorting.html>
 
-Podamo lahko tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
+Funkciji za sortiranje lahko podamo tudi neobvezni argument `key=ime_funkcije`, s katerim podamo ime druge funkcije, ki sprejme elemente seznama in vrne tiste elemente, po katerih želimo seznam sortirati. Primer sortiranja po tretjem elementu nabora:
 
 ```{python}
 def sortirna_funkcija(element_seznama):

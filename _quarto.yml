@@ -17,6 +17,8 @@ book:
   url: "https://python.rokuk.org"
   site-url: "https://python.rokuk.org"
   favicon: "favicon.ico"
+  twitter-card: true
+  open-graph: true
   page-navigation: true
   back-to-top-navigation: true
   search: true
@@ -44,8 +46,8 @@ format:
   html:
     theme:
       light: [cosmo, custom.scss]
-      dark: darkly
-    highlight-style: github
+      dark: [darkly, custom-dark.scss]
+    highlight-style: atom-one
     code-copy: true
     link-external-newwindow: true
     number-depth: 1

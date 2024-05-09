@@ -2,11 +2,11 @@
 
 Pri programiranju je pogosto koristno vedeti, kako deluje računalnik. To je zelo obsežna tema, o kateri bi se lahko učili leta. Kljub temu lahko razumemo osnovne ideje delovanja računalnikov že v nekaj urah. Če vas tema bolj poglobljeno zanima, lahko na spletu najdete veliko specializiranih gradiv in univerzitetnih učbenikov.
 
-Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Nekatere teme so dobro razložene v poglavju Sistemi učbenika <https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html>
+Spodaj sem skušal zbrati čim bolj jedrnata gradiva na spletu, ki poljudno in dobro razložijo nekatere osnovne ideje. Nekatere teme so dobro razložene v poglavju Sistemi v učbeniku <https://lusy.fri.uni-lj.si/ucbenik/book/1301/index.html>.
 
 ## Crash Course Computer Science
 
-Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov. <https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1>
+Obširen tečaj osnov računalništva. Vzame nekaj ur, priporočam predvsem prvih 21 videov <https://www.youtube.com/watch?v=tpIctyqH29Q&list=PLH2l6uzC4UEW0s7-KewFLBC1D0l6XRfye&index=1>.
 
 Če nimate časa za vse to, si lahko pogledate nekaj kratkih videov spodaj (po 10-20 min). Niso mišljeni kot študijsko gradivo -- bolj kot zanimivosti.
 

@@ -89,7 +89,7 @@ Nekaj najbolj uporabnih:
 -   `os.remove()` izbriše datoteko, ki se nahaja na podani poti
 -   `os.rmdir()` izbriše prazno mapo, ki se nahaja na podani poti
 
-Za delo s potmi je na voljo knjižnica `os.path`, kjer so pogosto
+Za delo s potmi je na voljo modul `os.path`, kjer so pogosto
 uporabljane funkcije:
 
 -   `os.path.exists()` vrne True, če podana pot obstaja
