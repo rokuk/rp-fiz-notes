@@ -8,3 +8,4 @@ _main.log
 .quarto
 /.quarto/
 .jupyter_cache/
+.DS_Store
