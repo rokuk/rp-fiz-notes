@@ -106,8 +106,7 @@ uporabljane funkcije:
 
 Datoteko odpremo v načinu za pisanje `mode="w"` in uporabimo metodo 
 `write()`, ki zapiše niz v datoteko. Znak `\n` pomeni novo vrstico. Če
-želimo zapisati znak `\` moramo v Pythonu napisati `\\`. Več o uporabi
-posebnih znakov v Pythonu:
+želimo zapisati samo znak `\` moramo v napisati `\\`. Več o uporabi posebnih znakov v Pythonu:
 <https://www.w3schools.com/python/gloss_python_escape_characters.asp>
 
 ```{python}
